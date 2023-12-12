@@ -3,9 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/guide.css">
+
+    <script type="text/javascript" async="" src="./js/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var page_arry = [
+                {
+                    depth:['공통','약관동의','',''],
+                    id:'', status:'',
+                    note:'모달',
+                },{
+                    depth:['','인증번호 입력','',''],
+                    id:'', status:'',
+                    note:'모달',
+                },
+
+                {
+                    depth:['회원가입','본인인증','',''],
+                    id:'app-signin-001', status:'',
+                    note:'',
+                },
+                {
+                    depth:['','휴대폰본인인증','',''],
+                    id:'', status:'',
+                    note:'[레이어팝업] 약관동의, 인증번호 입력',
+                },
+                {
+                    depth:['','간편비밀번호설정','',''],
+                    id:'', status:'',
+                    note:'',
+                },
+                {
+                    depth:['','생체인증사용설정','',''],
+                    id:'', status:'',
+                    note:'',
+                },
+                {
+                    depth:['','DID발급/가입완료','',''],
+                    id:'', status:'',
+                    note:'',
+                },
+
+                {
+                    depth:['로그인','간편비밀번호','',''],
+                    id:'app-login-001', status:'',
+                    note:'',
+                },
+                {
+                    depth:['','본인확인','',''],
+                    id:'', status:'',
+                    note:'[app-signin-001] 회원가입-본인인증 타이틀 교체 사용',
+                }
+            ];
+
+            var row_chk;
+
+            for (var i=0; i<page_arry.length;i++) {
+                /* row 시작 체크 */
+                if(page_arry[i].depth[0].length != 0){
+                    row_chk = 'row';
+                } else {
+                    row_chk = '';
+                }
+
+                $('tbody').append('<tr class="'+row_chk+'">'
+                +   '<th>'+page_arry[i].depth[0]+'</th>'
+                +   '<td class="'+page_arry[i].status+'">'+page_arry[i].depth[1]+'</td>'
+                +   '<td class="'+page_arry[i].status+'">'+page_arry[i].depth[2]+'</td>'
+                +   '<td class="'+page_arry[i].status+'">'+page_arry[i].depth[3]+'</td>'
+                +   '<td class="ac '+page_arry[i].status+'"><a href="./html/'+page_arry[i].id+'.html" target="_blank">'+page_arry[i].id+'</a></td>'
+                +   '<td class="'+page_arry[i].status+'">'+page_arry[i].note+'</td>'
+                +'</tr>');
+            }
+        });
+    </script>
 </head>
 <body>
-    test
+    <h1></h1>
+    <table>
+        <colgroup>
+            <col />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>1Depth</th>
+                <th>2Depth</th>
+                <th>3Depth</th>
+                <th>4Depth</th>
+                <th>ID</th>
+                <th>비고</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
 </body>
 </html>

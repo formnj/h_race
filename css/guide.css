@@ -1,0 +1,10 @@
+* {font-family:'Noto Sans KR', sans-serif;}
+table {width:100%;}
+th, td {padding:8px 10px; font-size:12px;}
+thead {background-color:#fcfcfc; border-bottom:1px solid #222;}
+thead tr > * + *, td {border-left:1px solid #ddd;}
+th {background-color:#f2f3f5;}
+tr.row {border-top:2px solid #222;}
+td.com {background-color:#ddeeff;}
+td {border-bottom:1px solid #ddd;}
+td a {font-weight:700; text-decoration:underline; display:block;}
