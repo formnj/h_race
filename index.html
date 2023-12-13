@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/guide.css">
 
-    <script type="text/javascript" async="" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="./js/jquery.min.js"></script>
 
     <script>
         $(document).ready(function(){
@@ -51,13 +51,18 @@
 
                 {
                     depth:['로그인','간편비밀번호','',''],
-                    id:'app-login-001', status:'',
+                    id:'app-login-001', status:'ing',
                     note:'',
                 },
                 {
                     depth:['','본인확인','',''],
                     id:'', status:'',
-                    note:'[app-signin-001] 회원가입-본인인증 타이틀 교체 사용',
+                    note:'',
+                },
+                {
+                    depth:['','간편비밀번호','',''],
+                    id:'app-password-002', status:'ing',
+                    note:'[app-login-001] 로그인-간편비밀번호 타이틀 교체 사용, modal_bottom 포함',
                 }
             ];
 
