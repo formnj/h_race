@@ -1,8 +1,8 @@
 html,body{height: 100%;}
-*{margin:0; padding:0; color:inherit; font-size:14px; font-family:inherit; box-sizing:border-box; text-decoration: inherit;}
+*{margin:0; padding:0; color:inherit; font-family:'Pretendard', 'Noto Sans KR', sans-serif; font-weight:400; box-sizing:border-box; text-decoration: inherit;}
 *:before, *:after {box-sizing:border-box;}
 
-body{text-decoration: none; font-style: normal; font-weight: normal;}
+body{font-size:14px;}
 li{list-style: none;}
 table{border-spacing: 0; border-collapse: collapse;}
 select,textarea,input{box-sizing: border-box;}
@@ -12,3 +12,5 @@ iframe,fieldset{border:none;}
 .clearfix::after{content:""; display: block; clear: both;}
 input[type="password"]::-ms-reveal,
 input[type="password"]::-ms-clear {display: none;}
+
+em {font-style:normal;}

@@ -1,45 +1,8 @@
 @charset "UTF-8";
 
+@import url('../css/fonts.css');
 @import url('../css/reset.css');
 @import url('../css/form.css');
-
-/* Noto Sans KR */
-@font-face {
-    font-family: "Noto Sans KR";
-    font-weight: 100;
-    font-style: normal;
-    src: url("../fonts/NotoSansKR-Thin.woff") format("woff"), url("../fonts/NotoSansKR-Thin.woff2") format("woff2");
-}
-@font-face {
-    font-family: "Noto Sans KR";
-    font-weight: 200;
-    font-style: normal;
-    src: url("../fonts/NotoSansKR-Light.woff") format("woff"), url("../fonts/NotoSansKR-Light.woff2") format("woff2");
-}
-@font-face {
-    font-family: "Noto Sans KR";
-    font-weight: 400;
-    font-style: normal;
-    src: url("../fonts/NotoSansKR-Regular.woff") format("woff"), url("../fonts/NotoSansKR-Regular.woff2") format("woff2");
-}
-@font-face {
-    font-family: "Noto Sans KR";
-    font-weight: 500;
-    font-style: normal;
-    src: url("../fonts/NotoSansKR-Medium.woff") format("woff"), url("../fonts/NotoSansKR-Medium.woff2") format("woff2");
-}
-@font-face {
-    font-family: "Noto Sans KR";
-    font-weight: 700;
-    font-style: normal;
-    src: url("../fonts/NotoSansKR-Bold.woff") format("woff"), url("../fonts/NotoSansKR-Bold.woff2") format("woff2");
-}
-@font-face {
-    font-family: "Noto Sans KR";
-    font-weight: 900;
-    font-style: normal;
-    src: url("../fonts/NotoSansKR-Black.woff") format("woff"), url("../fonts/NotoSansKR-Black.woff2") format("woff2");
-}
 
 html, body, #wrap, #container, .content {height:100%;}
 
@@ -63,6 +26,10 @@ html, body, #wrap, #container, .content {height:100%;}
 .tab_content > div {display:none;}
 .tab_content > div.current {display:block;}
 
+/* button */
+[class*"btn_"] {display:inline-flex;}
+.btn_confirm {color:#fff; background-color:#2ECCC8;}
+
 /* toast */
 .toast {height:50px; line-height:48px; background-color:#fff; border:1px solid #d4d4d4; border-radius:50px; box-shadow:0 4px 6px rgba(0,0,0,0.3); opacity:0; position:fixed; bottom:0px; left:50%; z-index:1; display:inline-block; transform:translateX(-50%); transition:all 0.35s;}
 .toast.confirm {padding:0 50px 0 40px;}
@@ -74,37 +41,39 @@ html, body, #wrap, #container, .content {height:100%;}
 .toast .btn_close:after {transform:rotate(-45deg);}
 
 /* modal */
-.modal_wrap {display:flex; align-items:center; justify-content:center;}
-.modal_wrap .modal_inner {padding:20px; background-color:#fff; position:relative;}
-.modal_wrap[data-modal*='-dim'] {background-color:rgba(0,0,0,.6); position:fixed; top:0; right:0; bottom:0; left:0; z-index:100;}
-.modal_wrap .btn_close {width:25px; height:25px; font-size:0; position:absolute; top:20px; right:20px; z-index:1; display:inline-block;}
-.modal_wrap .btn_close:before, .modal_wrap .btn_close:after {width:30px; border-top:1px solid #333; content:''; position:absolute; top:50%; right:-4px; display:inline-block;}
-.modal_wrap .btn_close:before {transform:rotate(45deg);}
-.modal_wrap .btn_close:after {transform:rotate(-45deg);}
+#modal_wrap {background-color:rgba(0,0,0,0.5); position:fixed; top:0; right:0; bottom:0; left:0; display:none;}
+#modal_wrap.active {display:block;}
+#modal_wrap .modal_container {padding:15px 20px; position:absolute; background-color:#fff;}
+#modal_wrap .modal_container .btnSection {margin:0 -20px -15px; display:flex;}
+#modal_wrap .modal_container .btnSection [class*='btn_'] {flex:1;}
+#modal_wrap .modal_container .btnSection [class*='btn_'] em {padding:16px 10px; font-size:16px; font-weight:600; display:inline-block;}
 
-.modal_wrap .modal_header {margin-bottom:10px; padding-right:50px; padding-bottom:5px; font-size:18px; font-weight:700; border-bottom:1px solid #333; position:relative;}
-.modal_wrap .modal_contents {margin-top:50px;}
-.modal_wrap .modal_header .modal_contents {margin-top:0;}
-.modal_bottom {margin-top:20px; padding-top:20px; border-top:1px dashed #ccc; text-align:center;}
+/* modal type */
+#modal_wrap .modal_container.type_bottom {border-radius:16px 16px 0 0; right:0; bottom:0; left:0; transform:translateY(100%);}
+#modal_wrap.active .modal_container.type_bottom {transform:translateY(0);}
 
-/* modal size */
-.modal_wrap[data-modal*='full'] .modal_inner {overflow:auto; position:absolute; top:10px; right:10px; bottom:10px; left:10px;}
-.modal_wrap[data-modal*='small'] .modal_inner {width:450px;}
-
-.modal_wrap[data-modal='layer'] {background-color:#fff; position:absolute; top:0; left:0; z-index:100;}
+/* modal content */
+.pss_set_complete {padding:30px 0; font-size:15px; text-align:center;}
+.pss_set_complete p:first-child:before {width:30px; height:30px; margin:0 auto 14px; background:url('../images/common/icon_sprit.png') -80px 0 no-repeat; background-size:250px auto; content:''; display:block;}
+.pss_set_complete p + p {margin-top:16px;}
 
 /* progress_bar */
 .progress_bar {width:0; height:4px; font-size:0; background-color:blue; position:fixed; top:0; z-index:10; transition:width 0.5s cubic-bezier(.47,1.64,.41,0.8);}
 
 /* 간편비밀번호, 생체인증, DID발급 레이아웃 */
 .except_layout {height:100%; text-align:center; display:flex; flex-direction:column; justify-content:space-between;}
-.except_layout h2 {margin-top:96px; font-size:24px; font-weight:500; line-height:36px;}
+.except_layout h2 {margin-top:96px; margin-bottom:54px; font-size:24px; font-weight:500; line-height:36px;}
 
 /* 숫자 키패드 */
 .sec_keypad {margin:0 -20px; overflow:hidden;}
 .sec_keypad .inner {margin-right:-1px; background-color:#fff; display:flex; flex-wrap:wrap; gap:1px;}
-.sec_keypad button {width:calc(33.3333% - 1px); color:#fff; font-size:24px; font-weight:600; background-color:#747881; text-align:center; display:flex; align-items:center; justify-content:center;}
+.sec_keypad button {width:calc(33.3333% - 1px); height:72px; color:#fff; font-size:24px; font-weight:600; background-color:#747881; text-align:center; display:flex; align-items:center; justify-content:center;}
+.sec_keypad button[class*='icon_'] {font-size:0;}
+.sec_keypad button[class*='icon_']:before {background-image:url('../images/common/icon_sprit.png'); background-repeat:no-repeat; background-size:250px auto; content:''; display:block;}
+.sec_keypad button.icon_reset:before {width:30px; height:30px; background-position:0 0;}
+.sec_keypad button.icon_del:before {width:30px; height:30px; background-position:-40px 0;}
 
 .pass_bullet ul {margin-top:26px; display:flex; justify-content:center; gap:15px;}
-.pass_bullet ul span {width:18px; height:18px; font-size:0; background-color: #EAECF7; border-radius:50%; display:block;}
-.pass_bullet a {text-decoration:underline;}
+.pass_bullet ul span {width:18px; height:18px; font-size:0; background-color: #EAECF7; border-radius:50%; display:block; transition:background-color 0.25s;}
+.pass_bullet .active span {background-color:#868cb0;}
+.pass_bullet a {margin-top:16px; text-decoration:underline; display:inline-block;}
