@@ -8,7 +8,7 @@ $(document).ready(function(){
 
             console.log(bul_idx);
             if(bul_idx == 6){
-                modal('app-password-002-1', 'type_bottom');
+                modal.open('app-password-002-1', 'type_bottom');
             }
         }
 
@@ -28,18 +28,28 @@ $(document).ready(function(){
 });
 
 /* modal */
-function modal(_content,_type){
-    $.ajax({
-        url:'../modal/'+_content+'.html',
-        method:'get',
-        success: function(data){
-            $('#modal_wrap').find('.modal_container').html(data);
-            $('#modal_wrap').addClass('active').find('.modal_container').addClass(_type);
-        },
-        complete: function(data){
-        },
-        error: function(){
-            alert('404 Error!');
+const modal = {
+    open: (_content,_type) => {    
+        $.ajax({
+            url:'../modal/'+_content+'.html',
+            method:'get',
+            success: function(data){
+                $('#modal_wrap').find('.modal_container').html(data);
+                $('#modal_wrap').addClass('active').find('.modal_container').attr('modal-type', _type);
+            },
+            complete: function(data){
+            },
+            error: function(){
+                alert('404 Error!');
+            }
+        });
+    },
+    close: (e) => {
+        e.currentTarget.closest('#modal_wrap').classList.remove('active');
+        contain = e.currentTarget.closest('.modal_container')
+        contain.removeAttribute('modal-type');
+        while (contain.firstChild) { 
+            contain.removeChild(contain.firstChild);
         }
-    });
+    }
 }

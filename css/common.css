@@ -49,8 +49,8 @@ html, body, #wrap, #container, .content {height:100%;}
 #modal_wrap .modal_container .btnSection [class*='btn_'] em {padding:16px 10px; font-size:16px; font-weight:600; display:inline-block;}
 
 /* modal type */
-#modal_wrap .modal_container.type_bottom {border-radius:16px 16px 0 0; right:0; bottom:0; left:0; transform:translateY(100%);}
-#modal_wrap.active .modal_container.type_bottom {transform:translateY(0);}
+#modal_wrap .modal_container[modal-type="type_bottom"] {border-radius:16px 16px 0 0; right:0; bottom:0; left:0; transform:translateY(100%);}
+#modal_wrap.active .modal_container[modal-type="type_bottom"] {transform:translateY(0);}
 
 /* modal content */
 .pss_set_complete {padding:30px 0; font-size:15px; text-align:center;}
