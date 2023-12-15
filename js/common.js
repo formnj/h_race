@@ -33,7 +33,8 @@ function modal(_content,_type){
         url:'../modal/'+_content+'.html',
         method:'get',
         success: function(data){
-            $('#modal_wrap').addClass('active').find('.modal_container').addClass(_type).html(data);
+            $('#modal_wrap').find('.modal_container').html(data);
+            $('#modal_wrap').addClass('active').find('.modal_container').addClass(_type);
         },
         complete: function(data){
         },
