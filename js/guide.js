@@ -44,7 +44,7 @@ $(document).ready(function(){
             note:'',
         },{
             depth:['','본인확인','',''],
-            id:'app-password-001', status:'ing',
+            id:'app-password-001', status:'com',
             note:'',
         },{
             depth:['','간편비밀번호','',''],
