@@ -45,7 +45,7 @@ $(document).ready(function(){
         },{
             depth:['','본인확인','',''],
             id:'app-password-001', status:'com',
-            note:'',
+            note:'약관 동의[modal > app-signin-002], 인증번호 입력[app-signin-003]',
         },{
             depth:['','간편비밀번호','',''],
             id:'app-password-002', status:'com',
