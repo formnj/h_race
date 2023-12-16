@@ -4,6 +4,14 @@ $(document).ready(function(){
             depth:['모달','간편비밃너호 설정 완료','',''],
             id:'app-password-002-1', status:'',
             type:'modal', note:'모달',
+        },{
+            depth:['','약관 동의','',''],
+            id:'app-signin-002', status:'',
+            type:'modal', note:'모달',
+        },{
+            depth:['','인증번호 입력','',''],
+            id:'app-signin-003', status:'',
+            type:'modal', note:'모달',
         },
 
         {
@@ -32,15 +40,15 @@ $(document).ready(function(){
 
         {
             depth:['로그인','간편비밀번호','',''],
-            id:'app-login-001', status:'ing',
+            id:'app-login-001', status:'com',
             note:'',
         },{
             depth:['','본인확인','',''],
-            id:'', status:'',
+            id:'app-password-001', status:'ing',
             note:'',
         },{
             depth:['','간편비밀번호','',''],
-            id:'app-password-002', status:'ing',
+            id:'app-password-002', status:'com',
             note:'[app-login-001] 로그인-간편비밀번호 타이틀 교체 사용, [modal > app-password-002-1] 포함',
         }
     ];

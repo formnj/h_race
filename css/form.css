@@ -1,26 +1,39 @@
-input[type="text"], input[type="email"], input[type="number"], input[type="tel"], input[type="password"], input[type="url"], input[type="search"], input[type="file"], textarea {height:42px; padding:0 15px; background-color:#fff; border:1px solid #e8e5e2; border-radius:0; -webkit-appearance:none; -moz-appearance:none; -ms-appearance:none; -o-appearance:none;}
+input[type="text"], input[type="email"], input[type="number"], input[type="tel"], input[type="password"], input[type="url"], input[type="search"], input[type="file"], textarea {height:43px; padding:0 30px 0 0; background-color:#fff; border:0; border-bottom:1px solid #E1E1E1; border-radius:0; outline:0; -webkit-appearance:none; -moz-appearance:none; -ms-appearance:none; -o-appearance:none;}
 
-select {background-color:#fff; border:0; border-radius:0;}
+select {background-color:#fff; border:0; border-bottom:1px solid #E1E1E1; border-radius:0; outline:0;}
 
 .multi_form {display:flex; flex-wrap:wrap; align-items:center; gap:8px;}
 .multi_form label {flex:1;}
 .multi_form + em {display:none;}
-.multi_form.err + em {margin-top: 5px;color: #ff7200; font-size: 12px; font-family: 'Noto Sans'; line-height: 18px; display:block;}
+.multi_form.err + em {margin-top:12px; color:#ff7200; font-size: 12px; display:block;}
+.multi_form.err + em.type_02 {color:#0070BA;}
+
+label.input input:focus, label.select select:focus {border-color:#222;}
 
 label.input, label.select {position:relative; display:block; flex:1;}
-label.input i {color:#aaa; font-size:16px; font-style:normal; line-height:18px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; position:absolute; top:11px; right:0; left:15px;}/* placeholder */
-label.input input[type='text'], label.input input[type='password'], label.input input[type='number'] {width:100%; font-size:16px; font-family:'MyLotte'; line-height:18px;}
+label.input i {color:#B7B7B7; font-size:18px; font-style:normal; line-height:18px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; position:absolute; top:11px; right:0; left:0;}/* placeholder */
+label.input input[type='text'], label.input input[type='password'], label.input input[type='number'] {width:100%; font-size:16px; line-height:18px;}
 label.input > em {margin-top:5px; color:#ff7200; font-size:12px; font-family:'Noto Sans'; line-height:18px; display:none;}
 label.input.err > em {display:block;}
+label.input.err > em.type_02 {color:#0070BA;}
 label.input * {flex:1 auto;}
 
-label.input button[class*='icon_'] {width:24px; height:24px; font-size:0; background-repeat:no-repeat; position:absolute; top:10px; right:10px; z-index:1; display:none;}
+label.input button[class*='icon_'] {width:24px; height:24px; font-size:0; background-repeat:no-repeat; position:absolute; top:10px; right:0; z-index:1; display:none;}
 label.input button[class*='icon_'] + button[class*='icon_'] {margin-right:34px;}
-label.input button.icon_del {background:url('../images/common/icon_search_del.png') 50% no-repeat; background-size:cover; border:0;}
+label.input button.icon_del:before, label.input button.icon_del:after {width:15px; border-top:2px solid #222; content:''; position:absolute; top:50%; left:5px; display:block;}
+label.input button.icon_del:before {transform:rotate(45deg);}
+label.input button.icon_del:after {transform:rotate(135deg);}
+
 label.input button.icon_pss.active, label.input  button.icon_pss {background-size:cover;}
 label.input button.icon_pss.active {background-image:url('../images/common/icon_pass_view.png');}
 label.input button.icon_pss {background-image:url('../images/common/icon_pass_hide.png'); border:0;}
-.select select{width:100%; height:42px; padding:0 20px 0 10px; border:1px solid #e8e5e2;}
+
+.label_wrap {border-bottom:1px solid #E1E1E1;}
+.label_wrap:has(input:focus) {border-color:#222;}
+.label_wrap input {border-bottom:0;}
+
+.select select {width:100%; height:43px; padding:0 20px 0 0; font-size:18px;}
+.select select option[value=""][disabled] {color:red;}
 
 .label_wrap {position:relative; flex:1; display:flex; gap:10px;}
 
@@ -29,20 +42,34 @@ label.input button.icon_pss {background-image:url('../images/common/icon_pass_hi
 .check_group {margin-top:-20px; margin-left:-20px;}
 .check_group .check {margin-top:20px; margin-left:20px;}
 
-.check {padding-left:20px; line-height:1; position:relative; display:inline-block;}
+.check_group.boolean {margin-top:0; margin-left:0; display:flex; gap:8px;}
+.check_group.boolean .check_square {flex:1;}
+
+.check {padding-left:34px; line-height:1; position:relative; display:inline-block;}
 .check > * {line-height:1.4; vertical-align:middle; display:inline-block;}
-.check input {margin:0 0 0 1px; border:0; position:absolute;}
-.check .label:before, .check .label:after {content:''; position:absolute; display:inline-block;}
+.check input {margin:0 0 0 1px; border:0; position:absolute; z-index:-1;}
+.check .label:before, .check .label:after {content:''; position:absolute; z-index:1; display:inline-block;}
 
 /* radio */
-.check input[type='radio'], .check input[type='radio'] + .label:before {width:16px; height:16px; background-color:#fff; border:1px solid #ccc; border-radius:50%; top:3px; left:0;}
+.check input[type='radio'] + .label:before {width:16px; height:16px; background-color:#fff; border:1px solid #ccc; border-radius:50%; top:3px; left:0;}
 .check input[type='radio']:checked + .label:after {width:10px; height:10px; background-color:#333; border-radius:50%; top:6px; left:3px;}
 
 /* checkbox */
-.check input[type='checkbox'], .check input[type='checkbox'] + .label:before {width:16px; height:16px; background-color:#fff; border:1px solid #ccc; top:3px; left:0;}
-.check input[type='checkbox']:checked + .label:after {width:7px; height:12px; border:2px solid #333; border-top:0; border-left:0; top:3px; left:5px; -webkit-transform:rotate(45deg); transform:rotate(45deg);}
+/* .check input[type='checkbox'] {width:10px; height:10px;} */
+.check input[type='checkbox'] + .label:before {width:24px; height:24px; background-image:url('../images/common/icon_checkbox_01.png'); background-position:0; background-repeat:no-repeat; background-size:cover; top:-2px; left:0;}
+.check input[type='checkbox']:checked + .label:before {background-image:url('../images/common/icon_checkbox_checked_01.png');}
 
-.check input[type='radio'], .check input[type='checkbox'] {margin-left:0;}
+.check.type_02 input[type='checkbox'] + .label:before {width:24px; height:24px; background-image:url('../images/common/icon_checkbox_02.png'); background-position:0; background-repeat:no-repeat; background-size:cover; top:-2px; left:0;}
+.check.type_02 input[type='checkbox']:checked + .label:before {background-image:url('../images/common/icon_checkbox_checked_02.png');}
+
+
+.check_square {padding:13px 20px 11px; background-color:#fff; border:1px solid #E1E1E1; border-radius:8px; text-align:center; position:relative;}
+.check_square:has(input:checked) {border-color:#222;}
+.check_square:has(input:disabled) {background-color:#f0f0f0; border-color:#D7D7D7;}
+.check_square input {position:absolute; top:50%; left:50%; z-index:-1;}
+.check_square em {color:#666; font-size:15px;}
+.check_square input:checked + em {color:#222;}
+.check_square input:disabled + em {color:#B9B9B9;}
 
 .check_ani {position:relative; display:inline-block;}
 .check_ani input {width:42px; height:22px; margin:0 0 0 1px; position:absolute;}
@@ -52,7 +79,7 @@ label.input button.icon_pss {background-image:url('../images/common/icon_pass_hi
 .check_ani em:before {content:''; width:42px; height:22px; background-color:#ccc; border:0; border-radius:60px; position:absolute; top:0; left:0; display:inline-block;}
 .check_ani input[type='checkbox']:checked + em:after {left:22px;}
 
-.form_group > li + li {padding-top:20px;}
-.form_group .form_tit {margin-top:0; margin-bottom:6px; font-size:14px !important; font-family:'Noto Sans'; line-height:20px !important; text-align:left !important;}
+.form_group > li + li {padding-top:50px;}
+.form_group .form_tit {margin-top:0; margin-bottom:13px; font-size:15px;}
 .form_group .form_tit em {color:#888; font-weight:400; display:inline-block;}
 .form_group .form_tit.required:after {margin-left:2px; color:#d60812; font-size:14px; content:'*'; display:inline-block;}

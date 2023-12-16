@@ -12,10 +12,55 @@
 </head>
 <body>
     <div id="wrap">
-        <header></header>
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>타이틀</strong>
+            </p>
+            <button class="btn_cancel">취소</button>
+        </header>
+        <!-- //header -->
         <div id="container">
             <div class="content">
                 <h2>타이틀-edit</h2>
+                <ul class="form_group">
+                    <li>
+                        <p class="form_tit">이름</p>
+                        <label class="input">
+                            <i>Placeholder</i>
+                            <input type="text" onkeyup="input_btn_chk(this);">
+                            <em>error message</em>
+                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                        </label>
+                    </li>
+                    <li>
+                        <div class="multi_form">
+                            <label class="input">
+                                <i>Placeholder</i>
+                                <input type="number" onkeyup="input_btn_chk(this);">
+                                <em>error message</em>
+                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                            </label>
+                            <label class="input">
+                                <i>Placeholder</i>
+                                <input type="text" onkeyup="input_btn_chk(this);">
+                                <em>error message</em>
+                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="check_square">
+                            <input type="radio" name="group">
+                            <em class="label">남자</em>
+                        </label>
+                        <label class="check_square">
+                            <input type="radio" name="group" disabled>
+                            <em class="label">여자</em>
+                        </label>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

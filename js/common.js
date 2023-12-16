@@ -22,8 +22,12 @@ $(document).ready(function(){
         if($(this).hasClass('icon_reset')){
             $('.pass_bullet li').removeClass('active');
             bul_idx = 0;
-        }
-        
+        }        
+    });
+
+    /* placeholder */
+    $('label.input').each(function(){
+        placeholder(this);
     });
 });
 
@@ -34,8 +38,8 @@ const modal = {
             url:'../modal/'+_content+'.html',
             method:'get',
             success: function(data){
-                $('#modal_wrap').find('.modal_container').html(data);
-                $('#modal_wrap').addClass('active').find('.modal_container').attr('modal-type', _type);
+                $('#modal_wrap').find('.modal_container').attr('modal-type', _type).html(data);
+                $('#modal_wrap').addClass('active').find('.modal_container');
             },
             complete: function(data){
             },
@@ -52,4 +56,72 @@ const modal = {
             contain.removeChild(contain.firstChild);
         }
     }
+}
+
+/* Input Form */
+function input_btn_chk(e){ // 버튼보이기
+    var icon_button = e.closest('.input').querySelector('button')
+    if(e.value.length>0){
+        icon_button.style.cssText="display:block;"
+    }else{
+        icon_button.style.cssText="display:none;"
+    }    
+}
+
+function input_btn_fn(e){ // del 클릭시, input 내용 삭제
+    var input = e.closest('.input').querySelector('input');
+    input.value = null;
+    e.style.display="none";
+    e.parentNode.querySelector('i').style.display="block";
+}
+
+function input_btn_chg(){
+    var icon_pss = document.querySelector('button.icon_pss')
+    var input_password = document.querySelector('input.password')
+    icon_pss.classList.toggle('active');
+    if(icon_pss.classList.contains('active')){
+        
+        input_password.setAttribute('type', 'text');
+    }else{
+        input_password.setAttribute('type', 'password');
+    }
+}
+
+/* input focus */
+function placeholder(_target){
+    _target = $(_target);
+    _target.find('i').click(function(){
+        $(this).hide();
+        $(this).siblings('input').focus();
+    });
+    _target.find('input').focus(function(){
+        $(this).siblings('i').hide();
+    });
+    _target.find('input').blur(function(){
+        if($(this).val().length < 1){
+            $(this).siblings('i').show();
+        }
+    });
+}
+
+/* timer */
+function timer(element, seconds){
+    var element, endTime, hours, mins, msLeft, time;
+
+    function updateTimer() {
+        msLeft = endTime - (+new Date);
+        if (msLeft < 0) {
+            console.log('done');
+        } else {
+            time = new Date(msLeft);
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + ('0' + mins).slice(-2) : mins) + ':' + ('0' + time.getUTCSeconds()).slice(-2);
+            setTimeout(updateTimer, time.getUTCMilliseconds());
+        }
+    }
+
+    element = document.querySelector(element);
+    endTime = (+new Date) + 1000 * seconds;
+    updateTimer();
 }
