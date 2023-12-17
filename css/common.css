@@ -127,5 +127,6 @@ h2 {margin-bottom:42px; font-size:21px; line-height:30px; font-weight:600;}
 .time_count {margin-top:16px; font-size:13px;}
 .time_count em {color:#FF0000;}
 
-.telecom_list {font-size:16px; text-align:center;}
+.telecom_list {text-align:center;}
 .telecom_list li + li {margin-top:20px;}
+.telecom_list button {font-size:18px;}
