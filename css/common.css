@@ -74,7 +74,16 @@ h2 {margin-bottom:42px; font-size:21px; line-height:30px; font-weight:600;}
 #modal_wrap .modal_container .modal_content + .btnSection [class*='btn_'] em {padding:16px 10px; font-size:16px; font-weight:600;}
 
 /* modal type */
-#modal_wrap .modal_container[modal-type="type_bottom"] {border-radius:16px 16px 0 0; box-shadow:0 -4px 10px rgba(0,0,0,0.1); right:0; bottom:0; left:0;}
+#modal_wrap .modal_container[modal-type="type_bottom"] {border-radius:16px 16px 0 0; box-shadow:0 -4px 10px rgba(0,0,0,0.1); right:0; bottom:0; left:0; animation-duration:0.25s; animation-name:show_up;}
+
+@keyframes show_up {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
 
 /* modal header */
 #modal_wrap .modal_header {padding:0 20px; background-color:#fff; position:absolute; top:0; right:0; left:0;}
