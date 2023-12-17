@@ -1,0 +1,30 @@
+<div class="modal_content">
+    <ul class="telecom_list">
+        <li><button onclick="modal.close(event);">SKT</button></li>
+        <li><button onclick="modal.close(event);">KT</button></li>
+        <li><button onclick="modal.close(event);">LGU+</button></li>
+        <li><button onclick="modal.close(event);">SKT 알뜰폰</button></li>
+        <li><button onclick="modal.close(event);">KT 알뜰폰</button></li>
+        <li><button onclick="modal.close(event);">LGU+ 알뜰폰</button></li>
+    </ul>
+</div>
+<div class="btnSection">
+    <button class="btn_confirm" onclick="modal.close(event);">
+        <em>확인</em>
+    </button>
+</div>
+
+<script>
+    /* 퍼블 테스트 용 기능 */
+    document.querySelector('.btn_confirm').addEventListener('click', function(){
+        document.querySelector('.icon_reset').click();
+    });
+    /* //퍼블 테스트 용 기능 */
+
+    /* 선택 통신사 전달 후 placeholder 숨김 */
+    $('.telecom_list').delegate('button', 'click', function(){
+        $('#telecom i').hide();
+        $('#telecom input').val($(this).text());
+    });
+    /* //선택 통신사 전달 후 placeholder 숨김 */
+</script>

@@ -5,6 +5,10 @@ $(document).ready(function(){
             id:'app-password-002-1', status:'',
             type:'modal', note:'모달',
         },{
+            depth:['','통신사 선택','',''],
+            id:'app-signin-001-1', status:'',
+            type:'modal', note:'모달',
+        },{
             depth:['','약관 동의','',''],
             id:'app-signin-002', status:'',
             type:'modal', note:'모달',
