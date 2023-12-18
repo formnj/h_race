@@ -23,10 +23,15 @@ $(document).ready(function(){
         },
 
         {
-            depth:['회원가입','본인인증','기본정보입력',''],
-            id:'app-signin-001', status:'ing',
+            depth:['회원가입','간편인증 시작하기','',''],
+            id:'app-signin-000', status:'ing',
             note:'',
-            sDate:'2023-12-18', eDate:''
+            sDate:'2023-12-18', eDate:'2023-12-18'
+        },{
+            depth:['','본인인증','기본정보입력',''],
+            id:'app-signin-001', status:'com',
+            note:'',
+            sDate:'2023-12-18', eDate:'2023-12-18'
         },
         {
             depth:['','휴대폰본인인증','',''],
