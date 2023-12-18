@@ -23,10 +23,10 @@ $(document).ready(function(){
         },
 
         {
-            depth:['회원가입','본인인증','',''],
-            id:'', status:'',
+            depth:['회원가입','본인인증','기본정보입력',''],
+            id:'app-signin-001', status:'ing',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2023-12-18', eDate:''
         },
         {
             depth:['','휴대폰본인인증','',''],
