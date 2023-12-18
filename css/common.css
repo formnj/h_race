@@ -48,6 +48,7 @@ h2 {margin-bottom:42px; font-size:21px; line-height:30px; font-weight:600;}
 [class*="btn_"] em {padding:0 5px; display:inline-block;}
 
 /* button color */
+.btn_cancel {color:#fff; background-color:#C3CCD2;}
 .btn_confirm {color:#fff; background-color:#2ECCC8;}
 
 /* button size */

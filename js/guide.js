@@ -23,8 +23,8 @@ $(document).ready(function(){
         },
 
         {
-            depth:['회원가입','간편인증 시작하기','',''],
-            id:'app-signin-000', status:'ing',
+            depth:['회원가입','메인','',''],
+            id:'app-signin-000', status:'com',
             note:'',
             sDate:'2023-12-18', eDate:'2023-12-18'
         },{
@@ -32,20 +32,14 @@ $(document).ready(function(){
             id:'app-signin-001', status:'com',
             note:'',
             sDate:'2023-12-18', eDate:'2023-12-18'
-        },
-        {
-            depth:['','휴대폰본인인증','',''],
-            id:'', status:'',
-            note:'',
-            sDate:'', eDate:''
         },{
             depth:['','간편비밀번호설정','',''],
-            id:'', status:'',
+            id:'app-signin-004', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2023-12-18', eDate:'2023-12-18'
         },{
             depth:['','생체인증사용설정','',''],
-            id:'', status:'',
+            id:'app-signin-005', status:'',
             note:'',
             sDate:'', eDate:''
         },
