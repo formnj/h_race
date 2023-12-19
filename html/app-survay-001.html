@@ -22,98 +22,51 @@
         <!-- //header -->
         <div id="container">
             <div class="content">
-                <h2>본인확인</h2>
-                <ul class="form_group">
-                    <li>
-                        <p class="form_tit">이름</p>
-                        <label class="input">
-                            <i>가입자 본인 이름 입력</i>
-                            <input type="text" onkeyup="input_btn_chk(this);">
-                            <em>error message</em>
-                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
-                        </label>
-                    </li>
-                    <li>
-                        <p class="form_tit">생년월일</p>
-                        <label class="input err">
-                            <i>123456</i>
-                            <input type="number" onkeyup="input_btn_chk(this);">
-                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
-                            <em class="type_02">* 만 19세 이상만 가입 가능합니다.</em>
-                        </label>
-                    </li>
-                    <li>
-                        <p class="form_tit">주민등록번호</p>
-                        <div class="multi_form">
-                            <label class="input">
-                                <i>123456</i>
-                                <input type="number" onkeyup="input_btn_chk(this);">
-                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
-                            </label>
-                            <span>-</span>
-                            <label class="input ac">
-                                <i>●●●●●●●</i>
-                                <input type="password" onkeyup="input_btn_chk(this);">
-                                <button type="button" class="icon_pss" onclick="input_btn_chg()" style="display: block;">text</button> 
-                            </label>
-                        </div>
-                        <em>Error Text</em>
-                    </li>
-                    <li>
-                        <p class="form_tit">성별</p>
-                        <div class="check_group boolean">
-                            <label class="check_square">
-                                <input type="radio" name="group">
-                                <em class="label">남자</em>
-                            </label>
-                            <label class="check_square">
-                                <input type="radio" name="group">
-                                <em class="label">여자</em>
-                            </label>
-                        </div>
-                    </li>
-                    <li>
-                        <p class="form_tit">휴대폰 번호</p>
-                        <label class="input select" id="telecom"><!-- 모달에서 선택한 통신사 가져오기 위한 id="telecom" 삽입 -->
-                            <i onclick="modal.open('app-signin-001-1', 'type_bottom');">통신사 선택</i>
-                            <input class="text" type="text" readonly onclick="modal.open('app-signin-001-1', 'type_bottom');">
-                            <em>error message</em>
-                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
-                        </label>
-                        <div class="label_wrap mt15">
-                            <label class="input">
-                                <i>하이픈(-) 없이 입력</i>
-                                <input class="text" type="text" onkeyup="input_btn_chk(this);">
-                                <em>error message</em>
-                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
-                            </label>
-                            <button class="btn_text" onclick="modal.open('app-signin-003', 'type_bottom');"><em>인증번호 전송</em></button>
-                        </div>
-                    </li>
-                    <li>
-                        <p class="form_tit">E-mail</p>
-                        <div class="multi_form err">
-                            <label class="input">
-                                <i></i>
-                                <input type="text" onkeyup="input_btn_chk(this);">
-                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
-                            </label>
-                            <span>@</span>
-                            <label class="input">
-                                <i></i>
-                                <input type="text" onkeyup="input_btn_chk(this);">
-                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
-                            </label>
-                        </div>
-                        <em class="type_02">* 만 19세 이상만 가입 가능합니다.</em>
-                    </li>
-                </ul>
+                <div class="survay_wrap type_txt">
+                    <h4>투자 성향 설문을 시작합니다.</h4>
+                    <dl>
+                        <dt>투자 성향이란?</dt>
+                        <dd>[금융소비자 보호법에 관한 법률]에 따라 투자자 보호를 위해 투자성향 진단 후 상품 거래가 가능해요.</dd>
+                    </dl>
+
+                    <h4>투자 성향 5단계</h4>
+                    <dl>
+                        <dt>공격 투자형</dt>
+                        <dd>높은 수준의 투자 수익을 추구하며, 자신의 높은 손실 위험을 적극 수용</dd>
+
+                        <dt>적극 투자형</dt>
+                        <dd>투자원금의 보전보다 위험을 간매하며 높은 수준의 투자수익을 추구</dd>
+
+                        <dt>위험 중립형</dt>
+                        <dd>투자에 상응하는 투자위험이 있음을 충분히 인지</dd>
+
+                        <dt>안정추구형</dt>
+                        <dd>원금 손실 위험을 최소화하고, 배당 수준의 안정적 투자를 목표로 함</dd>
+
+                        <dt>안정형</dt>
+                        <dd>투자원금의 손실이 발생하는 것을 원치 않으며, 안전한 투자를 목표로 함</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>투자자보호 절차 강화</dt>
+                        <dd>투자자성향진단은 '금융소비자 보호에 관한 법률'(이하 '금소법')에 근거하여 고객의 투자자정보를 파악하여 그에 적합한 투자 권유를 해드리기 위한 기초 자료로 활용됩니다. 따라서 최대한 고객님의 성향에 맞거나 가장 가까운 항목을 선택해 주시기 바랍니다.</dd>
+                    </dl>
+
+                    <div class="notice_box">
+                        <strong class="tit">유의사항</strong>
+                        <ul>
+                            <li>* 본 설문은 금소법 제18조 및 금소법 시행령 제12조 제1항에 따라 고객이 적정성원칙 대상 상품을 거래하고자 하는 경우에는 반드시 작성해야 합니다.</li>
+                            <li>* 별도의 통지가 없는 경우 투자자 성향 확인 결과는 24개월간 유지됩니다.</li>
+                            <li>* 투자권유 희망여부 및 투자자 정보 제공여부는 향후 분쟁 또는 소송이 발생하는 경우 고객님의 권리 구제에 불리하게 사용될 수 있으므로 신중하게 작성할 필요가 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>                
             </div>
-            <!-- fixed button section -->
+
             <div class="btnSection">
-                <button class="btn_confirm" onclick="modal.open('app-signin-002', 'type_bottom');"><em>확인</em></button>
+                <button class="btn_cancel"><em>다음에 하기</em></button>
+                <a href="./app-survay-002.html" class="btn_confirm"><em>내 투자성향 설문 시작하기</em></a>
             </div>
-            <!-- //fixed button section -->
         </div>
     </div>
 

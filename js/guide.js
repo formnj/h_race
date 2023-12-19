@@ -132,14 +132,14 @@ $(document).ready(function(){
 
         {
             depth:['투자성향','투자성향 조사','투자성향 설문안내',''],
-            id:'app-survay-001', status:'ing',
+            id:'app-survay-001', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2023-12-19', eDate:'2023-12-19'
         },{
             depth:['','','투자성향 설문시작','설문1)투자희망/정보제공'],
-            id:'app-survay-002', status:'',
+            id:'app-survay-002', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2023-12-19', eDate:'2023-12-19'
         },{
             depth:['','','','설문2)설문항목답변(9가지)'],
             id:'app-survay-003', status:'',
