@@ -47,10 +47,9 @@ $(document).ready(function(){
             id:'app-signin-005', status:'com',
             note:'',
             sDate:'2023-12-18', eDate:'2023-12-19'
-        },
-        {
-            depth:['','DID발급/가입완료','',''],
-            id:'', status:'',
+        },{
+            depth:['','가입완료','',''],
+            id:'app-signin-006', status:'ing',
             note:'',
             sDate:'2023-12-19', eDate:''
         },

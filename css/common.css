@@ -152,4 +152,7 @@ h2 {margin-bottom:42px; font-size:21px; line-height:30px; font-weight:600;}
 .telecom_list li + li {margin-top:20px;}
 .telecom_list button {font-size:18px;}
 
-.join_main p {margin-top:86px; font-size:28px; font-weight:300; line-height:43px;}
+.join_main p:not(.explain) {margin-top:86px; font-size:28px; font-weight:300; line-height:43px;}
+.join_main p strong {margin-bottom:34px; font-size:24px; font-weight:500; line-height:36px; display:block;}
+.join_main p span {font-size:14px; line-height:20px; display:block;}
+.join_main .join_complate {width:82px; height:82px; margin:0 auto; font-size:0; background:url('../images/common/icon_join_complate.png') 0 0 no-repeat; background-size:cover; display:block;}
