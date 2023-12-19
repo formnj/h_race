@@ -132,7 +132,7 @@ $(document).ready(function(){
 
         {
             depth:['투자성향','투자성향 조사','투자성향 설문안내',''],
-            id:'app-survay-001', status:'',
+            id:'app-survay-001', status:'ing',
             note:'',
             sDate:'', eDate:''
         },{
