@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-@import url('./css/fonts.css');
-@import url('./css/reset.css');
-@import url('./css/form.css');
+@import url('../css/fonts.css');
+@import url('../css/reset.css');
+@import url('../css/form.css');
 
 html:has(.except_layout), body:has(.except_layout), #wrap:has(.except_layout), #container:has(.except_layout), .content:has(.except_layout) {height:100%;}
 
