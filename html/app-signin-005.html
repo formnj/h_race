@@ -19,27 +19,20 @@
                         <h2>생체 인증을 설정하세요
                             <p>안전한 앱사용을 위한 절차입니다.</p>
                         </h2>
-
-                        <div class="pass_bullet">
-                            <span>숫자 6자리를 입력해주세요.</span>
-                            <ul>
-                                <li><span>1</span></li>
-                                <li><span>2</span></li>
-                                <li><span>3</span></li>
-                                <li><span>4</span></li>
-                                <li><span>5</span></li>
-                                <li><span>6</span></li>
-                            </ul>
-                        </div>
                     </section>
 
                     <section>
+                        <span class="bio_mark">Bio</span>                        
+                    </section>
+
+                    <section>
+                        <p class="explain">본인확인 목적으로 기기에 등록된 모든<br/> 지문 정보를 이용해 로그인을 진행하며,<br/> 생체 정보를 서버로 전송/저장하지 않습니다.</p>
                     </section>
                 </div>
             </div>
             <div class="btnSection">
                 <button class="btn_cancel"><em>건너뛰기</em></button>
-                <button class="btn_confirm"><em>확인</em></button>
+                <button onclick="modal.open('app-signin-005-1', 'type_alert');" class="btn_confirm"><em>생체인증 사용동의</em></button>
             </div>
         </div>
     </div>

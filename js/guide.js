@@ -20,6 +20,11 @@ $(document).ready(function(){
             id:'app-signin-003', status:'com',
             type:'modal', note:'모달',
             sDate:'', eDate:'2023-12-15'
+        },{
+            depth:['','생체인증','',''],
+            id:'app-signin-005-1', status:'com',
+            type:'modal', note:'모달',
+            sDate:'', eDate:'2023-12-19'
         },
 
         {
@@ -39,15 +44,15 @@ $(document).ready(function(){
             sDate:'2023-12-18', eDate:'2023-12-18'
         },{
             depth:['','생체인증사용설정','',''],
-            id:'app-signin-005', status:'',
+            id:'app-signin-005', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2023-12-18', eDate:'2023-12-19'
         },
         {
             depth:['','DID발급/가입완료','',''],
             id:'', status:'',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2023-12-19', eDate:''
         },
 
         {

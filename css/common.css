@@ -15,8 +15,9 @@ header .btn_cancel {padding:3px 10px 4px; font-size:13px; background-color:#eee;
 header + #container {padding-top:66px;}
 #container:has(> .btnSection) {padding-bottom:101px;}
 .content {padding:0 20px;}
-.content + .btnSection {position:fixed; right:0; bottom:0; left:0; display:flex; flex-wrap:wrap;}
+.content + .btnSection {position:fixed; right:0; bottom:0; left:0;}
 .content + .btnSection [class*='btn_'] {flex:1;}
+.content + .btnSection .btn_cancel {width:36%; flex:0 auto;}
 .content + .btnSection [class*='btn_'] em {padding:16px 10px; font-size:16px; font-weight:600;}
 
 h2 {margin-bottom:42px; font-size:21px; line-height:30px; font-weight:600;}
@@ -44,6 +45,7 @@ h2 {margin-bottom:42px; font-size:21px; line-height:30px; font-weight:600;}
 .tab_content > div.current {display:block;}
 
 /* button */
+.btnSection {display:flex; flex-wrap:wrap;}
 [class*="btn_"] {display:inline-flex; align-items:center; justify-content:center;}
 [class*="btn_"] em {padding:0 5px; display:inline-block;}
 
@@ -54,6 +56,8 @@ h2 {margin-bottom:42px; font-size:21px; line-height:30px; font-weight:600;}
 /* button size */
 .btn_big em {padding:16px 10px; font-size:16px; font-weight:600;}
 .btn_text em {font-size:16px;}
+
+.btn_text {font-size:15px; font-weight:500; text-decoration:underline;}
 
 /* toast */
 .toast {height:50px; line-height:48px; background-color:#fff; border:1px solid #d4d4d4; border-radius:50px; box-shadow:0 4px 6px rgba(0,0,0,0.3); opacity:0; position:fixed; bottom:0px; left:50%; z-index:1; display:inline-block; transform:translateX(-50%); transition:all 0.35s;}
@@ -70,12 +74,21 @@ h2 {margin-bottom:42px; font-size:21px; line-height:30px; font-weight:600;}
 #modal_wrap.active {display:block;}
 #modal_wrap .modal_container {padding:15px 20px; position:absolute; background-color:#fff; overflow:hidden;}
 #modal_wrap .modal_container:has(> .btnSection) {padding-bottom:81px;}
-#modal_wrap .modal_container .modal_content + .btnSection {margin:0 -20px 0; position:absolute; right:0; bottom:0; left:0; display:flex;}
+#modal_wrap .modal_container .modal_content + .btnSection {margin:0 -20px 0; position:absolute; right:0; bottom:0; left:0;}
 #modal_wrap .modal_container .modal_content + .btnSection [class*='btn_'] {flex:1;}
 #modal_wrap .modal_container .modal_content + .btnSection [class*='btn_'] em {padding:16px 10px; font-size:16px; font-weight:600;}
 
 /* modal type */
 #modal_wrap .modal_container[modal-type="type_bottom"] {border-radius:16px 16px 0 0; box-shadow:0 -4px 10px rgba(0,0,0,0.1); right:0; bottom:0; left:0; animation-duration:0.25s; animation-name:show_up;}
+#modal_wrap .modal_container[modal-type="type_alert"] {padding:30px 20px 20px; border-radius:16px; box-shadow:0 0 8px 0 rgba(0,0,0,0.25); top:50%; right:45px; left:45px; transform:translateY(-50%);}
+#modal_wrap .modal_container[modal-type="type_alert"]:has(.bio_alert) {padding:0; background-color:transparent; border-radius:0; box-shadow:none;}
+#modal_wrap .modal_container[modal-type="type_alert"] .bio_alert {padding:30px 20px 20px; background-color:#fff; border-radius:16px; box-shadow:0 0 8px 0 rgba(0,0,0,0.25); text-align:center;}
+#modal_wrap .modal_container[modal-type="type_alert"] .bio_alert .title {font-size:18px; font-weight:700;}
+#modal_wrap .modal_container[modal-type="type_alert"] .bio_alert p {margin-top:28px; margin-bottom:34px; color:#444;}
+#modal_wrap .modal_container[modal-type="type_alert"] .bio_alert p strong {margin-top:14px; font-size:15px; font-weight:600; display:block;}
+
+#modal_wrap .modal_container[modal-type="type_alert"] .bio_alert + .bio_mark {width:87px; height:87px; margin:30px auto 0; background-color:rgba(0,0,0,0.5); border:0; display:block;}
+#modal_wrap .modal_container[modal-type="type_alert"] .bio_alert + .bio_mark:before {width:40px; height:40px; background-position:-70px -50px;}
 
 @keyframes show_up {
     from {
@@ -91,6 +104,7 @@ h2 {margin-bottom:42px; font-size:21px; line-height:30px; font-weight:600;}
 #modal_wrap .modal_header:after {clear:both; content:''; display:block;}
 #modal_wrap .modal_container[modal-type="type_bottom"] .modal_header {padding-top:32px; padding-bottom:7px;}
 #modal_wrap .modal_header + .modal_content {padding-top:70px;}
+#modal_wrap .modal_header + .modal_content
 #modal_wrap .modal_header h3 {font-size:18px; float:left;}
 #modal_wrap .modal_header .btn_close {width:30px; height:30px; font-size:0; background-image:url('../images/common/icon_close.png'); background-position:50%; background-repeat:no-repeat; background-size:cover; float:right; display:block;}
 
@@ -104,7 +118,12 @@ h2 {margin-bottom:42px; font-size:21px; line-height:30px; font-weight:600;}
 
 /* 간편비밀번호, 생체인증, DID발급 레이아웃 */
 .except_layout {height:100%; text-align:center; display:flex; flex-direction:column; justify-content:space-between;}
-.except_layout h2 {margin-top:96px; margin-bottom:54px; font-size:24px; font-weight:500; line-height:36px;}
+.except_layout h2 {margin-top:96px; margin-bottom:0; font-size:24px; font-weight:500; line-height:36px;}
+.except_layout h2 p {margin-top:34px; font-size:14px; font-weight:400; line-height:20px;}
+.except_layout .explain {color:#666; font-size:15px; line-height:24px;}
+
+.bio_mark {width:112px; height:112px; font-size:0; border:1px solid #E4E4E4; border-radius:50%; box-shadow:-2px -2px 5px 0 rgba(0,0,0,0.08); position:relative; display:inline-block}
+.bio_mark:before {width:65px; height:65px; background-image:url('../images/common/icon_finger.png'); background-position:0 0; background-repeat:no-repeat; background-size:110px auto; content:''; position:absolute; top:50%; left:50%; display:block; transform:translate(-50%, -50%);}
 
 /* 숫자 키패드 */
 .sec_keypad {margin:0 -20px; overflow:hidden;}
@@ -115,6 +134,7 @@ h2 {margin-bottom:42px; font-size:21px; line-height:30px; font-weight:600;}
 .sec_keypad button.icon_reset:before {width:30px; height:30px; background-position:0 0;}
 .sec_keypad button.icon_del:before {width:30px; height:30px; background-position:-40px 0;}
 
+.pass_bullet {margin-top:52px;}
 .pass_bullet ul {margin-top:26px; display:flex; justify-content:center; gap:15px;}
 .pass_bullet ul span {width:18px; height:18px; font-size:0; background-color: #EAECF7; border-radius:50%; display:block; transition:background-color 0.25s;}
 .pass_bullet .active span {background-color:#868cb0;}
