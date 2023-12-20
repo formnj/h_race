@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>투자성향 진단</strong>
+            </p>
+            <button class="btn_cancel">처음으로</button>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content">
+                <div class="survay_wrap">
+                    <dl class="result">
+                        <dt>투자자 정보</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <span>투자정보 제공 여부</span>
+                                    <p>2023년 10월 20일</p>
+                                </li>
+                                <li>
+                                    <span>투자 희망 여부</span>
+                                    <p>1234567890123</p>
+                                </li>
+                                <li>
+                                    <span>등록일</span>
+                                    <p>홍길동</p>
+                                </li>
+                                <li>
+                                    <span>만기일</span>
+                                    <p>조각투자상품</p>
+                                </li>
+                            </ul>
+                        </dd>
+
+                        <dt>설문 입력 내용</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <span>투자 목적</span>
+                                    <p>자산늘리기</p>
+                                </li>
+                                <li>
+                                    <span>연소득</span>
+                                    <p>5천만원 이하</p>
+                                </li>
+                                <li>
+                                    <span>금융자산준비중</span>
+                                    <p>30~50% 미만</p>
+                                </li>
+                                <li>
+                                    <span>투자경험</span>
+                                    <p>혼합형펀드, 일반회사채 등</p>
+                                </li>
+                                <li>
+                                    <span>상품이해</span>
+                                    <p>금융투자상품에 대한 특징과 위험 조금 이해함</p>
+                                </li>
+                                <li>
+                                    <span>손실감수</span>
+                                    <p>투자원금은 보전되어야 한다</p>
+                                </li>
+                                <li>
+                                    <span>투자 예상 기간</span>
+                                    <p>1~2년 미만</p>
+                                </li>
+                                <li>
+                                    <span>투자 목표 성향</span>
+                                    <p>안정추구형</p>
+                                </li>
+                                <li>
+                                    <span>금융상품 유형별 기준</span>
+                                    <p>보장성상품40%<br/> 투자성상품10%<br/> 대출성상품20% <br/>기타 30%</p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="btnSection">
+                <a href="#none" class="btn_cancel"><em>다시하기</em></a>
+                <button class="btn_confirm" onclick="modal.open('app-survay-006', 'type_full');"><em>제출하기</em></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div id="modal_wrap">
+        <div class="modal_container"></div>
+    </div>
+    <!-- //modal -->
+</body>
+</html>

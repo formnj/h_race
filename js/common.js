@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 /* modal */
 const modal = {
-    open: (_content,_type) => {    
+    open: (_content,_type) => {
         $.ajax({
             url:'../modal/'+_content+'.html',
             method:'get',

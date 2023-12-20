@@ -147,9 +147,9 @@ $(document).ready(function(){
             sDate:'2023-12-20', eDate:'2023-12-20'
         },{
             depth:['','','투자성향 제출하기','투자성향 설문 확인서 확인/제출'],
-            id:'app-survay-004', status:'',
+            id:'app-survay-004', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2023-12-20', eDate:'2023-12-20'
         },{
             depth:['','','','확인완료 내역 본인확인(간편비밀번호or지문인증)'],
             id:'app-survay-005', status:'',
@@ -157,9 +157,9 @@ $(document).ready(function(){
             sDate:'', eDate:''
         },{
             depth:['','','','투자성상품거래확인서(설문결과서)'],
-            id:'app-survay-006', status:'',
-            note:'',
-            sDate:'', eDate:''
+            id:'app-survay-006', status:'ing',
+            type:'modal', note:'',
+            sDate:'2023-12-20', eDate:'2023-12-21'
         }
         
         // {
@@ -193,7 +193,7 @@ $(document).ready(function(){
         +   '<td class="'+page_arry[i].status+'">'+page_arry[i].depth[1]+'</td>'
         +   '<td class="'+page_arry[i].status+'">'+page_arry[i].depth[2]+'</td>'
         +   '<td class="'+page_arry[i].status+'">'+page_arry[i].depth[3]+'</td>'
-        +   '<td class="ac '+page_arry[i].status+'"><a href="./'+path+'/'+page_arry[i].id+'.html" target="_blank">'+page_arry[i].id+'</a></td>'
+        +   '<td class="ac '+page_arry[i].status+'"><a href="./'+path+'/'+page_arry[i].id+'.html" target="_blank" class="'+page_arry[i].type+'">'+page_arry[i].id+'</a></td>'
         +   '<td class="'+page_arry[i].status+'">'+page_arry[i].note+'</td>'
         +   '<td class="ac '+page_arry[i].status+'">'+page_arry[i].sDate+'</td>'
         +   '<td class="ac '+page_arry[i].status+'">'+page_arry[i].eDate+'</td>'
