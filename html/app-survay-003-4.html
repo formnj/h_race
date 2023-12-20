@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>투자성향 진단</strong>
+            </p>
+            <button class="btn_cancel">처음으로</button>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content">
+                <div class="survay_wrap type_check">
+                    <!-- progress -->
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function(){
+                            /* 스텝에 따른 progress bar 넓이값 조정 */
+                            var step        = Number(document.querySelector('.survay_step dt strong').textContent),
+                                total_step  = Number(document.querySelector('.survay_step dt em').textContent);
+
+                            document.querySelector('.progress_wrap p em').style.width = (step/total_step)*100+'%';
+                            /* //스텝에 따른 progress bar 넓이값 조정 */
+                        });
+                    </script>
+                    <dl class="survay_step">
+                        <dt>
+                            설문항목 <strong>04</strong> / <em>10</em>
+                        </dt>
+                        <dd class="progress_wrap">
+                            <p><em style="width:10%;"></em></p>
+                        </dd>
+                    </dl>
+                    <!-- //progress -->
+
+                    <h4>투자 경험이 있는 금융상품을 모두 선택해 주세요.</h4>
+                    
+                    <ul class="survay_list">
+                        <li>
+                            <label class="check_square al">
+                                <input type="checkbox" name="group">
+                                <em class="label">예금, CMA, MMF, RP 등</em>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check_square al">
+                                <input type="checkbox" name="group">
+                                <em class="label">채권형 펀드, 금융채 등</em>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check_square al">
+                                <input type="checkbox" name="group">
+                                <em class="label">혼합형 펀드, 일반회사채 등</em>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check_square al">
+                                <input type="checkbox" name="group">
+                                <em class="label">주식, 주식형펀드, 고위험회사채 등</em>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check_square al">
+                                <input type="checkbox" name="group">
+                                <em class="label">ELW, 선물옵션, 파생형펀드 주식신용거래 등</em>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="btnSection">
+                <a href="#none" class="btn_cancel"><em>이전</em></a>
+                <a href="./app-survay-003-5.html" class="btn_confirm"><em>다음</em></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div id="modal_wrap">
+        <div class="modal_container"></div>
+    </div>
+    <!-- //modal -->
+</body>
+</html>

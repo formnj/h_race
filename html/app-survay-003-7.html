@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>투자성향 진단</strong>
+            </p>
+            <button class="btn_cancel">처음으로</button>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content">
+                <div class="survay_wrap type_check">
+                    <!-- progress -->
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function(){
+                            /* 스텝에 따른 progress bar 넓이값 조정 */
+                            var step        = Number(document.querySelector('.survay_step dt strong').textContent),
+                                total_step  = Number(document.querySelector('.survay_step dt em').textContent);
+
+                            document.querySelector('.progress_wrap p em').style.width = (step/total_step)*100+'%';
+                            /* //스텝에 따른 progress bar 넓이값 조정 */
+                        });
+                    </script>
+                    <dl class="survay_step">
+                        <dt>
+                            설문항목 <strong>07</strong> / <em>10</em>
+                        </dt>
+                        <dd class="progress_wrap">
+                            <p><em style="width:10%;"></em></p>
+                        </dd>
+                    </dl>
+                    <!-- //progress -->
+
+                    <h4>예상하는 ST갤럭시아 투자 기간은 어느 정도인가요?</h4>
+                    
+                    <ul class="survay_list">
+                        <li>
+                            <label class="check_square al">
+                                <input type="radio" name="group">
+                                <em class="label">1년 미만</em>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check_square al">
+                                <input type="radio" name="group">
+                                <em class="label">1~2년 미만</em>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check_square al">
+                                <input type="radio" name="group">
+                                <em class="label">2~3년 미만</em>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check_square al">
+                                <input type="radio" name="group">
+                                <em class="label">3~4년 미만</em>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check_square al">
+                                <input type="radio" name="group">
+                                <em class="label">5년 미만</em>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="btnSection">
+                <a href="#none" class="btn_cancel"><em>이전</em></a>
+                <a href="./app-survay-003-8.html" class="btn_confirm"><em>다음</em></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div id="modal_wrap">
+        <div class="modal_container"></div>
+    </div>
+    <!-- //modal -->
+</body>
+</html>

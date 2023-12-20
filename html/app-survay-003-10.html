@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>투자성향 진단</strong>
+            </p>
+            <button class="btn_cancel">처음으로</button>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content">
+                <div class="survay_wrap type_check">
+                    <!-- progress -->
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function(){
+                            /* 스텝에 따른 progress bar 넓이값 조정 */
+                            var step        = Number(document.querySelector('.survay_step dt strong').textContent),
+                                total_step  = Number(document.querySelector('.survay_step dt em').textContent);
+
+                            document.querySelector('.progress_wrap p em').style.width = (step/total_step)*100+'%';
+                            /* //스텝에 따른 progress bar 넓이값 조정 */
+                        });
+                    </script>
+                    <dl class="survay_step">
+                        <dt>
+                            설문항목 <strong>10</strong> / <em>10</em>
+                        </dt>
+                        <dd class="progress_wrap">
+                            <p><em style="width:10%;"></em></p>
+                        </dd>
+                    </dl>
+                    <!-- //progress -->
+
+                    <h4>각 상품별 총합계를 100%로 기재해 주세요.</h4>
+
+                    <p class="total_ratio">
+                        <span>현재 총합</span>
+                        <strong>0</strong>
+                        <span>%</span>
+                    </p>
+                    
+                    <dl class="survay_list">
+                        <dt>
+                            <strong>보장성 상품</strong>
+                            <p>생명보험, 손해보험, 신협공제 등</p>
+                        </dt>
+                        <dd>
+                            <label class="input select" id="select01">
+                                <i onclick="modal.open('select_sample', 'type_bottom');">통신사 선택</i>
+                                <input class="text" type="text" readonly onclick="modal.open('select_sample', 'type_bottom');">
+                                <em>error message</em>
+                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                            </label>
+                        </dd>
+
+                        <dt>
+                            <strong>투자성 상품</strong>
+                            <p>주식, 펀드, 파생상품, 신탁, 투자알림 등</p>
+                        </dt>
+                        <dd>
+                            <label class="input select" id="select01">
+                                <i onclick="modal.open('select_sample', 'type_bottom');">통신사 선택</i>
+                                <input class="text" type="text" readonly onclick="modal.open('select_sample', 'type_bottom');">
+                                <em>error message</em>
+                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                            </label>
+                        </dd>
+
+                        <dt>
+                            <strong>대출 상품</strong>
+                            <p>은행대출, 신용카드 등</p>
+                        </dt>
+                        <dd>
+                            <label class="input select" id="select01">
+                                <i onclick="modal.open('select_sample', 'type_bottom');">통신사 선택</i>
+                                <input class="text" type="text" readonly onclick="modal.open('select_sample', 'type_bottom');">
+                                <em>error message</em>
+                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                            </label>
+                        </dd>
+
+                        <dt>
+                            <strong>기타</strong>
+                            <p>예적금 등</p>
+                        </dt>
+                        <dd>
+                            <label class="input select" id="select01">
+                                <i onclick="modal.open('select_sample', 'type_bottom');">통신사 선택</i>
+                                <input class="text" type="text" readonly onclick="modal.open('select_sample', 'type_bottom');">
+                                <em>error message</em>
+                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                            </label>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="btnSection">
+                <a href="#none" class="btn_cancel"><em>이전</em></a>
+                <a href="./app-survay-003-10.html" class="btn_confirm"><em>다음</em></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div id="modal_wrap">
+        <div class="modal_container"></div>
+    </div>
+    <!-- //modal -->
+</body>
+</html>

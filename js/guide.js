@@ -142,9 +142,9 @@ $(document).ready(function(){
             sDate:'2023-12-19', eDate:'2023-12-19'
         },{
             depth:['','','','설문2)설문항목답변(9가지)'],
-            id:'app-survay-003', status:'',
-            note:'',
-            sDate:'', eDate:''
+            id:'app-survay-003-1', status:'com',
+            note:'app-survay-003-1 ~ 10 (스텝별 페이지 추가)',
+            sDate:'2023-12-20', eDate:'2023-12-20'
         },{
             depth:['','','투자성향 제출하기','투자성향 설문 확인서 확인/제출'],
             id:'app-survay-004', status:'',
