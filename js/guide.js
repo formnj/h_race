@@ -1,29 +1,29 @@
 $(document).ready(function(){
     var page_arry = [
         {
-            depth:['모달','간편비밃너호 설정 완료','',''],
+            depth:['공통','간편비밃너호 설정 완료','',''],
             id:'app-password-002-1', status:'com',
-            type:'modal', note:'모달',
+            type:'modal', note:'',
             sDate:'', eDate:'2023-12-15'
         },{
             depth:['','통신사 선택','',''],
             id:'app-signin-001-1', status:'com',
-            type:'modal', note:'모달',
+            type:'modal', note:'',
             sDate:'', eDate:'2023-12-15'
         },{
             depth:['','약관 동의','',''],
             id:'app-signin-002', status:'com',
-            type:'modal', note:'모달',
+            type:'modal', note:'',
             sDate:'', eDate:'2023-12-15'
         },{
             depth:['','인증번호 입력','',''],
             id:'app-signin-003', status:'com',
-            type:'modal', note:'모달',
+            type:'modal', note:'',
             sDate:'', eDate:'2023-12-15'
         },{
             depth:['','생체인증','',''],
             id:'app-signin-005-1', status:'com',
-            type:'modal', note:'모달',
+            type:'modal', note:'',
             sDate:'', eDate:'2023-12-19'
         },
 
@@ -158,7 +158,7 @@ $(document).ready(function(){
         },{
             depth:['','','','투자성상품거래확인서(설문결과서)'],
             id:'app-survay-006', status:'ing',
-            type:'modal', note:'',
+            type:'modal', note:'app-survay-004 [제출하기] 클릭 확인',
             sDate:'2023-12-20', eDate:'2023-12-21'
         }
         
