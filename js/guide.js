@@ -25,6 +25,11 @@ $(document).ready(function(){
             id:'app-signin-005-1', status:'com',
             type:'modal', note:'',
             sDate:'', eDate:'2023-12-19'
+        },{
+            depth:['','미디어엑세스 허용','',''],
+            id:'media_access', status:'',
+            type:'modal', note:'',
+            sDate:'', eDate:''
         },
 
         {
@@ -157,10 +162,45 @@ $(document).ready(function(){
             sDate:'', eDate:''
         },{
             depth:['','','','투자성상품거래확인서(설문결과서)'],
-            id:'app-survay-006', status:'ing',
+            id:'app-survay-006', status:'com',
             type:'modal', note:'app-survay-004 [제출하기] 클릭 확인',
             sDate:'2023-12-20', eDate:'2023-12-21'
-        }
+        },{
+            depth:['','투자자격변경신청','투자성향결과',''],
+            id:'app-InvtQulf-001', status:'',
+            type:'', note:'(설문 통해 자동 설정)',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','자격유형 선택'],
+            id:'app-InvtQulf-002', status:'',
+            type:'', note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','소득적격투자자'],
+            id:'app-InvtQulf-002-1', status:'',
+            type:'', note:'상세내용',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','소득적격투자자-자격요건'],
+            id:'app-InvtQulf-002-2', status:'',
+            type:'modal', note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','필요서류제출'],
+            id:'app-InvtQulf-003', status:'자격요건 유형별 전체 들어있음',
+            type:'', note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','필요서류제출-확인'],
+            id:'app-InvtQulf-003-1', status:'',
+            type:'modal', note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','투자자격 변경 신청 완료'],
+            id:'app-InvtQulf-004', status:'자격요건 유형별 전체 들어있음',
+            type:'', note:'',
+            sDate:'', eDate:''
+        },
         
         // {
         //     depth:['','','',''],

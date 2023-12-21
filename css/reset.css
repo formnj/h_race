@@ -14,3 +14,5 @@ input[type="password"]::-ms-reveal,
 input[type="password"]::-ms-clear {display: none;}
 
 em {font-style:normal;}
+
+img {max-width:100%;}
