@@ -42,6 +42,19 @@ const modal = {
                 $('#modal_wrap').addClass('active').find('.modal_container');
             },
             complete: function(data){
+                /* body fixed */
+                const body = document.querySelector('body');
+                if (!body.getAttribute('scrollY')) {
+                    const pageY = window.pageYOffset;
+
+                    body.setAttribute('scrollY', pageY.toString());
+
+                    body.style.overflow = 'hidden';
+                    body.style.position = 'fixed';
+                    body.style.left = '0px';
+                    body.style.right = '0px';
+                    body.style.top = `-${pageY}px`;
+                }
             },
             error: function(){
                 alert('404 Error!');
@@ -55,6 +68,9 @@ const modal = {
         while (contain.firstChild) { 
             contain.removeChild(contain.firstChild);
         }
+
+        /* body remove fixed */
+        $('body').removeAttr('scrolly style');
     }
 }
 
