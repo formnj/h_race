@@ -23,31 +23,89 @@
         <div id="container">
             <div class="content">
                 <div class="invest_type">
-                    <span>홍길동님의 투자성향</span>
-                    <div class="level_wrap">
-                        <ul>
-                            <li>
-                                <span>공격<br/>1</span>
-                            </li>
-                            <li>
-                                <span>적극<br/>2</span>
-                            </li>
-                            <li>
-                                <span>위험중립<br/>3</span>
-                            </li>
-                            <li>
-                                <span>안정추구<br/>4</span>
-                            </li>
-                            <li>
-                                <span>안정<br/>5</span>
-                            </li>
-                        </ul>
-                        <p>
-                            <em></em>
-                        </p>
-                        <strong>위험중립형</strong>
+                    <div class="gray_box">
+                        <span>홍길동님의 투자성향</span>
+                        <script>
+                            $('document').ready(function(){
+                                /* 투자성향에 따른 위치 값 */
+                                var type_leng = 5,
+                                    current = $('.level_wrap .current').index()+1,
+                                    center = $('.level_wrap .current').width()*0.5,
+                                    left = (100/type_leng)*(current);
+                                $('.level_wrap p em').css({
+                                    left:'calc('+left+'% - '+center+'px)'
+                                });
+                                /* //투자성향에 따른 위치 값 */
+                            });
+                        </script>
+                        <div class="level_wrap">
+                            <ul>
+                                <li>
+                                    <span>공격<br/>1</span>
+                                </li>
+                                <li>
+                                    <span>적극<br/>2</span>
+                                </li>
+                                <li class="current">
+                                    <span>위험중립<br/>3</span>
+                                </li>
+                                <li>
+                                    <span>안정추구<br/>4</span>
+                                </li>
+                                <li>
+                                    <span>안정<br/>5</span>
+                                </li>
+                            </ul>
+                            <div>
+                                <p>
+                                    <em></em>
+                                </p>
+                            </div>
+                            <strong>위험중립형</strong>
+                        </div>
                     </div>
-                    <
+                    <div class="btnSection mt15">
+                        <button class="btn_mid btn_gray_r"><em>설문 다시하기</em></button>
+                        <button class="btn_mid btn_gray_r"><em>내 답변 보기</em></button>
+                    </div>
+                </div>
+
+                <h4>투자 성향 설문을 시작합니다.</h4>
+                <dl class="explain">
+                    <dt>투자 성향이란?</dt>
+                    <dd>[금융소비자 보호법에 관한 법률]에 따라 투자자 보호를 위해 투자성향 진단 후 상품 거래가 가능해요.</dd>
+                </dl>
+
+                <h4>투자 성향 5단계</h4>
+                <dl class="explain">
+                    <dt>공격 투자형</dt>
+                    <dd>높은 수준의 투자 수익을 추구하며, 자신의 높은 손실 위험을 적극 수용</dd>
+
+                    <dt>적극 투자형</dt>
+                    <dd>투자원금의 보전보다 위험을 간매하며 높은 수준의 투자수익을 추구</dd>
+
+                    <dt>위험 중립형</dt>
+                    <dd>투자에 상응하는 투자위험이 있음을 충분히 인지</dd>
+
+                    <dt>안정추구형</dt>
+                    <dd>원금 손실 위험을 최소화하고, 배당 수준의 안정적 투자를 목표로 함</dd>
+
+                    <dt>안정형</dt>
+                    <dd>투자원금의 손실이 발생하는 것을 원치 않으며, 안전한 투자를 목표로 함</dd>
+                </dl>
+
+                <dl class="explain">
+                    <dt>투자자보호 절차 강화</dt>
+                    <dd>투자자성향진단은 '금융소비자 보호에 관한 법률'(이하 '금소법')에 근거하여 고객의 투자자정보를 파악하여 그에 적합한 투자 권유를 해드리기 위한 기초 자료로 활용됩니다. 따라서 최대한 고객님의 성향에 맞거나 가장 가까운 항목을 선택해 주시기 바랍니다.</dd>
+                </dl>
+
+                <div class="notice_box">
+                    <strong class="tit">유의사항</strong>
+                    <ul>
+                        <li>* 본 설문은 금소법 제18조 및 금소법 시행령 제12조 제1항에 따라 고객이 적정성원칙 대상 상품을 거래하고자 하는 경우에는 반드시 작성해야 합니다.</li>
+                        <li>* 별도의 통지가 없는 경우 투자자 성향 확인 결과는 24개월간 유지됩니다.</li>
+                        <li>* 투자권유 희망여부 및 투자자 정보 제공여부는 향후 분쟁 또는 소송이 발생하는 경우 고객님의 권리 구제에 불리하게 사용될 수 있으므로 신중하게 작성할 필요가 있습니다.</li>
+                    </ul>
                 </div>
             </div>
         </div>

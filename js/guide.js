@@ -167,7 +167,7 @@ $(document).ready(function(){
             sDate:'2023-12-20', eDate:'2023-12-21'
         },{
             depth:['','투자자격변경신청','투자성향결과',''],
-            id:'app-InvtQulf-001', status:'ing',
+            id:'app-InvtQulf-001', status:'com',
             type:'', note:'(설문 통해 자동 설정)',
             sDate:'', eDate:''
         },{
