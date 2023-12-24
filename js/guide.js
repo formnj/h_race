@@ -169,7 +169,7 @@ $(document).ready(function(){
             depth:['','투자자격변경신청','투자성향결과',''],
             id:'app-InvtQulf-001', status:'com',
             type:'', note:'(설문 통해 자동 설정)',
-            sDate:'', eDate:''
+            sDate:'2023-12-22', eDate:'2023-12-23'
         },{
             depth:['','','','자격유형 선택'],
             id:'app-InvtQulf-002', status:'',
