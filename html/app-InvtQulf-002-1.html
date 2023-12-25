@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>소득적격 투자자</strong>
+            </p>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content">
+                <div class="explain_box">
+                    <p>아래의 투자자격 요건을 확인하시고, 6가지 중 고객님께 맞는 유형을 선택해 주세요.</p>
+                </div>
+
+                <div class="table_wrap mt25">
+                    <div class="inner">
+                        <table>
+                            <colgroup>
+                                <col style="width:32%;" />
+                                <col />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>자격유형</th>
+                                    <th>투자자격요건</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>근로소득</th>
+                                    <td>연간 근로소득이 1억원을 초과하는 경우</td>
+                                </tr>
+                                <tr>
+                                    <th>사업소득</th>
+                                    <td>연간 사업소득이 1억원을 초과하는 경우</td>
+                                </tr>
+                                <tr>
+                                    <th>근록사업소득</th>
+                                    <td>근로/사업소득의 합이 1억원을 초과하는 경우</td>
+                                </tr>
+                                <tr>
+                                    <th>이자배당소득</th>
+                                    <td>이자배당소득이 2천만원을 초과하는 경우</td>
+                                </tr>
+                                <tr>
+                                    <th>온라인투자경험</th>
+                                    <td>최근 2년간 온라인 소액투자 중개(사모 제외) 5회 이상 투자 및 누적투자금액이 1천5백만원 이상인 경우</td>
+                                </tr>
+                                <tr>
+                                    <th>금융전문가</th>
+                                    <td>금융전문자격 시험에 합격하여 금융투자전문 인력으로 협회에 3년이상 등록되어 있는 경우</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 모양 수정 필요 -->
+                <label class="input select" id="select01">
+                    <i>선택해주세요.</i>
+                    <input class="text" type="text" readonly onclick="modal.open('select_sample', 'type_bottom');">
+                    <em>error message</em>
+                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                </label>
+                <!-- //모양 수정 필요 -->
+
+                <div class="notice_box">
+                    <ul>
+                        <li>자격요건을 확인 후 적합한 자격 유형을 선택해 주세요.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="btnSection">
+                <a href="#none" class="btn_confirm"><em>확인</em></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div id="modal_wrap">
+        <div class="modal_container"></div>
+    </div>
+    <!-- //modal -->
+</body>
+</html>

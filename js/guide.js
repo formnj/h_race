@@ -168,18 +168,18 @@ $(document).ready(function(){
         },{
             depth:['','투자자격변경신청','투자성향결과',''],
             id:'app-InvtQulf-001', status:'com',
-            type:'', note:'(설문 통해 자동 설정)',
+            type:'', note:'[설문 다시하기] 클릭 시, 투자자격변경신청 [app-InvtQulf-002] 팝업 노출',
             sDate:'2023-12-22', eDate:'2023-12-23'
         },{
             depth:['','','','자격유형 선택'],
-            id:'app-InvtQulf-002', status:'',
+            id:'app-InvtQulf-002', status:'com',
             type:'', note:'',
-            sDate:'', eDate:''
+            sDate:'2023-12-25', eDate:'2023-12-25'
         },{
             depth:['','','','소득적격투자자'],
-            id:'app-InvtQulf-002-1', status:'',
+            id:'app-InvtQulf-002-1', status:'ing',
             type:'', note:'상세내용',
-            sDate:'', eDate:''
+            sDate:'2023-12-25', eDate:''
         },{
             depth:['','','','소득적격투자자-자격요건'],
             id:'app-InvtQulf-002-2', status:'',
