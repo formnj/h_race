@@ -177,29 +177,29 @@ $(document).ready(function(){
             sDate:'2023-12-25', eDate:'2023-12-25'
         },{
             depth:['','','','소득적격투자자'],
-            id:'app-InvtQulf-002-1', status:'ing',
+            id:'app-InvtQulf-002-1', status:'com',
             type:'', note:'상세내용',
             sDate:'2023-12-25', eDate:''
         },{
-            depth:['','','','소득적격투자자-자격요건'],
-            id:'app-InvtQulf-002-2', status:'',
+            depth:['','','','자격요건 선택'],
+            id:'app-InvtQulf-002-1-1', status:'com',
             type:'modal', note:'',
-            sDate:'', eDate:''
+            sDate:'2023-12-25', eDate:'2023-12-25'
         },{
             depth:['','','','필요서류제출'],
-            id:'app-InvtQulf-003', status:'',
-            type:'', note:'자격요건 유형별 전체 들어있음',
-            sDate:'', eDate:''
+            id:'app-InvtQulf-003', status:'com',
+            type:'', note:'자격요건 유형별 전체 들어있음, 파일업로드 추가 script 포함',
+            sDate:'2023-12-25', eDate:'2023-12-26'
         },{
             depth:['','','','필요서류제출-확인'],
-            id:'app-InvtQulf-003-1', status:'',
+            id:'app-InvtQulf-003-1', status:'com',
             type:'modal', note:'',
-            sDate:'', eDate:''
+            sDate:'2023-12-25', eDate:'2023-12-25'
         },{
             depth:['','','','투자자격 변경 신청 완료'],
-            id:'app-InvtQulf-004', status:'',
+            id:'app-InvtQulf-004', status:'ing',
             type:'', note:'',
-            sDate:'', eDate:''
+            sDate:'2023-12-26', eDate:''
         },
         
         // {

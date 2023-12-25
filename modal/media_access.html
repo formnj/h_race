@@ -1,12 +1,13 @@
-<div class="modal_header">
-    <button class="btn_close" onclick="modal.close(event);">close</button>
-</div>
-<div class="modal_content ac">
-    <p class="txt_cont">투자자격 변경을 신청합니다.<br/> 서류를 제출하시겠습니까?</p>
+<div class="modal_content media_access">
+    <p>기기의 사진 및 미디어에<br/> 엑세스하도록 허용하시겠습니까?</p>
 </div>
 <div class="btnSection">
-    <button class="btn_cancel"><em>취소</em></button>
-    <button class="btn_confirm"><em>확인</em></button>
+    <button class="btn_cancel" onclick="modal.close(event);">
+        <em>허용안함</em>
+    </button>
+    <button class="btn_confirm" onclick="modal.close(event);">
+        <em>허용</em>
+    </button>
 </div>
 
 <script>

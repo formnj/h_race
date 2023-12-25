@@ -1,0 +1,26 @@
+<div class="modal_header">
+    <h3>자격요건 선택</h3>
+    <button class="btn_close" onclick="modal.close(event);">close</button>
+</div>
+<div class="modal_content">
+    <ul class="option_list al">
+        <li><button onclick="modal.close(event);">근로 소득</button></li>
+        <li><button onclick="modal.close(event);">사업 소득</button></li>
+        <li><button onclick="modal.close(event);">근로/사업 소득</button></li>
+        <li><button onclick="modal.close(event);">이자,배당 소득</button></li>
+        <li><button onclick="modal.close(event);">온라인투자경험</button></li>
+        <li><button onclick="modal.close(event);">금융전문가</button></li>
+    </ul>
+</div>
+<div class="btnSection">
+    <button class="btn_confirm" onclick="modal.close(event);">
+        <em>확인</em>
+    </button>
+</div>
+
+<script>
+    $('.option_list > li').delegate('*', 'click', function(){
+        $('#select01 i').hide();
+        $('#select01 input').val($(this).text());
+    });
+</script>

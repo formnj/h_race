@@ -26,7 +26,7 @@ $(document).ready(function(){
     });
 
     /* placeholder */
-    $('label.input').each(function(){
+    $('label[class*="input"]').each(function(){
         placeholder(this);
     });
 });
@@ -118,6 +118,9 @@ function placeholder(_target){
             $(this).siblings('i').show();
         }
     });
+    if(_target.find('input').val().length > 1){
+        _target.find('input').siblings('i').hide();
+    }
 }
 
 /* timer */

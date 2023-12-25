@@ -8,33 +8,36 @@ select {background-color:#fff; border:0; border-bottom:1px solid #E1E1E1; border
 .multi_form.err + em {margin-top:12px; color:#ff7200; font-size: 12px; display:block;}
 .multi_form.err + em.type_02 {color:#0070BA;}
 
-label.input input:focus, label.select select:focus {border-color:#222;}
+label[class*='input'] input:focus, label.select select:focus {border-color:#222;}
 
-label.input, label.select {position:relative; display:block; flex:1;}
+label[class*='input'], label.select {position:relative; display:block; flex:1;}
 label.select:after {width:24px; height:24px; background-image:url('../images/common/icon_sprit.png'); background-position:-120px 0; background-repeat:no-repeat; background-size:250px auto; content:''; position:absolute; top:10px; right:3px; display:block;}
 label.select:has(input:disabled):after {background-position:-120px -60px;}
 label.select input:disabled {border-bottom:1px dashed #E1E1E1;}
-label.input i {color:#B7B7B7; font-size:18px; font-style:normal; line-height:18px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; position:absolute; top:11px; right:0; left:0;}/* placeholder */
-label.input input[type='text'], label.input input[type='password'], label.input input[type='number'] {width:100%; font-size:16px; line-height:18px;}
-label.input > em {margin-top:5px; color:#ff7200; font-size:12px; font-family:'Noto Sans'; line-height:18px; display:none;}
-label.input.err > em {display:block;}
-label.input.err > em.type_02 {color:#0070BA;}
-label.input * {flex:1 auto;}
+label[class*='input'] i {color:#B7B7B7; font-size:18px; font-style:normal; line-height:18px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; position:absolute; top:11px; right:0; left:0;}/* placeholder */
+label[class*='input'] input[type='text'], label[class*='input'] input[type='password'], label[class*='input'] input[type='number'] {width:100%; font-size:16px; line-height:18px;}
+label[class*='input'] > em {margin-top:5px; color:#ff7200; font-size:12px; font-family:'Noto Sans'; line-height:18px; display:none;}
+label[class*='input'].err > em {display:block;}
+label[class*='input'].err > em.type_02 {color:#0070BA;}
+label[class*='input'] * {flex:1 auto;}
 
-label.input button[class*='icon_'] {width:24px; height:24px; font-size:0; background-repeat:no-repeat; position:absolute; top:10px; right:0; z-index:1; display:none;}
-label.input button[class*='icon_'] + button[class*='icon_'] {margin-right:34px;}
-label.input button.icon_del:before, label.input button.icon_del:after {width:15px; border-top:2px solid #222; content:''; position:absolute; top:50%; left:5px; display:block;}
-label.input button.icon_del:before {transform:rotate(45deg);}
-label.input button.icon_del:after {transform:rotate(135deg);}
+label[class*='input'] button[class*='icon_'] {width:24px; height:24px; font-size:0; background-repeat:no-repeat; position:absolute; top:10px; right:0; z-index:1; display:none;}
+label[class*='input'] button[class*='icon_'] + button[class*='icon_'] {margin-right:34px;}
+label[class*='input'] button.icon_del:before, label[class*='input'] button.icon_del:after {width:15px; border-top:2px solid #222; content:''; position:absolute; top:50%; left:5px; display:block;}
+label[class*='input'] button.icon_del:before {transform:rotate(45deg);}
+label[class*='input'] button.icon_del:after {transform:rotate(135deg);}
 
-label.input button.icon_pss.active, label.input  button.icon_pss {background-size:cover;}
-label.input button.icon_pss.active {background-image:url('../images/common/icon_pass_view.png');}
-label.input button.icon_pss {background-image:url('../images/common/icon_pass_hide.png'); border:0;}
+label[class*='input'] button.icon_pss.active, label[class*='input']  button.icon_pss {background-size:cover;}
+label[class*='input'] button.icon_pss.active {background-image:url('../images/common/icon_pass_view.png');}
+label[class*='input'] button.icon_pss {background-image:url('../images/common/icon_pass_hide.png'); border:0;}
 
 .combine_input {border:1px solid #C2C4CC; border-radius:8px; display:flex; align-items:center; justify-content: center;}
 .combine_input .input {display:inline-block; flex:0;}
 .combine_input .input .icon_del {display:none !important;}
 .combine_input input {border:0;}
+
+label.input_square i {color:#666; font-size:14px; top:13px; left:20px;}
+label.input_square input {padding:0 20px; border:1px solid #D7D8DD; border-radius:8px;}
 
 .label_wrap {border-bottom:1px solid #E1E1E1;}
 .label_wrap:has(input:focus) {border-color:#222;}

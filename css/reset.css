@@ -16,3 +16,5 @@ input[type="password"]::-ms-clear {display: none;}
 em {font-style:normal;}
 
 img {max-width:100%;}
+
+a {word-break:break-all;}
