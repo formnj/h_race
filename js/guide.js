@@ -197,9 +197,9 @@ $(document).ready(function(){
             sDate:'2023-12-25', eDate:'2023-12-25'
         },{
             depth:['','','','투자자격 변경 신청 완료'],
-            id:'app-InvtQulf-004', status:'ing',
+            id:'app-InvtQulf-004', status:'com',
             type:'', note:'',
-            sDate:'2023-12-26', eDate:''
+            sDate:'2023-12-26', eDate:'2023-12-26'
         },
         
         // {

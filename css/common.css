@@ -6,6 +6,8 @@
 
 html:has(.except_layout), body:has(.except_layout), #wrap:has(.except_layout), #container:has(.except_layout), .content:has(.except_layout) {height:100%;}
 
+.content:has(.except_layout) {overflow:auto;}
+
 header {padding:13px 20px; background-color:#fff; position:fixed; top:0; right:0; left:0; z-index:100; display:flex; align-items:center; justify-content:space-between;}
 header p {display:flex; align-items:center;}
 header p strong {font-size:18px; font-weight:600;}
@@ -184,6 +186,13 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 .join_main p span {font-size:14px; line-height:20px; display:block;}
 .join_main .join_complate {width:82px; height:82px; margin:0 auto; font-size:0; background:url('../images/common/icon_join_complate.png') 0 0 no-repeat; background-size:cover; display:block;}
 
+.invest_change_fin p {margin-bottom:32px; font-size:24px; font-weight:500; line-height:36px;}
+.invest_change_fin .info {margin:35px 0; padding:20px 25px; border:1px solid #EAECF7; border-right:0; border-left:0;}
+.invest_change_fin dl {text-align:left; display:flex;}
+.invest_change_fin dl + dl {margin-top:20px;}
+.invest_change_fin dt {width:102px; font-weight:300;}
+.invest_change_fin dd {font-weight:500;}
+
 dl.explain {word-break:keep-all;}
 dl.explain + h4 {margin-top:30px;}
 dl.explain + dl.explain:before {margin-top:35px; padding-bottom:30px; border-top:1px solid #EAECF7; content:''; display:block;}
@@ -268,7 +277,7 @@ em.err {margin-top:12px; color:#F1213A; font-size:12px; display:block;}
 .invest_type_select .check_square input:checked + .label:before {background-position:-30px -60px;}
 .invest_type_select .check_square span {width:55px; font-size:13px; letter-spacing:-0.02em; text-align:left;}
 
-.table_wrap table {text-align:left;}
+.table_wrap table {min-width:100%; text-align:left;}
 .table_wrap table thead {background-color:#E8E8E8;}
 .table_wrap table thead th {padding:12px; font-weight:500; text-align:center;}
 .table_wrap table th, .table_wrap table td {padding:15px; font-size:13px; font-weight:400;}
