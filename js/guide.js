@@ -103,7 +103,7 @@ $(document).ready(function(){
             id:'app-account-004-0', status:'com',
             type:'modal', note:'',
             sDate:'2023-12-26', eDate:'2023-12-26'
-        },,{
+        },{
             depth:['','','계좌개설 시작','개설시 약관동의'],
             id:'app-account-004', status:'com',
             note:'',
