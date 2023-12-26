@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>증권계좌 개설하기</strong>
+            </p>
+            <button class="btn_cancel">취소</button>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content">
+                <div class="account_main">
+                    <dl class="title">
+                        <dt>조각투자전용계좌 보유 현황</dt>
+                        <dd>회원님은 현재 신한금융투자<br/> 조각투자전용계좌를 미보유 중입니다.<br/> 회원님의 조각투자전용계좌 개설을 진행해 주세요.</dd>
+                    </dl>
+                    <div class="border_box">
+                        <dl>
+                            <dt>이름</dt>
+                            <dd>홍길동</dd>
+                        </dl>
+                        <dl>
+                            <dt>생년월일</dt>
+                            <dd>861225</dd>
+                        </dl>
+                        <dl>
+                            <dt>휴대폰번호</dt>
+                            <dd>010-1234-5678</dd>
+                        </dl>
+                        <dl>
+                            <dt>계좌보유여부</dt>
+                            <dd class="txt_blue">미보유</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btnSection">
+                <button class="btn_confirm" onclick="modal.open('app-account-004-0','type_full');"><em>1원 이체(계좌 본인인증) 진행하기 </em></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div id="modal_wrap">
+        <div class="modal_container"></div>
+    </div>
+    <!-- //modal -->
+</body>
+</html>

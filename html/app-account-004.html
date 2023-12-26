@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>증권계좌 개설하기</strong>
+            </p>
+            <button class="btn_cancel">취소</button>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content">
+                <h2>계좌 만들 때 필요한 동의에<br/> 모두 체크해 주세요.</h2>
+
+                <div class="notice_box type_02">
+                    <ul>
+                        <li>대한민국 거주자 만19세 이상만 개설 가능</li>
+                        <li>외국인(국내 체류 포함)은 계좌개설 불가</li>
+                    </ul>
+                </div>
+
+                <script>
+                $(document).ready(function(){
+                    /* 약관 전체 동의 */
+                    $('.policy_check_list').delegate('.check input', 'change', function(){
+                        console.log($(this).parent().parent()[0].nodeName);
+                        if($(this).parent().parent()[0].nodeName == 'DT'){
+                            if($(this).is(':checked')){
+                                $(this).closest('.policy_check_list').find('.check input').prop('checked', true);
+                            } else {
+                                console.log('else')
+                                $(this).closest('.policy_check_list').find('.check input').prop('checked', false);
+                            }
+                        } else {
+                            var all_leng = $(this).closest('ul').find('li').length,
+                                chk_leng = $(this).closest('ul').find('.check input:checked').length;
+                            if(all_leng == chk_leng){
+                                $(this).closest('.policy_check_list').find('dt .check input').prop('checked', true);
+                            } else {
+                                $(this).closest('.policy_check_list').find('dt .check input').prop('checked', false);
+                            }
+                        }        
+                    });
+                });
+                </script>
+
+                <dl class="policy_check_list mt35">
+                    <dt>
+                        <label class="check type_02">
+                            <input type="checkbox" name="group">
+                            <em class="label">모두 동의</em>
+                        </label>
+                    </dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <div>
+                                    <label class="check">
+                                        <input type="checkbox" name="group">
+                                        <em class="label">서비스 이용약관 동의</em>
+                                    </label>
+                                    <button>약관보기</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label class="check">
+                                        <input type="checkbox" name="group">
+                                        <em class="label">(필수) 통신사 본인확인서비스 이용약관</em>
+                                    </label>
+                                    <button>약관보기</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label class="check">
+                                        <input type="checkbox" name="group">
+                                        <em class="label">(필수) 통신사 개인정보 수집 및 이용동의</em>
+                                    </label>
+                                    <button>약관보기</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label class="check">
+                                        <input type="checkbox" name="group">
+                                        <em class="label">(필수) 통신사 고유식별정보 처리 등의관</em>
+                                    </label>
+                                    <button>약관보기</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+
+            <div class="btnSection">
+                <button class="btn_confirm"><em>다음</em></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div id="modal_wrap">
+        <div class="modal_container"></div>
+    </div>
+    <!-- //modal -->
+</body>
+</html>

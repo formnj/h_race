@@ -26,7 +26,7 @@ h2 {margin-bottom:42px; font-size:21px; line-height:30px; font-weight:600;}
 h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 
 /* color */
-.txt_blue {color:#1D9ADD;}
+.txt_blue {color:#1D9ADD !important;}
 
 /* align */
 .al {text-align:left !important;}
@@ -166,13 +166,13 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 .pass_bullet .active span {background-color:#868cb0;}
 .pass_bullet a {margin-top:16px; text-decoration:underline; display:inline-block;}
 
-.policy_check_list dt {margin-bottom:27px;}
-.policy_check_list li {display:flex; justify-content:space-between;}
+.policy_check_list dt {margin-bottom:27px; font-size:16px; font-weight:600;}
+.policy_check_list li > div {display:flex; justify-content:space-between;}
 .policy_check_list li + li {margin-top:20px;}
-.policy_check_list li button {width:24px; height:24px; font-size:0; background-image:url('../images/common/icon_arrow.png'); background-position:50%; background-repeat:no-repeat; background-size:cover; display:block;}
+.policy_check_list li > div button {width:24px; height:24px; font-size:0; background-image:url('../images/common/icon_arrow.png'); background-position:50%; background-repeat:no-repeat; background-size:cover; display:block;}
 
-.policy_check_list.type_square li {padding:15px 10px 13px; background-color:#fff; border:1px solid #D7D8DD; border-radius:8px;}
-.policy_check_list.type_square li:has(input[type='checkbox']:checked) {border-color:#2ECCC8;}
+.policy_check_list.type_square li > div {padding:15px 10px 13px; background-color:#fff; border:1px solid #D7D8DD; border-radius:8px;}
+.policy_check_list.type_square li > div:has(input[type='checkbox']:checked) {border-color:#2ECCC8;}
 
 .time_count {margin-top:16px; font-size:13px;}
 .time_count em {color:#FF0000;}
@@ -187,13 +187,9 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 .join_main .join_complate {width:82px; height:82px; margin:0 auto; font-size:0; background:url('../images/common/icon_join_complate.png') 0 0 no-repeat; background-size:cover; display:block;}
 
 .invest_change_fin p {margin-bottom:32px; font-size:24px; font-weight:500; line-height:36px;}
-.invest_change_fin .info {margin:35px 0; padding:20px 25px; border:1px solid #EAECF7; border-right:0; border-left:0;}
-.invest_change_fin dl {text-align:left; display:flex;}
-.invest_change_fin dl + dl {margin-top:20px;}
-.invest_change_fin dt {width:102px; font-weight:300;}
-.invest_change_fin dd {font-weight:500;}
+.invest_change_fin .info_table {margin:35px 0;}
 
-dl.explain {word-break:keep-all;}
+dl.explain {line-height:20px; line-height:1.53em; word-break:keep-all;}
 dl.explain + h4 {margin-top:30px;}
 dl.explain + dl.explain:before {margin-top:35px; padding-bottom:30px; border-top:1px solid #EAECF7; content:''; display:block;}
 dl.explain dt {font-weight:600;}
@@ -224,8 +220,9 @@ dl.explain dd + dt {margin-top:20px;}
 .total_ratio strong + span {font-weight:700;}
 
 .notice_box {margin-top:10px; font-size:12px;}
+.notice_box.type_02 {font-size:13px; font-weight:500;}
 .notice_box .tit {font-weight:600;}
-.notice_box li {padding-left:10px; line-height:18px; position:relative;}
+.notice_box li {padding-left:10px; line-height:1.5em; position:relative;}
 .notice_box li:before {content:'*'; position:absolute; top:2px; left:0;}
 
 em.err {margin-top:12px; color:#F1213A; font-size:12px; display:block;}
@@ -285,6 +282,18 @@ em.err {margin-top:12px; color:#F1213A; font-size:12px; display:block;}
 .table_wrap tbody {color:#444; border-top:1px solid #EAECF7;}
 .table_wrap tbody th {background-color:#F8F8F8;}
 
+.info_table {padding:20px 25px; border:1px solid #EAECF7; border-right:0; border-left:0;}
+.info_table dl {text-align:left; display:flex;}
+.info_table dl + dl {margin-top:20px;}
+.info_table dt {min-width:102px; font-weight:300;}
+.info_table dd {font-weight:500;}
+
+.border_box {padding:30px; border:1px solid #E1E1E1; border-radius:16px;}
+.border_box dl {text-align:left; display:flex;}
+.border_box dl + dl {margin-top:20px;}
+.border_box dt  {min-width:75px; font-weight:300;}
+.border_box dd {margin-left:40px; color:#444; font-weight:500;}
+
 .qualification_wrap .title {margin-bottom:22px; padding:18px 20px 14px; font-size:16px; line-height:20px; background-color:#F3F3F3; border-radius:8px;}
 .qualification_wrap .title strong {font-weight:700;}
 .qualification_wrap .online_income_search {padding:16px 20px 20px 20px; background-color:#F8F8F8; border:1px solid #EAECF7; border-right:0; border-left:0;}
@@ -305,3 +314,16 @@ em.err {margin-top:12px; color:#F1213A; font-size:12px; display:block;}
 .upfile_list label[class*='input'] i {color:#222; font-size:14px; top:16px;}
 .upfile_list div .btn_add {width:20px; height:20px; font-size:0; background-image:url('../images/common/icon_add.png'); background-position:0 50%; background-repeat:no-repeat; background-size:20px auto; display:block;}
 .upfile_list div label + .btn_del {width:30px; height:30px; font-size:0; background-image:url('../images/common/icon_del.png'); background-position:0 50%; background-repeat:no-repeat; background-size:30px auto; display:block;}
+
+/* 계좌개설 */
+.account_main {padding-top:42px;}
+.account_main dl.title {word-break:keep-all; text-align:center;}
+.account_main dl.title dt {font-size:27px; font-weight:300;}
+.account_main dl.title dd {margin-top:23px; color:#666; font-size:18px; line-height:28px;}
+.account_main .certification {margin-top:70px; padding:53px 20px 0; color:#666; font-size:16px; line-height:30px; border-top:1px solid #EEEEEE; text-align:center;}
+.account_main .certification ul {display:inline-block;}
+.account_main li {padding-left:90px; text-align:left; position:relative;}
+.account_main li:before {width:55px; height:55px; content:''; position:absolute; top:50%; left:0; display:inline-block; transform:translateY(-50%); background-color:#f0f0f0;}
+.account_main li + li {margin-top:45px;}
+.account_main ul strong {color:#222;}
+.account_main .border_box {margin-top:67px;}

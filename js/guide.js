@@ -85,24 +85,29 @@ $(document).ready(function(){
         
         {
             depth:['계좌관리','증권계좌개설','증권계좌 개설안내',''],
-            id:'app-account-001', status:'',
-            note:'',
-            sDate:'', eDate:''
+            id:'app-account-001', status:'ing',
+            note:'이미지 55X55 삽입 필요',
+            sDate:'2023-12-26', eDate:''
         },{
             depth:['','','계좌보유여부확인','계좌보유'],
-            id:'app-account-002', status:'',
+            id:'app-account-002', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2023-12-26', eDate:'2023-12-26'
         },{
             depth:['','','','계좌미보유'],
             id:'app-account-003', status:'',
-            note:'',
+            note:'계좌 보유/미보유 동일 디자인',
             sDate:'', eDate:''
         },{
+            depth:['','','계좌개설 시작','개설시 유의사항'],
+            id:'app-account-004-0', status:'com',
+            type:'modal', note:'',
+            sDate:'2023-12-26', eDate:'2023-12-26'
+        },,{
             depth:['','','계좌개설 시작','개설시 약관동의'],
-            id:'app-account-004', status:'',
+            id:'app-account-004', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2023-12-26', eDate:'2023-12-26'
         },{
             depth:['','','','기본정보입력'],
             id:'app-account-005', status:'',

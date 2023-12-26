@@ -58,7 +58,7 @@ label.input_square input {padding:0 20px; border:1px solid #D7D8DD; border-radiu
 
 .check {padding-left:34px; line-height:1; position:relative; display:inline-block;}
 .check > * {line-height:1.4; vertical-align:middle; display:inline-block;}
-.check input {margin:0 0 0 1px; border:0; position:absolute; z-index:-1;}
+.check input {margin:0 0 0 1px; border:0; position:absolute; opacity:0; z-index:-1;}
 .check .label:before, .check .label:after {content:''; position:absolute; z-index:1; display:inline-block;}
 
 /* radio */
