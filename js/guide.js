@@ -206,6 +206,118 @@ $(document).ready(function(){
             type:'', note:'',
             sDate:'2023-12-26', eDate:'2023-12-26'
         },
+
+        {
+            depth:['자산','내정보 요약','투자성향정보','투자성향관리/투자자격변경신청'],
+            id:'app-myInfo-001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','연결계좌 및 예수금 현황',''],
+            id:'app-myInfo-002', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','	내조각투자보유현황',''],
+            id:'app-myInfo-003', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','예수금출금안내',''],
+            id:'app-myInfo-004', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','청약/배당내역','공모내역'],
+            id:'app-myInfo-005', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','배당내역'],
+            id:'app-myInfo-006', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','내가참여한청약','청약상품 목록보기',''],
+            id:'app-mygoods-001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','청약상품 취소하기','청약신청 내역보기'],
+            id:'app-mygoods-005', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','청약신청 취소하기'],
+            id:'app-mygoods-006', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','청약취소 완료'],
+            id:'app-mygoods-007', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','청약상품 중도해지','중도해지 신청안내'],
+            id:'app-mygoods-008', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','내 경주마 경주현황','경주참여 결과','내 청약상품 목록-경주성적_전체'],
+            id:'app-myrace-001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','내 청약상품 목록-경주성적_마별'],
+            id:'app-myrace-002', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','경주참여 일정','내 청약상품 목록-경주일정_전체'],
+            id:'app-myrace-003', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','내 청약상품 목록-경주일정_마별'],
+            id:'app-myrace-004', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','내 청약상품 배당내역','청약상품 배당내역','우숭상금/자산매각 배당'],
+            id:'app-mydvdns-001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','내 투표 및 청산내역','청산투표','청산투표 목록'],
+            id:'app-mydvdns-002', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','청산투표 상세보기'],
+            id:'app-mydvdns-003', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','청산투표 투표하기'],
+            id:'app-mydvdns-004', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','청산내역','청산내역 목록'],
+            id:'app-mydvdns-005', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','청산내역 상세보기'],
+            id:'app-mydvdns-006', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','청산투표 결과보기'],
+            id:'app-mydvdns-007', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },
         
         // {
         //     depth:['','','',''],
