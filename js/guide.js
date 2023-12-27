@@ -85,9 +85,9 @@ $(document).ready(function(){
         
         {
             depth:['계좌관리','증권계좌개설','증권계좌 개설안내',''],
-            id:'app-account-001', status:'ing',
-            note:'이미지 55X55 삽입 필요',
-            sDate:'2023-12-26', eDate:''
+            id:'app-account-001', status:'com',
+            note:'',
+            sDate:'2023-12-26', eDate:'2023-12-27'
         },{
             depth:['','','계좌보유여부확인','계좌보유'],
             id:'app-account-002', status:'com',

@@ -323,7 +323,11 @@ em.err {margin-top:12px; color:#F1213A; font-size:12px; display:block;}
 .account_main .certification {margin-top:70px; padding:53px 20px 0; color:#666; font-size:16px; line-height:30px; border-top:1px solid #EEEEEE; text-align:center;}
 .account_main .certification ul {display:inline-block;}
 .account_main li {padding-left:90px; text-align:left; position:relative;}
-.account_main li:before {width:55px; height:55px; content:''; position:absolute; top:50%; left:0; display:inline-block; transform:translateY(-50%); background-color:#f0f0f0;}
+.account_main li:before {width:55px; height:55px; background-image:url('../images/common/icon_account.png'); background-repeat:no-repeat; background-size:250px auto; content:''; position:absolute; top:50%; left:0; display:inline-block; transform:translateY(-50%);}
 .account_main li + li {margin-top:45px;}
 .account_main ul strong {color:#222;}
 .account_main .border_box {margin-top:67px;}
+
+.certification li.phone:before {background-position:0 0;}
+.certification li.license:before {background-position:0 -70px;}
+.certification li.account:before {background-position:0 -140px;}
