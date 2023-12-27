@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>증권계좌 개설하기</strong>
+            </p>
+            <button class="btn_cancel">취소</button>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content">
+                <h2>기본 정보를 알려주세요</h2>
+                <ul class="form_group">
+                    <li>
+                        <ul class="policy_check_list">
+                            <li>
+                                <div>
+                                    <label class="check type_02">
+                                        <input type="checkbox" name="group">
+                                        <em class="label">개인(신용)정보처리 동의서(금융거래)</em>
+                                    </label>
+                                    <button>약관보기</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="form_tit">영문명</p>
+                        <div class="multi_form">
+                            <label class="input">
+                                <i></i>
+                                <input type="text" onkeyup="input_btn_chk(this);">
+                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                            </label>
+                            <span>&nbsp;</span>
+                            <label class="input">
+                                <i></i>
+                                <input type="text" onkeyup="input_btn_chk(this);">
+                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="form_tit">이름</p>
+                        <label class="input">
+                            <i>가입자 본인 이름 입력</i>
+                            <input type="text" value="홍길동" readonly>
+                            <em>error message</em>
+                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                        </label>
+                    </li>
+                    <li>
+                        <p class="form_tit">생년월일</p>
+                        <label class="input">
+                            <i>123456</i>
+                            <input type="number" value="881225" readonly>
+                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                            <em>error message</em>
+                        </label>
+                    </li>
+                    <li>
+                        <p class="form_tit">휴대폰 번호</p>
+                        <label class="input">
+                            <i>통신사 선택</i>
+                            <input class="text" type="text" value="010-1234-5678" readonly>
+                            <em>error message</em>
+                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btnSection">
+                <button class="btn_confirm"><em>다음</em></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div id="modal_wrap">
+        <div class="modal_container"></div>
+    </div>
+    <!-- //modal -->
+</body>
+</html>

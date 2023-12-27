@@ -110,9 +110,9 @@ $(document).ready(function(){
             sDate:'2023-12-26', eDate:'2023-12-26'
         },{
             depth:['','','','기본정보입력'],
-            id:'app-account-005', status:'',
+            id:'app-account-005', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2023-12-27', eDate:'2023-12-27'
         },{
             depth:['','','','신분증촬영'],
             id:'app-account-006', status:'',
