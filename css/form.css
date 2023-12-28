@@ -91,6 +91,7 @@ label.input_square input {padding:0 20px; border:1px solid #D7D8DD; border-radiu
 .check_ani input[type='checkbox']:checked + em:after {border-color:#2ECCC8; left:21px;}
 
 .form_group > li + li {padding-top:50px;}
+.form_group.gap_30 > li + li {padding-top:30px;}
 .form_group .form_tit {margin-top:0; margin-bottom:13px; font-size:15px;}
 .form_group .form_tit em {color:#888; font-weight:400; display:inline-block;}
 .form_group .form_tit.required:after {margin-left:2px; color:#d60812; font-size:14px; content:'*'; display:inline-block;}

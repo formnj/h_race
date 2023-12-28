@@ -23,22 +23,60 @@
         <!-- //header -->
         <div id="container">
             <div class="content">
-                <h2>신분증을 준비해 주세요</h2>
+                <h2>인식된 정보가 맞는지 확인해 주세요</h2>
 
-                <div class="id_card">
-                    <p>계좌 개설을 위해 고객님의 실명을 확인할 수 있는 주민등록증 혹은 운전면허증이 필요합니다.</p>
-                    <span><img src="../images/sub/img_id_card.png" alt="" /></span>
-                    <dl>
-                        <dt>촬영 Tip</dt>
-                        <dd>- 어두운 배경에 놓으면 촬영이 쉬워요</dd>
-                        <dd>- 빛이 반사되지 않도록 촬영해 주세요.</dd>
-                        <dd>- 신분증은 원본으로 촬영해 주세요.</dd>
-                    </dl>
-                </div>
+                <span class="photo_area"><img src="../images/sample/sam_idcard.png" alt="" /></span>
+
+                <ul class="form_group">
+                    <li>
+                        <p class="form_tit">이름</p>
+                        <label class="input">
+                            <i>가입자 본인 이름 입력</i>
+                            <input type="text" value="홍길동" readonly>
+                            <em>error message</em>
+                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                        </label>
+                    </li>
+                    <li>
+                        <p class="form_tit">주민등록번호</p>
+                        <label class="input">
+                            <i>123456</i>
+                            <input type="text" value="123456 - 1●●●●●●" readonly>
+                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                            <em>error message</em>
+                        </label>
+                    </li>
+                    <!-- 운전면허증 -->
+                    <li>
+                        <p class="form_tit">면허번호</p>
+                        <label class="input">
+                            <i>placeholder</i>
+                            <input class="text" type="text" value="12-34-567890-12" readonly>
+                            <em>error message</em>
+                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                        </label>
+                    </li>
+                    <!-- //운전면허증 -->
+                    <li>
+                        <p class="form_tit">발급일자</p>
+                        <label class="input">
+                            <i>placeholder</i>
+                            <input class="text" type="text" value="2020. 05. 16" readonly>
+                            <em>error message</em>
+                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                        </label>
+                    </li>
+                </ul>
             </div>
 
             <div class="btnSection">
-                <a href="./app-account-005.html" class="btn_confirm"><em>촬영</em></a>
+                <!-- 촬영 카메라 사용 -->
+                <label class="btn_cancel" for="camera">
+                    <em>촬영</em>
+                    <input id="camera" type="file" accept="image/*" capture="environment" style="display:none" />                
+                </label>
+                <!-- //촬영 카메라 사용 -->
+                <button class="btn_confirm" onclick="modal.open('app-account-006-1-0', 'type_bottom')"><em>다음</em></button>
             </div>
         </div>
     </div>

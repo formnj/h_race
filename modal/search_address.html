@@ -1,0 +1,40 @@
+<div class="modal_header">
+    <h3>주소검색</h3>
+    <button class="btn_close" onclick="modal.close(event);">close</button>
+</div>
+<div class="modal_content">
+    <div class="label_wrap">
+        <label class="input">
+            <i>예) 법원로 2길, 서초동</i>
+            <input type="text" onkeyup="input_btn_chk(this);">
+            <em>error message</em>
+            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+        </label>
+        <button class="btn_search"><em>검색</em></button>
+    </div>
+
+    <div class="address_wrap">
+        <dl>
+            <dt>이렇게 검색해 보세요!</dt>
+            <dd>
+                <strong>도로명 + 건물번호</strong>
+                <p>예) 법원로 2길 17-4</p>
+            </dd>
+            <dd>
+                <strong>지역명(동/리) + 번지</strong>
+                <p>예) 서초동 174-14</p>
+            </dd>
+            <dd>
+                <strong>지역명(동/리) + 건물명 아파트</strong>
+                <p>예) 서초동  법원빌딩</p>
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<script>
+    /* placeholder */
+    $('label.input').each(function(){
+        placeholder(this);
+    });
+</script>

@@ -36,6 +36,17 @@
                         </label>
                     </li>
                     <li>
+                        <div class="label_wrap">
+                            <label class="input">
+                                <i>주소</i>
+                                <input type="text" onkeyup="input_btn_chk(this);">
+                                <em>error message</em>
+                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                            </label>
+                            <button class="btn_mid btn_confirm" onclick="modal.open('search_address', 'type_bottom');"><em>버튼</em></button>
+                        </div>
+                    </li>
+                    <li>
                         <div class="multi_form">
                             <label class="input">
                                 <i>Placeholder</i>

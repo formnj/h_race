@@ -30,6 +30,11 @@ $(document).ready(function(){
             id:'media_access', status:'com',
             type:'modal', note:'',
             sDate:'2023-12-21', eDate:'2023-12-21'
+        },{
+            depth:['','주소 검색','',''],
+            id:'search_address', status:'com',
+            type:'modal', note:'',
+            sDate:'2023-12-28', eDate:'2023-12-28'
         },
 
         {
@@ -125,19 +130,24 @@ $(document).ready(function(){
             sDate:'2023-12-28', eDate:'2023-12-28'
         },{
             depth:['','','','신분증촬영 완료'],
-            id:'app-account-006-1', status:'ing',
+            id:'app-account-006-1', status:'com',
             note:'',
+            sDate:'2023-12-28', eDate:'2023-12-28'
+        },{
+            depth:['','','','신분증진위여부 확인'],
+            id:'app-account-006-1-0', status:'com',
+            type:'modal', note:'',
             sDate:'2023-12-28', eDate:''
         },{
             depth:['','','','직업정보입력/거래정보입력'],
-            id:'app-account-007', status:'',
-            note:'',
-            sDate:'', eDate:''
+            id:'app-account-007', status:'com',
+            note:'나머지 정보 입력',
+            sDate:'2023-12-28', eDate:'2023-12-28'
         },{
             depth:['','','','계좌비밀번호등록(4자리)'],
-            id:'app-account-008', status:'',
+            id:'app-account-008', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2023-12-29', eDate:'2023-12-29'
         },{
             depth:['','','','입금졔좌연결'],
             id:'app-account-009', status:'',
