@@ -38,13 +38,11 @@
             </div>
 
             <div class="btnSection">
-                <input
-        id="cameraFileInput"
-        type="file"
-        accept="image/*"
-        capture="environment"
-      />
-                <a href="./app-account-006-1.html" class="btn_confirm"><em>촬영</em></a>
+                <label class="btn_confirm" for="camera">
+                    <em>촬영</em>
+                    <input id="camera" type="file" accept="image/*" capture="environment" style="display:none" />                
+                </label>
+                <!-- <a href="./app-account-006-1.html" class="btn_confirm"><em>촬영</em></a> -->
             </div>
         </div>
     </div>
