@@ -114,10 +114,20 @@ $(document).ready(function(){
             note:'',
             sDate:'2023-12-27', eDate:'2023-12-27'
         },{
-            depth:['','','','신분증촬영'],
-            id:'app-account-006', status:'',
+            depth:['','','','계좌개설목적'],
+            id:'app-account-005-1', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2023-12-28', eDate:'2023-12-28'
+        },{
+            depth:['','','','신분증촬영'],
+            id:'app-account-006', status:'com',
+            note:'촬영tip',
+            sDate:'2023-12-28', eDate:'2023-12-28'
+        },{
+            depth:['','','','신분증촬영 완료'],
+            id:'app-account-006-1', status:'ing',
+            note:'',
+            sDate:'2023-12-28', eDate:''
         },{
             depth:['','','','직업정보입력/거래정보입력'],
             id:'app-account-007', status:'',

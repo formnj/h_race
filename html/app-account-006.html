@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>증권계좌 개설하기</strong>
+            </p>
+            <button class="btn_cancel">취소</button>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content">
+                <h2>신분증을 준비해 주세요</h2>
+
+                <div class="id_card">
+                    <p>계좌 개설을 위해 고객님의 실명을 확인할 수 있는 주민등록증 혹은 운전면허증이 필요합니다.</p>
+                    <span><img src="../images/sub/img_id_card.png" alt="" /></span>
+                    <dl>
+                        <dt>촬영 Tip</dt>
+                        <dd>- 어두운 배경에 놓으면 촬영이 쉬워요</dd>
+                        <dd>- 빛이 반사되지 않도록 촬영해 주세요.</dd>
+                        <dd>- 신분증은 원본으로 촬영해 주세요.</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="btnSection">
+                <input
+        id="cameraFileInput"
+        type="file"
+        accept="image/*"
+        capture="environment"
+      />
+                <a href="./app-account-006-1.html" class="btn_confirm"><em>촬영</em></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div id="modal_wrap">
+        <div class="modal_container"></div>
+    </div>
+    <!-- //modal -->
+</body>
+</html>

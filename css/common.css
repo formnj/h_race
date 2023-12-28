@@ -22,7 +22,8 @@ header + #container {padding-top:66px;}
 .content + .btnSection [class*='btn_'] + [class*='btn_'] {margin-left:0;}
 .content + .btnSection [class*='btn_'] em {padding:16px 10px; font-size:16px; font-weight:600;}
 
-h2 {margin-bottom:42px; font-size:21px; line-height:30px; font-weight:600;}
+h2 {margin-bottom:42px; font-size:21px; line-height:1.43em; font-weight:600;}
+h2 .explain {margin-top:10px; color:#666; font-size:12px; line-height:1.66em;}
 h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 
 /* color */
@@ -166,9 +167,11 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 .pass_bullet .active span {background-color:#868cb0;}
 .pass_bullet a {margin-top:16px; text-decoration:underline; display:inline-block;}
 
-.policy_check_list dt {margin-bottom:27px; font-size:16px; font-weight:600;}
+.policy_check_list dt {font-size:16px; font-weight:600;}
+.policy_check_list dt + dd {margin-top:27px;}
 .policy_check_list li > div {display:flex; justify-content:space-between;}
 .policy_check_list li + li {margin-top:20px;}
+.policy_check_list li > div .check {flex:1;}
 .policy_check_list li > div button {width:24px; height:24px; font-size:0; background-image:url('../images/common/icon_arrow.png'); background-position:50%; background-repeat:no-repeat; background-size:cover; display:block;}
 
 .policy_check_list.type_square li > div {padding:15px 10px 13px; background-color:#fff; border:1px solid #D7D8DD; border-radius:8px;}
@@ -331,3 +334,10 @@ em.err {margin-top:12px; color:#F1213A; font-size:12px; display:block;}
 .certification li.phone:before {background-position:0 0;}
 .certification li.license:before {background-position:0 -70px;}
 .certification li.account:before {background-position:0 -140px;}
+
+.id_card p {font-size:15px; line-height:1.6em;}
+.id_card span {width:225px; margin:30px auto 35px; display:block;}
+.id_card dl {font-size:13px; line-height:2em;}
+.id_card dt {padding-left:30px; font-weight:600; position:relative;}
+.id_card dt:before {width:21px; height:21px; background-image:url('../images/common/icon_sprit.png'); background-position:0 -90px; background-repeat:no-repeat; background-size:250px auto; content:''; position:absolute; top:0; left:0; display:block;}
+.id_card dt + dd {margin-top:5px;}
