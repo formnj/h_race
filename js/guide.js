@@ -35,6 +35,11 @@ $(document).ready(function(){
             id:'search_address', status:'com',
             type:'modal', note:'',
             sDate:'2023-12-28', eDate:'2023-12-28'
+        },{
+            depth:['','은행/증권사 리스트','',''],
+            id:'bank', status:'',
+            type:'modal', note:'',
+            sDate:'2023-12-29', eDate:'2023-12-29'
         },
 
         {

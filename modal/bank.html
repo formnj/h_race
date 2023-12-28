@@ -1,0 +1,35 @@
+<div class="modal_header">
+    <button class="btn_close" onclick="modal.close(event);">close</button>
+</div>
+<div class="modal_content">
+    <div class="tab_wrap">
+        <ul class="tab_type_01">
+            <li class="current"><button>은행</button></li>
+            <li><button>증권</button></li>
+        </ul>
+        <div class="tab_content">
+            <!-- 은행 리스트 -->
+            <div class="current">
+                <ul class="bank_list">
+                    <li><button>국민</button></li>
+                    <li><button>기업</button></li>
+                </ul>
+            </div>
+            <!-- //은행 리스트 -->
+            <!-- 증권사 리스트 -->
+            <div>
+                <ul class="bank_list">
+                    <li></li>
+                </ul>
+            </div>
+            <!-- //증권사 리스트 -->
+        </div>
+    </div>
+</div>
+
+<script>
+    /* placeholder */
+    $('label.input').each(function(){
+        placeholder(this);
+    });
+</script>
