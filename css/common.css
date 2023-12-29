@@ -97,6 +97,7 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 #modal_wrap .modal_container:has(> .btnSection) {padding-bottom:51px;}
 #modal_wrap .modal_container:has(> .modal_header) {padding-top:65px;}
 #modal_wrap .modal_content {height:100%; padding:20px; overflow:auto;}
+#modal_wrap .modal_content  .sticky {background-color:#fff; position:sticky; top:0;}
 #modal_wrap .modal_content + .btnSection {margin:0; position:absolute; right:0; bottom:0; left:0;}
 #modal_wrap .modal_content + .btnSection [class*='btn_'] {flex:1;}
 #modal_wrap .modal_content + .btnSection [class*='btn_'] + [class*='btn_'] {margin-left:0;}
@@ -105,9 +106,11 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 /* modal type */
 #modal_wrap .modal_container[modal-type="type_full"] {position:fixed; top:0; right:0; bottom:0; left:0;}
 #modal_wrap .modal_container[modal-type="type_full"] .modal_header {padding-top:13px; padding-bottom:20px;}
-/* #modal_wrap .modal_container[modal-type="type_full"] .modal_header + .modal_content {padding-top:65px;} */
 
 #modal_wrap .modal_container[modal-type="type_bottom"] {border-radius:16px 16px 0 0; box-shadow:0 -4px 10px rgba(0,0,0,0.1); right:0; bottom:0; left:0; animation-duration:0.25s; animation-name:show_up;}
+#modal_wrap .modal_container[modal-type="type_bottom"] .modal_content {max-height:60vh;}
+#modal_wrap .modal_container[modal-type="type_bottom"] .modal_header + .modal_content {padding-top:0;}
+
 #modal_wrap .modal_container[modal-type="type_alert"] {border-radius:16px; box-shadow:0 0 8px 0 rgba(0,0,0,0.25); top:50%; right:45px; left:45px; transform:translateY(-50%);}
 #modal_wrap .modal_container[modal-type="type_alert"] .modal_content {padding:35px 20px 35px;}
 #modal_wrap .modal_container[modal-type="type_alert"] .modal_content p.txt_cont {line-height:1.71em;}
@@ -371,4 +374,38 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .alert > li strong {font-weight:600;}
 
 .bank_list {display:flex; flex-wrap:wrap;}
-.bank_list > li {flex:1;}
+.bank_list > li {width:50%;}
+.bank_list > li > * {padding:12px 10px; font-size:14px; font-family:'Noto Sans KR', sans-serif; font-weight:500; line-height:1.43em; display:flex; gap:8px;}
+.bank_list > li > *:before {width:22px; height:22px; background-image:url('../images/common/icon_bank.png'); background-repeat:no-repeat; background-size:200px auto; content:''; display:block;}
+.bank_list .bank_01:before {background-position:0 0;}
+.bank_list .bank_02:before {background-position:-30px -150px;}
+.bank_list .bank_03:before {background-position:-30px 0;}
+.bank_list .bank_04:before {background-position:-60px -150px;}
+.bank_list .bank_05:before {background-position:-60px 0;}
+.bank_list .bank_06:before {background-position:0 -180px;}
+.bank_list .bank_07:before {background-position:0 -30px;}
+.bank_list .bank_08:before {background-position:-30px -180px;}
+.bank_list .bank_09:before {background-position:-30px -30px;}
+.bank_list .bank_10:before {background-position:-60px -180px;}
+.bank_list .bank_11:before {background-position:-60px -30px;}
+.bank_list .bank_12:before {background-position:0 -210px;}
+.bank_list .bank_13:before {background-position:0 -60px;}
+.bank_list .bank_14:before {background-position:-30px -210px;}
+.bank_list .bank_15:before {background-position:-30px -60px;}
+.bank_list .bank_16:before {background-position:0 -90px;}
+.bank_list .bank_17:before {background-position:-60px -60px;}
+.bank_list .bank_18:before {background-position:0 -240px;}
+.bank_list .bank_19:before {background-position:-60px -210px;}
+.bank_list .bank_20:before {background-position:-30px -240px;}
+.bank_list .bank_21:before {background-position:-30px -90px;}
+.bank_list .bank_22:before {background-position:-60px -240px;}
+.bank_list .bank_23:before {background-position:-60px -90px;}
+.bank_list .bank_24:before {background-position:-0 -270px;}
+.bank_list .bank_25:before {background-position:0 -120px;}
+.bank_list .bank_26:before {background-position:-30px -270px;}
+.bank_list .bank_27:before {background-position:-30px -120px;}
+.bank_list .bank_28:before {background-position:-60px -270px;}
+.bank_list .bank_29:before {background-position:-60px -120px;}
+.bank_list .bank_30:before {background-position:0 -300px;}
+.bank_list .bank_31:before {background-position:0 -150px;}
+.bank_list .bank_32:before {background-position:-30px -300px;}
