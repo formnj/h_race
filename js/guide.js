@@ -155,14 +155,34 @@ $(document).ready(function(){
             sDate:'2023-12-29', eDate:'2023-12-29'
         },{
             depth:['','','','입금졔좌연결'],
-            id:'app-account-009', status:'ing',
+            id:'app-account-009', status:'com',
             note:'연결계좌입력 / 1원송금확인',
-            sDate:'2023-12-29', eDate:''
+            sDate:'2023-12-29', eDate:'2023-12-30'
+        },{
+            depth:['','','','1원송금'],
+            id:'app-account-009-1-1', status:'com',
+            type:'modal', note:'연결계좌입력 / 1원송금확인',
+            sDate:'2023-12-30', eDate:'2023-12-30'
+        },{
+            depth:['','','','입금졔좌확인'],
+            id:'app-account-009-1', status:'com',
+            note:'인증번호 입력',
+            sDate:'2023-12-30', eDate:'2023-12-30'
+        },{
+            depth:['','','','이체 제한 안내'],
+            id:'app-account-009-1-2', status:'com',
+            type:'modal', note:'',
+            sDate:'2023-12-30', eDate:'2023-12-30'
         },{
             depth:['','','','계좌개설 완료화면'],
-            id:'app-account-010', status:'',
+            id:'app-account-010', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-02', eDate:'2024-01-02'
+        },{
+            depth:['','','','투자성향 설문 작성'],
+            id:'app-account-010-1-1', status:'com',
+            type:'modal', note:'',
+            sDate:'2024-01-03', eDate:'2024-01-03'
         },
 
         {

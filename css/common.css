@@ -110,6 +110,8 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 #modal_wrap .modal_container[modal-type="type_bottom"] {border-radius:16px 16px 0 0; box-shadow:0 -4px 10px rgba(0,0,0,0.1); right:0; bottom:0; left:0; animation-duration:0.25s; animation-name:show_up;}
 #modal_wrap .modal_container[modal-type="type_bottom"] .modal_content {max-height:60vh;}
 #modal_wrap .modal_container[modal-type="type_bottom"] .modal_header + .modal_content {padding-top:0;}
+#modal_wrap .modal_container[modal-type="type_bottom"] .modal_content dl.noti dt {font-size:18px; line-height:1.4em;}
+#modal_wrap .modal_container[modal-type="type_bottom"] .modal_content dl.noti dd {margin-top:20px; line-height:1.4em;}
 
 #modal_wrap .modal_container[modal-type="type_alert"] {border-radius:16px; box-shadow:0 0 8px 0 rgba(0,0,0,0.25); top:50%; right:45px; left:45px; transform:translateY(-50%);}
 #modal_wrap .modal_container[modal-type="type_alert"] .modal_content {padding:35px 20px 35px;}
@@ -264,8 +266,10 @@ em.err {margin-top:12px; color:#F1213A; font-size:12px; display:block;}
 .bullet_list li + li {margin-top:15px;}
 .bullet_list li:before {width:3px; height:3px; background-color:#666; border-radius:50%; content:''; position:absolute; top:5px; left:5px; display:block;}
 
+.gray_box {padding:20px; background-color:#f8f8f8; border:1px solid #e1e1e1; border-radius:8px;}
+
 .invest_type {margin-bottom:50px;}
-.invest_type .gray_box {padding:22px 27px 34px; background-color:#F8F8F8; border-radius:16px;}
+.invest_type .gray_box {padding:22px 27px 34px; border:0; border-radius:16px;}
 .invest_type .level_wrap {margin-top:33px; text-align:center;}
 .invest_type .level_wrap ul {margin:0 -20px; display:flex; justify-content:space-between;}
 .invest_type .level_wrap ul li {width:20%; color:#888; font-size:12px; font-weight:500; text-align:center;}
@@ -376,36 +380,79 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .bank_list {display:flex; flex-wrap:wrap;}
 .bank_list > li {width:50%;}
 .bank_list > li > * {padding:12px 10px; font-size:14px; font-family:'Noto Sans KR', sans-serif; font-weight:500; line-height:1.43em; display:flex; gap:8px;}
-.bank_list > li > *:before {width:22px; height:22px; background-image:url('../images/common/icon_bank.png'); background-repeat:no-repeat; background-size:200px auto; content:''; display:block;}
-.bank_list .bank_01:before {background-position:0 0;}
-.bank_list .bank_02:before {background-position:-30px -150px;}
-.bank_list .bank_03:before {background-position:-30px 0;}
-.bank_list .bank_04:before {background-position:-60px -150px;}
-.bank_list .bank_05:before {background-position:-60px 0;}
-.bank_list .bank_06:before {background-position:0 -180px;}
-.bank_list .bank_07:before {background-position:0 -30px;}
-.bank_list .bank_08:before {background-position:-30px -180px;}
-.bank_list .bank_09:before {background-position:-30px -30px;}
-.bank_list .bank_10:before {background-position:-60px -180px;}
-.bank_list .bank_11:before {background-position:-60px -30px;}
-.bank_list .bank_12:before {background-position:0 -210px;}
-.bank_list .bank_13:before {background-position:0 -60px;}
-.bank_list .bank_14:before {background-position:-30px -210px;}
-.bank_list .bank_15:before {background-position:-30px -60px;}
-.bank_list .bank_16:before {background-position:0 -90px;}
-.bank_list .bank_17:before {background-position:-60px -60px;}
-.bank_list .bank_18:before {background-position:0 -240px;}
-.bank_list .bank_19:before {background-position:-60px -210px;}
-.bank_list .bank_20:before {background-position:-30px -240px;}
-.bank_list .bank_21:before {background-position:-30px -90px;}
-.bank_list .bank_22:before {background-position:-60px -240px;}
-.bank_list .bank_23:before {background-position:-60px -90px;}
-.bank_list .bank_24:before {background-position:-0 -270px;}
-.bank_list .bank_25:before {background-position:0 -120px;}
-.bank_list .bank_26:before {background-position:-30px -270px;}
-.bank_list .bank_27:before {background-position:-30px -120px;}
-.bank_list .bank_28:before {background-position:-60px -270px;}
-.bank_list .bank_29:before {background-position:-60px -120px;}
-.bank_list .bank_30:before {background-position:0 -300px;}
-.bank_list .bank_31:before {background-position:0 -150px;}
-.bank_list .bank_32:before {background-position:-30px -300px;}
+.icon_bank:before {width:22px; height:22px; background-image:url('../images/common/icon_bank.png'); background-repeat:no-repeat; background-size:200px auto; content:''; display:block;}
+.icon_bank.bank_01:before {background-position:0 0;}
+.icon_bank.bank_02:before {background-position:-30px -150px;}
+.icon_bank.bank_03:before {background-position:-30px 0;}
+.icon_bank.bank_04:before {background-position:-60px -150px;}
+.icon_bank.bank_05:before {background-position:-60px 0;}
+.icon_bank.bank_06:before {background-position:0 -180px;}
+.icon_bank.bank_07:before {background-position:0 -30px;}
+.icon_bank.bank_08:before {background-position:-30px -180px;}
+.icon_bank.bank_09:before {background-position:-30px -30px;}
+.icon_bank.bank_10:before {background-position:-60px -180px;}
+.icon_bank.bank_11:before {background-position:-60px -30px;}
+.icon_bank.bank_12:before {background-position:0 -210px;}
+.icon_bank.bank_13:before {background-position:0 -60px;}
+.icon_bank.bank_14:before {background-position:-30px -210px;}
+.icon_bank.bank_15:before {background-position:-30px -60px;}
+.icon_bank.bank_16:before {background-position:0 -90px;}
+.icon_bank.bank_17:before {background-position:-60px -60px;}
+.icon_bank.bank_18:before {background-position:0 -240px;}
+.icon_bank.bank_19:before {background-position:-60px -210px;}
+.icon_bank.bank_20:before {background-position:-30px -240px;}
+.icon_bank.bank_21:before {background-position:-30px -90px;}
+.icon_bank.bank_22:before {background-position:-60px -240px;}
+.icon_bank.bank_23:before {background-position:-60px -90px;}
+.icon_bank.bank_24:before {background-position:-0 -270px;}
+.icon_bank.bank_25:before {background-position:0 -120px;}
+.icon_bank.bank_26:before {background-position:-30px -270px;}
+.icon_bank.bank_27:before {background-position:-30px -120px;}
+.icon_bank.bank_28:before {background-position:-60px -270px;}
+.icon_bank.bank_29:before {background-position:-60px -120px;}
+.icon_bank.bank_30:before {background-position:0 -300px;}
+.icon_bank.bank_31:before {background-position:0 -150px;}
+.icon_bank.bank_32:before {background-position:-30px -300px;}
+
+.icon_bank.invest_01:before {background-position:-100px 0;}
+.icon_bank.invest_02:before {background-position:-100px -150px;}
+.icon_bank.invest_03:before {background-position:-130px 0;}
+.icon_bank.invest_04:before {background-position:-130px -150px;}
+.icon_bank.invest_05:before {background-position:-160px 0;}
+.icon_bank.invest_06:before {background-position:-160px -150px;}
+.icon_bank.invest_07:before {background-position:-130px -30px;}
+.icon_bank.invest_08:before {background-position:-100px -180px;}
+.icon_bank.invest_09:before {background-position:-130px -30px;}
+.icon_bank.invest_10:before {background-position:-130px -180px;}
+.icon_bank.invest_11:before {background-position:-160px -30px;}
+.icon_bank.invest_12:before {background-position:-160px -180px;}
+.icon_bank.invest_13:before {background-position:-100px -60px;}
+.icon_bank.invest_14:before {background-position:-100px -210px;}
+.icon_bank.invest_15:before {background-position:-130px -60px;}
+.icon_bank.invest_16:before {background-position:-130px -210px;}
+.icon_bank.invest_17:before {background-position:-160px -60px;}
+.icon_bank.invest_18:before {background-position:-160px -210px;}
+.icon_bank.invest_19:before {background-position:-100px -90px;}
+.icon_bank.invest_20:before {background-position:-100px -240px;}
+.icon_bank.invest_21:before {background-position:-130px -90px;}
+.icon_bank.invest_22:before {background-position:-130px -240px;}
+.icon_bank.invest_23:before {background-position:-160px -90px;}
+.icon_bank.invest_24:before {background-position:-160px -240px;}
+.icon_bank.invest_25:before {background-position:-100px -120px;}
+.icon_bank.invest_26:before {background-position:-100px -270px;}
+.icon_bank.invest_27:before {background-position:-130px -120px;}
+.icon_bank.invest_28:before {background-position:-130px -270px;}
+.icon_bank.invest_29:before {background-position:-160px -120px;}
+
+.account_info p {margin-bottom:30px; display:flex; justify-content:space-between;}
+.account_info p span {font-size:0;}
+.account_info dt {font-size:15px; display:flex; align-items:center; gap:10px;}
+.account_info dt + dd {margin-top:20px; padding-top:30px; border-top:1px solid #E1E1E1;}
+.account_info table {width:100%;}
+.account_info th {padding:0 10px; font-size:13px; font-weight:400;}
+.account_info td {padding:20px 10px 0; font-size:15px; font-weight:500;}
+.account_info td span {margin-right:10px; padding:10px; background-color:#E1E1E1; border-radius:8px; vertical-align:middle; display:inline-flex; justify-content:space-between; gap:8px;}
+.account_info td span em {width:5px; height:5px; background-color:#222; border-radius:50%; display:block;}
+
+.account_complate {padding-top:30px;}
+.account_complate strong.title {margin-bottom:44px; font-size:21px; font-weight:600; line-height:1.43em; display:block;}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>증권계좌 개설하기</strong>
+            </p>
+            <button class="btn_cancel">취소</button>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content">
+                <div class="account_info">
+                    <p>
+                        <span class="icon_bank bank_12">kakaobank</span>
+                        <a href="#none" class="btn_text underline">계좌변경</a>
+                    </p>
+
+                    <dl class="gray_box">
+                        <dt class="icon_bank bank_06">11*********56</dt>
+                        <dd>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="al">보낸사람</th>
+                                        <th class="ar">금액</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="al">
+                                            <span>
+                                                <em></em>
+                                                <em></em>
+                                                <em></em>
+                                            </span>
+                                            신한 계좌개설</td>
+                                        <td class="ar">1원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </dd>
+                    </dl>
+                </div>
+                
+                <ul class="form_group mt40">
+                    <li>
+                        <p class="form_tit">인증번호 숫자 3자리</p>
+                        <label class="input select" id="select01">
+                            <i>인증번호 입력</i>
+                            <input type="text" />
+                            <em>error message</em>
+                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                        </label>
+                        <ul class="notice_box">
+                            <li>1원 입금 내역의 '숫자 3자리'를 입력해 주세요.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btnSection">
+                <button class="btn_confirm" onclick="modal.open('app-account-009-1-2', 'type_bottom');"><em>다음</em></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div id="modal_wrap">
+        <div class="modal_container"></div>
+    </div>
+    <!-- //modal -->
+</body>
+</html>

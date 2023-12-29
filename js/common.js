@@ -154,7 +154,7 @@ function tab_active(_target, evt) {//_target : 대상 / evt : 핸들러
     tab = document.querySelectorAll(_target);
     
     tab.forEach(el => {
-        el.querySelectorAll('a').forEach((el, i) => {
+        el.querySelectorAll('button').forEach((el, i) => {
             el.addEventListener(evt, function(){
                 const parent_index = Array.from(el.closest('ul').children).indexOf(el.parentNode);
                 for(j=0; j<el.closest('ul').childElementCount; j++){
