@@ -31,6 +31,9 @@ $(document).ready(function(){
     });
 });
 
+/* tab */
+tab_active('.tab_wrap > ul','click');
+
 /* modal */
 const modal = {
     open: (_content,_type) => {
@@ -144,3 +147,25 @@ function timer(element, seconds){
     endTime = (+new Date) + 1000 * seconds;
     updateTimer();
 }
+
+/* tab */
+function tab_active(_target, evt) {//_target : 대상 / evt : 핸들러
+    var evt,
+    tab = document.querySelectorAll(_target);
+    
+    tab.forEach(el => {
+        el.querySelectorAll('a').forEach((el, i) => {
+            el.addEventListener(evt, function(){
+                const parent_index = Array.from(el.closest('ul').children).indexOf(el.parentNode);
+                for(j=0; j<el.closest('ul').childElementCount; j++){
+                    el.closest('ul').children[j].classList.remove('current')
+                    el.closest('ul').nextElementSibling.children[j].classList.remove('current');
+                }
+                el.parentNode.classList.add('current');
+                el.closest('ul').nextElementSibling.children[i].classList.add('current');
+                console.log('aaaa');
+            });
+        });
+    })
+}
+/* //tab */
