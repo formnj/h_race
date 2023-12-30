@@ -161,7 +161,7 @@ $(document).ready(function(){
         },{
             depth:['','','','1원송금'],
             id:'app-account-009-1-1', status:'com',
-            type:'modal', note:'연결계좌입력 / 1원송금확인',
+            type:'modal', note:'',
             sDate:'2023-12-30', eDate:'2023-12-30'
         },{
             depth:['','','','입금졔좌확인'],
@@ -179,7 +179,7 @@ $(document).ready(function(){
             note:'',
             sDate:'2024-01-02', eDate:'2024-01-02'
         },{
-            depth:['','','','투자성향 설문 작성'],
+            depth:['','','','투자성향 설문 이동'],
             id:'app-account-010-1-1', status:'com',
             type:'modal', note:'',
             sDate:'2024-01-03', eDate:'2024-01-03'
