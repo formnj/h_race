@@ -363,7 +363,113 @@ $(document).ready(function(){
             note:'',
             sDate:'', eDate:''
         },
-        
+
+        {
+            depth:['설정','내정보관리','내정보관리',''],
+            id:'app-setMyInfo-001', status:'',
+            note:'app-setMyInfo-001',
+            sDate:'', eDate:''
+        },{
+            depth:['','','휴대폰번호변경',''],
+            id:'app-setMyInfo-002', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','이메일주소변경',''],
+            id:'app-setMyInfo-003', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','	인증/보안','지문인증사용설정',''],
+            id:'app-setAuth-001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','간편비밀번호변경',''],
+            id:'app-setAuth-002', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','최근 소식','공지사항','목록'],
+            id:'app-setNoti-001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','상세'],
+            id:'app-setNoti-002', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','공시안내','목록'],
+            id:'app-setNoti-003', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','상세'],
+            id:'app-setNoti-004', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','고객지원','	자주하는질문','FAQ목록/상세보기'],
+            id:'app-setFaq-001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','문의하기'],
+            id:'app-setQna-001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','문의내역'],
+            id:'app-setQna-002', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','이벤트 보기','목록'],
+            id:'app-setEvent-001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','상세'],
+            id:'app-setEvent-002', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','알림설정','서비스 이용알림',''],
+            id:'app-setAlarm-001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','마케팅/이벤트 알림',''],
+            id:'app-setAlarm-002', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','모바일앱 버전',''],
+            id:'app-setAlarm-003', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','약관 및 정책','동의한 약관보기',''],
+            id:'app-setTerms-001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','개인정보취급방침',''],
+            id:'app-setTerms-002', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','오픈소스 라이선스','',''],
+            id:'app-setLicense-001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','탈퇴하기','',''],
+            id:'app-withdraw-001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },
         // {
         //     depth:['','','',''],
         //     id:'', status:'',
