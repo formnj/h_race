@@ -16,126 +16,17 @@
         <header>
             <p>
                 <button class="back">뒤로가기</button>
-                <strong>타이틀</strong>
+                <strong>공지사항</strong>
             </p>
-            <button class="btn_cancel">취소</button>
         </header>
         <!-- //header -->
         <div id="container">
-            <div class="content">
-                <h2>H2타이틀 - font-size:21px; font-weight:600</h2>
-                <h4>H4 타이틀 - font-size:16px; font-weight:500</h4>
-                <ul class="form_group">
-                    <li>
-                        <p class="form_tit">이름</p>
-                        <label class="input">
-                            <i>Placeholder</i>
-                            <input type="text" onkeyup="input_btn_chk(this);">
-                            <em>error message</em>
-                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
-                        </label>
-                    </li>
-                    <li>
-                        <div class="label_wrap">
-                            <label class="input">
-                                <i>주소</i>
-                                <input type="text" onkeyup="input_btn_chk(this);">
-                                <em>error message</em>
-                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
-                            </label>
-                            <button class="btn_mid btn_confirm" onclick="modal.open('search_address', 'type_bottom');"><em>버튼</em></button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="multi_form">
-                            <label class="input">
-                                <i>Placeholder</i>
-                                <input type="number" onkeyup="input_btn_chk(this);">
-                                <em>error message</em>
-                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
-                            </label>
-                            <label class="input">
-                                <i>Placeholder</i>
-                                <input type="text" onkeyup="input_btn_chk(this);">
-                                <em>error message</em>
-                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
-                            </label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="check_group boolean">
-                            <label class="check_square">
-                                <input type="radio" name="group">
-                                <em class="label">남자</em>
-                            </label>
-                            <label class="check_square">
-                                <input type="radio" name="group" disabled>
-                                <em class="label">여자</em>
-                            </label>
-                        </div>
-                    </li>
-                    <li>
-                        <label class="check_ani">
-                            <input type="checkbox">
-                            <em>Switch</em>
-                        </label>
-                    </li>
-                </ul>
-                <div class="notice_box">
-                    <strong class="tit">notice_box title</strong>
-                    <ul>
-                        <li>본 설문은 금소법 제18조 및 금소법 시행령 제12조 제1항에 따라 고객이 적정성원칙 대상 상품을 거래하고자 하는 경우에는 반드시 작성해야 합니다.</li>
-                        <li>별도의 통지가 없는 경우 투자자 성향 확인 결과는 24개월간 유지됩니다.</li>
-                        <li>투자권유 희망여부 및 투자자 정보 제공여부는 향후 분쟁 또는 소송이 발생하는 경우 고객님의 권리 구제에 불리하게 사용될 수 있으므로 신중하게 작성할 필요가 있습니다.</li>
-                    </ul>
-                </div>
-
-                <div class="btnSection mt30">
-                    <button class="btn_big btn_confirm">
-                        <em>Button big comfirm</em>
-                    </button>
-                    <button class="btn_big btn_cancel">
-                        <em>Button big cancel</em>
-                    </button>
-                </div>
-
-                <div class="btnSection mt30">
-                    <button class="btn_mid btn_confirm">
-                        <em>Button mid comfirm</em>
-                    </button>
-                    <button class="btn_mid btn_cancel">
-                        <em>Button mid cancel</em>
-                    </button>
-                </div>
-
-                <div class="btnSection mt30">
-                    <button class="btn_min btn_confirm">
-                        <em>min comfirm</em>
-                    </button>
-                    <button class="btn_min btn_cancel">
-                        <em>min cancel</em>
-                    </button>
-                    <button class="btn_min btn_gray_r">
-                        <em>min cancel</em>
-                    </button>
-                </div>
-
-                <div class="info_table mt30">
-                    <dl>
-                        <dt>타이틀</dt>
-                        <dd>내용</dd>
-                    </dl>
-                    <dl>
-                        <dt>타이틀</dt>
-                        <dd>내용</dd>
-                    </dl>
-                </div>
-
-                <div class="list_wrap mt30">
+            <div class="content">                
+                <div class="list_wrap">
                     <dl class="type_board accordion single">
                         <!-- loop -->
                         <dt>
-                            <strong>모바일앱 신규 오픈 100% 당첨 이벤트모바일앱 신규 오픈 100% 당첨 이벤트모바일앱 신규 오픈 100% 당첨 이벤트모바일앱 신규 오픈 100% 당첨 이벤트</strong>
+                            <strong class="tit">모바일앱 신규 오픈 100% 당첨 이벤트모바일앱 신규 오픈 100% 당첨 이벤트모바일앱 신규 오픈 100% 당첨 이벤트모바일앱 신규 오픈 100% 당첨 이벤트</strong>
                             <em class="date">2023-12-31</em>
                         </dt>
                         <!-- 상세 내용 -->
@@ -152,7 +43,7 @@
                         <!-- //상세 내용 -->
                         <!-- //loop -->
                         <dt>
-                            <strong>모바일앱 신규 오픈 100% 당첨 이벤트</strong>
+                            <strong class="tit">모바일앱 신규 오픈 100% 당첨 이벤트</strong>
                             <em class="date">2023-12-31</em>
                         </dt>
                         <dd>
@@ -166,7 +57,7 @@
                             </ul>
                         </dd>
                         <dt>
-                            <strong>모바일앱 신규 오픈 100% 당첨 이벤트</strong>
+                            <strong class="tit">모바일앱 신규 오픈 100% 당첨 이벤트</strong>
                             <em class="date">2023-12-31</em>
                         </dt>
                         <dd>
@@ -180,7 +71,7 @@
                             </ul>
                         </dd>
                         <dt>
-                            <strong>모바일앱 신규 오픈 100% 당첨 이벤트</strong>
+                            <strong class="tit">모바일앱 신규 오픈 100% 당첨 이벤트</strong>
                             <em class="date">2023-12-31</em>
                         </dt>
                         <dd>
@@ -194,7 +85,7 @@
                             </ul>
                         </dd>
                         <dt>
-                            <strong>모바일앱 신규 오픈 100% 당첨 이벤트</strong>
+                            <strong class="tit">모바일앱 신규 오픈 100% 당첨 이벤트</strong>
                             <em class="date">2023-12-31</em>
                         </dt>
                         <dd>
@@ -223,5 +114,11 @@
         </div>
         <!-- //action bar -->
     </div>
+
+    <!-- modal -->
+    <div id="modal_wrap">
+        <div class="modal_container"></div>
+    </div>
+    <!-- //modal -->
 </body>
 </html>

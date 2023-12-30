@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>공시안내</strong>
+            </p>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content">
+
+                <label class="input_square select select" id="select01">
+                    <i>전체</i>
+                    <input class="text" type="text" readonly onclick="modal.open('select_sample', 'type_bottom');">
+                    <em>error message</em>
+                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                </label>
+
+                <div class="list_wrap mt10">
+                    <ul class="type_board">
+                        <!-- loop -->
+                        <li>
+                            <a href="./app-setNoti-004.html">
+                                <span class="tit">[청약상품01호] 스탄로드의 멋진 경마 대회 여정스탄로드의 멋진 경마 대회 여정스탄로드의 멋진 경마 대회 여정</span>
+                                <em class="date">2023-12-31</em>
+                            </a>
+                        </li>
+                        <!-- //loop -->
+                        <li>
+                            <a href="./app-setNoti-004.html">
+                                <span class="tit">[청약상품01호] 스탄로드의 멋진 경마 대회 여정</span>
+                                <em class="date">2023-12-31</em>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- action bar -->
+        <div class="action_bar">
+            <ul>
+                <li><button class="home">홈</button></li>
+                <li><button class="funding">펀딩</button></li>
+                <li><button class="invest">자산</button></li>
+                <li><a href="./app-setMyInfo-000.html" class="setting">설정</a></li>
+            </ul>
+        </div>
+        <!-- //action bar -->
+    </div>
+
+    <!-- modal -->
+    <div id="modal_wrap">
+        <div class="modal_container"></div>
+    </div>
+    <!-- //modal -->
+</body>
+</html>

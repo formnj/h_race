@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <strong>설정</strong>
+            </p>
+            <button class="btn_alarm">알림</button>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content">
+                <div class="setting_menu">
+                    <dl>
+                        <dt>홍길동님</dt>
+                        <dd>
+                            <a href="./app-setMyInfo-001.html">내정보 관리</a>
+                        </dd>
+                        <dd>
+                            <button onclick="modal.open('text_modal','type_alert');">로그아웃</button>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>인증/보안</dt>
+                        <dd>
+                            <label class="check_ani">
+                                <input type="checkbox" onchange="modal.open('text_modal', 'type_alert');">
+                                <em>지문인증 사용</em>
+                            </label>
+                        </dd>
+                        <dd>
+                            <a href="#none">간편비밀번호 변경</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>최근소식</dt>
+                        <dd>
+                            <a href="./app-setNoti-001.html">공지사항</a>
+                        </dd>
+                        <dd>
+                            <a href="./app-setNoti-003.html">공시안내</a>
+                        </dd>
+                        <dd>
+                            <a href="#none">이벤트 보기</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>고객지원</dt>
+                        <dd>
+                            <a href="#none">자주하는 질문</a>
+                        </dd>
+                        <dd>
+                            <a href="#none">1:1 문의</a>
+                        </dd>
+                        <dd>
+                            <a href="#none">ST갤럭시아챗봇</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>알림설정</dt>
+                        <dd>
+                            <label class="check_ani">
+                                <input type="checkbox" onchange="modal.open('alarm_set_comfirm', 'type_alert');">
+                                <em>서비스 이용 알림</em>
+                            </label>
+                            <p class="explain">서비스 이용(청약, 공시/공지, 거래, 입출금, 배당, 청산) 시 중요 정보 알림 제공 (청약 참여 시 활성화 필수)</p>
+                        </dd>
+                        <dd>
+                            <label class="check_ani">
+                                <input type="checkbox" onchange="modal.open('alarm_set_comfirm', 'type_alert');">
+                                <em>마케팅/이벤트 알림</em>
+                            </label>
+                            <p class="explain">서비스 이용 및 청약상품, 이벤트 등 다양한 혜택과 소식을 전해 드립니다.</p>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>모바일앱 버전</dt>
+                        <dd class="version">
+                            <button onclick="modal.open('version', 'type_alert');">
+                                버전정보
+                                <span>1. 3. 3. 2</span>
+                            </button>
+                            <em>새로운 버전으로 업데이트해 주세요</em>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>약관 및 정책</dt>
+                        <dd>
+                            <a href="#none">동의한 약관보기</a>
+                        </dd>
+                        <dd>
+                            <a href="#none">개인정보취급방침</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>오픈소스 라이선스</dt>
+                        <dd>
+                            <a href="#none">오픈소스 라이선스 보기</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dd>
+                            <button class="btn_secession"><em>서비스 탈퇴하기</em></button>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <div class="inner">
+                <h2>ST Galaxia</h2>
+                <ul class="quick">
+                    <li><a href="#none">홈페이지</a></li>
+                    <li>
+                        <dl>
+                            <dt>고객센터 : </dt>
+                            <dd>T 02-6005-1605</dd>
+                            <dd>F. 02-512-0785</dd>
+                        </dl>
+                    </li>
+                </ul>
+
+                <dl class="address">
+                    <dt>갤럭시아머니트리(주)</dt>
+                    <dd>대표이사 신동훈 사업자등록번호 120-81-60844</dd>
+                    <dd>서울특별시 강남구 광평로 281 수서오피스빌딩 15층 (수서동)<br/> T. 1566-0123</dd>
+                </dl>
+
+                <p>copyright ⓒ galaxia MoneyTree Co. Ltd, All Rights Reserved.</p>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+
+    <!-- modal -->
+    <div id="modal_wrap">
+        <div class="modal_container"></div>
+    </div>
+    <!-- //modal -->
+</body>
+</html>

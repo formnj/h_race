@@ -37,9 +37,34 @@ $(document).ready(function(){
             sDate:'2023-12-28', eDate:'2023-12-28'
         },{
             depth:['','은행/증권사 리스트','',''],
-            id:'bank', status:'',
+            id:'bank', status:'com',
             type:'modal', note:'',
             sDate:'2023-12-29', eDate:'2023-12-29'
+        },{
+            depth:['','하단 메뉴','',''],
+            id:'action_bar', status:'com',
+            type:'', note:'',
+            sDate:'2024-01-03', eDate:'2024-01-03'
+        },{
+            depth:['','버전 알림 팝업','',''],
+            id:'version', status:'com',
+            type:'modal', note:'',
+            sDate:'2024-01-03', eDate:'2024-01-03'
+        },{
+            depth:['','단순 텍스트 팝업','',''],
+            id:'text_modal', status:'com',
+            type:'modal', note:'',
+            sDate:'2024-01-03', eDate:'2024-01-03'
+        },{
+            depth:['','알림 설정 팝업','',''],
+            id:'alarm_set', status:'com',
+            type:'modal', note:'',
+            sDate:'2024-01-03', eDate:'2024-01-03'
+        },{
+            depth:['','알림 설정 확인 팝업','',''],
+            id:'alarm_set_comfirm', status:'com',
+            type:'modal', note:'',
+            sDate:'2024-01-03', eDate:'2024-01-03'
         },
 
         {
@@ -365,24 +390,29 @@ $(document).ready(function(){
         },
 
         {
-            depth:['설정','내정보관리','내정보관리',''],
-            id:'app-setMyInfo-001', status:'',
-            note:'app-setMyInfo-001',
+            depth:['설정','메뉴','',''],
+            id:'app-setMyInfo-000', status:'',
+            type:'', note:'설정 메뉴',
             sDate:'', eDate:''
+        },{
+            depth:['','내정보관리','내정보관리',''],
+            id:'app-setMyInfo-001', status:'com',
+            note:'',
+            sDate:'2024-01-02', eDate:'2024-01-02'
         },{
             depth:['','','휴대폰번호변경',''],
             id:'app-setMyInfo-002', status:'',
-            note:'',
+            note:'본인인증 후 변경 - app-signin-001.html',
             sDate:'', eDate:''
         },{
             depth:['','','이메일주소변경',''],
-            id:'app-setMyInfo-003', status:'',
+            id:'app-setMyInfo-003', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2023-01-02', eDate:'2023-01-02'
         },{
-            depth:['','	인증/보안','지문인증사용설정',''],
+            depth:['','인증/보안','지문인증사용설정',''],
             id:'app-setAuth-001', status:'',
-            note:'',
+            note:' ',
             sDate:'', eDate:''
         },{
             depth:['','','간편비밀번호변경',''],
@@ -391,24 +421,24 @@ $(document).ready(function(){
             sDate:'', eDate:''
         },{
             depth:['','최근 소식','공지사항','목록'],
-            id:'app-setNoti-001', status:'',
-            note:'',
-            sDate:'', eDate:''
+            id:'app-setNoti-001', status:'com',
+            note:'펼침/닫힘으로 상세 노출',
+            sDate:'2024-01-04', eDate:'2024-01-04'
         },{
             depth:['','','','상세'],
             id:'app-setNoti-002', status:'',
-            note:'',
+            note:'펼침/닫힘으로 상세 노출',
             sDate:'', eDate:''
         },{
             depth:['','','공시안내','목록'],
-            id:'app-setNoti-003', status:'',
+            id:'app-setNoti-003', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-04', eDate:'2024-01-05'
         },{
             depth:['','','','상세'],
-            id:'app-setNoti-004', status:'',
+            id:'app-setNoti-004', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-05', eDate:'2024-01-05'
         },{
             depth:['','고객지원','	자주하는질문','FAQ목록/상세보기'],
             id:'app-setFaq-001', status:'',

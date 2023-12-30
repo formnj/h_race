@@ -34,6 +34,10 @@ $(document).ready(function(){
 /* tab */
 tab_active('.tab_wrap > ul','click');
 
+$('.accordion').delegate('> dt', 'click', function() {
+    accordion(this);
+});
+
 /* modal */
 const modal = {
     open: (_content,_type) => {
@@ -169,3 +173,30 @@ function tab_active(_target, evt) {//_target : 대상 / evt : 핸들러
     })
 }
 /* //tab */
+
+/* accordion */
+function accordion(_target) {
+    var _target = $(_target);
+    _target.closest('dl').hasClass('single') ? // 하나만 오픈
+    (
+        _target.hasClass('active') ?
+        (
+            _target.next('dd').stop().slideUp(),
+            _target.removeClass('active')
+        ) : (
+            _target.addClass('active'),
+            _target.siblings().removeClass('active'),
+            _target.closest('dl').children('dd').stop().slideUp(),
+            _target.next('dd').stop().slideDown()
+        )
+    ) : ( // 각각 제어
+        _target.hasClass('active') ?
+        (
+            _target.next('dd').stop().slideUp(),
+            _target.removeClass('active')
+        ) : (
+            _target.addClass('active'),
+            _target.next('dd').stop().slideDown()
+        )
+    )
+}
