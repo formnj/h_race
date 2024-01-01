@@ -16,10 +16,12 @@ label.select:has(input:disabled):after {background-position:-120px -60px;}
 label.select input:disabled {border-bottom:1px dashed #E1E1E1;}
 label[class*='input'] i {color:#B7B7B7; font-size:18px; font-style:normal; line-height:18px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; position:absolute; top:11px; right:0; left:0;}/* placeholder */
 label[class*='input'] input[type='text'], label[class*='input'] input[type='password'], label[class*='input'] input[type='number'] {width:100%; font-size:16px; line-height:18px;}
+label[class*='input'] textarea {width:100%; min-height:150px; font-size:16px; line-height:18px;}
 label[class*='input'] > em {margin-top:5px; color:#ff7200; font-size:12px; font-family:'Noto Sans'; line-height:18px; display:none;}
 label[class*='input'].err > em {display:block;}
 label[class*='input'].err > em.type_02 {color:#0070BA;}
 label[class*='input'] * {flex:1 auto;}
+label[class*='input'] input:disabled {background-color:#f0f0f0;}
 
 label[class*='input'] button[class*='icon_'] {width:24px; height:24px; font-size:0; background-repeat:no-repeat; position:absolute; top:10px; right:0; z-index:1; display:none;}
 label[class*='input'] button[class*='icon_'] + button[class*='icon_'] {margin-right:34px;}
@@ -37,7 +39,8 @@ label[class*='input'] button.icon_pss {background-image:url('../images/common/ic
 .combine_input input {border:0;}
 
 label.input_square i {color:#666; font-size:14px; top:13px; left:20px;}
-label.input_square input {padding:0 20px; border:1px solid #D7D8DD; border-radius:8px;}
+label.input_square input, label.input_square textarea {padding:0 20px; border:1px solid #D7D8DD; border-radius:8px;}
+label.input_square textarea {padding:15px 20px;}
 
 .label_wrap {border-bottom:1px solid #E1E1E1;}
 .label_wrap:has(input:focus) {border-color:#222;}
@@ -90,8 +93,11 @@ label.input_square input {padding:0 20px; border:1px solid #D7D8DD; border-radiu
 .check_ani input[type='checkbox']:checked + em:before {background-color:#2ECCC8;}
 .check_ani input[type='checkbox']:checked + em:after {border-color:#2ECCC8; left:21px;}
 
-.form_group > li + li {padding-top:50px;}
-.form_group.gap_30 > li + li {padding-top:30px;}
-.form_group .form_tit {margin-top:0; margin-bottom:13px; font-size:15px;}
-.form_group .form_tit em {color:#888; font-weight:400; display:inline-block;}
-.form_group .form_tit.required:after {margin-left:2px; color:#d60812; font-size:14px; content:'*'; display:inline-block;}
+[class*='form_group'] > li + li {padding-top:50px;}
+[class*='form_group'].gap_30 > li + li {padding-top:30px;}
+[class*='form_group'] .form_tit {margin-top:0; margin-bottom:13px; font-size:15px;}
+[class*='form_group'] .form_tit em {color:#888; font-weight:400; display:inline-block;}
+[class*='form_group'] .form_tit.required:after {margin-left:2px; color:#d60812; font-size:14px; content:'*'; display:inline-block;}
+
+.form_group_small > li + li {padding-top:12px;}
+.form_group_small .form_tit {font-size:13px; margin-bottom:6px;}

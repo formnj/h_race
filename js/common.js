@@ -115,18 +115,18 @@ function placeholder(_target){
     _target = $(_target);
     _target.find('i').click(function(){
         $(this).hide();
-        $(this).siblings('input').focus();
+        $(this).siblings('input, textarea').focus();
     });
-    _target.find('input').focus(function(){
+    _target.find('input, textarea').focus(function(){
         $(this).siblings('i').hide();
     });
-    _target.find('input').blur(function(){
+    _target.find('input, textarea').blur(function(){
         if($(this).val().length < 1){
             $(this).siblings('i').show();
         }
     });
-    if(_target.find('input').val().length > 1){
-        _target.find('input').siblings('i').hide();
+    if(_target.find('input, textarea').val().length > 1){
+        _target.find('input, textarea').siblings('i').hide();
     }
 }
 
@@ -162,11 +162,11 @@ function tab_active(_target, evt) {//_target : 대상 / evt : 핸들러
             el.addEventListener(evt, function(){
                 const parent_index = Array.from(el.closest('ul').children).indexOf(el.parentNode);
                 for(j=0; j<el.closest('ul').childElementCount; j++){
-                    el.closest('ul').children[j].classList.remove('current')
-                    el.closest('ul').nextElementSibling.children[j].classList.remove('current');
+                    el.closest('ul').children[j].classList.remove('current');
+                    el.closest('.tab_wrap').querySelector('.tab_content').children[j].classList.remove('current');
                 }
                 el.parentNode.classList.add('current');
-                el.closest('ul').nextElementSibling.children[i].classList.add('current');
+                el.closest('.tab_wrap').querySelector('.tab_content').children[i].classList.add('current');
                 console.log('aaaa');
             });
         });

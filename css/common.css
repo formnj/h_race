@@ -53,6 +53,7 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 .mt20 {margin-top:20px !important;}
 .mt25 {margin-top:25px !important;}
 .mt30 {margin-top:30px !important;}
+.mt35 {margin-top:35px !important;}
 .mt40 {margin-top:40px !important;}
 .mt50 {margin-top:50px !important;}
 .mt35 {margin-top:35px !important;}
@@ -65,8 +66,13 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 .tab_wrap [class*='tab_type'] > li > * {display:block;}
 
 .tab_type_01 {border:1px solid #DFE3E5; border-radius:8px; overflow:hidden;}
-.tab_type_01 li > * {width:100%; padding:11px 5px; color:#888; font-size:15px; font-weight:500; text-align:center;}
+.tab_type_01 li > * {width:100%; padding:11px 5px; color:#888; font-size:15px; font-weight:500; text-align:center; display:block;}
 .tab_type_01 li.current > * {color:#222; background-color:#DFE3E5;}
+
+.tab_type_02 {border:1px solid #DFE3E5; border-radius:8px;}
+.tab_type_02 li {position:relative;}
+.tab_type_02 li > * {min-width:100%; padding:11px 5px; color:#888; font-size:15px; border-radius:8px; text-align:center; display:block;}
+.tab_type_02 li.current > * {color:#222; font-weight:500; border:1px solid #222; position:absolute; top:-1px; right:-1px; bottom:-1px; left:-1px;}
 
 .tab_content {margin-top:20px;}
 .tab_content > div {display:none;}
@@ -229,9 +235,10 @@ dl.explain + dl.explain:before {margin-top:35px; padding-bottom:30px; border-top
 dl.explain dt {font-weight:600;}
 dl.explain dd + dt {margin-top:20px;}
 
-.explain_box {color:#444; font-size:14px; font-weight:400; line-height:20px;}
+.explain_box {color:#444; font-size:14px; font-weight:400; line-height:1.43em;}
 .explain_box p + p {margin-top:20px;}
 .explain_box span {color:#D61920;}
+.explain_box p.sub_explain {font-size:13px;}
 
 .survay_wrap.type_check * + h4 {margin-top:45px;}
 .survay_wrap .age_info {margin-top:50px; padding:16px 40px; color:#13A09D; background-color:#F0FFFF; border:1px solid #A6E5E4; border-radius:8px; text-align:center;}
@@ -392,6 +399,10 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .qna > dt:before {width:24px; height:24px; margin-top:-2px; background:url('../images/common/icon_sprit.png') -70px -90px no-repeat; background-size:250px auto; content:''; position:absolute; top:0; left:0; display:block;}
 .qna > dd {padding-top:25px;}
 
+.faq > *:has(.tit) {padding-bottom:13px;}
+.faq .tit {padding-left:25px; position:relative;}
+.faq .tit:before {width:15px; height:15px; background-image:url('../images/common/icon_sprit.png'); background-position:-75px -95px; background-repeat:no-repeat; background-size:250px auto; content:''; position:absolute; top:2px; left:0; display:block;}
+
 .copyright {color:#666; font-size:12px; line-height:1.66em; text-align:center;}
 
 .alert > li {padding-left:26px; color:#444; line-height:1.5em; position:relative;}
@@ -535,6 +546,10 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 
 .list_wrap .type_board > li:after {width:24px; height:24px; font-size:0; background-image:url('../images/common/icon_arrow.png'); background-position:50%; background-repeat:no-repeat; background-size:cover; content:''; position:absolute; top:22px; right:4px; display:block;}
 
+.list_wrap .type_board.type_status > li {padding:20px 0;}
+.list_wrap .type_board.type_status > li:after {display:none;}
+.list_wrap .type_board.type_status > * .tit {display:flex; justify-content:space-between;}
+
 .list_wrap .accordion > dt:after {width:24px; height:24px; font-size:0; background-image:url('../images/common/icon_arrow.png'); background-position:50%; background-repeat:no-repeat; background-size:cover; content:''; position:absolute; top:20px; right:4px; display:block; transform:rotate(90deg); transition:transform 0.25s;}
 .list_wrap .accordion > dt.active:after {transform:rotate(-90deg);}
 .list_wrap .accordion > dt .tit {font-weight:500;}
@@ -553,3 +568,6 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .board_detail_wrap .board_cont + .file_list {margin-top:45px;}
 .board_detail_wrap .file_list li + li {margin-top:25px;}
 .board_detail_wrap .file_list a {text-decoration:underline;}
+
+[class*='badge_'] {padding:4px 15px; font-size:12px; word-break:keep-all; background-color:#F3F3F3; border:1px solid #D9D9D9; border-radius:8px;}
+.badge_wait {color:#F36514; background-color:#FFF1DC; border:1px solid #FABF9E;}

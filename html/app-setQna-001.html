@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>1:1 문의</strong>
+            </p>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content"> 
+                <div class="tab_wrap">
+                    <ul class="tab_type_02">
+                        <li class="current"><button>문의하기</button></li>
+                        <li><button>문의내역</button></li>
+                    </ul>
+
+                    <div class="tab_content">
+                        <!-- 문의하기 -->
+                        <div class="current">
+                            <div class="explain_box mt15">
+                                <p class="sub_explain">서비스 이용 중 궁금한 점이나 건의사항을 등록해 주세요.</p>
+                            </div>
+                            <ul class="form_group_small mt35">
+                                <li>
+                                    <p class="form_tit">문의구분</p>
+                                    <label class="input_square select" id="select01">
+                                        <i>선택해주세요.</i>
+                                        <input class="text" type="text" readonly="" onclick="modal.open('select_sample', 'type_bottom');">
+                                        <em>error message</em>
+                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                                    </label>
+                                </li>
+                                <li>
+                                    <p class="form_tit">이름</p>
+                                    <label class="input_square">
+                                        <i>선택해주세요.</i>
+                                        <input type="text" value="홍길동" disabled />
+                                        <em>error message</em>
+                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                                    </label>
+                                </li>
+                                <li>
+                                    <p class="form_tit">전화번호</p>
+                                    <label class="input_square">
+                                        <i>선택해주세요.</i>
+                                        <input type="text" value="010-1234-1234" disabled />
+                                        <em>error message</em>
+                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                                    </label>
+                                </li>
+                                <li>
+                                    <p class="form_tit">이메일</p>
+                                    <label class="input_square">
+                                        <i>선택해주세요.</i>
+                                        <input type="text" value="abcd@eemail.com" disabled />
+                                        <em>error message</em>
+                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                                    </label>
+                                </li>
+                                <li>
+                                    <p class="form_tit">제목</p>
+                                    <label class="input_square">
+                                        <i>제목을 입력해주세요.</i>
+                                        <input type="text" />
+                                        <em>error message</em>
+                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                                    </label>
+                                </li>
+                                <li>
+                                    <p class="form_tit">내용</p>
+                                    <label class="input_square">
+                                        <i>내용을 입력해주세요.</i>
+                                        <textarea></textarea>
+                                        <em>error message</em>
+                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //문의하기 -->
+
+                        <!-- 문의내역 -->
+                        <div>
+                            <div class="list_wrap">
+                                <ul class="type_board type_status">
+                                    <!-- loop -->
+                                    <li>
+                                        <a href="./app-setNoti-004.html">
+                                            <span class="tit">비밀번호 재설정이 안되요
+                                                <span>
+                                                    <em class="badge_wait">답변대기</em>
+                                                </span>
+                                            </span>
+                                            <em class="date">2023-12-31</em>
+                                        </a>
+                                    </li>
+                                    <!-- //loop -->
+
+                                    <li>
+                                        <a href="./app-setNoti-004.html">
+                                            <span class="tit">비밀번호 재설정이 안되요
+                                                <span>
+                                                    <em class="badge_com">답변완료</em>
+                                                </span>
+                                            </span>
+                                            <em class="date">2023-12-31</em>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //문의내역 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- action bar -->
+        <div class="action_bar">
+            <ul>
+                <li><button class="home">홈</button></li>
+                <li><button class="funding">펀딩</button></li>
+                <li><button class="invest">자산</button></li>
+                <li><a href="./app-setMyInfo-000.html" class="setting">설정</a></li>
+            </ul>
+        </div>
+        <!-- //action bar -->
+    </div>
+
+    <!-- modal -->
+    <div id="modal_wrap">
+        <div class="modal_container"></div>
+    </div>
+    <!-- //modal -->
+</body>
+</html>

@@ -441,18 +441,18 @@ $(document).ready(function(){
             sDate:'2024-01-05', eDate:'2024-01-05'
         },{
             depth:['','고객지원','	자주하는질문','FAQ목록/상세보기'],
-            id:'app-setFaq-001', status:'',
+            id:'app-setFaq-001', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-05', eDate:'2024-01-05'
         },{
-            depth:['','','','문의하기'],
-            id:'app-setQna-001', status:'',
-            note:'',
-            sDate:'', eDate:''
+            depth:['','','1:1문의','문의하기'],
+            id:'app-setQna-001', status:'com',
+            note:'문의하기/내역 페이지 묶음',
+            sDate:'2024-01-05', eDate:'2024-01-06'
         },{
             depth:['','','','문의내역'],
             id:'app-setQna-002', status:'',
-            note:'',
+            note:'[app-setQna-001] 문의하기/내역 페이지 묶음',
             sDate:'', eDate:''
         },{
             depth:['','','이벤트 보기','목록'],
