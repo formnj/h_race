@@ -46,11 +46,6 @@ $(document).ready(function(){
             type:'', note:'',
             sDate:'2024-01-03', eDate:'2024-01-03'
         },{
-            depth:['','버전 알림 팝업','',''],
-            id:'version', status:'com',
-            type:'modal', note:'',
-            sDate:'2024-01-03', eDate:'2024-01-03'
-        },{
             depth:['','단순 텍스트 팝업','',''],
             id:'text_modal', status:'com',
             type:'modal', note:'',
@@ -456,29 +451,29 @@ $(document).ready(function(){
             sDate:'', eDate:''
         },{
             depth:['','','이벤트 보기','목록'],
-            id:'app-setEvent-001', status:'',
+            id:'app-setEvent-001', status:'ing',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-07', eDate:'2024-01-07'
         },{
             depth:['','','','상세'],
-            id:'app-setEvent-002', status:'',
+            id:'app-setEvent-002', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-06', eDate:'2024-01-06'
         },{
             depth:['','알림설정','서비스 이용알림',''],
             id:'app-setAlarm-001', status:'',
-            note:'',
+            type:'modal', note:'[공통 > 알림 설정 팝업]',
             sDate:'', eDate:''
         },{
             depth:['','','마케팅/이벤트 알림',''],
             id:'app-setAlarm-002', status:'',
-            note:'',
+            type:'modal', note:'[공통 > 알림 설정 확인 팝업]',
             sDate:'', eDate:''
         },{
             depth:['','','모바일앱 버전',''],
-            id:'app-setAlarm-003', status:'',
-            note:'',
-            sDate:'', eDate:''
+            id:'app-setAlarm-003', status:'com',
+            type:'modal', note:'',
+            sDate:'2024-01-03', eDate:'2024-01-03'
         },{
             depth:['','약관 및 정책','동의한 약관보기',''],
             id:'app-setTerms-001', status:'',

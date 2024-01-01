@@ -560,8 +560,8 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .list_wrap .accordion > dd .file_list li + li {margin-top:25px;}
 .list_wrap .accordion > dd .file_list a {text-decoration:underline;}
 
-.board_detail_wrap .title_wrap {padding:20px 0;}
-.board_detail_wrap .title_wrap .tit {font-size:16px; font-weight:500;}
+.board_detail_wrap .title_wrap {padding-bottom:20px;}
+.board_detail_wrap .title_wrap .tit {font-size:16px; font-weight:500; display:flex; justify-content:space-between;}
 .board_detail_wrap .title_wrap .date {margin-top:6px; color:#888; font-size:12px; display:inline-block;}
 .board_detail_wrap .board_cont {padding-top:25px; line-height:1.57em; border-top:1px solid #eee;}
 .board_detail_wrap .board_cont > p + p {margin-top:18px;}
@@ -569,5 +569,6 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .board_detail_wrap .file_list li + li {margin-top:25px;}
 .board_detail_wrap .file_list a {text-decoration:underline;}
 
-[class*='badge_'] {padding:4px 15px; font-size:12px; word-break:keep-all; background-color:#F3F3F3; border:1px solid #D9D9D9; border-radius:8px;}
-.badge_wait {color:#F36514; background-color:#FFF1DC; border:1px solid #FABF9E;}
+.badge em {padding:4px 15px; font-size:12px; word-break:keep-all; background-color:#F3F3F3; border:1px solid #D9D9D9; border-radius:8px;}
+.badge em.wait {color:#F36514; background-color:#FFF1DC; border:1px solid #FABF9E;}
+.badge em.ing {color:#496BAE; background-color:#E2ECFF; border:1px solid #B8CAFA;}
