@@ -47,6 +47,10 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 .ar {text-align:right!important;}
 .vm {vertical-align:middle !important;}
 
+/* float */
+.fr {float:right;}
+.fl {float:left;}
+
 /* margin & padding */
 .mt10 {margin-top:10px !important;}
 .mt15 {margin-top:15px !important;}
@@ -175,6 +179,8 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 
 .media_access p:first-child:before {width:40px; height:40px; margin:0 auto 22px; background-image:url('../images/common/icon_folder.png'); background-position:0 0; background-repeat:no-repeat; background-size:40px; content:''; display:block;}
 
+.thumb img {display:block;}
+
 /* progress_bar */
 .progress_bar {width:0; height:4px; font-size:0; background-color:blue; position:fixed; top:0; z-index:10; transition:width 0.5s cubic-bezier(.47,1.64,.41,0.8);}
 
@@ -211,6 +217,16 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 
 .policy_check_list.type_square li > div {padding:15px 10px 13px; background-color:#fff; border:1px solid #D7D8DD; border-radius:8px;}
 .policy_check_list.type_square li > div:has(input[type='checkbox']:checked) {border-color:#2ECCC8;}
+
+.policy_wrap dt {font-weight:600;}
+.policy_wrap dd {color:#444;}
+.policy_wrap dd + dt {margin-top:20px;}
+.policy_wrap p + p {margin-top:20px;}
+
+.policy_history {margin-top:50px; padding:20px 0; border:1px solid #eee; border-right:0; border-left:0;}
+.policy_history li {font-size:13px; font-weight:500; display:flex; gap:15px;}
+.policy_history li + li {margin-top:8px;}
+.policy_history li .date {font-weight:400;}
 
 .time_count {margin-top:16px; font-size:13px;}
 .time_count em {color:#FF0000;}
@@ -534,6 +550,8 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .alarm_set li:before {width:3px; height:3px; background-color:#444; border-radius:50%; content:''; position:absolute; top:6px; left:0; display:block;}
 
 /* list */
+.list_wrap .list_top:after {clear:both; content:''; display:block;}
+
 .list_wrap .type_table > li {width:100%; border-bottom:1px solid #EEEEEE; display:table;}
 .list_wrap .type_table > li + li {margin-top:20px;}
 .list_wrap .type_table > li > * {padding:10px 0; display:table-cell;}
@@ -543,6 +561,8 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .list_wrap .type_board > * {padding:24px 30px 24px 0; line-height:1.45em; border-bottom:1px solid #eee; position:relative;}
 .list_wrap .type_board > * .tit {display:block;}
 .list_wrap .type_board > * .tit + .date {margin-top:10px; color:#888; font-size:12px; display:inline-block;}
+.list_wrap .type_board > * .thumb {display:block;}
+.list_wrap .type_board > * .thumb + .tit {margin-top:15px;}
 
 .list_wrap .type_board > li:after {width:24px; height:24px; font-size:0; background-image:url('../images/common/icon_arrow.png'); background-position:50%; background-repeat:no-repeat; background-size:cover; content:''; position:absolute; top:22px; right:4px; display:block;}
 
@@ -560,10 +580,12 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .list_wrap .accordion > dd .file_list li + li {margin-top:25px;}
 .list_wrap .accordion > dd .file_list a {text-decoration:underline;}
 
-.board_detail_wrap .title_wrap {padding-bottom:20px;}
+.board_detail_wrap .title_wrap {margin-bottom:25px; padding-bottom:20px; border-bottom:1px solid #eee;}
 .board_detail_wrap .title_wrap .tit {font-size:16px; font-weight:500; display:flex; justify-content:space-between;}
+.board_detail_wrap .title_wrap.type_02 {display:flex; justify-content:space-between;}
+.board_detail_wrap .title_wrap.type_02 .tit {display:block;}
 .board_detail_wrap .title_wrap .date {margin-top:6px; color:#888; font-size:12px; display:inline-block;}
-.board_detail_wrap .board_cont {padding-top:25px; line-height:1.57em; border-top:1px solid #eee;}
+.board_detail_wrap .board_cont {line-height:1.57em;}
 .board_detail_wrap .board_cont > p + p {margin-top:18px;}
 .board_detail_wrap .board_cont + .file_list {margin-top:45px;}
 .board_detail_wrap .file_list li + li {margin-top:25px;}
@@ -572,3 +594,4 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .badge em {padding:4px 15px; font-size:12px; word-break:keep-all; background-color:#F3F3F3; border:1px solid #D9D9D9; border-radius:8px;}
 .badge em.wait {color:#F36514; background-color:#FFF1DC; border:1px solid #FABF9E;}
 .badge em.ing {color:#496BAE; background-color:#E2ECFF; border:1px solid #B8CAFA;}
+.badge em.fin {color:#fff; background-color:#6D6D6D; border:1px solid #6D6D6D;}

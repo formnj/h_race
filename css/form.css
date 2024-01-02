@@ -46,8 +46,18 @@ label.input_square textarea {padding:15px 20px;}
 .label_wrap:has(input:focus) {border-color:#222;}
 .label_wrap input {border-bottom:0;}
 
+/* select_form */
 .select select {width:100%; height:43px; padding:0 20px 0 0; font-size:18px;}
 .select select option[value=""][disabled] {color:red;}
+.select_form {vertical-align:middle; display:inline-block;}
+.select_form select {display:none;}
+.select_form dt a {padding:0 25px 0 0; font-size:13px; line-height:24px; position:relative; display:block;}
+.select_form dt a:after {width:6px; height:6px; margin-top:-4px; border-right:1px solid #222; border-bottom:1px solid #222; content:''; position:absolute; top:50%; right:5px; display:inline-block; transform:rotate(45deg); transition:all 0.2s;}
+.select_form dl.active dt a:after {margin-top:-3px; transform:rotate(-135deg);}
+.select_form dd {position:relative;}
+.select_form dd ul {min-width:100%; padding:10px; background-color:#fff; border:1px solid #e8e5e2; position:absolute; top:5px; left:0; z-index:1; display:none;}
+.select_form dd li a {padding:8px 0; word-break:keep-all; display:block;}
+.select_form.fr dd ul {right:0; left:initial;}
 
 .label_wrap {position:relative; flex:1; display:flex; gap:10px;}
 

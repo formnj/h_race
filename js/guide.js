@@ -451,7 +451,7 @@ $(document).ready(function(){
             sDate:'', eDate:''
         },{
             depth:['','','이벤트 보기','목록'],
-            id:'app-setEvent-001', status:'ing',
+            id:'app-setEvent-001', status:'com',
             note:'',
             sDate:'2024-01-07', eDate:'2024-01-07'
         },{
@@ -476,19 +476,19 @@ $(document).ready(function(){
             sDate:'2024-01-03', eDate:'2024-01-03'
         },{
             depth:['','약관 및 정책','동의한 약관보기',''],
-            id:'app-setTerms-001', status:'',
+            id:'app-setTerms-001', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-07', eDate:'2024-01-07'
         },{
             depth:['','','개인정보취급방침',''],
-            id:'app-setTerms-002', status:'',
-            note:'',
-            sDate:'', eDate:''
+            id:'app-setTerms-002', status:'com',
+            note:'약관 상세보기 공통',
+            sDate:'2024-01-07', eDate:'2024-01-07'
         },{
             depth:['','오픈소스 라이선스','',''],
-            id:'app-setLicense-001', status:'',
+            id:'app-setLicense-001', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-08', eDate:'2024-01-08'
         },{
             depth:['','탈퇴하기','',''],
             id:'app-withdraw-001', status:'',

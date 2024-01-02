@@ -31,11 +31,24 @@ $(document).ready(function(){
     });
 });
 
+$(document).delegate('body','click', function(){
+    $('.select_form dl').removeClass('active');
+    $('.select_form ul').slideUp();
+});
+
 /* tab */
 tab_active('.tab_wrap > ul','click');
 
 $('.accordion').delegate('> dt', 'click', function() {
     accordion(this);
+});
+
+$('.select_form').delegate('a','click',function(e) {
+    select_ctrl(this);
+    e.stopPropagation();
+});
+$('.select_form').delegate('select','change',function() {
+    select_change(this);
 });
 
 /* modal */
@@ -199,4 +212,24 @@ function accordion(_target) {
             _target.next('dd').stop().slideDown()
         )
     )
+}
+
+function select_ctrl(_target) {
+    var _target = $(_target);
+    var select_baseline = _target.closest('dl').find('ul').outerHeight() + _target.closest('dl').offset().top + 40;
+
+    if (_target.parent()[0].nodeName == 'DT' && !_target.closest('dl').hasClass('active')) {
+        _target.closest('dl').addClass('active');
+        _target.closest('dl').find('ul').stop().slideDown();
+    } else {
+        _target.closest('dl').removeClass('active').find('dt a').text(_target.text());
+        _target.closest('dl').find('ul').stop().slideUp();
+        _target.closest('.select_form').find('option').prop('selected', false);
+        _target.closest('.select_form').find('option').eq(_target.parent().index()).prop('selected', true);
+    }
+}
+
+function select_change(_target) {
+    var _target = $(_target);
+    _target.closest('.select_form').find('dt a').text(_target.children('option:selected').text());
 }
