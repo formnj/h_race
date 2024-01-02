@@ -202,7 +202,7 @@ $(document).ready(function(){
             depth:['','','','투자성향 설문 이동'],
             id:'app-account-010-1-1', status:'com',
             type:'modal', note:'',
-            sDate:'2024-01-03', eDate:'2024-01-03'
+            sDate:'2024-01-02', eDate:'2024-01-02'
         },
 
         {
@@ -386,9 +386,9 @@ $(document).ready(function(){
 
         {
             depth:['설정','메뉴','',''],
-            id:'app-setMyInfo-000', status:'',
+            id:'app-setMyInfo-000', status:'com',
             type:'', note:'설정 메뉴',
-            sDate:'', eDate:''
+            sDate:'2024-01-02', eDate:'2024-01-02'
         },{
             depth:['','내정보관리','내정보관리',''],
             id:'app-setMyInfo-001', status:'com',
