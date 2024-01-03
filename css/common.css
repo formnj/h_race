@@ -226,7 +226,7 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 .policy_check_list li > div {display:flex; justify-content:space-between;}
 .policy_check_list li + li {margin-top:20px;}
 .policy_check_list li > div .check {flex:1;}
-.policy_check_list li > div button {width:24px; height:24px; font-size:0; background-image:url('../images/common/icon_arrow.png'); background-position:50%; background-repeat:no-repeat; background-size:cover; display:block;}
+.policy_check_list li > div button {width:24px; height:24px; font-size:0; background-image:url('../images/common/icon_sprit.png'); background-position:-150px -90px; background-repeat:no-repeat; background-size:250px auto; display:block;}
 
 .policy_check_list.type_square li > div {padding:15px 10px 13px; background-color:#fff; border:1px solid #D7D8DD; border-radius:8px;}
 .policy_check_list.type_square li > div:has(input[type='checkbox']:checked) {border-color:#2ECCC8;}
@@ -577,13 +577,14 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .list_wrap .type_board > * .thumb {display:block;}
 .list_wrap .type_board > * .thumb + .tit {margin-top:15px;}
 
-.list_wrap .type_board > li:after {width:24px; height:24px; font-size:0; background-image:url('../images/common/icon_arrow.png'); background-position:50%; background-repeat:no-repeat; background-size:cover; content:''; position:absolute; top:22px; right:4px; display:block;}
+.list_wrap .type_board > li:after {width:24px; height:24px; font-size:0; background-image:url('../images/common/icon_sprit.png'); background-position:-150px -90px; background-repeat:no-repeat; background-size:250px auto; content:''; position:absolute; top:22px; right:4px; display:block;}
 
 .list_wrap .type_board.type_status > li {padding:20px 0;}
 .list_wrap .type_board.type_status > li:after {display:none;}
 .list_wrap .type_board.type_status > * .tit {display:flex; justify-content:space-between;}
 
-.list_wrap .accordion > dt:after {width:24px; height:24px; font-size:0; background-image:url('../images/common/icon_arrow.png'); background-position:50%; background-repeat:no-repeat; background-size:cover; content:''; position:absolute; top:20px; right:4px; display:block; transform:rotate(90deg); transition:transform 0.25s;}
+.list_wrap .accordion > dt {position:relative;}
+.list_wrap .accordion > dt:after {width:24px; height:24px; font-size:0; background-image:url('../images/common/icon_sprit.png'); background-position:-150px -90px; background-repeat:no-repeat; background-size:250px auto; content:''; position:absolute; top:20px; right:4px; display:block; transform:rotate(90deg); transition:transform 0.25s;}
 .list_wrap .accordion > dt.active:after {transform:rotate(-90deg);}
 .list_wrap .accordion > dt .tit {font-weight:500;}
 .list_wrap .accordion > dd {display:none;}
@@ -592,6 +593,12 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .list_wrap .accordion > dd .cont + .file_list {margin-top:40px;}
 .list_wrap .accordion > dd .file_list li + li {margin-top:25px;}
 .list_wrap .accordion > dd .file_list a {text-decoration:underline;}
+.list_wrap .type_square dt {padding:18px 16px; line-height:1.43em; border:1px solid #d7d8dd; border-radius:8px;}
+.list_wrap .type_square dd .cont {margin:20px 0;}
+.list_wrap .type_square dd + dt {margin-top:15px;}
+.list_wrap .type_square dt:after {margin-top:-12px; top:50%; right:16px; transform-origin:center;}
+.list_wrap .type_square dt.active {border-color:#222;}
+.list_wrap .type_square dt.active:after {background-position:-180px -90px; transform-origin:center;}
 
 .board_detail_wrap .title_wrap {margin-bottom:25px; padding-bottom:20px; border-bottom:1px solid #eee;}
 .board_detail_wrap .title_wrap .tit {font-size:16px; font-weight:500; display:flex; justify-content:space-between;}
@@ -608,6 +615,9 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .badge em.wait {color:#F36514; background-color:#FFF1DC; border:1px solid #FABF9E;}
 .badge em.ing {color:#496BAE; background-color:#E2ECFF; border:1px solid #B8CAFA;}
 .badge em.fin {color:#fff; background-color:#6D6D6D; border:1px solid #6D6D6D;}
+.badge em.type_01 {color:#309717; background-color:#E8FAE6; border-color:#A3E598;}
+.badge em.type_02 {color:#D1510A; background-color:#FCEAE1; border-color:#FCC2AF;}
+.badge em.type_03 {color:#3376A3; background-color:#E1EEFC; border-color:#A4CCF3;}
 
 .myinfo_wrap section + section:before {margin:25px -20px; border-top:4px solid #f1f1f1; content:''; display:block;}
 .myinfo_wrap .user {font-size:16px;}
@@ -631,7 +641,7 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 
 .myinfo_wrap.main .dash_board li.possession > * {padding-top:0;}
 .myinfo_wrap.main .dash_board li.possession dt > * {padding:25px 0 18px; display:flex; justify-content:space-between;}
-.myinfo_wrap.main .dash_board li.possession dt > *:after {width:24px; height:24px; font-size:0; background-image:url('../images/common/icon_arrow.png'); background-position:50%; background-repeat:no-repeat; background-size:cover; content:''; display:block;}
+.myinfo_wrap.main .dash_board li.possession dt > *:after {width:24px; height:24px; font-size:0; background-image:url('../images/common/icon_sprit.png'); background-position:-150px -90px; background-repeat:no-repeat; background-size:250px auto; content:''; display:block;}
 .myinfo_wrap.main .dash_board li.possession dd {margin:0 -20px; padding-top:21px; border-top:1px solid #EAECF7; display:flex; justify-content:space-between;}
 .myinfo_wrap.main .dash_board li.possession dd > * {width:33.3333%; font-size:15px; font-weight:500; text-align:center; display:block;}
 .myinfo_wrap.main .dash_board li.possession dd strong {margin-top:16px; font-weight:700; display:block;}
@@ -665,3 +675,15 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .my_status_list > p {margin-top:30px; color:#000; font-size:12px; display:flex; align-items:center; justify-content:space-between;}
 .my_status_list > p a {padding:7px 24px 8px; background-color:#F0F2F3; border:1px solid #dbdbdb; border-radius:8px; display:flex; align-items:center;}
 .my_status_list > p a:before {width:15px; height:15px; margin-right:10px; background:url('../images/sub/icon_subscription.png') -150px 0 no-repeat; background-size:250px auto; content:''; display:block;}
+
+.invest_status .account {padding:24px 16px; background-color:#F8F8F8; border-radius:16px;}
+.invest_status .account:after {clear:both; content:''; display:block;}
+.invest_status .account > * {float:left;}
+.invest_status .account dt:after {height:10px; margin:0 15px; border-left:1px solid #666; content:''; display:inline-block;}
+.invest_status .account dd {font-weight:500;}
+.invest_status .account dd span {margin-left:5px;}
+
+.status_board {padding:24px 20px; background-color:#F8F8F8; border:1px solid #ededed; border-radius:16px;}
+.status_board dl {font-size:15px; display:flex; justify-content:space-between;}
+.status_board dl + dl {margin-top:20px;}
+.status_board dd {font-weight:700; text-align:right;}

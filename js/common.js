@@ -171,18 +171,29 @@ function tab_active(_target, evt) {//_target : 대상 / evt : 핸들러
     tab = document.querySelectorAll(_target);
     
     tab.forEach(el => {
-        el.querySelectorAll('button').forEach((el, i) => {
-            el.addEventListener(evt, function(){
-                const parent_index = Array.from(el.closest('ul').children).indexOf(el.parentNode);
-                for(j=0; j<el.closest('ul').childElementCount; j++){
-                    el.closest('ul').children[j].classList.remove('current');
-                    el.closest('.tab_wrap').querySelector('.tab_content').children[j].classList.remove('current');
-                }
-                el.parentNode.classList.add('current');
-                el.closest('.tab_wrap').querySelector('.tab_content').children[i].classList.add('current');
-                console.log('aaaa');
+        if(el.classList.contains('demo')){// 탭버튼에만 current 효과 줄 때
+            el.querySelectorAll('button').forEach((el, i) => {
+                el.addEventListener(evt, function(){
+                    const parent_index = Array.from(el.closest('ul').children).indexOf(el.parentNode);
+                    for(j=0; j<el.closest('ul').childElementCount; j++){
+                        el.closest('ul').children[j].classList.remove('current');
+                    }
+                    el.parentNode.classList.add('current');
+                });
             });
-        });
+        } else {
+            el.querySelectorAll('button').forEach((el, i) => {
+                el.addEventListener(evt, function(){
+                    const parent_index = Array.from(el.closest('ul').children).indexOf(el.parentNode);
+                    for(j=0; j<el.closest('ul').childElementCount; j++){
+                        el.closest('ul').children[j].classList.remove('current');
+                        el.closest('.tab_wrap').querySelector('.tab_content').children[j].classList.remove('current');
+                    }
+                    el.parentNode.classList.add('current');
+                    el.closest('.tab_wrap').querySelector('.tab_content').children[i].classList.add('current');
+                });
+            });
+        }
     })
 }
 /* //tab */

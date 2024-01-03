@@ -284,14 +284,14 @@ $(document).ready(function(){
             sDate:'', eDate:''
         },{
             depth:['','','	내조각투자보유현황',''],
-            id:'app-myInfo-003', status:'ing',
+            id:'app-myInfo-003', status:'com',
             note:'',
             sDate:'2024-01-09', eDate:'2024-01-09'
         },{
             depth:['','','예수금출금안내',''],
-            id:'app-myInfo-004', status:'',
+            id:'app-myInfo-004', status:'ing',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-09', eDate:''
         },{
             depth:['','','청약/배당내역','공모내역'],
             id:'app-myInfo-005', status:'',
