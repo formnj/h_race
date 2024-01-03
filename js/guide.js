@@ -274,19 +274,19 @@ $(document).ready(function(){
 
         {
             depth:['자산','내정보 요약','투자성향정보','투자성향관리/투자자격변경신청'],
-            id:'app-myInfo-001', status:'',
+            id:'app-myInfo-001', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-09', eDate:'2024-01-09'
         },{
             depth:['','','연결계좌 및 예수금 현황',''],
             id:'app-myInfo-002', status:'',
-            note:'',
+            note:'[app-myInfo-001]에 내용 포함',
             sDate:'', eDate:''
         },{
             depth:['','','	내조각투자보유현황',''],
-            id:'app-myInfo-003', status:'',
+            id:'app-myInfo-003', status:'ing',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-09', eDate:'2024-01-09'
         },{
             depth:['','','예수금출금안내',''],
             id:'app-myInfo-004', status:'',

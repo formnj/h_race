@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>조각투자 보유 현황</strong>
+            </p>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content">
+                <div class="myinfo_wrap">
+                    <script>
+                        $(document).ready(function(){
+                            tab_active('.tab_wrap .tab_type_prossession','click');
+                        });
+                    </script>
+                    <div class="tab_wrap">
+                        <section>
+                            <ul class="tab_type_prossession">
+                                <li class="all current">
+                                    <button><em>전체</em></button>
+                                </li>
+                                <li class="horse">
+                                    <button><em>육성마</em></button>
+                                </li>
+                                <li class="energe">
+                                    <button><em>에너지</em></button>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="tab_content">
+                            <div class="current">tab01</div>
+                            <div>tab02</div>
+                            <div>tab03</div>
+                        </section>
+
+                        <p class="user" ><strong>홍길동</strong>님 자산현황</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div id="modal_wrap">
+        <div class="modal_container"></div>
+    </div>
+    <!-- //modal -->
+</body>
+</html>

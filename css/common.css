@@ -78,6 +78,19 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 .tab_type_02 li > * {min-width:100%; padding:11px 5px; color:#888; font-size:15px; border-radius:8px; text-align:center; display:block;}
 .tab_type_02 li.current > * {color:#222; font-weight:500; border:1px solid #222; position:absolute; top:-1px; right:-1px; bottom:-1px; left:-1px;}
 
+.tab_type_prossession {display:inline-flex !important; gap:10px;}
+.tab_type_prossession li > * {width:84px; height:84px; color:#888A90; font-size:13px; font-weight:500; background-color:#F8F8F8; border:1px solid #f8f8f8; border-radius:50%; display:flex; align-items:center;}
+.tab_type_prossession li em:before {width:40px; height:40px; margin:0 auto; background-image:url('../images/sub/icon_subscription.png'); background-repeat:no-repeat; background-size:250px auto; content:''; display:block;}
+.tab_type_prossession li.all em:before {background-position:0 -140px;}
+.tab_type_prossession li.horse em:before {background-position:-50px -140px;}
+.tab_type_prossession li.energe em:before {background-position:-100px -140px;}
+
+.tab_type_prossession li.current > * {background-color:#fff; border-color:#B5D6E2;}
+.tab_type_prossession li.current em:before {color:#222;}
+.tab_type_prossession li.current.all em:before {background-position:0 -100px;}
+.tab_type_prossession li.current.horse em:before {background-position:-50px -100px;}
+.tab_type_prossession li.current.energe em:before {background-position:-100px -100px;}
+
 .tab_content {margin-top:20px;}
 .tab_content > div {display:none;}
 .tab_content > div.current {display:block;}
@@ -595,3 +608,60 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .badge em.wait {color:#F36514; background-color:#FFF1DC; border:1px solid #FABF9E;}
 .badge em.ing {color:#496BAE; background-color:#E2ECFF; border:1px solid #B8CAFA;}
 .badge em.fin {color:#fff; background-color:#6D6D6D; border:1px solid #6D6D6D;}
+
+.myinfo_wrap section + section:before {margin:25px -20px; border-top:4px solid #f1f1f1; content:''; display:block;}
+.myinfo_wrap .user {font-size:16px;}
+.myinfo_wrap .user strong {font-weight:600;}
+
+.myinfo_wrap.main .dash_board li + li {margin-top:16px;}
+.myinfo_wrap.main .dash_board li > * {padding:23px 20px 25px; border-radius:16px; position:relative; display:block;}
+.myinfo_wrap.main .dash_board li.banner span {font-size:13px;}
+.myinfo_wrap.main .dash_board li.banner strong {margin-top:16px; font-size:15px; font-weight:500; display:block;}
+.myinfo_wrap.main .dash_board li.banner > *:before {width:50px; height:50px; background-image:url('../images/sub/icon_subscription.png'); background-position:0 0; background-repeat:no-repeat; background-size:250px auto; content:''; position:absolute; top:50%; right:20px; display:block; transform:translateY(-50%);}
+.myinfo_wrap.main .dash_board li.opening > *:before {background-position:-60px 0;}
+
+.myinfo_wrap.main .dash_board li.survay > * {background-color:#E3F8FF;}
+.myinfo_wrap.main .dash_board li.opening > * {background-color:#E3F0FF;}
+.myinfo_wrap.main .dash_board li.account > *, .myinfo_wrap.main .dash_board li.possession > * {background-color:#f8f8f8;}
+
+.myinfo_wrap.main .dash_board li.account p {text-align:left; display:flex; align-items:center; gap:10px;}
+.myinfo_wrap.main .dash_board li.account p span {font-weight:500;}
+.myinfo_wrap.main .dash_board li.account .btn_copy {width:18px; height:18px; font-size:0; background:url('../images/sub/icon_subscription.png') -120px 0 no-repeat; background-size:250px auto; display:block;}
+.myinfo_wrap.main .dash_board li.account strong {margin-top:28px; font-size:22px; font-weight:700; text-align:center; display:block;}
+
+.myinfo_wrap.main .dash_board li.possession > * {padding-top:0;}
+.myinfo_wrap.main .dash_board li.possession dt > * {padding:25px 0 18px; display:flex; justify-content:space-between;}
+.myinfo_wrap.main .dash_board li.possession dt > *:after {width:24px; height:24px; font-size:0; background-image:url('../images/common/icon_arrow.png'); background-position:50%; background-repeat:no-repeat; background-size:cover; content:''; display:block;}
+.myinfo_wrap.main .dash_board li.possession dd {margin:0 -20px; padding-top:21px; border-top:1px solid #EAECF7; display:flex; justify-content:space-between;}
+.myinfo_wrap.main .dash_board li.possession dd > * {width:33.3333%; font-size:15px; font-weight:500; text-align:center; display:block;}
+.myinfo_wrap.main .dash_board li.possession dd strong {margin-top:16px; font-weight:700; display:block;}
+
+.myinfo_wrap.main .dash_board .top_quick ul {padding:0; display:flex; gap:8px;}
+.myinfo_wrap.main .dash_board .top_quick li {width:100%; margin-top:0;}
+.myinfo_wrap.main .dash_board .top_quick li > * {padding:20px 5px 14px; font-size:15px; font-weight:500; background-color:#E3F0FF; text-align:center; display:block;}
+.myinfo_wrap.main .dash_board .top_quick li em {display:inline-flex; align-items:center;}
+.myinfo_wrap.main .dash_board .top_quick li em:before {width:26px; height:26px; margin-right:10px; background-image:url('../images/sub/icon_subscription.png'); background-repeat:no-repeat; background-size:250px auto; content:''; display:block;}
+.myinfo_wrap.main .dash_board .top_quick li.type em:before {background-position:-190px 0;}
+.myinfo_wrap.main .dash_board .top_quick li.change em:before {background-position:-220px 0;}
+
+.myinfo_wrap .account_quick {margin-top:23px; margin-bottom:50px; display:flex; gap:7px;}
+.myinfo_wrap .account_quick li {width:100%; text-align:center;}
+.myinfo_wrap .account_quick a {border:1px solid #C2C4CC; border-radius:8px; position:relative; display:block;}
+.myinfo_wrap .account_quick a:after {width:18px; height:18px; font-size:0; background-image:url('../images/common/icon_sprit.png'); background-position:-120px -90px; background-repeat:no-repeat; background-size:250px auto; content:''; position:absolute; top:50%; right:9px; display:block; transform:translateY(-50%);}
+.myinfo_wrap .account_quick em {padding:15px 23px; font-size:15px; font-weight:500; display:block;}
+
+.my_status_list ul > li {border-bottom:1px solid #f1f1f1;}
+.my_status_list ul > li:first-child > * {padding-top:0;}
+.my_status_list ul > li > * {padding:12px 30px 12px 10px; display:flex; align-items:center; justify-content:space-between;}
+.my_status_list ul > li > * span {font-size:15px; display:flex; align-items:center;}
+.my_status_list ul > li > * span:before {width:40px; height:40px; margin-right:7px; background-image:url('../images/sub/icon_subscription.png'); background-repeat:no-repeat; background-size:250px auto; content:''; display:block;}
+.my_status_list ul > li > * strong {font-weight:500;}
+.my_status_list ul > li > * em {font-weight:400;}
+
+.my_status_list .subscription span:before {background-position:0 -60px;}
+.my_status_list .horse span:before {background-position:-50px -60px;}
+.my_status_list .revenue span:before {background-position:-100px -60px;}
+.my_status_list .survay span:before {background-position:-150px -60px;}
+.my_status_list > p {margin-top:30px; color:#000; font-size:12px; display:flex; align-items:center; justify-content:space-between;}
+.my_status_list > p a {padding:7px 24px 8px; background-color:#F0F2F3; border:1px solid #dbdbdb; border-radius:8px; display:flex; align-items:center;}
+.my_status_list > p a:before {width:15px; height:15px; margin-right:10px; background:url('../images/sub/icon_subscription.png') -150px 0 no-repeat; background-size:250px auto; content:''; display:block;}
