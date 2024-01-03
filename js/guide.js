@@ -289,9 +289,9 @@ $(document).ready(function(){
             sDate:'2024-01-09', eDate:'2024-01-09'
         },{
             depth:['','','예수금출금안내',''],
-            id:'app-myInfo-004', status:'ing',
+            id:'app-myInfo-004', status:'com',
             note:'',
-            sDate:'2024-01-09', eDate:''
+            sDate:'2024-01-09', eDate:'2024-01-09'
         },{
             depth:['','','청약/배당내역','공모내역'],
             id:'app-myInfo-005', status:'',
