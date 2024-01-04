@@ -298,6 +298,11 @@ $(document).ready(function(){
             note:'거래내역',
             sDate:'2024-01-10', eDate:'2024-01-10'
         },{
+            depth:['','','','상세'],
+            id:'app-myInfo-005-1', status:'com',
+            note:'',
+            sDate:'2024-01-10', eDate:'2024-01-10'
+        },{
             depth:['','','','배당내역'],
             id:'app-myInfo-006', status:'',
             note:'',
@@ -495,7 +500,109 @@ $(document).ready(function(){
             note:'',
             sDate:'', eDate:''
         },
+
+        {
+            depth:['admin','로그인','',''],
+            id:'adm-login-001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','비밀번호찾기(재설정)',''],
+            id:'adm-password-001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','비밀번호재설정(분실)',''],
+            id:'adm-password-002', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','비밀번호 재설정(정기변경)',''],
+            id:'adm-password-005', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','운영자관리','목록',''],
+            id:'adm_admin_001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','상세',''],
+            id:'adm_admin_002', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','등록',''],
+            id:'adm_admin_003', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','코드관리','조회',''],
+            id:'adm_code_001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','상세',''],
+            id:'adm_code_002', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','등록','상위코드'],
+            id:'adm_code_003', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','하위코드'],
+            id:'adm_code_003-1', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','메뉴관리','목록',''],
+            id:'adm_menu_001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','등록','부모메뉴등록'],
+            id:'adm_menu_002', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','','하위메뉴등록'],
+            id:'adm_menu_002-1', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','권한관리','그룹조회',''],
+            id:'adm_auth_001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','등록',''],
+            id:'adm_auth_002', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','상세',''],
+            id:'adm_auth_003', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','회원관리','목록',''],
+            id:'adm-mamber-001', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },{
+            depth:['','','상세',''],
+            id:'adm-mamber-002', status:'',
+            note:'',
+            sDate:'', eDate:''
+        },
         // {
+        //     depth:['','','',''],
+        //     id:'', status:'',
+        //     note:'',
+        //     sDate:'', eDate:''
+        // },{
         //     depth:['','','',''],
         //     id:'', status:'',
         //     note:'',
@@ -519,6 +626,9 @@ $(document).ready(function(){
             path = 'modal'
         } else {
             path = 'html'
+        }
+        if(page_arry[i].id.indexOf('adm') > -1){
+            path = 'admin'
         }
 
         $('tbody').append('<tr class="'+row_chk+'">'

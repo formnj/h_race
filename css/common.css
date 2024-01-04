@@ -723,3 +723,10 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .app_explain .download li a:before {margin-right:7px; background-position:50%; background-repeat:no-repeat; background-size:contain; content:''; display:block;}
 .app_explain .download li.google a:before {width:12px; background-image:url('../images/sub/icon_googleplay.png');}
 .app_explain .download li.appstore a:before {width:16px; background-image:url('../images/sub/icon_appstore.png');}
+
+.deal_detail {line-height:1.43em;}
+.deal_detail dt {font-size:16px;}
+.deal_detail dt strong {font-weight:700;}
+.deal_detail dt p {margin-top:5px;}
+.deal_detail dd {margin-top:25px; font-weight:300; display:flex; gap:6px;}
+.deal_detail dd strong {font-weight:500;}
