@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>mysql connect test</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+
+<script src="../js/admin.js"></script>
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <!-- wrap -->
+    <div id="admin_wrap">
+        <!-- header -->
+        <header>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <section>
+                <div>
+                    <h3>Board - default</h3>
+                    <!-- search Add 23-10-31 -->
+                    <div class="board_info_wrap">
+                        <p class="result_count">총<strong>999</strong>건의 게시물이 있습니다.</p>
+                        <div class="search_wrap">
+                            <!-- select -->
+                            <label class="select">
+                                <select>
+                                    <option>Option01</option>
+                                    <option>Option02</option>
+                                    <option>Option03</option>
+                                </select>
+                            </label>
+                            <!-- //select -->
+                            <label class="input">
+                                <i>Placeholder</i>
+                                <input type="text" onkeyup="input_btn_chk(this);">
+                                <em>error message</em>
+                            </label>
+                            <a href="#none" class="btn_search">검색</a>
+                        </div>
+                    </div>
+                    <!-- //search Add 23-10-31 -->
+
+                    <!-- default -->
+                    <div class="board_type_list01">
+                        <ul class="header">
+                            <li>
+                                <strong class="no">번호</strong>
+                                <strong class="subject">제목</strong>
+                                <strong class="w_date">작성일</strong>
+                                <strong class="writer">작성자</strong>
+                            </li>
+                        </ul>
+                        <ul class="body">
+                            <!-- loop -->
+                            <li>
+                                <span class="no">10</span>
+                                <span class="subject"><a href="#none">제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목</a></span>
+                                <span class="w_date">2023.00.00</span>
+                                <span class="writer">작성자</span>
+                            </li>
+                            <!-- //loop -->
+                            <li>
+                                <span class="no">9</span>
+                                <span class="subject"><a href="#none">제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목</a></span>
+                                <span class="w_date">2023.00.00</span>
+                                <span class="writer">작성자</span>
+                            </li>
+                            <li>
+                                <span class="no">8</span>
+                                <span class="subject"><a href="#none">제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목</a></span>
+                                <span class="w_date">2023.00.00</span>
+                                <span class="writer">작성자</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //default -->
+
+                    <!-- 하단 버튼 Add 23-10-31 -->
+                    <div class="btnSection ar">
+                        <a href="#none" class="btn_mid btn_ok">글쓰기</a>
+                    </div>
+                    <!-- //하단 버튼 Add 23-10-31 -->
+
+                    <!-- 페이징 -->
+                    <div class="paging">
+                        <div>
+                            <a href="#none" class="first">처음으로</a>
+                            <a href="#none" class="prev">이전</a>
+
+                            <strong>1</strong>
+                            <a href="#none">2</a>
+                            <a href="#none">3</a>
+                            <a href="#none">4</a>
+                            <a href="#none">5</a>
+
+                            <a href="#none" class="next">다음</a>
+                            <a href="#none" class="last">마지막으로</a>
+                        </div>
+                    </div>
+                    <!-- //페이징 -->
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <h3>Board - Gallery</h3>
+                    <!-- gallery -->
+                    <div class="board_type_gallery">
+                        <ul class="body">
+                            <!-- loop -->
+                            <li>
+                                <a href="#none" class="item">
+                                    <span class="thumb">
+                                        <em>배경 또는 이미지</em>
+                                    </span>
+                                    <p class="board_cont">
+                                        <strong class="subject">제목제목</strong>
+                                        <span>내용내용</span>
+                                    </p>
+                                </a>
+                            </li>
+                            <!-- //loop -->
+                            <li>
+                                <a href="#none" class="item">
+                                    <span class="thumb">
+                                        <em>배경 또는 이미지</em>
+                                    </span>
+                                    <p class="board_cont">
+                                        <strong class="subject">제목제목</strong>
+                                        <span>내용내용</span>
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none" class="item">
+                                    <span class="thumb">
+                                        <em>배경 또는 이미지</em>
+                                    </span>
+                                    <p class="board_cont">
+                                        <strong class="subject">제목제목</strong>
+                                        <span>내용내용</span>
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none" class="item">
+                                    <span class="thumb">
+                                        <em>배경 또는 이미지</em>
+                                    </span>
+                                    <p class="board_cont">
+                                        <strong class="subject">제목제목</strong>
+                                        <span>내용내용</span>
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none" class="item">
+                                    <span class="thumb">
+                                        <em>배경 또는 이미지</em>
+                                    </span>
+                                    <p class="board_cont">
+                                        <strong class="subject">제목제목</strong>
+                                        <span>내용내용</span>
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //gallery -->
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <h3>Board - Accordion</h3>
+                    <dl class="board_type_toggle single">
+                        <dt><a href="#none">제목제목제목</a></dt>
+                        <dd>
+                            <div class="item">내용내용내용내용</div>
+                        </dd>
+                        <dt><a href="#none">제목제목제목</a></dt>
+                        <dd>
+                            <div class="item">내용내용내용내용</div>
+                        </dd>
+                        <dt><a href="#none">제목제목제목</a></dt>
+                        <dd>
+                            <div class="item">내용내용내용내용</div>
+                        </dd>
+                    </dl>
+                </div>
+            </section>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer>COPYRIGHT. RIANag INC. ALL RIGHT RESERVED.</footer>
+        <!-- //footer -->
+    </div>
+</body>

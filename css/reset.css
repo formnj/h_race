@@ -6,6 +6,7 @@ body{color:#222; font-size:14px; font-weight:400; touch-action:pan-x pan-y;}
 li{list-style: none;}
 table{border-spacing: 0; border-collapse: collapse;}
 select,textarea,input{box-sizing: border-box;}
+select {-webkit-appearance:none; -moz-appearance:none; appearance:none;}
 button{border:none; background: none; cursor: pointer;}
 iframe,fieldset{border:none;}
 .hidden{position: fixed; left:-10000px}
