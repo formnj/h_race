@@ -688,10 +688,11 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .status_board dl + dl {margin-top:20px;}
 .status_board dd {font-weight:700; text-align:right;}
 
+.information dt {font-size:15px; font-weight:500;}
+.information dd {margin-top:20px; line-height:1.43em;}
+.information dd p + p {margin-top:25px;}
+
 .app_explain {margin-top:30px;}
-.app_explain dt {font-size:15px; font-weight:500;}
-.app_explain dd {margin-top:20px; line-height:1.43em;}
-.app_explain dd p + p {margin-top:25px;}
 .app_explain .download {margin-top:35px; padding:30px 0; border:1px solid #eee; border-right:0; border-left:0; display:flex;}
 .app_explain .thumb {width:87px;}
 .app_explain .download div {width:100%; padding-left:40px;}
