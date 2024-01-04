@@ -294,9 +294,9 @@ $(document).ready(function(){
             sDate:'2024-01-09', eDate:'2024-01-09'
         },{
             depth:['','','청약/배당내역','공모내역'],
-            id:'app-myInfo-005', status:'',
-            note:'',
-            sDate:'', eDate:''
+            id:'app-myInfo-005', status:'com',
+            note:'거래내역',
+            sDate:'2024-01-10', eDate:'2024-01-10'
         },{
             depth:['','','','배당내역'],
             id:'app-myInfo-006', status:'',

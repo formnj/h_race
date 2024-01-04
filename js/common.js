@@ -29,6 +29,88 @@ $(document).ready(function(){
     $('label[class*="input"]').each(function(){
         placeholder(this);
     });
+
+    /* resize check */
+    var init_width = $(window).width(),
+    change_size,
+    i=0,
+    j=0;
+    var resize_chk = setTimeout(function(){
+        change_size = $(window).width();
+        if(init_width != change_size){
+            $('.tab_wrap ul.tab_type_slide').unbind('touchstart');
+            $('.tab_wrap ul.tab_type_slide').unbind('touchmove');
+            $('.tab_wrap ul.tab_type_slide').unbind('touchend');
+        } else {
+
+            /* slide tab */
+            var slide_tab_target = $('.tab_wrap').find('ul.tab_type_slide');
+
+            $('.tab_wrap .tab_type_slide li > *').click(function(){
+                $('.tab_wrap .tab_type_slide li').removeClass('current');
+                $(this).parent().addClass('current');
+
+                if($('.tab_wrap ul.tab_type_slide').width() > $('.tab_wrap.type_slide').width()){
+                    /* 선택된 탭 중앙 배치 */
+                    var ul_pos = slide_tab_target.css("transform").replace(/[^0-9\-.,]/g, '').split(',')[4];
+                    var move_pos = Math.abs((($(this).closest('div').width() * 0.5) - $(this).parent().offset().left));
+
+                    j = i - ul_pos;
+                    if($(this).parent().offset().left > ($(this).closest('div').width()*0.5)){
+                        //i -= move_pos + j;
+                        i -= ((move_pos + j) - (slide_tab_target.parent().width() * 0.2));
+                    } else {
+                        // i += move_pos - j;
+                        i += ((move_pos - j) + (slide_tab_target.parent().width() * 0.2));
+                    }
+
+                    slide_tab_target.css('transform','translate('+i+'px, 0)');
+
+                    var slide_tab_limit = $('.tab_wrap.type_slide').width() - $('.tab_wrap ul.tab_type_slide').width();
+                    if(i >= 0){
+                        slide_tab_target.css('transform','translate(0, 0)');
+                    }
+                    if(i <= slide_tab_limit){
+                        slide_tab_target.css('transform','translate('+slide_tab_limit+'px, 0)');
+                    }
+                }
+            });
+
+            /** touch
+            터치 발생 시점 : touchstart, mousedown
+            움직임 발생 시점 : touchmove, mousemove
+            터치 해제 시점 : touchend, mouseup
+            **/
+            var tab_slide = $('.tab_wrap ul.tab_type_slide');
+            var x = 0;
+            var tabx = 0;
+            var xx = 0;
+            var limit = tab_slide.width() - tab_slide.parent().width();
+            tab_slide.bind('touchstart', function(e) {
+                var event = e.originalEvent;
+                x = event.touches[0].screenX;
+                tabx = tab_slide.css("transform").replace(/[^0-9\-.,]/g, '').split(',')[4];
+            });
+            tab_slide.bind('touchmove', function(e) {
+                var event = e.originalEvent;
+                xx = parseInt(tabx) + parseInt(event.touches[0].screenX - x);
+                tab_slide.css("transform", "translate(" + xx + "px, 0px)");
+                event.preventDefault();
+            });
+            tab_slide.bind('touchend', function(e) {
+                // if ((xx > 0) || (tabx < 0)) {
+                if (xx > 0) {
+                    tab_slide.css("transform", "translate(0px, 0px)");
+                }
+                if (Math.abs(xx) > limit) {
+                    tab_slide.css("transform", "translate(" + -limit + "px, 0px)");
+                }
+
+                slide_tab_navi_pos = xx;
+            });
+
+        }
+    }, 300);
 });
 
 $(document).delegate('body','click', function(){
