@@ -43,6 +43,7 @@
                     </li>
                     <li>
                         <p class="form_tit">주민등록번호</p>
+                        <!-- Edit 24-01-05 : password 입력 -->
                         <div class="multi_form">
                             <label class="input">
                                 <i>123456</i>
@@ -50,13 +51,16 @@
                                 <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
                             </label>
                             <span>-</span>
-                            <label class="input ac">
-                                <i>●●●●●●●</i>
-                                <input type="password" onkeyup="input_btn_chk(this);">
-                                <button type="button" class="icon_pss" onclick="input_btn_chg()" style="display: block;">text</button> 
-                            </label>
+                            <div class="pass_wrap">
+                                <label class="input">
+                                    <i>●●</i>
+                                    <input class="ac" maxlength="2" type="text" onkeyup="input_btn_chk(this);">
+                                </label>
+                                <strong>●●●●●</strong>
+                            </div>
                         </div>
                         <em>Error Text</em>
+                        <!-- //Edit 24-01-05 : password 입력 -->
                     </li>
                     <li>
                         <p class="form_tit">성별</p>

@@ -68,6 +68,27 @@
                             </div>
                         </li>
                         <li>
+                            <p class="form_tit">주민등록 번호</p>
+                            <!-- Edit 24-01-05 : password 입력 -->
+                            <div class="multi_form">
+                                <label class="input">
+                                    <i>123456</i>
+                                    <input type="number" onkeyup="input_btn_chk(this);">
+                                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                </label>
+                                <span>-</span>
+                                <div class="pass_wrap">
+                                    <label class="input">
+                                        <i>●●</i>
+                                        <input class="ac" maxlength="2" type="text" onkeyup="input_btn_chk(this);">
+                                    </label>
+                                    <strong>●●●●●</strong>
+                                </div>
+                            </div>
+                            <em>Error Text</em>
+                            <!-- //Edit 24-01-05 : password 입력 -->
+                        </li>
+                        <li>
                             <div class="check_group boolean">
                                 <label class="check_square">
                                     <input type="radio" name="group">

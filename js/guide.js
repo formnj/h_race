@@ -13,7 +13,7 @@ $(document).ready(function(){
         },{
             depth:['','약관 동의','',''],
             id:'app-signin-002', status:'com',
-            type:'modal', note:'',
+            type:'modal', note:'약관동의 필수/선택 구분<!-- Edit 2024-01-05 : 필수/선택 구분 -->',
             sDate:'', eDate:'2023-12-15'
         },{
             depth:['','인증번호 입력','',''],
@@ -70,7 +70,7 @@ $(document).ready(function(){
         },{
             depth:['','본인인증','기본정보입력',''],
             id:'app-signin-001', status:'com',
-            note:'',
+            note:'주민등록번호 입력 폼 수정<!-- Edit 24-01-05 : password 입력 -->',
             sDate:'2023-12-18', eDate:'2023-12-18'
         },{
             depth:['','간편비밀번호설정','',''],

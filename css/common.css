@@ -242,6 +242,7 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 
 .policy_check_list dt {font-size:16px; font-weight:600;}
 .policy_check_list dt + dd {margin-top:27px;}
+.policy_check_list ul + ul:before {margin:15px 0; border-top:1px dashed #e1e1e1; content:''; display:block;}
 .policy_check_list li > div {display:flex; justify-content:space-between;}
 .policy_check_list li + li {margin-top:20px;}
 .policy_check_list li > div .check {flex:1;}

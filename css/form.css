@@ -8,6 +8,13 @@ select {background-color:#fff; border:0; border-bottom:1px solid #E1E1E1; border
 .multi_form.err + em {margin-top:12px; color:#ff7200; font-size: 12px; display:block;}
 .multi_form.err + em.type_02 {color:#0070BA;}
 
+.multi_form .pass_wrap {border-bottom: 1px solid #E1E1E1; display:flex; align-items:center; flex:1;}
+.multi_form .pass_wrap input {border-bottom:0;}
+.multi_form .pass_wrap:has(input[type='text']:focus) {border-color:#222;}
+.multi_form .pass_wrap label:has(input[type='text']) {width:32px;  flex:initial;}
+.multi_form .pass_wrap label input[type='text'] {padding-right:0;}
+.multi_form .pass_wrap strong {margin-bottom:5px; color:#B7B7B7; font-size:18px; display:flex;}
+
 label[class*='input'] input:focus, label.select select:focus {border-color:#222;}
 
 label[class*='input'], label.select {position:relative; display:block; flex:1;}
