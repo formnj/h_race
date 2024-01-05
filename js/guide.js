@@ -523,9 +523,9 @@ $(document).ready(function(){
             sDate:'', eDate:''
         },{
             depth:['','운영자관리','목록',''],
-            id:'adm_admin_001', status:'ing',
+            id:'adm_admin_001', status:'com',
             note:'',
-            sDate:'2024-01-04', eDate:''
+            sDate:'2024-01-04', eDate:'2024-01-05'
         },{
             depth:['','','상세',''],
             id:'adm_admin_002', status:'',

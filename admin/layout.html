@@ -9,6 +9,34 @@
 
 <script src="../js/admin.js"></script>
 <link rel="stylesheet" href="../css/admin.css">
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+    $(document).ready(function(){
+        var today = new Date();
+        var year = today.getFullYear();
+        var month = ('0' + (today.getMonth() + 1)).slice(-2);
+        var day = ('0' + today.getDate()).slice(-2);
+        var dateString = year + '-' + month  + '-' + day;
+
+
+        $(".datepicker input").val(dateString).datepicker({
+            dayNamesMin: [ "일", "월", "화", "수", "목", "금", "토" ],
+            dateFormat: "yy-mm-dd",
+            onSelect: function(){
+                var _wrap = $(this).parent();
+                placeholder(_wrap);
+            }
+        });
+
+        /* placeholder */
+        $('label[class*="input"]').each(function(){
+            placeholder(this);
+        });
+    });
+</script>
 </head>
 <body>
     <!-- wrap -->
@@ -20,49 +48,111 @@
 
         <!-- container -->
         <div id="container">
-            <div class="tit_wrap">
-                <h2>H2 - Title</h2>
-                <ul class="breadcrumb">
-                    <li>Home</li>
-                    <li>1Depth</li>
-                    <li>2Depth</li>
-                </ul>
-            </div>
+            <section>
+                <div>
+                    <h3>title wrap</h3>
+                
+                    <div class="tit_wrap">
+                        <h2>H2 - Title</h2>
+                        <ul class="breadcrumb">
+                            <li>Home</li>
+                            <li>1Depth</li>
+                            <li>2Depth</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- search -->
+            <section>
+                <div>
+                    <h3>search wrap</h3>
+                    <section class="search_wrap">
+                        <div class="inner">
+                            <ul class="row">
+                                <li>
+                                    <dl>
+                                        <dt>기간선택</dt>
+                                        <dd>
+                                            <div class="datepicker_wrap">
+                                                <div class="multi_form">
+                                                    <label class="input datepicker">
+                                                        <i>Placeholder</i>
+                                                        <input type="text" id="datepicker_start" readonly="readonly">
+                                                        <em>error message</em>
+                                                    </label>
+                                                    <span>~</span>
+                                                    <label class="input datepicker">
+                                                        <i>Placeholder</i>
+                                                        <input type="text" id="datepicker_end" readonly="readonly">
+                                                        <em>error message</em>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <!-- //datepicker -->
+                                        </dd>
+                                    </dl>
+                                    <div class="check_group">
+                                        <label class="check">
+                                            <input type="radio">
+                                            <em class="label">전체</em>
+                                        </label>
+                                        <label class="check">
+                                            <input type="checkbox">
+                                            <em class="label">메인메뉴 아이콘</em>
+                                        </label>
+                                        <label class="check">
+                                            <input type="checkbox">
+                                            <em class="label">카테고리 아이콘</em>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="multi_form full">
+                                        <label class="select w_150">
+                                            <select>
+                                                <option>선택</option>
+                                            </select>
+                                        </label>
+                                        <div class="label_wrap">
+                                            <label class="input">
+                                                <i style="display: none;">Placeholder</i>
+                                                <input class="password" type="text" onkeyup="input_btn_chk(this);">
+                                                <em>error message</em>
+                                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                            </label>
+                                            <button class="btn_search"><em>조회</em></button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <!-- //search -->
 
             <section>
                 <div>
-                    <h3>H3 - title</h3>
-                    <!-- search Add 23-10-31 -->
+                    <h3>board set</h3>
                     <div class="board_info_wrap">
                         <p class="result_count">총<strong>999</strong>건의 게시물이 있습니다.</p>
                         <div class="btnSection">
-                            <button class="btn_download"><em>엑셀 다운로드</em></button>
-                            <button class="btn_add"><em>운영자 등록</em></button>
-                        </div>
-                        <div class="search_wrap">
-                            <!-- select -->
-                            <label class="select">
+                            <label class="select w_150">
                                 <select>
-                                    <option>Option01</option>
-                                    <option>Option02</option>
-                                    <option>Option03</option>
+                                    <option>전체</option>
                                 </select>
                             </label>
-                            <!-- //select -->
-                            <label class="input">
-                                <i>Placeholder</i>
-                                <input type="text" onkeyup="input_btn_chk(this);">
-                                <em>error message</em>
-                            </label>
-                            <a href="#none" class="btn_search">검색</a>
+                            
+                            <button class="btn_download"><em>엑셀 다운로드</em></button>
+                            <button class="btn_upload"><em>정산지급 엑셀 업로드</em></button>
+                            <button class="btn_add"><em>운영자 등록</em></button>
                         </div>
                     </div>
-                    <!-- //search Add 23-10-31 -->
 
-                    <!-- default -->
                     <div class="table_wrap">
                         <div class="inner">
-                            <table class="ac">
+                            <table class="type_list ac">
                                 <colgroup>
                                     <col />
                                     <col />
@@ -106,13 +196,6 @@
                             </table>
                         </div>
                     </div>
-                    <!-- //default -->
-
-                    <!-- 하단 버튼 Add 23-10-31 -->
-                    <div class="btnSection ar">
-                        <a href="#none" class="btn_mid btn_ok">글쓰기</a>
-                    </div>
-                    <!-- //하단 버튼 Add 23-10-31 -->
 
                     <!-- 페이징 -->
                     <div class="paging">
@@ -136,70 +219,11 @@
 
             <section>
                 <div>
-                    <h3>Board - Gallery</h3>
-                    <!-- gallery -->
-                    <div class="board_type_gallery">
-                        <ul class="body">
-                            <!-- loop -->
-                            <li>
-                                <a href="#none" class="item">
-                                    <span class="thumb">
-                                        <em>배경 또는 이미지</em>
-                                    </span>
-                                    <p class="board_cont">
-                                        <strong class="subject">제목제목</strong>
-                                        <span>내용내용</span>
-                                    </p>
-                                </a>
-                            </li>
-                            <!-- //loop -->
-                            <li>
-                                <a href="#none" class="item">
-                                    <span class="thumb">
-                                        <em>배경 또는 이미지</em>
-                                    </span>
-                                    <p class="board_cont">
-                                        <strong class="subject">제목제목</strong>
-                                        <span>내용내용</span>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#none" class="item">
-                                    <span class="thumb">
-                                        <em>배경 또는 이미지</em>
-                                    </span>
-                                    <p class="board_cont">
-                                        <strong class="subject">제목제목</strong>
-                                        <span>내용내용</span>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#none" class="item">
-                                    <span class="thumb">
-                                        <em>배경 또는 이미지</em>
-                                    </span>
-                                    <p class="board_cont">
-                                        <strong class="subject">제목제목</strong>
-                                        <span>내용내용</span>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#none" class="item">
-                                    <span class="thumb">
-                                        <em>배경 또는 이미지</em>
-                                    </span>
-                                    <p class="board_cont">
-                                        <strong class="subject">제목제목</strong>
-                                        <span>내용내용</span>
-                                    </p>
-                                </a>
-                            </li>
-                        </ul>
+                    <h3>Button set</h3>
+                    <div class="btnSection ac">
+                        <a href="#none" class="btn_small btn_cancel"><em>btn_small</em></a>
+                        <a href="#none" class="btn_text"><em>btn_text</em></a>
                     </div>
-                    <!-- //gallery -->
                 </div>
             </section>
         </div>

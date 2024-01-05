@@ -37,6 +37,11 @@ $(document).ready(function(){
         <button class="btn_open">Close</button>
     </nav>`);
 
+    /* placeholder */
+    $('label[class*="input"]').each(function(){
+        placeholder(this);
+    });
+
     /* Nav show / hide */
     $('nav').delegate('.btn_open', 'click',function(){
         if($('#admin_wrap').hasClass('close')){
