@@ -1,7 +1,7 @@
 @charset 'UTF-8';
 
 /*::::::::::::::::::::::::::::::: Design :::::::::::::::::::::::::::::::*/
-#admin_wrap {background-color:#fff;}
+#admin_wrap {min-width:1200px;}
 
 select, input[type="text"], input[type="email"], input[type="number"], input[type="tel"], input[type="password"], input[type="url"], input[type="search"], input[type="file"], textarea {padding:0 10px; font-size:15px !important; border:1px solid #E1E1E1; border-radius:4px;}
 textarea {padding:10px;}
@@ -37,6 +37,7 @@ header nav > div {width:250px;}
 header nav dt, header nav dt > a {color:#F4F4F4; font-size:16px; display:block;}
 header nav dt > a {padding:15px 20px 15px 40px;}
 header nav dt:hover, header nav dt > a:hover, header nav dt.active > a {color:#fff; font-weight:600; background-color:#2ECCC8;}
+header nav dt.active + dd {display:block;}
 header nav dd {background-color:rgba(255,255,255,0.2); overflow:hidden; display:none; transition:height 0.2s ease-out;}
 header nav dd.show {display:block !important;}
 header nav dd ul {margin:10px 0;}
