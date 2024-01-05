@@ -50,7 +50,7 @@ header .btn_open:before {width:9px; height:9px; margin-left:-1px; border:2px sol
 /* //header */
 
 /* footer */
-footer {padding:10px 20px; color:#fff; font-size:13px; font-weight:400; background-color:#e60012; text-align:center; position:fixed; right:0; bottom:0; left:253px; z-index:100; transition:left 0.25s;}
+footer {padding:10px 20px; color:#fff; font-size:13px; font-weight:400; background-color:#40454f; text-align:center; position:fixed; right:0; bottom:0; left:253px; z-index:100; transition:left 0.25s;}
 /* //footer */
 
 /* width */
