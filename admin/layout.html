@@ -21,7 +21,7 @@
         <!-- container -->
         <div id="container">
             <div class="tit_wrap">
-                <h2>운영자 리스트</h2>
+                <h2>H2 - Title</h2>
                 <ul class="breadcrumb">
                     <li>Home</li>
                     <li>1Depth</li>
@@ -29,13 +29,35 @@
                 </ul>
             </div>
 
-            <div class="board_info_wrap">
-                <p class="result_count">총<strong>999</strong>건의 게시물이 있습니다.</p>
-                <div class="btnSection">
-                    <button class="btn_download"><em>엑셀 다운로드</em></button>
-                    <button class="btn_add"><em>운영자 등록</em></button>
-                </div>
-            </div>
+            <section>
+                <div>
+                    <h3>H3 - title</h3>
+                    <!-- search Add 23-10-31 -->
+                    <div class="board_info_wrap">
+                        <p class="result_count">총<strong>999</strong>건의 게시물이 있습니다.</p>
+                        <div class="btnSection">
+                            <button class="btn_download"><em>엑셀 다운로드</em></button>
+                            <button class="btn_add"><em>운영자 등록</em></button>
+                        </div>
+                        <div class="search_wrap">
+                            <!-- select -->
+                            <label class="select">
+                                <select>
+                                    <option>Option01</option>
+                                    <option>Option02</option>
+                                    <option>Option03</option>
+                                </select>
+                            </label>
+                            <!-- //select -->
+                            <label class="input">
+                                <i>Placeholder</i>
+                                <input type="text" onkeyup="input_btn_chk(this);">
+                                <em>error message</em>
+                            </label>
+                            <a href="#none" class="btn_search">검색</a>
+                        </div>
+                    </div>
+                    <!-- //search Add 23-10-31 -->
 
                     <!-- default -->
                     <div class="table_wrap">
@@ -80,35 +102,17 @@
                                         <td>최고운영자</td>
                                         <td>2023-00-00 00:00:00</td>
                                     </tr>
-                                    <tr>
-                                        <td>65</td>
-                                        <td>홍길동</td>
-                                        <td>123456</td>
-                                        <td>sto@galaxia.co.kr</td>
-                                        <td>010-1234-5678</td>
-                                        <td>사원</td>
-                                        <td>부서명</td>
-                                        <td>승인</td>
-                                        <td>최고운영자</td>
-                                        <td>2023-00-00 00:00:00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>65</td>
-                                        <td>홍길동</td>
-                                        <td>123456</td>
-                                        <td>sto@galaxia.co.kr</td>
-                                        <td>010-1234-5678</td>
-                                        <td>사원</td>
-                                        <td>부서명</td>
-                                        <td>승인</td>
-                                        <td>최고운영자</td>
-                                        <td>2023-00-00 00:00:00</td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                     <!-- //default -->
+
+                    <!-- 하단 버튼 Add 23-10-31 -->
+                    <div class="btnSection ar">
+                        <a href="#none" class="btn_mid btn_ok">글쓰기</a>
+                    </div>
+                    <!-- //하단 버튼 Add 23-10-31 -->
 
                     <!-- 페이징 -->
                     <div class="paging">
@@ -196,26 +200,6 @@
                         </ul>
                     </div>
                     <!-- //gallery -->
-                </div>
-            </section>
-
-            <section>
-                <div>
-                    <h3>Board - Accordion</h3>
-                    <dl class="board_type_toggle single">
-                        <dt><a href="#none">제목제목제목</a></dt>
-                        <dd>
-                            <div class="item">내용내용내용내용</div>
-                        </dd>
-                        <dt><a href="#none">제목제목제목</a></dt>
-                        <dd>
-                            <div class="item">내용내용내용내용</div>
-                        </dd>
-                        <dt><a href="#none">제목제목제목</a></dt>
-                        <dd>
-                            <div class="item">내용내용내용내용</div>
-                        </dd>
-                    </dl>
                 </div>
             </section>
         </div>
