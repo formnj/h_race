@@ -73,6 +73,7 @@ h3 .more:after {transform:rotate(90deg);}
 
 section {display:flex; gap:30px;}
 section + section {margin-top:30px;}
+section > div {width:100%;}
 section > div:not(.col_group) {padding:20px; background-color:#fff; border:1px solid #F0EEEB; border-radius:6px; flex:1;}
 section .col_group {flex:1;}
 section .col_group > div {padding:20px; background-color:#fff; border:1px solid rgba(151,157,15,0.1); border-radius:6px; box-shadow:0 4px 4px 0 rgba(14,34,56,.07);}
