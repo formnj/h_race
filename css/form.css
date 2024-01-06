@@ -22,6 +22,7 @@ label.select:after {width:24px; height:24px; background-image:url('../images/com
 label.select:has(input:disabled):after {background-position:-120px -60px;}
 label.select input:disabled {border-bottom:1px dashed #E1E1E1;}
 label[class*='input'] i {color:#B7B7B7; font-size:18px; font-style:normal; line-height:18px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; position:absolute; top:11px; right:0; left:0;}/* placeholder */
+label[class*='input']:has(input:disabled) i, label[class*='input']:has(textarea:disabled) i {display:none;}
 label[class*='input'] input[type='text'], label[class*='input'] input[type='password'], label[class*='input'] input[type='number'] {width:100%; font-size:16px; line-height:18px;}
 label[class*='input'] textarea {width:100%; min-height:150px; font-size:16px; line-height:18px;}
 label[class*='input'] > em {margin-top:5px; color:#ff7200; font-size:12px; font-family:'Noto Sans'; line-height:18px; display:none;}

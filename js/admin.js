@@ -58,4 +58,8 @@ $(document).ready(function(){
         accordion(_target);
     });
     /* //header nav */
+
+    $('.accordion').delegate('> dt', 'click', function() {
+        accordion(this);
+    });
 });

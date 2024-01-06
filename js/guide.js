@@ -573,19 +573,19 @@ $(document).ready(function(){
             sDate:'', eDate:''
         },{
             depth:['','권한관리','그룹조회',''],
-            id:'adm_auth_001', status:'',
+            id:'adm_auth_001', status:'com',
             note:'',
-            sDate:'', eDate:''
-        },{
-            depth:['','','등록',''],
-            id:'adm_auth_002', status:'',
-            note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-06', eDate:'2024-01-06'
         },{
             depth:['','','상세',''],
-            id:'adm_auth_003', status:'',
+            id:'adm_auth_002', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-06', eDate:'2024-01-06'
+        },{
+            depth:['','','등록',''],
+            id:'adm_auth_003', status:'com',
+            note:'',
+            sDate:'2024-01-06', eDate:'2024-01-06'
         },{
             depth:['','회원관리','목록',''],
             id:'adm-mamber-001', status:'',
