@@ -21,16 +21,12 @@
         <!-- container -->
         <div id="container">
             <div class="tit_wrap">
-                <h2>운영자 리스트</h2>
+                <h2>회원 리스트</h2>
                 <ul class="breadcrumb">
                     <li>Home</li>
                     <li>1Depth</li>
                     <li>2Depth</li>
                 </ul>
-            </div>
-
-            <div class="warning_box">
-                <p>기준정보 삭제/입력 누락시 프로그램이 오작동합니다. 등록된 기준정보 변경/신규 내역은 개발팀에 꼭 전달하세요.</p>
             </div>
 
             <section class="search_wrap mt30">
@@ -56,6 +52,24 @@
                                         </div>
                                     </div>
                                     <!-- //datepicker -->
+                                </dd>
+
+                                <dt>구분선택</dt>
+                                <dd>
+                                    <div class="check_group">
+                                        <label class="check">
+                                            <input type="checkbox">
+                                            <em class="label">전체</em>
+                                        </label>
+                                        <label class="check">
+                                            <input type="checkbox">
+                                            <em class="label">활성</em>
+                                        </label>
+                                        <label class="check">
+                                            <input type="checkbox">
+                                            <em class="label">휴면</em>
+                                        </label>
+                                    </div>
                                 </dd>
                             </dl>
                         </li>
@@ -84,12 +98,17 @@
             <div class="board_info_wrap">
                 <p class="result_count">총<strong>999</strong>건의 게시물이 있습니다.</p>
                 <div class="btnSection">
+                    <label class="select w_150">
+                        <select>
+                            <option>전체</option>
+                        </select>
+                    </label>
+
                     <button class="btn_download"><em>엑셀 다운로드</em></button>
-                    <button class="btn_add"><em>운영자 등록</em></button>
                 </div>
             </div>
 
-                    <!-- default -->
+            <!-- default -->
             <div class="table_wrap scroll"> <!-- 스크롤 테이블의 경우 class="scroll" 추가 -->
                 <div class="inner">
                     <table class="type_list ac">
@@ -99,74 +118,55 @@
                             <col />
                             <col />
                             <col />
+                            <col style="width:80px;" />
                             <col />
                             <col />
                             <col />
                             <col />
                             <col />
+                            <col />
+                            <col />
+                            <col style="width:80px;" />
                         </colgroup>
                         <thead>
                             <tr>
                                 <th>No</th>
                                 <th>이름</th>
-                                <th>ID(사번)</th>
-                                <th>회사메일</th>
+                                <th>생년월일</th>
                                 <th>휴대폰번호</th>
-                                <th>직급</th>
-                                <th>부서</th>
-                                <th>승인상태</th>
-                                <th>권한설정</th>
-                                <th>마지막 로그인 일시</th>
+                                <th>이메일</th>
+                                <th>성별</th>
+                                <th>회원상태</th>
+                                <th>계좌개설</th>
+                                <th>자격설문</th>
+                                <th>투자자격</th>
+                                <th>자격심사</th>
+                                <th>청약이력</th>
+                                <th>가입일시</th>
+                                <th>선택</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>65</td>
                                 <td>홍길동</td>
-                                <td>123456</td>
-                                <td>sto@galaxia.co.kr</td>
+                                <td>yyyymmdd</td>
                                 <td>010-1234-5678</td>
-                                <td>사원</td>
-                                <td>부서명</td>
-                                <td>승인</td>
-                                <td><a href="#none" class="btn_text"><em>최고운영자</em></a></td>
-                                <td>2023-00-00 00:00:00</td>
-                            </tr>
-                            <tr>
-                                <td>65</td>
-                                <td>홍길동</td>
-                                <td>123456</td>
-                                <td>sto@galaxia.co.kr</td>
-                                <td>010-1234-5678</td>
-                                <td>사원</td>
-                                <td>부서명</td>
-                                <td>승인</td>
-                                <td><a href="#none" class="btn_text"><em>일반운영자</em></a></td>
-                                <td>2023-00-00 00:00:00</td>
-                            </tr>
-                            <tr>
-                                <td>65</td>
-                                <td>홍길동</td>
-                                <td>123456</td>
-                                <td>sto@galaxia.co.kr</td>
-                                <td>010-1234-5678</td>
-                                <td>사원</td>
-                                <td>부서명</td>
-                                <td>승인</td>
-                                <td><a href="#none" class="btn_text"><em>지급담당</em></a></td>
-                                <td>2023-00-00 00:00:00</td>
-                            </tr>
-                            <tr>
-                                <td>65</td>
-                                <td>홍길동</td>
-                                <td>123456</td>
-                                <td>sto@galaxia.co.kr</td>
-                                <td>010-1234-5678</td>
-                                <td>사원</td>
-                                <td>부서명</td>
-                                <td>승인</td>
-                                <td><a href="#none" class="btn_text"><em>마케팅담당</em></a></td>
-                                <td>2023-00-00 00:00:00</td>
+                                <td>abc@abcd.com</td>
+                                <td>남</td>
+                                <td>활성</td>
+                                <td>활성</td>
+                                <td>안정추구형</td>
+                                <td>일반투자자</td>
+                                <td>접수</td>
+                                <td>있음</td>
+                                <td>0000-00-00 00:00</td>
+                                <td>
+                                    <label class="check">
+                                        <input type="checkbox" checked name="group1">
+                                        <em class="label"></em>
+                                    </label>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

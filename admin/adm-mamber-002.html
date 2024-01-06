@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>mysql connect test</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+
+<script src="../js/admin.js"></script>
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <!-- wrap -->
+    <div id="admin_wrap">
+        <!-- header -->
+        <header>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <div class="tit_wrap">
+                <h2>회원 상세보기</h2>
+                <ul class="breadcrumb">
+                    <li>Home</li>
+                    <li>1Depth</li>
+                    <li>2Depth</li>
+                </ul>
+            </div>
+
+            <div class="list_wrap">
+                <dl class="type_register accordion">
+                    <dt class="active">
+                        <strong class="tit">회원 기본정보</strong>
+                    </dt>
+                    <dd style="display:block;">
+                        <div class="cont">
+                            <div class="table_wrap detaile">
+                                <div class="inner">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:20%;" />
+                                            <col />
+                                            <col style="width:20%;" />
+                                            <col />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>가입일시</th>
+                                                <td>0000-00-00 00:00</td>
+                                                <th>탈퇴일시</th>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <th>회원명</th>
+                                                <td>이름</td>
+                                                <th>생년월일</th>
+                                                <td>YYYYMMDD</td>
+                                            </tr>
+                                            <tr>
+                                                <th>휴대폰번호</th>
+                                                <td>010-1234-5678</td>
+                                                <th>이메일</th>
+                                                <td>abc@abc.com</td>
+                                            </tr>
+                                            <tr>
+                                                <th>성별</th>
+                                                <td>남</td>
+                                                <th>연령대</th>
+                                                <td>30대</td>
+                                            </tr>
+                                            <tr>
+                                                <th>회원상태</th>
+                                                <td>활성(or 휴먼)</td>
+                                                <th>탈퇴여부</th>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <th>계좌개설 상태</th>
+                                                <td>활성(or 해지)</td>
+                                                <th>자격설문</th>
+                                                <td>일반투자자</td>
+                                            </tr>
+                                            <tr>
+                                                <th>자격심사</th>
+                                                <td></td>
+                                                <th>청약이력</th>
+                                                <td>있음</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </dd>
+
+                    <dt>
+                        <strong class="tit">회원 활동정보</strong>
+                    </dt>
+                    <!-- 상세 내용 -->
+                    <dd>
+                        <div class="cont">
+                            <h4>회원 청약/배분활동</h4>
+                            <div class="table_wrap scroll">
+                                <div class="inner">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>상품코드</th>
+                                                <th>카테고리</th>
+                                                <th>청약번호</th>
+                                                <th>상품명</th>
+                                                <th>청약기간</th>
+                                                <th>총청약금액</th>
+                                                <th>총발행량</th>
+                                                <th>청약금액</th>
+                                                <th>청약수량</th>
+                                                <th>청약율</th>
+                                                <th>청약상태</th>
+                                                <th>지분율</th>
+                                                <th>배분상태</th>
+                                                <th>비례배분</th>
+                                                <th>청약상품 운용기간</th>
+                                                <th>청약상품 남은기간</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>90</td>
+                                                <td>상품코드</td>
+                                                <td>카테고리</td>
+                                                <td>청약상품01호</td>
+                                                <td>경주마와 함께하는 최고의 조각투자</td>
+                                                <td>0000-00-00<br/> ~ 0000-00-00</td>
+                                                <td>0,000,000원</td>
+                                                <td>000,000</td>
+                                                <td>0,000,000원</td>
+                                                <td>000,000</td>
+                                                <td>90%</td>
+                                                <td>신청</td>
+                                                <td>-</td>
+                                                <td>신청</td>
+                                                <td>적용</td>
+                                                <td>0000-00-00<br/> ~ 0000-00-00</td>
+                                                <td>1년 9개월 30일</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- 페이징 -->
+                            <div class="paging">
+                                <div>
+                                    <a href="#none" class="first">처음으로</a>
+                                    <a href="#none" class="prev">이전</a>
+
+                                    <strong>1</strong>
+                                    <a href="#none">2</a>
+                                    <a href="#none">3</a>
+                                    <a href="#none">4</a>
+                                    <a href="#none">5</a>
+
+                                    <a href="#none" class="next">다음</a>
+                                    <a href="#none" class="last">마지막으로</a>
+                                </div>
+                            </div>
+                            <!-- //페이징 -->
+                        </div>
+
+                        <div class="cont">
+                            <h4>회원 수익활동 [청약상품01호]</h4>
+                            <div class="table_wrap scroll">
+                                <div class="inner">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>지급회차</th>
+                                                <th>회원명</th>
+                                                <th>연락처</th>
+                                                <th>E-Mail</th>
+                                                <th>계좌번호</th>
+                                                <th>청약금액 (확정)</th>
+                                                <th>청약수량 (확정)</th>
+                                                <th>지분율</th>
+                                                <th>수익금구분</th>
+                                                <th>수익금(지급)</th>
+                                                <th>청약상품 운용기간</th>
+                                                <th>청약상품 남은기간</th>
+                                                <th>수익금 지급 완료일</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>90</td>
+                                                <td>00회차</td>
+                                                <td>홍길동</td>
+                                                <td>010-1234-5678</td>
+                                                <td>abc@abcd.com</td>
+                                                <td>1233-13123-13131</td>
+                                                <td>0,000,000원</td>
+                                                <td>000,000</td>
+                                                <td>00.00%</td>
+                                                <td>자산매각</td>
+                                                <td>000,000원</td>
+                                                <td>0000-00-00<br/> ~ 0000-00-00</td>
+                                                <td>1년 9월 30일</td>
+                                                <td>0000-00-00 00:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- 페이징 -->
+                            <div class="paging">
+                                <div>
+                                    <a href="#none" class="first">처음으로</a>
+                                    <a href="#none" class="prev">이전</a>
+
+                                    <strong>1</strong>
+                                    <a href="#none">2</a>
+                                    <a href="#none">3</a>
+                                    <a href="#none">4</a>
+                                    <a href="#none">5</a>
+
+                                    <a href="#none" class="next">다음</a>
+                                    <a href="#none" class="last">마지막으로</a>
+                                </div>
+                            </div>
+                            <!-- //페이징 -->
+                        </div>
+
+                        <div class="cont">
+                            <h4>회원 수익활동 [청약상품02호]</h4>
+                            <div class="table_wrap scroll">
+                                <div class="inner">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>지급회차</th>
+                                                <th>회원명</th>
+                                                <th>연락처</th>
+                                                <th>E-Mail</th>
+                                                <th>계좌번호</th>
+                                                <th>청약금액 (확정)</th>
+                                                <th>청약수량 (확정)</th>
+                                                <th>지분율</th>
+                                                <th>수익금구분</th>
+                                                <th>수익금(지급)</th>
+                                                <th>청약상품 운용기간</th>
+                                                <th>청약상품 남은기간</th>
+                                                <th>수익금 지급 완료일</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>90</td>
+                                                <td>00회차</td>
+                                                <td>홍길동</td>
+                                                <td>010-1234-5678</td>
+                                                <td>abc@abcd.com</td>
+                                                <td>1233-13123-13131</td>
+                                                <td>0,000,000원</td>
+                                                <td>000,000</td>
+                                                <td>00.00%</td>
+                                                <td>자산매각</td>
+                                                <td>000,000원</td>
+                                                <td>0000-00-00<br/> ~ 0000-00-00</td>
+                                                <td>1년 9월 30일</td>
+                                                <td>0000-00-00 00:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- 페이징 -->
+                            <div class="paging">
+                                <div>
+                                    <a href="#none" class="first">처음으로</a>
+                                    <a href="#none" class="prev">이전</a>
+
+                                    <strong>1</strong>
+                                    <a href="#none">2</a>
+                                    <a href="#none">3</a>
+                                    <a href="#none">4</a>
+                                    <a href="#none">5</a>
+
+                                    <a href="#none" class="next">다음</a>
+                                    <a href="#none" class="last">마지막으로</a>
+                                </div>
+                            </div>
+                            <!-- //페이징 -->
+                        </div>
+                    </dd>
+                    <!-- //상세 내용 -->
+                </dl>
+            </div>
+
+            <div class="btnSection">
+                <button class="btn_cancel"><em>목록</em></button>
+                <button class="btn_confirm"><em>블랙리스트 지정하기</em></button>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer>Template</footer>
+        <!-- //footer -->
+    </div>
+</body>

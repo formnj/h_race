@@ -93,6 +93,7 @@ section.search_wrap .btn_search em {width:auto; height:auto; padding:12px 30px; 
 section.search_wrap .inner > div + div {margin-top:12px;}
 section.search_wrap dl {display:inline-flex; align-items:center;}
 section.search_wrap dt {margin-right:16px; color:#444; font-size:15px;}
+section.search_wrap dd + dt {margin-left:40px;}
 
 /* result & search */
 .board_info_wrap {margin-bottom:10px; display:flex; align-items:center;}
@@ -227,11 +228,11 @@ section.search_wrap dt {margin-right:16px; color:#444; font-size:15px;}
 #admin_wrap .btn_text {text-decoration:underline;}
 #admin_wrap .btn_small em {padding:6px 20px; color:#444;}
 #admin_wrap .btn_cancel {background-color:#fff; border:1px solid #c6c6c6;}
+#admin_wrap .btn_confirm {color:#fff; background-color:#666A72;}
 
 #admin_wrap #container > .btnSection {margin-top:50px; justify-content:center;}
 #admin_wrap #container > .btnSection [class*='btn_'] em {padding:11px 24px; border-radius:4px; display:block;}
 #admin_wrap #container > .btnSection .btn_cancel {color:#333;}
-#admin_wrap #container > .btnSection .btn_confirm {color:#fff; background-color:#666A72;}
 
 .btn_del_02 {width:26px; height:26px; font-size:0; background:url('../images/admin/icon_del_02.png') 0 0 no-repeat; background-size:cover; display:inline-block;}
 .btn_add_02 {width:26px; height:26px; font-size:0; background:url('../images/admin/icon_add_02.png') 0 0 no-repeat; background-size:cover; display:inline-block;}

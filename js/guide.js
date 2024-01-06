@@ -528,14 +528,14 @@ $(document).ready(function(){
             sDate:'2024-01-04', eDate:'2024-01-05'
         },{
             depth:['','','상세',''],
-            id:'adm_admin_002', status:'',
+            id:'adm_admin_002', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-06', eDate:'2024-01-06'
         },{
             depth:['','','등록',''],
-            id:'adm_admin_003', status:'',
+            id:'adm_admin_003', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-06', eDate:'2024-01-06'
         },{
             depth:['','코드관리','조회',''],
             id:'adm_code_001', status:'',
@@ -556,6 +556,16 @@ $(document).ready(function(){
             id:'adm_code_003-1', status:'',
             note:'',
             sDate:'', eDate:''
+        },{
+            depth:['','회원관리','목록',''],
+            id:'adm-mamber-001', status:'com',
+            note:'',
+            sDate:'2024-01-06', eDate:'2024-01-06'
+        },{
+            depth:['','','상세',''],
+            id:'adm-mamber-002', status:'com',
+            note:'',
+            sDate:'2024-01-06', eDate:'2024-01-06'
         },{
             depth:['','메뉴관리','목록',''],
             id:'adm_menu_001', status:'',
