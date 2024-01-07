@@ -503,23 +503,23 @@ $(document).ready(function(){
 
         {
             depth:['admin','로그인','',''],
-            id:'adm-login-001', status:'',
+            id:'adm-login-001', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-07', eDate:'2024-01-07'
         },{
             depth:['','','비밀번호찾기(재설정)',''],
             id:'adm-password-001', status:'',
-            note:'',
+            note:'로그인 전체 요소 배치',
             sDate:'', eDate:''
         },{
             depth:['','','비밀번호재설정(분실)',''],
             id:'adm-password-002', status:'',
-            note:'',
+            note:'로그인 전체 요소 배치',
             sDate:'', eDate:''
         },{
             depth:['','','비밀번호 재설정(정기변경)',''],
             id:'adm-password-005', status:'',
-            note:'',
+            note:'로그인 전체 요소 배치',
             sDate:'', eDate:''
         },{
             depth:['','운영자관리','목록',''],

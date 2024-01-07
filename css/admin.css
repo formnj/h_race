@@ -58,6 +58,7 @@ footer {padding:10px 20px; color:#fff; font-size:13px; font-weight:400; backgrou
 .full {width:100%;}
 
 #container {min-height:calc(100vh - 122px); padding-top:38px !important; margin-left:253px; padding:30px 30px 50px; transition:margin 0.25s;}
+#container:has(.login_wrap) {height:100vh; margin:0; padding:0 !important; display:flex; align-items:center; justify-content:center;}
 
 .tit_wrap {margin-bottom:36px; display:flex;}
 .tit_wrap h2 {margin-bottom:0; font-size:24px; font-weight:600;}
@@ -223,6 +224,30 @@ section.search_wrap dd + dt {margin-left:40px;}
 	50%{-webkit-transform:rotate(-5deg);transform:rotate(-5deg)}
 	to{-webkit-transform:rotate(130deg);transform:rotate(130deg)}
 }
+
+.login_wrap {border:1px solid #eee; border-radius:16px; display:flex;}
+.login_wrap .thumb {overflow:hidden;}
+.login_wrap .thumb img {max-width:initial; height:100%;}
+.login_wrap .form_wrap {padding:23px 40px; line-height:1.42em; text-align:center; display:flex; flex-direction:column;}
+.login_wrap h1 > strong {color:#000; font-size:30px; font-weight:600;}
+.login_wrap h1 > strong em {color:#2ECCC8; font-weight:800;}
+.login_wrap h1 p {margin-top:16px; color:#666; font-size:18px; font-weight:200;}
+.login_wrap h1 p strong {font-weight:400;}
+.login_wrap .sub_tit {margin-top:30px; margin-bottom:18px;}
+.login_wrap .sub_tit strong {color:#333; font-size:16px; font-weight:600;}
+.login_wrap .sub_tit span {margin-top:15px; color:#666; font-size:12px; font-weight:300; display:block;}
+.login_wrap .find_wrap {margin-top:20px; display:flex; justify-content:space-between;}
+.login_wrap .find_password em {display:flex; align-items:center;}
+.login_wrap .find_password em:before {width:20px; height:20px; margin-right:2px; background:url('../images/admin/icon_lock.png') 0 0 no-repeat; content:''; display:block;}
+.login_wrap .btnSection {margin-top:30px; justify-content:center;}
+#admin_wrap .login_wrap .btnSection .btn_confirm {background-color:#2ECCC8; flex:1;}
+#admin_wrap .login_wrap .btnSection .btn_confirm em {padding:14px 10px 13px; color:#fff; font-size:18px; font-weight:600;}
+.login_wrap dl {margin-top:20px; color:#666; font-size:11px; font-weight:300; text-align:left;}
+.login_wrap dt {font-weight:400;}
+
+.login_wrap .form_group, .login_wrap .find_wrap, .login_wrap .btnSection {width:250px; margin-right:auto; margin-left:auto;}
+
+.login_wrap .form_group li + li {padding-top:10px;}
 
 #admin_wrap [class*='btn_'] {border-radius:4px; flex:initial;}
 #admin_wrap .btn_text {text-decoration:underline;}

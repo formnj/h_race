@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>mysql connect test</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+
+<script src="../js/admin.js"></script>
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <!-- wrap -->
+    <div id="admin_wrap">
+
+        <!-- container -->
+        <div id="container">
+            <div class="login_wrap">
+                <span class="thumb"><img src="../images/admin/banner_login.png" alt="" /></span>
+                <div class="form_wrap">
+                    <h1>
+                        <strong><em>BI</em> STO</strong>
+                        <p>
+                            <strong>ST Galaxia</strong>  STO플랫폼 운영시스템
+                        </p>
+                    </h1>
+                    <p class="sub_tit">
+                        <strong>비밀번호 재설정</strong>
+                        <span>현재 비밀번호 대신 새로 사용할 비밀번호를 입력해 주세요.<br/> 비밀번호 변경 후 이전 비밀번호는 사용할 수 없습니다.</span>
+                    </p>
+                    <ul class="form_group">
+                        <li>
+                            <label class="input">
+                                <i>ID(사번)</i>
+                                <input type="text" onkeyup="input_btn_chk(this);">
+                                <em>error message</em>
+                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="input">
+                                <i>비밀번호</i>
+                                <input type="text" onkeyup="input_btn_chk(this);">
+                                <em>error message</em>
+                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                            </label>
+                        </li>
+                    </ul>
+
+                    <!-- 아이디저장 / 비밀번호찾기 -->
+                    <ul class="find_wrap">
+                        <li>
+                            <label class="check">
+                                <input type="checkbox">
+                                <em class="label">아이디 저장</em>
+                            </label>
+                        </li>
+                        <li>
+                            <button class="find_password"><em>비밀번호 찾기</em></button>
+                        </li>
+                    </ul>
+                    <!-- //아이디저장 / 비밀번호찾기 -->
+
+                    <div class="btnSection">
+                        <a href="#none" class="btn_confirm"><em>로그인</em></a>
+                    </div>
+                    <dl>
+                        <dt>[비밀번호 조합 규칙 안내]</dt>
+                        <dd>ㆍ영문 대소문자, 숫자, 특수문자 조합 8자리 이상</dd>
+                        <dd>ㆍ사용가능 특수문자 : ! “ $ % & ‘ () * + , - . $ : ; &lt; &gt; = ? @ # [] ? ^ _`{} ~ | ? †</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer>Template</footer>
+        <!-- //footer -->
+    </div>
+</body>
