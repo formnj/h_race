@@ -228,11 +228,12 @@ section.search_wrap dd + dt {margin-left:40px;}
 .login_wrap {border:1px solid #eee; border-radius:16px; display:flex;}
 .login_wrap .thumb {overflow:hidden;}
 .login_wrap .thumb img {max-width:initial; height:100%;}
-.login_wrap .form_wrap {padding:23px 40px; line-height:1.42em; text-align:center; display:flex; flex-direction:column;}
+.login_wrap .form_wrap {width:422px; padding:23px 40px; line-height:1.42em; text-align:center; display:flex; flex-direction:column;}
 .login_wrap h1 > strong {color:#000; font-size:30px; font-weight:600;}
 .login_wrap h1 > strong em {color:#2ECCC8; font-weight:800;}
 .login_wrap h1 p {margin-top:16px; color:#666; font-size:18px; font-weight:200;}
 .login_wrap h1 p strong {font-weight:400;}
+.login_wrap .cont {display:flex; flex:1; align-items:center; justify-content:center;}
 .login_wrap .sub_tit {margin-top:30px; margin-bottom:18px;}
 .login_wrap .sub_tit strong {color:#333; font-size:16px; font-weight:600;}
 .login_wrap .sub_tit span {margin-top:15px; color:#666; font-size:12px; font-weight:300; display:block;}
