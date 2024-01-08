@@ -40,6 +40,7 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 
 /* color */
 .txt_blue {color:#1D9ADD !important;}
+.txt_red {color:#EE1045 !important;}
 
 /* align */
 .al {text-align:left !important;}
@@ -202,6 +203,7 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 #modal_wrap .modal_header {padding:17px 20px; background-color:#fff; position:absolute; top:0; right:0; left:0;}
 #modal_wrap .modal_header:after {clear:both; content:''; display:block;}
 #modal_wrap .modal_header h3 {margin-top:5px; font-size:18px; font-weight:700; float:left;}
+#modal_wrap .modal_header.ac h3 {float:initial; display:block;}
 #modal_wrap .modal_header .btn_close {width:30px; height:30px; font-size:0; background-image:url('../images/common/icon_close.png'); background-position:50%; background-repeat:no-repeat; background-size:cover; float:right; display:block;}
 
 /* modal content */

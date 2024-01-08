@@ -1,0 +1,28 @@
+<div class="modal_content">
+    <strong class="tit">문구문구문구</strong>
+    <div class="preloader">
+		<div class="spinner_layer">
+			<div class="circle_clipper left">
+				<div class="circle"></div>
+			</div>
+			<div class="gap_patch">
+				<div class="circle"></div>
+			</div>
+			<div class="circle_clipper right">
+				<div class="circle"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+    // 로딩 후 팝업 닫기
+    setTimeout(function(){
+        document.querySelector('#modal_wrap').classList.remove('active');
+        contain = document.querySelector('.modal_container')
+        contain.removeAttribute('modal-type');
+        while (contain.firstChild) { 
+            contain.removeChild(contain.firstChild);
+        }
+    }, 3000);
+</script>

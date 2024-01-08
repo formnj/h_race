@@ -1,0 +1,99 @@
+<div class="modal_header">
+    <h3>갤럭시아 청약 참여하기</h3>
+    <button class="btn_close" onclick="modal.close(event);">close</button>
+</div>
+<div class="modal_content">
+    <div class="gray_box txt_cont">현재 청약율 <span class="txt_blue">70%</span>로 갤럭시아 청약 참여를 통해 청약을 마감할 수 있습니다. 아래 청약금액$수량 확인 후 참여하기를
+        선택해 주세요.</div>
+
+    <h4 class="mt35">청약현황</h4>
+    <div class="table_wrap detaile mt25">
+        <div class="inner">
+            <table>
+                <colgroup>
+                    <col style="width:20%;" />
+                    <col style="width:30%;" />
+                    <col style="width:20%;" />
+                    <col style="width:30%;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>청약상품 구분</th>
+                        <td class="ar">경주마</td>
+                        <th>청약상품 번호</th>
+                        <td class="ar">청약상품01호</td>
+                    </tr>
+                    <tr>
+                        <th>목표 청약수량</th>
+                        <td class="ar">100,000</td>
+                        <th>목표 청약금액</th>
+                        <td class="ar">1,000,000원</td>
+                    </tr>
+                    <tr>
+                        <th>현재 청약수량</th>
+                        <td class="ar">70,000</td>
+                        <th>현재 청약금액</th>
+                        <td class="ar">70,000원</td>
+                    </tr>
+                    <tr>
+                        <th>미달 청약수량</th>
+                        <td class="ar txt_blue">30,000</td>
+                        <th>미달 청약금액</th>
+                        <td class="ar txt_red">30,000원</td>
+                    </tr>
+                    <tr>
+                        <th>마감 청약율</th>
+                        <td class="ar txt_blue">70%</td>
+                        <th>청약 미달율</th>
+                        <td class="ar txt_red">30%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <ul class="write_input_group mt50">
+        <li>
+            <div>
+                <strong>갤럭시아 청약 수량</strong>
+                <label class="input">
+                    <i>Placeholder</i>
+                    <input class="ar" type="text" value="30,000" onkeyup="input_btn_chk(this);">
+                    <em>error message</em>
+                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                </label>
+            </div>
+        </li>
+        <li>
+            <div>
+                <strong>갤럭시아 청약 금액</strong>
+                <label class="input">
+                    <i>Placeholder</i>
+                    <input class="ar" type="text" value="30,000원" onkeyup="input_btn_chk(this);">
+                    <em>error message</em>
+                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                </label>
+            </div>
+        </li>
+    </ul>
+
+    <div class="ac mt35">
+        <p>현재 청약 미달율은 30%이며, 청약 마감을 위해 갤럭시아 청약 참여 시 30,000 청약수량을 30,000원으로 청약 참여가 필요합니다.<br/> 갤럭시아 청약 참여 시 취소가 불가하오니 신중히 결정해 주십시오.</p>
+        <label class="check mt20">
+            <input type="checkbox">
+            <em class="label">갤럭시아 청약 참여를 신청합니다.</em>
+        </label>
+    </div>
+</div>
+<div class="btnSection">
+    <button class="btn_confirm" onclick="modal.close(event);">
+        <em>갤럭시아 청약참여하기</em>
+    </button>
+</div>
+
+<script>
+    /* placeholder */
+    $('label[class*="input"]').each(function(){
+        placeholder(this);
+    });
+</script>

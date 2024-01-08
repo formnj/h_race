@@ -60,6 +60,11 @@ $(document).ready(function(){
             id:'alarm_set_comfirm', status:'com',
             type:'modal', note:'',
             sDate:'2024-01-03', eDate:'2024-01-03'
+        },{
+            depth:['','로딩 팝업','',''],
+            id:'preload_modal', status:'com',
+            type:'modal', note:'',
+            sDate:'2024-01-08', eDate:'2024-01-08'
         },
 
         {
@@ -566,6 +571,21 @@ $(document).ready(function(){
             id:'adm-mamber-002', status:'com',
             note:'',
             sDate:'2024-01-06', eDate:'2024-01-06'
+        },{
+            depth:['','','주문대리인 지정',''],
+            id:'adm-mamber-002-1', status:'com',
+            type:'modal',note:'',
+            sDate:'2024-01-08', eDate:'2024-01-08'
+        },{
+            depth:['','','주문대리인 검증 완료',''],
+            id:'adm-mamber-002-2', status:'com',
+            type:'modal',note:'',
+            sDate:'2024-01-08', eDate:'2024-01-08'
+        },{
+            depth:['','','갤럭시아 청약 참여하기',''],
+            id:'adm-goodsApply-007', status:'com',
+            type:'modal',note:'',
+            sDate:'2024-01-08', eDate:'2024-01-08'
         },{
             depth:['','메뉴관리','목록',''],
             id:'adm_menu_001', status:'',

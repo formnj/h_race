@@ -1,0 +1,96 @@
+<div class="modal_header">
+    <h3>주문대리인 지정</h3>
+    <button class="btn_close" onclick="modal.close(event);">close</button>
+</div>
+<div class="modal_content">
+    <div class="gray_box txt_cont"><span class="txt_blue">'$이름$'</span> 회원님을 주문대리인으로 지정합니다. 주문대리인 지정을 위해 가입한 회원 정보와 지점에서 개설한 법인계좌의 가입자 정보 일치를 확인합니다.</div>
+
+    <div class="table_wrap detaile mt25">
+        <div class="inner">
+            <table>
+                <colgroup>
+                    <col style="width:20%;" />
+                    <col style="width:30%;" />
+                    <col style="width:20%;" />
+                    <col style="width:30%;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>가입일시</th>
+                        <td>2023-0000 00:00:00</td>
+                        <th>회원명</th>
+                        <td>홍길동</td>
+                    </tr>
+                    <tr>
+                        <th>휴대폰번호</th>
+                        <td>010-1523-4567</td>
+                        <th>성별</th>
+                        <td>남성</td>
+                    </tr>
+                    <tr>
+                        <th>이메일</th>
+                        <td>abc@abcd.com</td>
+                        <th>연령대</th>
+                        <td>30대</td>
+                    </tr>
+                    <tr>
+                        <th>회원상태</th>
+                        <td>활성</td>
+                        <th>계좌개설상태</th>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th>자격설문</th>
+                        <td>일반투자자</td>
+                        <th>법인계좌번호</th>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <ul class="write_input_group mt50">
+        <li>
+            <div>
+                <strong>법인사업자번호</strong>
+                <label class="input">
+                    <i style="display: none;">Placeholder</i>
+                    <input class="password" type="text" onkeyup="input_btn_chk(this);">
+                    <em>error message</em>
+                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                </label>
+            </div>
+        </li>
+        <li>
+            <div>
+                <strong>법인계좌 상태</strong>
+                <label class="input">
+                    <i style="display: none;">Placeholder</i>
+                    <input class="password" type="text" onkeyup="input_btn_chk(this);">
+                    <em>error message</em>
+                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                </label>
+            </div>
+        </li>
+        <li>
+            <div>
+                <strong>법인계좌 번호</strong>
+                <label class="input">
+                    <i style="display: none;">Placeholder</i>
+                    <input class="password" type="text" onkeyup="input_btn_chk(this);">
+                    <em>error message</em>
+                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                </label>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="btnSection">
+    <button class="btn_confirm" onclick="modal.open('adm-mamber-002-2','type_mid');">
+        <em>주문대리인 검증요청</em>
+    </button>
+</div>
+
+<script>
+</script>
