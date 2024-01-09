@@ -34,6 +34,8 @@ header + #container {padding-top:66px;}
 .content + .btnSection [class*='btn_'] + [class*='btn_'] {margin-left:0;}
 .content + .btnSection [class*='btn_'] em {padding:16px 10px; font-size:16px; font-weight:600;}
 
+.lockbody{overflow:hidden;height:100%;}
+
 h2 {margin-bottom:42px; font-size:21px; line-height:1.43em; font-weight:600;}
 h2 .explain {margin-top:10px; color:#666; font-size:12px; line-height:1.66em;}
 h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
@@ -565,6 +567,7 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .setting_menu .check_ani {display:block;}
 .setting_menu .check_ani em {padding-right:48px; padding-left:0;}
 .setting_menu .check_ani em:before {right:0; left:initial;}
+.setting_menu .check_ani input[type='checkbox']{overflow:hidden; position:absolute; left:0; top:0; width:1px; height:1px; margin:0; padding:0; border:none; opacity:0; filter:alpha(opacity=0);}
 .setting_menu .check_ani input[type='checkbox'] + em:after {right:18px; left:initial;}
 .setting_menu .check_ani input[type='checkbox']:checked + em:after {right:0;}
 .setting_menu .check_ani input {right:0;}

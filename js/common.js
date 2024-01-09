@@ -144,19 +144,7 @@ const modal = {
                 $('#modal_wrap').addClass('active').find('.modal_container');
             },
             complete: function(data){
-                /* body fixed */
-                const body = document.querySelector('body');
-                if (!body.getAttribute('scrollY')) {
-                    const pageY = window.pageYOffset;
-
-                    body.setAttribute('scrollY', pageY.toString());
-
-                    body.style.overflow = 'hidden';
-                    body.style.position = 'fixed';
-                    body.style.left = '0px';
-                    body.style.right = '0px';
-                    body.style.top = `-${pageY}px`;
-                }
+                disableScroll();
             },
             error: function(){
                 alert('404 Error!');
@@ -171,8 +159,12 @@ const modal = {
             contain.removeChild(contain.firstChild);
         }
 
-        /* body remove fixed */
-        $('body').removeAttr('scrolly style');
+        $("html").css({
+            height: "initial",
+            overflow: "initial",
+        });
+
+        enableScroll();
     }
 }
 
@@ -326,3 +318,50 @@ function select_change(_target) {
     var _target = $(_target);
     _target.closest('.select_form').find('dt a').text(_target.children('option:selected').text());
 }
+
+/* 2024-01-09 : 추가 */
+// body lock scroll ios 대응
+function lockScrollHandle(event) {
+    const e = event || window.event;
+
+    // body lock 에서 제외시킬 요소 정의
+    // 모달 공통
+    if (e.target.classList.contains("modal_content")) {
+        return;
+    }
+    if (e.target.closest(".modal_content")) {
+        return;
+    }
+
+    // 멀티 터치는 터치 되게 한다
+    if (e.touches.length > 1) return;
+
+    // event 초기화 속성이 있음 초기화
+    e.preventDefault();
+}
+
+// 스크롤 잠금
+function disableScroll() {
+    const body = document.querySelector("body");
+    const pageY = document.body.scrollTop || document.documentElement.scrollTop;
+
+    if (!body.hasAttribute("scrollY")) {
+        body.setAttribute("scrollY", String(pageY));
+        $(body).addClass("lockbody");
+    }
+    body.addEventListener("touchmove", lockScrollHandle, { passive: false });
+}
+
+// 스크롤 잠금 해제
+function enableScroll() {
+    const body = document.querySelector("body");
+
+    if (body.hasAttribute("scrollY")) {
+        $(body).removeClass("lockbody");
+        body.scrollTop = Number(body.getAttribute("scrollY"));
+        body.removeAttribute("scrollY");
+    }
+
+    body.removeEventListener("touchmove", lockScrollHandle, { passive: true });
+}
+/* //2024-01-09 : 추가 */
