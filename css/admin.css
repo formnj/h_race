@@ -264,8 +264,8 @@ section.search_wrap dd + dt {margin-left:40px;}
 #admin_wrap #container > .btnSection {margin-top:50px; justify-content:center;}
 #admin_wrap #container > .btnSection [class*='btn_'] em {padding:11px 24px; border-radius:4px; display:block;}
 
-.btn_del_02 {width:26px; height:26px; font-size:0; background:url('../images/admin/icon_del_02.png') 0 0 no-repeat; background-size:cover; display:inline-block;}
-.btn_add_02 {width:26px; height:26px; font-size:0; background:url('../images/admin/icon_add_02.png') 0 0 no-repeat; background-size:cover; display:inline-block;}
+.btn_del_02 {width:26px; height:26px; font-size:0; background:url('../images/admin/icon_del_02.png') 0 -1px no-repeat; background-size:cover; display:inline-block;}
+.btn_add_02 {width:26px; height:26px; font-size:0; background:url('../images/admin/icon_add_02.png') 0 -1px no-repeat; background-size:cover; display:inline-block;}
 
 .detail_cont {text-align:justify;}
 .detail_cont h3 {padding-bottom:20px; color:#141824; font-size:18px; font-weight:700; border-bottom:1px solid #e3e6ed;}
