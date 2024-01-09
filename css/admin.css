@@ -20,7 +20,7 @@ textarea {padding:10px;}
 
 /* header */
 header {padding:19px 20px; background-color:#fff; box-shadow:0 1px 3px 0 #cacaca; position:sticky; top:0; z-index:100; display:flex; align-items:center; justify-content:space-between;}
-header h1 {margin-bottom:34px; padding-left:40px; color:#fff; font-size:18px; font-weight:600; position:relative; z-index:1; transition:color 0.25s;}
+header h1 {margin-bottom:34px; padding-top:35px; padding-left:40px; color:#fff; font-size:18px; font-weight:600; position:relative; z-index:1; transition:color 0.25s;}
 header h1 a {color:#fff; font-size:26px; font-weight:700; display:block; transition:color 0.25s;}
 header h1 img {height:40px;}
 header .quick {margin-left:auto; color:#333; font-size:12px; font-weight:400; display:flex; align-items:center;}
@@ -32,8 +32,11 @@ header .quick .timer:before {width:18px; height:18px; background-position:-30px 
 header .quick .btnSection {margin-top:0; display:flex; gap:8px;}
 header .quick .btnSection button {padding:6px 20px; color:#444; font-size:13px; font-weight:500; border:1px solid #C5C8CF; border-radius:4px;}
 
-header nav {padding:35px 0 30px 0; background-color:#40454f; overflow-y:auto; position:fixed; top:0; bottom:0; left:0; transition:transform 0.25s;}
-header nav > div {width:250px;}
+header nav {padding-bottom:30px; background-color:#40454f; position:fixed; top:0; bottom:0; left:0; display:flex; flex-direction:column; transition:transform 0.25s;}
+header nav > div {width:250px; overflow:auto; flex:1;}
+header nav > div::-webkit-scrollbar {width: 10px;}
+header nav > div:hover::-webkit-scrollbar-thumb {background: #d9d9d9; background-clip: padding-box; border: 3px solid transparent; border-radius: 8px;}
+header nav > div::-webkit-scrollbar-track {background: transparent;}
 header nav dt, header nav dt > a {color:#F4F4F4; font-size:16px; display:block;}
 header nav dt > a {padding:15px 20px 15px 40px;}
 header nav dt:hover, header nav dt > a:hover, header nav dt.active > a {color:#fff; font-weight:600; background-color:#2ECCC8;}
