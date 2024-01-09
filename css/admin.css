@@ -156,11 +156,14 @@ section.search_wrap dd + dt {margin-left:40px;}
 #admin_wrap .check {padding-left:29px;}
 #admin_wrap .check_group {margin-left:-40px;}
 #admin_wrap .check_group .check {margin-left:40px;}
-#admin_wrap .check input + .label:before {width:20px; height:20px; background-color:#fff !important; border:1px solid #E1E1E1; top:0; left:0;}
+#admin_wrap .check input + .label:before {width:20px; height:20px; background-color:#fff; border:1px solid #E1E1E1; top:0; left:0;}
+#admin_wrap .check input:disabled + .label:before {background-color:#f0f0f0;}
 #admin_wrap .check input[type='radio'] + .label:after {width:12px; height:12px; background-color:#666; border-radius:50%; opacity:0; top:4px; left:4px;}
 #admin_wrap .check input[type='radio']:checked + .label:after {opacity:1;}
-#admin_wrap .check input[type='checkbox'] + .label:before {background:none;}
+#admin_wrap .check input[type='radio']:disabled:checked + .label:after {background-color:#999;}
+#admin_wrap .check input[type='checkbox'] + .label:before {background-image:none;}
 #admin_wrap .check input[type='checkbox']:checked + .label:after {width:14px; height:8px; border:2px solid #444; border-top:0; border-right:0; top:4px; left:3px; display:block; transform:rotate(-45deg);}
+#admin_wrap .check input[type='checkbox']:disabled:checked + .label:after {border-color:#999;}
 
 /* tab */
 .tab_wrap [class*='tab_type'] {display:flex; flex-wrap:wrap;}
