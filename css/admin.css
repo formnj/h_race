@@ -302,7 +302,10 @@ section.search_wrap dd + dt {margin-left:40px;}
 #admin_wrap #modal_wrap .modal_content + .btnSection [class*='btn_'] em {padding:12px 24px; font-size:14px; font-weight:400;}
 #admin_wrap #modal_wrap .txt_cont {font-size:15px;}
 
-#admin_wrap #modal_wrap .modal_container[modal-type="type_big"] {width:800px;}
+#admin_wrap #modal_wrap .modal_container[modal-type="type_big"] {width:800px; max-height:90%; overflow:auto;}
+#admin_wrap #modal_wrap .modal_container[modal-type="type_big"] .modal_header {margin-bottom:0; padding:30px 30px 25px; position:sticky; top:0;}
+#admin_wrap #modal_wrap .modal_container[modal-type="type_big"]:has(.modal_header) {padding-top:0;}
+
 #admin_wrap #modal_wrap .modal_container[modal-type="type_mid"] {width:440px;}
 #admin_wrap #modal_wrap .modal_container[modal-type="type_alert"] {width:360px;}
 

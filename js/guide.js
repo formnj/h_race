@@ -654,11 +654,10 @@ $(document).ready(function(){
         /* path */
         if(page_arry[i].type == 'modal'){
             path = 'modal'
+        } else if(page_arry[i].id.indexOf('adm') > -1){
+            path = 'admin'
         } else {
             path = 'html'
-        }
-        if(page_arry[i].id.indexOf('adm') > -1){
-            path = 'admin'
         }
 
         $('tbody').append('<tr class="'+row_chk+'">'
