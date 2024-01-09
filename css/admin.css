@@ -32,7 +32,7 @@ header .quick .timer:before {width:18px; height:18px; background-position:-30px 
 header .quick .btnSection {margin-top:0; display:flex; gap:8px;}
 header .quick .btnSection button {padding:6px 20px; color:#444; font-size:13px; font-weight:500; border:1px solid #C5C8CF; border-radius:4px;}
 
-header nav {padding:35px 0 30px 0; background-color:#40454f; position:fixed; top:0; bottom:0; left:0; transition:transform 0.25s;}
+header nav {padding:35px 0 30px 0; background-color:#40454f; overflow-y:auto; position:fixed; top:0; bottom:0; left:0; transition:transform 0.25s;}
 header nav > div {width:250px;}
 header nav dt, header nav dt > a {color:#F4F4F4; font-size:16px; display:block;}
 header nav dt > a {padding:15px 20px 15px 40px;}
