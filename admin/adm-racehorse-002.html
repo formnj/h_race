@@ -1,0 +1,384 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<title>mysql connect test</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+
+<script src="../js/admin.js"></script>
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <!-- wrap -->
+    <div id="admin_wrap">
+        <!-- header -->
+        <header>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <div class="tit_wrap">
+                <h2>경주마 상세보기</h2>
+                <ul class="breadcrumb">
+                    <li>Home</li>
+                    <li>1Depth</li>
+                    <li>2Depth</li>
+                </ul>
+            </div>
+            <script>
+                $(document).ready(function(){
+                    tab_active('.tab_wrap .tab_type_04','click');
+                });
+            </script>
+            <div class="tab_wrap">
+                <ul class="tab_type_04">
+                    <li class="current"><button>개체정보</button></li>
+                    <li><button>접종정보</button></li>
+                </ul>
+
+                <div class="tab_content">
+                    <!-- 개체정보 -->
+                    <div class="current">
+                        <div class="list_wrap">
+                            <dl class="type_register accordion">
+                                <dt class="active">
+                                    <strong class="tit">경주마 기본정보</strong>
+                                </dt>
+                                <!-- 상세 내용 -->
+                                <dd style="display:block;">
+                                    <div class="cont">
+                                        <div class="def_info_wrap">
+                                            <div class="img_area">
+                                                스와이프
+                                            </div>
+                                            <div class="info_area">
+                                                <div class="table_wrap detaile">
+                                                    <div class="inner">
+                                                        <table>
+                                                            <colgroup>
+                                                                <col style="width:37%;" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>마번</th>
+                                                                    <td>1411965</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>마이크로칩</th>
+                                                                    <td>410-0998-0002-1181</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>보마명(한글$영문)</th>
+                                                                    <td>가나파워 GANA POWER</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>소유주</th>
+                                                                    <td>갤럭시아 머니트리</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>소재지</th>
+                                                                    <td>서울경마공원(0T1001)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>생산자</th>
+                                                                    <td>한라농축영농조합법인(215422)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>기초자산(가)</th>
+                                                                    <td> 10,000,000원</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>보관장소</th>
+                                                                    <td>렛츠런 파크</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>보관위치</th>
+                                                                    <td>경상북도 경주군 경남로 4길 2-1 ABC마방</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                                <!-- //상세 내용 -->
+            
+                                <dt>
+                                    <strong class="tit">경주마 개체정보</strong>
+                                </dt>
+                                <!-- 상세 내용 -->
+                                <dd>
+                                    <div class="cont">
+                                        <div class="table_wrap detaile">
+                                            <div class="inner">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width:20%;" />
+                                                        <col style="width:30%;" />
+                                                        <col style="width:20%;" />
+                                                        <col />
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>등록일시</th>
+                                                            <td>yyyy-mm-dd 00:00</td>
+                                                            <th>최종수정</th>
+                                                            <td>yyyy-mm-dd 00:00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>공공데이터 조회</th>
+                                                            <td>$성공$</td>
+                                                            <th>최종용도</th>
+                                                            <td>경주용</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>출생일</th>
+                                                            <td>yyyy-mm-dd (2세)</td>
+                                                            <th>경주마등록일</th>
+                                                            <td>yyyy-mm-dd</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>생산국</th>
+                                                            <td>$생산국$</td>
+                                                            <th>품종</th>
+                                                            <td>$품종$</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>성별</th>
+                                                            <td>$성별$</td>
+                                                            <th>털색</th>
+                                                            <td>$털색$</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                                <!-- //상세 내용 -->
+
+                                <dt>
+                                    <strong class="tit">경주마 보험정보</strong>
+                                </dt>
+                                <!-- 상세 내용 -->
+                                <dd>
+                                    <div class="cont">
+                                        <div class="table_wrap detaile">
+                                            <div class="inner">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width:20%;" />
+                                                        <col style="width:30%;" />
+                                                        <col style="width:20%;" />
+                                                        <col />
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>보험종류</th>
+                                                            <td>가축재해 보험</td>
+                                                            <th>보험사</th>
+                                                            <td>NH농협손해보험</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>보험기간</th>
+                                                            <td>yyyy-mm-dd ~ yyyy-mm-dd (24개월)</td>
+                                                            <th>보험대상</th>
+                                                            <td>말</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>보장내용</th>
+                                                            <td colspan="3">
+                                                                &lt;보통약관&gt;<br>
+                                                                법정전염병을 제외한 질병 또는 각종사고(풍재·수재·설해·지진 등 자연재해, 화재)로 인한 폐사<br>
+                                                                ※ 신규가입일 경우 가입일로부터 1개월 이내 질병 관련 사고는 보상하지 않습니다.<br>
+
+                                                                부상(사지골절, 경추골절, 탈구), 난산, 산욕마비, 산통, 경주마의 실명으로 인하여 즉시 도살하여야 할 손해<br><br>
+
+                                                                &lt;보험특약&gt;<br>
+                                                                1. 경주마 부적격 특약<br>
+                                                                경주마가 건염, 인대염, 골절로 인한 손해<br>
+                                                                ※ 다만, 경주마 부적격 판정 이후 종모마 혹은 종빈마로 용도 변경된 경우는 보상하지 않습니다.<br><br>
+
+                                                                2. 말운송위험확장보장특약<br>
+                                                                말 운송 중 발생되는 주계약 보상사고<br><br>
+
+                                                                3. 화재대물 배상책임 특약<br>
+                                                                화재로 인해 타인의 재물에 손해를 끼침으로서 부담하게 될 법률적 배상책임액보상<br><br>
+
+                                                                4. 동물복지인증계약 특약<br>
+                                                                동물복지축산농장 인증(농림축산검역본부)시 5% 할인
+
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                                <!-- //상세 내용 -->
+                            </dl>
+                        </div>
+
+                        <div class="btnSection">
+                            <button class="btn_cancel"><em>목록</em></button>
+                            <button class="btn_confirm"><em>수정</em></button>
+                        </div>
+                    </div>
+                    <!-- //개체정보 -->
+
+                    <!-- 접종정보 -->
+                    <div>
+                        <div class="list_wrap">
+                            <dl class="type_register accordion">
+                                <dt class="active">
+                                    <strong class="tit">경주마 진료정보</strong>
+                                </dt>
+                                <!-- 상세 내용 -->
+                                <dd style="display:block;">
+                                    <div class="cont">
+                                        <div class="table_wrap"><!-- table scroll 필요 시 scroll 클래스 추가 -->
+                                            <div class="inner">
+                                                <table class="type_list ac">
+                                                    <colgroup>
+                                                        <col />
+                                                        <col />
+                                                        <col />
+                                                        <col />
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>진료일자</th>
+                                                            <th>질병명</th>
+                                                            <th>진료병원</th>
+                                                            <th>진료장소</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>yyyy-mm-dd</td>
+                                                            <td>양각막염</td>
+                                                            <td>명성동물병원</td>
+                                                            <td>마방 진료</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                                <!-- //상세 내용 -->
+            
+                                <dt>
+                                    <strong class="tit">예방접종정보</strong>
+                                </dt>
+                                <!-- 상세 내용 -->
+                                <dd>
+                                    <div class="cont">
+                                        <div class="table_wrap"><!-- table scroll 필요 시 scroll 클래스 추가 -->
+                                            <div class="inner">
+                                                <table class="type_list ac">
+                                                    <colgroup>
+                                                        <col />
+                                                        <col />
+                                                        <col />
+                                                        <col />
+                                                        <col />
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>진료일자</th>
+                                                            <th>접종명</th>
+                                                            <th>영문명</th>
+                                                            <th>유효기간</th>
+                                                            <th>접종병원</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>2023-05-20</td>
+                                                            <td>구충제1</td>
+                                                            <td>Oximinth-Plus</td>
+                                                            <td>1년</td>
+                                                            <td>서울부속동물병원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                                <!-- //상세 내용 -->
+
+                                <dt>
+                                    <strong class="tit">식사사용 금지약물 투약내역</strong>
+                                </dt>
+                                <!-- 상세 내용 -->
+                                <dd>
+                                    <div class="cont">
+                                        <div class="table_wrap scroll"><!-- table scroll 필요 시 scroll 클래스 추가 -->
+                                            <div class="inner">
+                                                <table class="type_list ac">
+                                                    <colgroup>
+                                                        <col />
+                                                        <col />
+                                                        <col />
+                                                        <col />
+                                                        <col />
+                                                        <col />
+                                                        <col />
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>진료일자</th>
+                                                            <th>병원명</th>
+                                                            <th>마번</th>
+                                                            <th>병명1</th>
+                                                            <th>병명2</th>
+                                                            <th>약품명</th>
+                                                            <th>휴약기간</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>2023-05-20</td>
+                                                            <td>명성동물병원</td>
+                                                            <td>0047061</td>
+                                                            <td>양전지 근육통</td>
+                                                            <td>우중수부찰과상</td>
+                                                            <td>EAGLE KETH</td>
+                                                            <td>2023-09-24</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                                <!-- //상세 내용 -->
+                            </dl>
+                        </div>
+
+                        <div class="btnSection">
+                            <button class="btn_cancel"><em>목록</em></button>
+                            <button class="btn_confirm"><em>수정</em></button>
+                        </div>
+                    </div>
+                    <!-- //접종정보 -->
+                </div>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer>Template</footer>
+        <!-- //footer -->
+    </div>
+</body>

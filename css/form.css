@@ -48,7 +48,7 @@ label[class*='input'] button.icon_pss {background-image:url('../images/common/ic
 
 label.input_square i {color:#666; font-size:14px; top:13px; left:20px;}
 label.input_square input, label.input_square textarea {padding:0 20px; border:1px solid #D7D8DD; border-radius:8px;}
-label.input_square textarea {padding:15px 20px;}
+label.input_square textarea {padding:15px 20px;resize:none;}
 
 .label_wrap {border-bottom:1px solid #E1E1E1;}
 .label_wrap:has(input:focus) {border-color:#222;}

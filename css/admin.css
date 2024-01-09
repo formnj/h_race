@@ -7,9 +7,13 @@ select, input[type="text"], input[type="email"], input[type="number"], input[typ
 textarea {padding:10px;}
 .select select {padding:0 35px 0 10px;}
 
-#admin_wrap label[class*='input'] i {font-size:15px; top:13px; left:10px;}
+#admin_wrap label[class*='input'] input:disabled {background-color:#f6f7f8;}
+#admin_wrap label[class*='input'] i {font-size:15px; top:13px; left:10px; right:10px; text-align:left;}
 #admin_wrap label[class*='input'] button[class*='icon_'] {right:10px;}
 #admin_wrap .label_wrap {border:0;}
+#admin_wrap .label_wrap label + label {margin-top:0;}
+#admin_wrap .label_wrap.addr label.input:first-of-type {width:20%; flex:0 auto;}
+#admin_wrap label.input_square textarea {border-color:#E1E1E1;}
 
 #admin_wrap.close header nav {transform:translateX(-100%);}
 #admin_wrap.close header .btn_open:before {margin-left:-4px; transform:translate(-50%, -50%) rotate(45deg)}
@@ -267,8 +271,8 @@ section.search_wrap dd + dt {margin-left:40px;}
 #admin_wrap .btn_confirm {background-color:#666A72;}
 #admin_wrap .btn_confirm em {color:#fff;}
 
-#admin_wrap #container > .btnSection {margin-top:50px; justify-content:center;}
-#admin_wrap #container > .btnSection [class*='btn_'] em {padding:11px 24px; border-radius:4px; display:block;}
+#admin_wrap #container > .btnSection, #admin_wrap .list_wrap ~ .btnSection {margin-top:50px; justify-content:center;}
+#admin_wrap #container > .btnSection [class*='btn_'] em, #admin_wrap .list_wrap ~ .btnSection [class*='btn_'] em {padding:11px 24px; border-radius:4px; display:block;}
 
 .btn_del_02 {width:26px; height:26px; font-size:0; background:url('../images/admin/icon_del_02.png') 0 -1px no-repeat; background-size:cover; display:inline-block;}
 .btn_add_02 {width:26px; height:26px; font-size:0; background:url('../images/admin/icon_add_02.png') 0 -1px no-repeat; background-size:cover; display:inline-block;}
@@ -323,3 +327,26 @@ section.search_wrap dd + dt {margin-left:40px;}
 .write_input_group li {border-bottom:1px solid #EEEBE9;}
 .write_input_group li > * {padding:15px 10px; display:flex; align-items:center; gap:30px;}
 .write_input_group li strong {font-size:18px; font-weight:500;}
+
+.txt_exp{margin-top:20px; font-size:13px; font-weight:300; color:#2174F5;}
+
+.pic_info_wrap {display:flex; gap:0 40px;}
+.pic_info_wrap .img_area {width:33.396%; max-width:531px; flex-shrink:0;}
+.pic_info_wrap .pic_box {display:flex; align-items:center; justify-content:center; padding:61px 78px; text-align:center; border:1px solid #EEEBE9; background-color:#F6F7F8;}
+.pic_info_wrap .pic_box img {object-fit:cover;}
+.pic_info_wrap .info_area {flex:1; overflow:hidden;}
+
+.upload_list li {padding:9px 20px;border-bottom:1px solid #ddd;}
+.upload_list li:first-child {border-top:1px solid #ddd;}
+
+.file_box {display:flex; align-items:center; position:relative;}
+.file_box .inp_file {display:block; visibility:hidden; position:absolute;}
+.btn_dgray {min-height:43px; padding:0 20px; background-color:#9DA1A8; color:#fff;}
+.file_box .txt_control {flex:1; display:block; padding:0 20px; text-decoration:underline; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-weight:300; font-size:15px; color:#444;}
+.file_box .btn_add {width:26px; height:26px; background:url('../images/admin/icon_add_02.png') no-repeat center center / 100% auto; font-size:0;}
+.file_box .btn_del {width:26px; height:26px; background:url('../images/admin/icon_del_02.png') no-repeat center center / 100% auto; font-size:0;}
+
+.def_info_wrap {display:flex; gap:0 67px;}
+.def_info_wrap .img_area {width:29.34%; max-width:468px; flex-shrink:0;}
+.def_info_wrap .img_area .img {object-fit:cover;}
+.def_info_wrap .info_area {flex:1;}
