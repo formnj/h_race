@@ -98,10 +98,94 @@
         </div>
     </div>
 
-    <!-- modal -->
-    <div class="modal_wrap">
-        <div class="modal_container"></div>
+    <!-- modal 우편번호 -->
+    <div class="modal_wrap search_address">
+        <div class="modal_container">
+            <div class="modal_header">
+                <h3>주소검색</h3>
+                <button class="btn_close" onclick="modal.close(event);">close</button>
+            </div>
+            <div class="modal_content">
+                <div class="label_wrap">
+                    <label class="input">
+                        <i>예) 법원로 2길, 서초동</i>
+                        <input type="text" onkeyup="input_btn_chk(this);">
+                        <em>error message</em>
+                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                    </label>
+                    <button class="btn_search"><em>검색</em></button>
+                </div>
+            
+                <div class="address_wrap">
+                    <dl>
+                        <dt>이렇게 검색해 보세요!</dt>
+                        <dd>
+                            <strong>도로명 + 건물번호</strong>
+                            <p>예) 법원로 2길 17-4</p>
+                        </dd>
+                        <dd>
+                            <strong>지역명(동/리) + 번지</strong>
+                            <p>예) 서초동 174-14</p>
+                        </dd>
+                        <dd>
+                            <strong>지역명(동/리) + 건물명 아파트</strong>
+                            <p>예) 서초동  법원빌딩</p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <script>
+                /* placeholder */
+                $('label.input').each(function(){
+                    placeholder(this);
+                });
+            </script>
+        </div>
     </div>
-    <!-- //modal -->
+    <!-- //modal 우편번호 -->
+
+    <!-- 옵션팝업 -->
+    <div class="modal_wrap select_sample">
+        <div class="modal_container">
+            <div class="modal_header">
+                <h3>모달 타이틀</h3>
+                <button class="btn_close" onclick="modal.close(event);">close</button>
+            </div>
+            <div class="modal_content">
+                <ul class="option_list al">
+                    <li><button onclick="modal.close(event);">Option01</button></li>
+                    <li><button onclick="modal.close(event);">Option02</button></li>
+                    <li><button onclick="modal.close(event);">Option03</button></li>
+                    <li><button onclick="modal.close(event);">Option04</button></li>
+                    <li><button onclick="modal.close(event);">Option05</button></li>
+                    <li><button onclick="modal.close(event);">Option06</button></li>
+                    <li><button onclick="modal.close(event);">Option07</button></li>
+                    <li><button onclick="modal.close(event);">Option08</button></li>
+                </ul>
+            </div>
+            <div class="btnSection">
+                <button class="btn_confirm" onclick="modal.close(event);">
+                    <em>확인</em>
+                </button>
+            </div>
+            
+            <script>
+                /* 퍼블 테스트 용 기능 */
+                document.querySelector('.btn_confirm').addEventListener('click', function(){
+                    document.querySelector('.icon_reset').click();
+                });
+                /* //퍼블 테스트 용 기능 */
+            
+                /* 선택 통신사 전달 후 placeholder 숨김 */
+                $('.option_list > li').delegate('*', 'click', function(){
+                    $('#select01 i').hide();
+                    $('#select01 input').val($(this).text());
+                });
+                /* //선택 통신사 전달 후 placeholder 숨김 */
+            </script>
+        </div>
+    </div>
+    <!-- //옵션팝업 -->
 </body>
 </html>

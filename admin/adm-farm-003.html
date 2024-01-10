@@ -1,0 +1,188 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<title>mysql connect test</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+
+<script src="../js/admin.js"></script>
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <!-- wrap -->
+    <div id="admin_wrap">
+        <!-- header -->
+        <header>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <div class="tit_wrap">
+                <h2>목장 등록하기</h2>
+                <ul class="breadcrumb">
+                    <li>Home</li>
+                    <li>1Depth</li>
+                    <li>2Depth</li>
+                </ul>
+            </div>
+
+            <div class="list_wrap">
+                <dl class="type_register accordion">
+                    <dt class="active">
+                        <strong class="tit">목장 기본정보</strong>
+                    </dt>
+                    <!-- 상세 내용 -->
+                    <dd style="display:block;">
+                        <div class="cont">
+                            <div class="table_wrap detaile">
+                                <div class="inner">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:20%;" />
+                                            <col style="width:30%;" />
+                                            <col style="width:20%;" />
+                                            <col />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>목장명</th>
+                                                <td>
+                                                    <label class="input">
+                                                        <i></i>
+                                                        <input type="text" onkeyup="input_btn_chk(this);">
+                                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                    </label>
+                                                </td>
+                                                <th>대표자</th>
+                                                <td>
+                                                    <label class="input">
+                                                        <i></i>
+                                                        <input type="text" onkeyup="input_btn_chk(this);">
+                                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>설립연월</th>
+                                                <td>
+                                                    <label class="input">
+                                                        <i></i>
+                                                        <input type="text" onkeyup="input_btn_chk(this);">
+                                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                    </label>
+                                                </td>
+                                                <th>사업자번호</th>
+                                                <td>
+                                                    <label class="input">
+                                                        <i></i>
+                                                        <input type="text" onkeyup="input_btn_chk(this);">
+                                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>농장규모</th>
+                                                <td>
+                                                    <label class="input">
+                                                        <i></i>
+                                                        <input type="text" onkeyup="input_btn_chk(this);">
+                                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                    </label>
+                                                </td>
+                                                <th>보유마수</th>
+                                                <td>
+                                                    <label class="input">
+                                                        <i></i>
+                                                        <input type="text" onkeyup="input_btn_chk(this);">
+                                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>소재지</th>
+                                                <td colspan="3">
+                                                    <ul class="form_group_small">
+                                                        <li class="label_wrap addr">
+                                                            <label class="input">
+                                                                <i></i>
+                                                                <input type="text" onkeyup="input_btn_chk(this);">
+                                                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                            </label>
+                                                            <button class="btn_dgray"><em>주소검색</em></button>
+                                                        </li>
+                                                        <li>
+                                                            <label class="input">
+                                                                <i></i>
+                                                                <input type="text" onkeyup="input_btn_chk(this);">
+                                                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label class="input">
+                                                                <i></i>
+                                                                <input type="text" onkeyup="input_btn_chk(this);">
+                                                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>목장소개</th>
+                                                <td colspan="3">
+                                                    <label class="input">
+                                                        <i>소개글을 입력해주세요.</i>
+                                                        <textarea></textarea>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <p class="txt_exp">* 경주마 위치정보는 현재 보관 중인 장소의 주소를 입력해 주세요. 증권신고서 내 필수 관리 지침으로 수정을 통해 갱신하실 수 있습니다.</p>
+                        </div>
+                    </dd>
+                    <!-- //상세 내용 -->
+                </dl>
+            </div>
+
+            <div class="btnSection">
+                <button class="btn_cancel"><em>이전</em></button>
+                <button class="btn_confirm" onclick="modal.open('save', 'type_alert');"><em>저장</em></button>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- modal -->
+        <!-- 저장 -->
+        <div class="modal_wrap save">
+            <div class="modal_container">
+                <div class="modal_header">
+                    <button class="btn_close" onclick="modal.close(event);">close</button>
+                </div>
+                <div class="modal_content">
+                    <p class="txt_cont ac">경주마 기본정보를 등록합니다.</p>
+                </div>
+                <div class="btnSection">
+                    <button class="btn_cancel" onclick="modal.close(event);">
+                        <em>취소</em>
+                    </button>
+                    <button class="btn_confirm" onclick="modal.close(event);">
+                        <em>확인</em>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--//저장 -->
+        <!-- //modal -->
+
+        <!-- footer -->
+        <footer>Template</footer>
+        <!-- //footer -->
+    </div>
+</body>

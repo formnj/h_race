@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>mysql connect test</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+
+<script src="../js/admin.js"></script>
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <!-- wrap -->
+    <div id="admin_wrap">
+        <!-- header -->
+        <header>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <div class="tit_wrap">
+                <h2>기준정보 조회</h2>
+                <ul class="breadcrumb">
+                    <li>Home</li>
+                    <li>1Depth</li>
+                    <li>2Depth</li>
+                </ul>
+            </div>
+
+            <div class="warning_box">
+                <p>기준정보 삭제/입력 누락시 프로그램이 오작동합니다. 등록된 기준정보 변경/신규 내역은 개발팀에 꼭 전달하세요.</p>
+            </div>
+
+            <section class="search_wrap mt30">
+                <div class="inner">
+                    <ul class="row">
+                        <li>
+                            <dl>
+                                <dt>기간선택</dt>
+                                <dd>
+                                    <div class="datepicker_wrap">
+                                        <div class="multi_form">
+                                            <label class="input datepicker">
+                                                <i>Placeholder</i>
+                                                <input type="text" id="datepicker_start" readonly="readonly">
+                                                <em>error message</em>
+                                            </label>
+                                            <span>~</span>
+                                            <label class="input datepicker">
+                                                <i>Placeholder</i>
+                                                <input type="text" id="datepicker_end" readonly="readonly">
+                                                <em>error message</em>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- //datepicker -->
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div class="multi_form full">
+                                <label class="select w_150">
+                                    <select>
+                                        <option>선택</option>
+                                    </select>
+                                </label>
+                                <div class="label_wrap">
+                                    <label class="input">
+                                        <i style="display: none;">Placeholder</i>
+                                        <input class="password" type="text" onkeyup="input_btn_chk(this);">
+                                        <em>error message</em>
+                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                    </label>
+                                    <button class="btn_search"><em>조회</em></button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="board_info_wrap">
+                <p class="result_count">총<strong>999</strong>건의 게시물이 있습니다.</p>
+                <div class="btnSection">
+                    <button class="btn_download"><em>엑셀 다운로드</em></button>
+                    <button class="btn_add"><em>기준정보 추가</em></button>
+                </div>
+            </div>
+
+            <!-- default -->
+            <div class="table_wrap scroll"> <!-- 스크롤 테이블의 경우 class="scroll" 추가 -->
+                <div class="inner">
+                    <table class="type_list ac">
+                        <colgroup>
+                            <col style="width:80px;" />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>상위코드</th>
+                                <th>기준정보 구분</th>
+                                <th>기준정보 적용내용</th>
+                                <th>비고</th>
+                                <th>최종수정</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>65</td>
+                                <td><a href="./adm-baseInfo-002.html">상위코드</a></td>
+                                <td>경마상금</td>
+                                <td>출전장려금</td>
+                                <td>'23년도 출전장려금</td>
+                                <td>2023-00-00 00:00:00</td>
+                            </tr>
+                            <tr>
+                                <td>65</td>
+                                <td><a href="./adm-baseInfo-002.html">상위코드</a></td>
+                                <td>경마상금</td>
+                                <td>출전장려금</td>
+                                <td>'23년도 출전장려금</td>
+                                <td>2023-00-00 00:00:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- //default -->
+
+            <!-- 페이징 -->
+            <div class="paging">
+                <div>
+                    <a href="#none" class="first">처음으로</a>
+                    <a href="#none" class="prev">이전</a>
+
+                    <strong>1</strong>
+                    <a href="#none">2</a>
+                    <a href="#none">3</a>
+                    <a href="#none">4</a>
+                    <a href="#none">5</a>
+
+                    <a href="#none" class="next">다음</a>
+                    <a href="#none" class="last">마지막으로</a>
+                </div>
+            </div>
+            <!-- //페이징 -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer>Template</footer>
+        <!-- //footer -->
+    </div>
+</body>

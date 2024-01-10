@@ -126,7 +126,7 @@ $(document).ready(function(){
         },{
             depth:['','','계좌보유여부확인','계좌보유'],
             id:'app-account-002', status:'com',
-            note:'',
+            note:'팝업방식 수정 완료(24-01-10)',
             sDate:'2023-12-26', eDate:'2023-12-26'
         },{
             depth:['','','','계좌미보유'],
@@ -161,7 +161,7 @@ $(document).ready(function(){
         },{
             depth:['','','','신분증촬영 완료'],
             id:'app-account-006-1', status:'com',
-            note:'',
+            note:'팝업방식 수정 완료(24-01-10)',
             sDate:'2023-12-28', eDate:'2023-12-28'
         },{
             depth:['','','','신분증진위여부 확인'],
@@ -171,7 +171,7 @@ $(document).ready(function(){
         },{
             depth:['','','','직업정보입력/거래정보입력'],
             id:'app-account-007', status:'com',
-            note:'나머지 정보 입력',
+            note:'팝업방식 수정 완료(24-01-10)',
             sDate:'2023-12-28', eDate:'2023-12-28'
         },{
             depth:['','','','계좌비밀번호등록(4자리)'],
@@ -191,7 +191,7 @@ $(document).ready(function(){
         },{
             depth:['','','','입금졔좌확인'],
             id:'app-account-009-1', status:'com',
-            note:'인증번호 입력',
+            note:'팝업방식 수정 완료(24-01-10)',
             sDate:'2023-12-30', eDate:'2023-12-30'
         },{
             depth:['','','','이체 제한 안내'],
@@ -201,7 +201,7 @@ $(document).ready(function(){
         },{
             depth:['','','','계좌개설 완료화면'],
             id:'app-account-010', status:'com',
-            note:'',
+            note:'팝업방식 수정 완료(24-01-10)',
             sDate:'2024-01-02', eDate:'2024-01-02'
         },{
             depth:['','','','투자성향 설문 이동'],
@@ -542,6 +542,21 @@ $(document).ready(function(){
             note:'',
             sDate:'2024-01-06', eDate:'2024-01-06'
         },{
+            depth:['','기준정보관리','조회',''],
+            id:'adm-baseInfo-001', status:'com',
+            note:'',
+            sDate:'2024-01-10', eDate:'2024-01-10'
+        },{
+            depth:['','','등록',''],
+            id:'adm-baseInfo-003', status:'com',
+            note:'',
+            sDate:'2024-01-10', eDate:'2024-01-10'
+        },{
+            depth:['','목장관리','등록',''],
+            id:'adm-farm-003', status:'com',
+            note:'',
+            sDate:'2024-01-10', eDate:'2024-01-10'
+        },{
             depth:['','코드관리','조회',''],
             id:'adm_code_001', status:'',
             note:'',
@@ -588,17 +603,17 @@ $(document).ready(function(){
             sDate:'2024-01-08', eDate:'2024-01-08'
         },{
             depth:['','메뉴관리','목록',''],
-            id:'adm_menu_001', status:'',
+            id:'adm_menu_001', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-10', eDate:'2024-01-10'
         },{
             depth:['','','등록','부모메뉴등록'],
-            id:'adm_menu_002', status:'',
+            id:'adm_menu_002', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-10', eDate:'2024-01-10'
         },{
             depth:['','','','하위메뉴등록'],
-            id:'adm_menu_002-1', status:'',
+            id:'adm_menu_003', status:'',
             note:'',
             sDate:'', eDate:''
         },{

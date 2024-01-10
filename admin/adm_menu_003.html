@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>mysql connect test</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+
+<script src="../js/admin.js"></script>
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <!-- wrap -->
+    <div id="admin_wrap">
+        <!-- header -->
+        <header>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <div class="tit_wrap">
+                <h2>하위메뉴 등록하기</h2>
+                <ul class="breadcrumb">
+                    <li>Home</li>
+                    <li>1Depth</li>
+                    <li>2Depth</li>
+                </ul>
+            </div>
+
+            <div class="list_wrap">
+                <dl class="type_register accordion">
+                    <dt class="active">
+                        <strong class="tit">하위메뉴 등록</strong>
+                    </dt>
+                    <dd style="display:block;">
+                        <div class="cont">
+                            <div class="table_wrap detaile">
+                                <div class="inner">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:20%;" />
+                                            <col style="width:30%;" />
+                                            <col style="width:20%;" />
+                                            <col />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>메뉴명</th>
+                                                <td colspan="3"><label class="input">
+                                                    <i></i>
+                                                    <input type="text" onkeyup="input_btn_chk(this);">
+                                                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                </label></td>
+                                            </tr>
+                                            <tr>
+                                                <th>메뉴URL</th>
+                                                <td colspan="3"><label class="input">
+                                                    <i></i>
+                                                    <input type="text" onkeyup="input_btn_chk(this);">
+                                                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                </label></td>
+                                            </tr>
+                                            <tr>
+                                                <th>부모메뉴</th>
+                                                <td>
+                                                    <label class="select">
+                                                        <select>
+                                                            <option>부모메뉴명</option>
+                                                        </select>
+                                                    </label>
+                                                </td>
+                                                <th>정렬순서</th>
+                                                <td><label class="input">
+                                                    <i></i>
+                                                    <input type="text" onkeyup="input_btn_chk(this);">
+                                                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                </label></td>
+                                            </tr>
+                                            <tr>
+                                                <th>사용상태</th>
+                                                <td colspan="3"><div class="check_group">
+                                                    <label class="check">
+                                                        <input type="radio" checked name="group1">
+                                                        <em class="label">사용</em>
+                                                    </label>
+                                                    <label class="check">
+                                                        <input type="radio" name="group1">
+                                                        <em class="label">미사용</em>
+                                                    </label>
+                                                </div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+
+            <div class="btnSection">
+                <button class="btn_cancel"><em>이전</em></button>
+                <button class="btn_confirm"><em>저장</em></button>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer>Template</footer>
+        <!-- //footer -->
+    </div>
+</body>
