@@ -185,13 +185,169 @@
                         <button class="btn_min btn_confirm" onclick="modal.open('app-account-004-0','type_full')">
                             <em>modal full</em>
                         </button>
-                        <button class="btn_min btn_confirm" onclick="modal.open('app-account-004-0','type_alert')">
+                        <button class="btn_min btn_confirm" onclick="modal.open('alarm_set_comfirm','type_alert')">
                             <em>modal alert</em>
                         </button>
-                        <button class="btn_min btn_confirm" onclick="modal.open('app-account-004-0','type_bottom')">
+                        <button class="btn_min btn_confirm" onclick="modal.open('bank','type_bottom')">
                             <em>modal bottom</em>
                         </button>
                     </div>
+
+                    <!-- modal full -->
+                    <div class="modal_wrap app-account-004-0">
+                        <div class="modal_container">
+                            <div class="modal_header">
+                                <h3>투자계약증권 거래 유의 사항</h3>
+                                <button class="btn_close" onclick="modal.close(event);">close</button>
+                            </div>
+                            <div class="modal_content">
+                                <dl class="explain">
+                                    <dt>신한투자증권 역할</dt>
+                                    <dd>신한투자증권은 (주)갤럭시아머니트리와 제휴 및 협약을 맺고 STO상품의 투자계약증권 거래를 위한 계좌를 제공하고, (주)갤럭시아머니트리의 지시에 따라 거래 관련된 데이터를 제공받아 계좌 거래 내역을 생성하고 결제 처리를 수행하는 ''계좌 관리기관"의 역할을 담당합니다.</dd>
+                            
+                                    <dt>신한증권투자 거래계좌</dt>
+                                    <dd>해당 계좌는 (주)갤럭시아머니트리에서 투자계약증권 거래가 가능한 신한투자증권 종합 계좌입니다.<br/><br/> 투자계약증권 거래를 위해 계좌 개설 후 (주)갤럭시아머니트리 앱에서 제휴 서비스 신청을 하셔야 합니다.<br/><br/> 제휴 서비스 신청 후에는 투자계약증권 거래만 가능합니다.<br/><br/>계좌 상태가 정상이 아니거나 질권, 가압류, 주문불응, 출금고 정지 시 투자계약증권 거래가 불가합니다.</dd>
+                            
+                                    <dt>출금 가능시간</dt>
+                                    <dd>제휴서비스 신청계좌는 영업일 08:50~17:30까지 (주)갤럭시아머니트리 앱에서 약정계좌로 이체만 가능하며, 이외 시간에는 신한투자증권을 이용 가능 합니다.</dt>
+                                </dl>
+                            </div>
+                            <div class="btnSection">
+                                <a href="./app-account-004.html" class="btn_confirm" onclick="modal.close(event);">
+                                    <em>확인</em>
+                                </a>
+                            </div>
+                            
+                            <script>
+                            </script>
+                        </div>
+                    </div>
+                    <!-- //modal -->
+
+                    <!-- modal alert -->
+                    <div class="modal_wrap alarm_set_comfirm">
+                        <div class="modal_container">
+                            <div class="modal_header">
+                                <button class="btn_close" onclick="modal.close(event);">close</button>
+                            </div>
+                            <div class="modal_content ac">
+                                <p class="txt_cont">마케팅 알림수신을 거부하시면<br/> 주요 정보를 확인할 수 없습니다.<br/><br/> 수신거부를 진행 하시겠습니까?</p>
+                            </div>
+                            <div class="btnSection">
+                                <button class="btn_cancel" onclick="modal.close(event);">
+                                    <em>취소</em>
+                                </button>
+                                <button class="btn_confirm" onclick="modal.open('alarm_set','type_alert');">
+                                    <em>확인</em>
+                                </button>
+                            </div>
+                            
+                            <script>
+                            </script>
+                        </div>
+                    </div>
+                    <!-- //modal -->
+
+                    <!-- modal bottom -->
+                    <div class="modal_wrap bank">
+                        <div class="modal_container">
+                            <div class="modal_header">
+                                <button class="btn_close" onclick="modal.close(event);">close</button>
+                            </div>
+                            <div class="modal_content">
+                                <div class="tab_wrap">
+                                    <ul class="tab_type_01 sticky">
+                                        <li class="current"><button>은행</button></li>
+                                        <li><button>증권</button></li>
+                                    </ul>
+                                    <div class="tab_content">
+                                        <!-- 은행 리스트 -->
+                                        <div class="current">
+                                            <!-- 은행 class="bank_01~"-->
+                                            <ul class="bank_list">
+                                                <li><button class="icon_bank bank_01">국민</button></li>
+                                                <li><button class="icon_bank bank_02">기업</button></li>
+                                                <li><button class="icon_bank bank_03">농협</button></li>
+                                                <li><button class="icon_bank bank_04">산업</button></li>
+                                                <li><button class="icon_bank bank_05">수협</button></li>
+                                                <li><button class="icon_bank bank_06">신한</button></li>
+                                                <li><button class="icon_bank bank_07">우리</button></li>
+                                                <li><button class="icon_bank bank_08">우체국</button></li>
+                                                <li><button class="icon_bank bank_09">하나</button></li>
+                                                <li><button class="icon_bank bank_10">한국씨티</button></li>
+                                                <li><button class="icon_bank bank_11">SC제일</button></li>
+                                                <li><button class="icon_bank bank_12">카카오뱅크</button></li>
+                                                <li><button class="icon_bank bank_13">케이뱅크</button></li>
+                                                <li><button class="icon_bank bank_14">토스뱅크</button></li>
+                                                <li><button class="icon_bank bank_15">경남</button></li>
+                                                <li><button class="icon_bank bank_16">광주</button></li>
+                                                <li><button class="icon_bank bank_17">대구</button></li>
+                                                <li><button class="icon_bank bank_18">부산</button></li>
+                                                <li><button class="icon_bank bank_19">전북</button></li>
+                                                <li><button class="icon_bank bank_20">제주</button></li>
+                                                <li><button class="icon_bank bank_21">저축</button></li>
+                                                <li><button class="icon_bank bank_22">산림조합</button></li>
+                                                <li><button class="icon_bank bank_23">새마을</button></li>
+                                                <li><button class="icon_bank bank_24">신협</button></li>
+                                                <li><button class="icon_bank bank_25">도이치</button></li>
+                                                <li><button class="icon_bank bank_26">뱅크오브아메리카</button></li>
+                                                <li><button class="icon_bank bank_27">중국건설</button></li>
+                                                <li><button class="icon_bank bank_28">중국공상</button></li>
+                                                <li><button class="icon_bank bank_29">중국</button></li>
+                                                <li><button class="icon_bank bank_30">HSBC</button></li>
+                                                <li><button class="icon_bank bank_31">BNP파리바</button></li>
+                                                <li><button class="icon_bank bank_32">JP모간체이스</button></li>
+                                            </ul>
+                                        </div>
+                                        <!-- //은행 리스트 -->
+                                        <!-- 증권사 리스트 -->
+                                        <div>
+                                            <!-- 증권사 class="icon_bank invest_01~"-->
+                                            <ul class="bank_list">
+                                            <li><button class="icon_bank invest_01">교보증권</button></li>
+                                            <li><button class="icon_bank invest_02">대신증권</button></li>
+                                            <li><button class="icon_bank invest_03">DB금융투자</button></li>
+                                            <li><button class="icon_bank invest_04">메리츠증권</button></li>
+                                            <li><button class="icon_bank invest_05">미래에셋증권</button></li>
+                                            <li><button class="icon_bank invest_06">부국증권</button></li>
+                                            <li><button class="icon_bank invest_07">삼성증권</button></li>
+                                            <li><button class="icon_bank invest_08">신영증권</button></li>
+                                            <li><button class="icon_bank invest_09">신한투자증권</button></li>
+                                            <li><button class="icon_bank invest_10">SK증권</button></li>
+                                            <li><button class="icon_bank invest_11">현대차증권</button></li>
+                                            <li><button class="icon_bank invest_12">유안타증권</button></li>
+                                            <li><button class="icon_bank invest_13">유진투자증권</button></li>
+                                            <li><button class="icon_bank invest_14">이베스트투자증권</button></li>
+                                            <li><button class="icon_bank invest_15">케이프투자증권</button></li>
+                                            <li><button class="icon_bank invest_16">키움증권</button></li>
+                                            <li><button class="icon_bank invest_17">한국포스증권</button></li>
+                                            <li><button class="icon_bank invest_18">하나증권</button></li>
+                                            <li><button class="icon_bank invest_19">하이투자증권</button></li>
+                                            <li><button class="icon_bank invest_20">한국투자증권</button></li>
+                                            <li><button class="icon_bank invest_21">상상인증권</button></li>
+                                            <li><button class="icon_bank invest_22">한화투자증권</button></li>
+                                            <li><button class="icon_bank invest_23">KB증권</button></li>
+                                            <li><button class="icon_bank invest_24">다올투자증권</button></li>
+                                            <li><button class="icon_bank invest_25">BNK투자증권</button></li>
+                                            <li><button class="icon_bank invest_26">NH투자증권</button></li>
+                                            <li><button class="icon_bank invest_27">카카오페이증권</button></li>
+                                            <li><button class="icon_bank invest_28">IBK투자증권</button></li>
+                                            <li><button class="icon_bank invest_29">토스중권</button></li>
+                                            </ul>
+                                        </div>
+                                        <!-- //증권사 리스트 -->
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <script>
+                                console.log(document.querySelectorAll('.tab_wrap > ul').length)
+                                /* tab */
+                                tab_active('.tab_wrap > ul','click');
+                            </script>
+                        </div>
+                    </div>
+                    <!-- //modal -->
                 </section>
 
                 <section class="list_wrap mt30">
@@ -312,6 +468,12 @@
             </div>
         </div>
 
+        <!-- 기본 모달 형태 -->
+        <div class="modal_wrap">
+            <div class="modal_container"></div>
+        </div>
+        <!-- //기본 모달 형태 -->
+
         <!-- action bar -->
         <div class="action_bar">
             <ul>
@@ -323,11 +485,5 @@
         </div>
         <!-- //action bar -->
     </div>
-
-    <!-- modal -->
-    <div id="modal_wrap">
-        <div class="modal_container"></div>
-    </div>
-    <!-- //modal -->
 </body>
 </html>

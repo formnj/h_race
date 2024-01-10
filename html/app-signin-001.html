@@ -78,7 +78,7 @@
                     <li>
                         <p class="form_tit">휴대폰 번호</p>
                         <label class="input select" id="telecom"><!-- 모달에서 선택한 통신사 가져오기 위한 id="telecom" 삽입 -->
-                            <i onclick="modal.open('app-signin-001-1', 'type_bottom');">통신사 선택</i>
+                            <i>통신사 선택</i>
                             <input class="text" type="text" readonly onclick="modal.open('app-signin-001-1', 'type_bottom');">
                             <em>error message</em>
                             <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
@@ -121,8 +121,39 @@
     </div>
 
     <!-- modal -->
-    <div id="modal_wrap">
-        <div class="modal_container"></div>
+    <div class="modal_wrap app-signin-001-1">
+        <div class="modal_container">
+            <div class="modal_content">
+                <ul class="telecom_list">
+                    <li><button onclick="modal.close(event);">SKT</button></li>
+                    <li><button onclick="modal.close(event);">KT</button></li>
+                    <li><button onclick="modal.close(event);">LGU+</button></li>
+                    <li><button onclick="modal.close(event);">SKT 알뜰폰</button></li>
+                    <li><button onclick="modal.close(event);">KT 알뜰폰</button></li>
+                    <li><button onclick="modal.close(event);">LGU+ 알뜰폰</button></li>
+                </ul>
+            </div>
+            <div class="btnSection">
+                <button class="btn_confirm" onclick="modal.close(event);">
+                    <em>확인</em>
+                </button>
+            </div>
+            
+            <script>
+                /* 퍼블 테스트 용 기능 */
+                document.querySelector('.btn_confirm').addEventListener('click', function(){
+                    document.querySelector('.icon_reset').click();
+                });
+                /* //퍼블 테스트 용 기능 */
+            
+                /* 선택 통신사 전달 후 placeholder 숨김 */
+                $('.telecom_list').delegate('button', 'click', function(){
+                    $('#telecom i').hide();
+                    $('#telecom input').val($(this).text());
+                });
+                /* //선택 통신사 전달 후 placeholder 숨김 */
+            </script>
+        </div>
     </div>
     <!-- //modal -->
 </body>

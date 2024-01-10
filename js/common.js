@@ -136,28 +136,29 @@ $('.select_form').delegate('select','change',function() {
 /* modal */
 const modal = {
     open: (_content,_type) => {
-        $.ajax({
-            url:'../modal/'+_content+'.html',
-            method:'get',
-            success: function(data){
-                $('#modal_wrap').find('.modal_container').attr('modal-type', _type).html(data);
-                $('#modal_wrap').addClass('active').find('.modal_container');
-            },
-            complete: function(data){
-                disableScroll();
-            },
-            error: function(){
-                alert('404 Error!');
-            }
-        });
+        $('.modal_wrap.'+_content).addClass('active').find('.modal_container').attr('modal-type', _type);
+        // $.ajax({
+        //     url:'../modal/'+_content+'.html',
+        //     method:'get',
+        //     success: function(data){
+        //         $('#modal_wrap').find('.modal_container').attr('modal-type', _type).html(data);
+        //         $('#modal_wrap').addClass('active').find('.modal_container');
+        //     },
+        //     complete: function(data){
+        //         disableScroll();
+        //     },
+        //     error: function(){
+        //         alert('404 Error!');
+        //     }
+        // });
     },
     close: (e) => {
-        e.currentTarget.closest('#modal_wrap').classList.remove('active');
+        e.currentTarget.closest('.modal_wrap').classList.remove('active');
         contain = e.currentTarget.closest('.modal_container')
         contain.removeAttribute('modal-type');
-        while (contain.firstChild) { 
-            contain.removeChild(contain.firstChild);
-        }
+        // while (contain.firstChild) { 
+        //     contain.removeChild(contain.firstChild);
+        // }
 
         $("html").css({
             height: "initial",
