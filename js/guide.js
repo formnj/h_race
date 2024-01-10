@@ -618,19 +618,19 @@ $(document).ready(function(){
             sDate:'2024-01-06', eDate:'2024-01-06'
         },{
             depth:['','경주마 관리','조회',''],
-            id:'adm_racehorse-001', status:'com',
+            id:'adm-racehorse-001', status:'com',
             note:'',
             sDate:'2024-01-09', eDate:'2024-01-09'
         },{
             depth:['','','상세보기',''],
             id:'adm-racehorse-002', status:'com',
-            note:'',
+            note:'swiper관련 기능 및 swiper.js, swiper.css 추가',
             sDate:'2024-01-09', eDate:'2024-01-09'
         },{
             depth:['','','등록',''],
-            id:'adm-racehorse-003', status:'',
+            id:'adm-racehorse-003', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-09', eDate:'2024-01-09'
         },
         // {
         //     depth:['','','',''],

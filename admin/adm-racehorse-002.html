@@ -49,8 +49,8 @@
                             slideChange: function () {},
                         },
                         navigation: {
-                            nextEl: '.visual .swiper-button-next',
-                            prevEl: '.visual .swiper-button-prev',
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
                         },
                     });
                 });
@@ -76,8 +76,15 @@
                                             <!-- swiper 이미지 영역 -->
                                             <div class="img_area swiper-container">
                                                 <ul class="swiper-wrapper">
-                                                    <li class="swiper-slide"><img src="../images/sample/sam_horse.png" /></li>
+                                                    <li class="swiper-slide">
+                                                        <span class="thumb"><img src="../images/sample/sam_horse.png" /></span>
+                                                    </li>
                                                 </ul>
+
+                                                <div class="swiper-button-wrap">
+                                                    <button class="swiper-button-next">다음</button>
+                                                    <button class="swiper-button-prev">이전</button>
+                                                </div>
                                             </div>
                                             <!-- //swiper 이미지 영역 -->
                                             <div class="info_area">

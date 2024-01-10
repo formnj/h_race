@@ -349,7 +349,13 @@ section.search_wrap dd + dt {margin-left:40px;}
 .file_box .btn_del {width:26px; height:26px; background:url('../images/admin/icon_del_02.png') no-repeat center center / 100% auto; font-size:0;}
 
 .def_info_wrap {display:flex; gap:20px;}
-.def_info_wrap .img_area {width:29.34%; max-width:388px; margin:0 40px; flex-shrink:0;}
-.def_info_wrap .img_area li {text-align:center;}
-.def_info_wrap .img_area .img {object-fit:cover;}
+.def_info_wrap .img_area {width:29.34%; max-width:468px; flex-shrink:0;}
+.def_info_wrap .img_area li {overflow:hidden; text-align:center; position:relative;}
+.def_info_wrap .img_area .thumb {position:absolute; top:0; right:50px; bottom:0; left:50px; display:flex; align-items:center;}
+.def_info_wrap .img_area .thumb img {width:100%; max-width:initial;}
 .def_info_wrap .info_area {flex:1;}
+
+.swiper-button-wrap {position:absolute; top:50%; right:0; left:0;}
+.swiper-button-wrap button {width:40px; height:40px; font-size:0; background:url('../images/admin/swiper_arrow.png') 50% no-repeat;}
+.swiper-button-wrap button.swiper-button-next {transform:rotate(180deg);}
+.swiper-button-wrap button:after {display:none;}
