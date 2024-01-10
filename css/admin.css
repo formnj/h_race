@@ -65,7 +65,9 @@ footer {padding:10px 20px; color:#fff; font-size:13px; font-weight:400; backgrou
 .full {width:100%;}
 
 #container {min-height:calc(100vh - 122px); padding-top:38px !important; margin-left:253px; padding:30px 30px 50px; transition:margin 0.25s;}
-#container:has(.login_wrap) {height:100vh; margin:0; padding:0 !important; display:flex; align-items:center; justify-content:center;}
+#container:has(.login_wrap) {height:100vh; margin:0; padding:0 !important; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:30px;}
+.copyright {color:#888; font-size:12px;}
+
 
 .tit_wrap {margin-bottom:36px; display:flex;}
 .tit_wrap h2 {margin-bottom:0; font-size:24px; font-weight:600;}
