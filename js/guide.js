@@ -617,13 +617,18 @@ $(document).ready(function(){
             note:'',
             sDate:'2024-01-06', eDate:'2024-01-06'
         },{
-            depth:['','회원관리','목록',''],
-            id:'adm-mamber-001', status:'',
+            depth:['','경주마 관리','조회',''],
+            id:'adm_racehorse-001', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-09', eDate:'2024-01-09'
         },{
-            depth:['','','상세',''],
-            id:'adm-mamber-002', status:'',
+            depth:['','','상세보기',''],
+            id:'adm-racehorse-002', status:'com',
+            note:'',
+            sDate:'2024-01-09', eDate:'2024-01-09'
+        },{
+            depth:['','','등록',''],
+            id:'adm-racehorse-003', status:'',
             note:'',
             sDate:'', eDate:''
         },

@@ -348,7 +348,8 @@ section.search_wrap dd + dt {margin-left:40px;}
 .file_box .btn_add {width:26px; height:26px; background:url('../images/admin/icon_add_02.png') no-repeat center center / 100% auto; font-size:0;}
 .file_box .btn_del {width:26px; height:26px; background:url('../images/admin/icon_del_02.png') no-repeat center center / 100% auto; font-size:0;}
 
-.def_info_wrap {display:flex; gap:0 67px;}
-.def_info_wrap .img_area {width:29.34%; max-width:468px; flex-shrink:0;}
+.def_info_wrap {display:flex; gap:20px;}
+.def_info_wrap .img_area {width:29.34%; max-width:388px; margin:0 40px; flex-shrink:0;}
+.def_info_wrap .img_area li {text-align:center;}
 .def_info_wrap .img_area .img {object-fit:cover;}
 .def_info_wrap .info_area {flex:1;}

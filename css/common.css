@@ -8,7 +8,7 @@ html:has(.except_layout), body:has(.except_layout), #wrap:has(.except_layout), #
 
 #wrap:has(.action_bar:not(.down)) #container {padding-bottom:57px;}
 
-.content:has(.except_layout) {overflow:auto;}
+.content:has(.except_layout) {padding-bottom:0; overflow:auto;}
 
 header {padding:13px 20px; background-color:#fff; position:fixed; top:0; right:0; left:0; z-index:100; display:flex; align-items:center; justify-content:space-between;}
 header p {display:flex; align-items:center;}
@@ -64,6 +64,7 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 .mt40 {margin-top:40px !important;}
 .mt50 {margin-top:50px !important;}
 .mt35 {margin-top:35px !important;}
+.mb30 {margin-bottom:30px !important;}
 .mb50 {margin-bottom:50px !important;}
 .ml10 {margin-left:10px !important;}
 .ml40 {margin-left:40px !important;}
@@ -232,6 +233,9 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 .except_layout h2 {margin-top:96px; margin-bottom:0; font-size:24px; font-weight:500; line-height:36px;}
 .except_layout h2 p {margin-top:34px; font-size:14px; font-weight:400; line-height:20px;}
 .except_layout .explain {color:#666; font-size:15px; line-height:24px;}
+
+.except_layout section:nth-last-of-type(1) {padding-bottom:30px;}
+.except_layout section:nth-last-of-type(1):has(.sec_keypad) {padding-bottom:0;}
 
 .bio_mark {width:112px; height:112px; font-size:0; border:1px solid #E4E4E4; border-radius:50%; box-shadow:-2px -2px 5px 0 rgba(0,0,0,0.08); position:relative; display:inline-block}
 .bio_mark:before {width:65px; height:65px; background-image:url('../images/common/icon_finger.png'); background-position:0 0; background-repeat:no-repeat; background-size:110px auto; content:''; position:absolute; top:50%; left:50%; display:block; transform:translate(-50%, -50%);}
