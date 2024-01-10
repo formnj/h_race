@@ -268,10 +268,10 @@
                 <div>
                     <h3>Modal</h3>
                     <div class="btnSection">
-                        <a href="#none" class="btn_small btn_confirm" onclick="modal.open('text_modal', 'type_big')"><em>big_modal</em></a>
-                        <a href="#none" class="btn_small btn_confirm" onclick="modal.open('text_modal', 'type_mid')"><em>mid_modal</em></a>
-                        <a href="#none" class="btn_small btn_confirm" onclick="modal.open('text_modal', 'type_alert')"><em>Text modal</em></a>
-                        <a href="#none" class="btn_small btn_confirm" onclick="modal.open('preload_modal', 'type_preload')"><em>preload_modal</em></a>
+                        <a href="#none" class="btn_small btn_confirm" onclick="modal.open('big', 'type_big')"><em>big_modal</em></a>
+                        <a href="#none" class="btn_small btn_confirm" onclick="modal.open('mid', 'type_mid')"><em>mid_modal</em></a>
+                        <a href="#none" class="btn_small btn_confirm" onclick="modal.open('alert', 'type_alert')"><em>Text modal</em></a>
+                        <a href="#none" class="btn_small btn_confirm" onclick="modal.open('preload', 'type_preload')"><em>preload_modal</em></a>
                     </div>
                     <div class="btnSection mt30">
                         <a href="#none" class="btn_small btn_confirm" onclick="modal.open('adm-mamber-002-1', 'type_big')"><em>주문대리인 지정</em></a>
@@ -288,8 +288,103 @@
         <!-- //footer -->
 
         <!-- modal -->
-        <div class="modal_wrap">
-            <div class="modal_container"></div>
+        <div class="modal_wrap big">
+            <div class="modal_container">
+                <div class="modal_header">
+                    <button class="btn_close" onclick="modal.close(event);">close</button>
+                </div>
+                <div class="modal_content alarm_set">
+                    <p class="txt_cont">로그아웃, 지문인증 사용 해제 등의 내용</p>
+                </div>
+                <div class="btnSection">
+                    <button class="btn_cancel" onclick="modal.close(event);">
+                        <em>취소</em>
+                    </button>
+                    <button class="btn_confirm" onclick="modal.close(event);">
+                        <em>확인</em>
+                    </button>
+                </div>
+                
+                <script>
+                </script>
+            </div>
+        </div>
+
+        <div class="modal_wrap mid">
+            <div class="modal_container">
+                <div class="modal_header">
+                    <button class="btn_close" onclick="modal.close(event);">close</button>
+                </div>
+                <div class="modal_content alarm_set">
+                    <p class="txt_cont">로그아웃, 지문인증 사용 해제 등의 내용</p>
+                </div>
+                <div class="btnSection">
+                    <button class="btn_cancel" onclick="modal.close(event);">
+                        <em>취소</em>
+                    </button>
+                    <button class="btn_confirm" onclick="modal.close(event);">
+                        <em>확인</em>
+                    </button>
+                </div>
+                
+                <script>
+                </script>
+            </div>
+        </div>
+
+        <div class="modal_wrap alert">
+            <div class="modal_container">
+                <div class="modal_header">
+                    <button class="btn_close" onclick="modal.close(event);">close</button>
+                </div>
+                <div class="modal_content alarm_set">
+                    <p class="txt_cont">로그아웃, 지문인증 사용 해제 등의 내용</p>
+                </div>
+                <div class="btnSection">
+                    <button class="btn_cancel" onclick="modal.close(event);">
+                        <em>취소</em>
+                    </button>
+                    <button class="btn_confirm" onclick="modal.close(event);">
+                        <em>확인</em>
+                    </button>
+                </div>
+                
+                <script>
+                </script>
+            </div>
+        </div>
+
+        <div class="modal_wrap preload">
+            <div class="modal_container">
+                <div class="modal_content">
+                    <strong class="tit">문구문구문구</strong>
+                    <div class="preloader">
+                        <div class="spinner_layer">
+                            <div class="circle_clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap_patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle_clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                    // 로딩 후 팝업 닫기
+                    setTimeout(function(){
+                        document.querySelector('.modal_wrap.preload').classList.remove('active');
+                        contain = document.querySelector('.modal_container')
+                        contain.removeAttribute('modal-type');
+                        while (contain.firstChild) { 
+                            contain.removeChild(contain.firstChild);
+                        }
+                    }, 3000);
+                </script>
+            </div>
         </div>
         <!-- //modal -->
     </div>
