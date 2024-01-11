@@ -15,6 +15,34 @@
 <script src="../js/swiper.js"></script>
 <link rel="stylesheet" href="../css/swiper.css">
 <!-- //2024-01-10 swiper -->
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+    $(document).ready(function(){
+        var today = new Date();
+        var year = today.getFullYear();
+        var month = ('0' + (today.getMonth() + 1)).slice(-2);
+        var day = ('0' + today.getDate()).slice(-2);
+        var dateString = year + '-' + month  + '-' + day;
+
+
+        $(".datepicker input").val(dateString).datepicker({
+            dayNamesMin: [ "일", "월", "화", "수", "목", "금", "토" ],
+            dateFormat: "yy-mm-dd",
+            onSelect: function(){
+                var _wrap = $(this).parent();
+                placeholder(_wrap);
+            }
+        });
+
+        /* placeholder */
+        $('label[class*="input"]').each(function(){
+            placeholder(this);
+        });
+    });
+</script>
 </head>
 <body>
     <!-- wrap -->
@@ -268,6 +296,157 @@
 
                     <!-- 접종정보 -->
                     <div>
+                        <script>
+                            var _html = [{row:'<td>' //경주마 진료정보
+                                +'  <div class="datepicker_wrap">'
+                                +'      <label class="input datepicker">'
+                                +'          <i>Placeholder</i>'
+                                +'          <input type="text" id="datepicker_start" readonly="readonly">'
+                                +'          <em>error message</em>'
+                                +'      </label>'
+                                +'  </div>'
+                                +'</td>'
+                                +'<td>'
+                                +'  <label class="input">'
+                                +'      <i>Placeholder</i>'
+                                +'      <input type="text" />'
+                                +'      <em>error message</em>'
+                                +'  </label>'
+                                +'</td>'
+                                +'<td>'
+                                +'  <label class="input">'
+                                +'      <i>Placeholder</i>'
+                                +'      <input type="text" />'
+                                +'      <em>error message</em>'
+                                +'  </label>'
+                                +'</td>'
+                                +'<td>'
+                                +'  <div class="label_wrap">'
+                                +'          <label class="input">'
+                                +'          <i></i>'
+                                +'          <input type="text" onkeyup="input_btn_chk(this);">'
+                                +'          <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>'
+                                +'      </label>'
+                                +'      <div class="file_box">'
+                                +'          <button class="btn_del" onclick="add_row.del(event)">삭제</button>'
+                                +'      </div>'
+                                +'  </div>'
+                                +'</td>'},
+
+                                {row:'<td>' //예방접종정보
+                                +'  <div class="datepicker_wrap">'
+                                +'      <label class="input datepicker">'
+                                +'          <i>Placeholder</i>'
+                                +'          <input type="text" id="datepicker_start" readonly="readonly">'
+                                +'          <em>error message</em>'
+                                +'      </label>'
+                                +'  </div>'
+                                +'</td>'
+                                +'<td>'
+                                +'  <label class="input">'
+                                +'      <i>Placeholder</i>'
+                                +'      <input type="text" />'
+                                +'      <em>error message</em>'
+                                +'  </label>'
+                                +'</td>'
+                                +'<td>'
+                                +'  <label class="input">'
+                                +'      <i>Placeholder</i>'
+                                +'      <input type="text" />'
+                                +'      <em>error message</em>'
+                                +'  </label>'
+                                +'</td>'
+                                +'<td>'
+                                +'  <label class="input">'
+                                +'      <i>Placeholder</i>'
+                                +'      <input type="text" />'
+                                +'      <em>error message</em>'
+                                +'  </label>'
+                                +'</td>'
+                                +'<td>'
+                                +'  <div class="label_wrap">'
+                                +'          <label class="input">'
+                                +'          <i></i>'
+                                +'          <input type="text" onkeyup="input_btn_chk(this);">'
+                                +'          <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>'
+                                +'      </label>'
+                                +'      <div class="file_box">'
+                                +'          <button class="btn_del" onclick="add_row.del(event)">삭제</button>'
+                                +'      </div>'
+                                +'  </div>'
+                                +'</td>'},
+
+                                {row:'<td>' //식사사용 금지약물 투약내역
+                                +'  <div class="datepicker_wrap">'
+                                +'      <label class="input datepicker">'
+                                +'          <i>Placeholder</i>'
+                                +'          <input type="text" id="datepicker_start" readonly="readonly">'
+                                +'          <em>error message</em>'
+                                +'      </label>'
+                                +'  </div>'
+                                +'</td>'
+                                +'<td>'
+                                +'  <label class="input">'
+                                +'      <i>Placeholder</i>'
+                                +'      <input type="text" />'
+                                +'      <em>error message</em>'
+                                +'  </label>'
+                                +'</td>'
+                                +'<td>'
+                                +'  <label class="input">'
+                                +'      <i>Placeholder</i>'
+                                +'      <input type="text" />'
+                                +'      <em>error message</em>'
+                                +'  </label>'
+                                +'</td>'
+                                +'<td>'
+                                +'  <label class="input">'
+                                +'      <i>Placeholder</i>'
+                                +'      <input type="text" />'
+                                +'      <em>error message</em>'
+                                +'  </label>'
+                                +'</td>'
+                                +'<td>'
+                                +'  <label class="input">'
+                                +'      <i>Placeholder</i>'
+                                +'      <input type="text" />'
+                                +'      <em>error message</em>'
+                                +'  </label>'
+                                +'</td>'
+                                +'<td>'
+                                +'  <label class="input">'
+                                +'      <i>Placeholder</i>'
+                                +'      <input type="text" />'
+                                +'      <em>error message</em>'
+                                +'  </label>'
+                                +'</td>'
+                                +'<td>'
+                                +'  <div class="label_wrap">'
+                                +'      <div class="datepicker_wrap">'
+                                +'          <label class="input datepicker">'
+                                +'              <i>Placeholder</i>'
+                                +'              <input type="text" id="datepicker_start" readonly="readonly">'
+                                +'              <em>error message</em>'
+                                +'          </label>'
+                                +'      </div>'
+                                +'      <div class="file_box">'
+                                +'          <button class="btn_del" onclick="add_row.del(event)">삭제</button>'
+                                +'      </div>'
+                                +'  </div>'
+                                +'</td>'}]
+                            var add_row = {
+                                add: (e, i) => {
+                                    row = document.createElement('tr');
+                                    console.log(i);
+                                    row.innerHTML = _html[i].row
+
+                                    e.currentTarget.closest('tbody').append(row);
+                                },
+                                del: (e) => {
+                                    e.currentTarget.closest('tr').remove();
+                                }
+                            }
+                        </script>
                         <div class="list_wrap">
                             <dl class="type_register accordion">
                                 <dt class="active">
@@ -276,11 +455,11 @@
                                 <!-- 상세 내용 -->
                                 <dd style="display:block;">
                                     <div class="cont">
-                                        <div class="table_wrap"><!-- table scroll 필요 시 scroll 클래스 추가 -->
+                                        <div class="table_wrap detaile">
                                             <div class="inner">
-                                                <table class="type_list ac">
+                                                <table class="ac">
                                                     <colgroup>
-                                                        <col />
+                                                        <col style="width:200px;" />
                                                         <col />
                                                         <col />
                                                         <col />
@@ -295,10 +474,42 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>yyyy-mm-dd</td>
-                                                            <td>양각막염</td>
-                                                            <td>명성동물병원</td>
-                                                            <td>마방 진료</td>
+                                                            <td>
+                                                                <div class="datepicker_wrap">
+                                                                    <label class="input datepicker">
+                                                                        <i>Placeholder</i>
+                                                                        <input type="text" id="datepicker_start" readonly="readonly">
+                                                                        <em>error message</em>
+                                                                    </label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <label class="input">
+                                                                    <i>Placeholder</i>
+                                                                    <input type="text" />
+                                                                    <em>error message</em>
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <label class="input">
+                                                                    <i>Placeholder</i>
+                                                                    <input type="text" />
+                                                                    <em>error message</em>
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <div class="label_wrap">
+                                                                    <label class="input">
+                                                                        <i></i>
+                                                                        <input type="text" onkeyup="input_btn_chk(this);">
+                                                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                                    </label>
+            
+                                                                    <div class="file_box">
+                                                                        <button class="btn_add" onclick="add_row.add(event, 0)">추가</button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -318,7 +529,7 @@
                                             <div class="inner">
                                                 <table class="type_list ac">
                                                     <colgroup>
-                                                        <col />
+                                                        <col style="width:200px;" />
                                                         <col />
                                                         <col />
                                                         <col />
@@ -335,11 +546,49 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>2023-05-20</td>
-                                                            <td>구충제1</td>
-                                                            <td>Oximinth-Plus</td>
-                                                            <td>1년</td>
-                                                            <td>서울부속동물병원</td>
+                                                            <td>
+                                                                <div class="datepicker_wrap">
+                                                                    <label class="input datepicker">
+                                                                        <i>Placeholder</i>
+                                                                        <input type="text" id="datepicker_start" readonly="readonly">
+                                                                        <em>error message</em>
+                                                                    </label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <label class="input">
+                                                                    <i>Placeholder</i>
+                                                                    <input type="text" />
+                                                                    <em>error message</em>
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <label class="input">
+                                                                    <i>Placeholder</i>
+                                                                    <input type="text" />
+                                                                    <em>error message</em>
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <label class="input">
+                                                                    <i>Placeholder</i>
+                                                                    <input type="text" />
+                                                                    <em>error message</em>
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <div class="label_wrap">
+                                                                    <label class="input">
+                                                                        <i></i>
+                                                                        <input type="text" onkeyup="input_btn_chk(this);">
+                                                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                                    </label>
+            
+                                                                    <div class="file_box">
+                                                                        <button class="btn_add" onclick="add_row.add(event, 1)">추가</button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -359,13 +608,13 @@
                                             <div class="inner">
                                                 <table class="type_list ac">
                                                     <colgroup>
+                                                        <col style="width:200px;" />
                                                         <col />
                                                         <col />
                                                         <col />
                                                         <col />
                                                         <col />
-                                                        <col />
-                                                        <col />
+                                                        <col style="width:250px;" />
                                                     </colgroup>
                                                     <thead>
                                                         <tr>
@@ -380,13 +629,65 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>2023-05-20</td>
-                                                            <td>명성동물병원</td>
-                                                            <td>0047061</td>
-                                                            <td>양전지 근육통</td>
-                                                            <td>우중수부찰과상</td>
-                                                            <td>EAGLE KETH</td>
-                                                            <td>2023-09-24</td>
+                                                            <td>
+                                                                <div class="datepicker_wrap">
+                                                                    <label class="input datepicker">
+                                                                        <i>Placeholder</i>
+                                                                        <input type="text" id="datepicker_start" readonly="readonly">
+                                                                        <em>error message</em>
+                                                                    </label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <label class="input">
+                                                                    <i>Placeholder</i>
+                                                                    <input type="text" />
+                                                                    <em>error message</em>
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <label class="input">
+                                                                    <i>Placeholder</i>
+                                                                    <input type="text" />
+                                                                    <em>error message</em>
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <label class="input">
+                                                                    <i>Placeholder</i>
+                                                                    <input type="text" />
+                                                                    <em>error message</em>
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <label class="input">
+                                                                    <i>Placeholder</i>
+                                                                    <input type="text" />
+                                                                    <em>error message</em>
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <label class="input">
+                                                                    <i>Placeholder</i>
+                                                                    <input type="text" />
+                                                                    <em>error message</em>
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <div class="label_wrap">
+                                                                    <div class="datepicker_wrap">
+                                                                        <label class="input datepicker">
+                                                                            <i>Placeholder</i>
+                                                                            <input type="text" id="datepicker_start" readonly="readonly">
+                                                                            <em>error message</em>
+                                                                        </label>
+                                                                    </div>
+            
+                                                                    <div class="file_box">
+                                                                        <button class="btn_add" onclick="add_row.add(event, 2)">추가</button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
