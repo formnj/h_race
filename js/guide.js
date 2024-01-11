@@ -639,13 +639,18 @@ $(document).ready(function(){
         },{
             depth:['','','상세보기',''],
             id:'adm-racehorse-002', status:'com',
-            note:'swiper관련 기능 및 swiper.js, swiper.css 추가',
+            note:'swiper관련 기능 및 swiper.js, swiper.css 추가, 24-01-11 접종정보탭 관련 수정',
             sDate:'2024-01-09', eDate:'2024-01-09'
         },{
             depth:['','','등록',''],
             id:'adm-racehorse-003', status:'com',
             note:'',
             sDate:'2024-01-09', eDate:'2024-01-09'
+        },{
+            depth:['','공지/공시 조회','목록',''],
+            id:'adm-noti-001', status:'com',
+            note:'',
+            sDate:'2024-01-11', eDate:'2024-01-11'
         },
         // {
         //     depth:['','','',''],

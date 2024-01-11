@@ -274,6 +274,9 @@ section.search_wrap dd + dt {margin-left:40px;}
 #admin_wrap .btn_confirm {background-color:#666A72;}
 #admin_wrap .btn_confirm em {color:#fff;}
 
+#admin_wrap .btn_clip {vertical-align:middle;}
+#admin_wrap .btn_clip em {width:25px; height:25px; font-size:0; background:url('../images/admin/icon_clip.png') 50% no-repeat;}
+
 #admin_wrap #container > .btnSection, #admin_wrap .list_wrap ~ .btnSection {margin-top:50px; justify-content:center;}
 #admin_wrap #container > .btnSection [class*='btn_'] em, #admin_wrap .list_wrap ~ .btnSection [class*='btn_'] em {padding:11px 24px; border-radius:4px; display:block;}
 

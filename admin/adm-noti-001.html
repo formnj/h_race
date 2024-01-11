@@ -21,7 +21,7 @@
         <!-- container -->
         <div id="container">
             <div class="tit_wrap">
-                <h2>회원 리스트</h2>
+                <h2>공지/공시 조회</h2>
                 <ul class="breadcrumb">
                     <li>Home</li>
                     <li>1Depth</li>
@@ -63,11 +63,11 @@
                                         </label>
                                         <label class="check">
                                             <input type="checkbox">
-                                            <em class="label">활성</em>
+                                            <em class="label">공지사항</em>
                                         </label>
                                         <label class="check">
                                             <input type="checkbox">
-                                            <em class="label">휴면</em>
+                                            <em class="label">청약공시</em>
                                         </label>
                                     </div>
                                 </dd>
@@ -104,9 +104,7 @@
                         </select>
                     </label>
 
-                    <button class="btn_download"><em>엑셀 다운로드</em></button>
-                    <button class="btn_confirm" onclick="modal.open('adm-mamber-002-1','type_big');"><em>주문대리인 지정</em></button>
-                    <button class="btn_confirm" onclick="modal.open('adm-goodsApply-007','type_big');"><em>갤럭시아 청약 참여하기</em></button>
+                    <button class="btn_add"><em>등록하기</em></button>
                 </div>
             </div>
 
@@ -117,78 +115,43 @@
                         <colgroup>
                             <col style="width:80px;" />
                             <col />
-                            <col />
-                            <col />
-                            <col />
+                            <col style="width:150px;" />
+                            <col style="width:150px;" />
                             <col style="width:80px;" />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col style="width:80px;" />
+                            <col style="width:150px;" />
+                            <col style="width:200px;" />
                         </colgroup>
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>이름</th>
-                                <th>생년월일</th>
-                                <th>휴대폰번호</th>
-                                <th>이메일</th>
-                                <th>성별</th>
-                                <th>회원상태</th>
-                                <th>계좌개설</th>
-                                <th>자격설문</th>
-                                <th>투자자격</th>
-                                <th>자격심사</th>
-                                <th>청약이력</th>
-                                <th>가입일시</th>
-                                <th>선택</th>
+                                <th>제목</th>
+                                <th>구분</th>
+                                <th>게시여부</th>
+                                <th>첨부</th>
+                                <th>작성자</th>
+                                <th>최종수정일시</th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- 지정된 주문대리인 -->
                             <tr class="row_header02">
                                 <td>65</td>
-                                <td>홍길동</td>
-                                <td>yyyymmdd</td>
-                                <td>010-1234-5678</td>
-                                <td>abc@abcd.com</td>
-                                <td>남</td>
-                                <td>활성</td>
-                                <td>활성</td>
-                                <td>안정추구형</td>
-                                <td>일반투자자</td>
-                                <td>접수</td>
-                                <td>있음</td>
+                                <td class="al"><a href="#none">제목</a></td>
+                                <td>공지사항</td>
+                                <td>게시</td>
+                                <td><button class="btn_clip"><em>파일 다운로드</em></button></td>
+                                <td>작성자</td>
                                 <td>0000-00-00 00:00</td>
-                                <td>
-                                    <button class="btn_min btn_cancel"><em>관리하기</em></button>
-                                </td>
                             </tr>
                             <!-- //지정된 주문대리인 -->
                             <tr>
                                 <td>65</td>
-                                <td>홍길동</td>
-                                <td>yyyymmdd</td>
-                                <td>010-1234-5678</td>
-                                <td>abc@abcd.com</td>
-                                <td>남</td>
-                                <td>활성</td>
-                                <td>활성</td>
-                                <td>안정추구형</td>
-                                <td>일반투자자</td>
-                                <td>접수</td>
-                                <td>있음</td>
+                                <td class="al"><a href="#none">제목</a></td>
+                                <td>공지사항</td>
+                                <td>게시</td>
+                                <td>-</td>
+                                <td>작성자</td>
                                 <td>0000-00-00 00:00</td>
-                                <td>
-                                    <label class="check">
-                                        <input type="checkbox" checked name="group1">
-                                        <em class="label"></em>
-                                    </label>
-                                </td>
                             </tr>
                         </tbody>
                     </table>
