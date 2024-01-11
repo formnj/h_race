@@ -145,6 +145,7 @@ section.search_wrap dd + dt {margin-left:40px;}
 #admin_wrap .table_wrap.detaile th, #admin_wrap .table_wrap.detaile td {border-left:1px solid #EEEBE9;}
 
 #admin_wrap .table_wrap .row_header {background-color:#FFFBED;}
+#admin_wrap .table_wrap .row_header02 {background-color:#edeeff;}
 
 /* paging */
 #admin_wrap .paging {margin-top:40px; text-align:center;}
