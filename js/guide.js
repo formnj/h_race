@@ -652,6 +652,11 @@ $(document).ready(function(){
             note:'',
             sDate:'2024-01-11', eDate:'2024-01-11'
         },{
+            depth:['','','등록',''],
+            id:'adm-noti-004', status:'com',
+            note:'',
+            sDate:'2024-01-11', eDate:'2024-01-11'
+        },{
             depth:['','청약상품 조회','상세',''],
             id:'adm-goods-002', status:'com',
             note:'',

@@ -372,3 +372,5 @@ section.search_wrap dd + dt {margin-left:40px;}
 .swiper-button-wrap button {width:40px; height:40px; font-size:0; background:url('../images/admin/swiper_arrow.png') 50% no-repeat;}
 .swiper-button-wrap button.swiper-button-next {transform:rotate(180deg);}
 .swiper-button-wrap button:after {display:none;}
+
+.no_data {padding:50px 0;}
