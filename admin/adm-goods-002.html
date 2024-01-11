@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>mysql connect test</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+
+<script src="../js/admin.js"></script>
+<link rel="stylesheet" href="../css/admin.css">
+
+<!-- 2024-01-10 swiper -->
+<script src="../js/swiper.js"></script>
+<link rel="stylesheet" href="../css/swiper.css">
+<!-- //2024-01-10 swiper -->
+<script>
+    $(document).ready(function(){
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            loop: true,
+            keyboard: {
+                enabled: true,
+            },
+            on: {
+                init: function () {},
+                slideChange: function () {},
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    });
+</script>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="admin_wrap">
+        <!-- header -->
+        <header>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <div class="tit_wrap">
+                <h2>청약상품 상세보기</h2>
+                <ul class="breadcrumb">
+                    <li>Home</li>
+                    <li>1Depth</li>
+                    <li>2Depth</li>
+                </ul>
+            </div>
+
+            <div class="list_wrap">
+                <dl class="type_register accordion">
+                    <dt class="active">
+                        <strong class="tit">청약상품 기본정보</strong>
+                    </dt>
+                    <dd style="display:block;">
+                        <div class="cont">
+                            <div class="table_wrap detaile">
+                                <div class="inner">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:20%;" />
+                                            <col />
+                                            <col style="width:20%;" />
+                                            <col />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>상품코드</th>
+                                                <td>$상품코드$</td>
+                                                <th>최종수정</th>
+                                                <td>2024-00-00 00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th>카테고리</th>
+                                                <td>$카테고리$</td>
+                                                <th>청약번호</th>
+                                                <td>청약번호</td>
+                                            </tr>
+                                            <tr>
+                                                <th>상품명</th>
+                                                <td>상품명</td>
+                                                <th>최소투자금액</th>
+                                                <td>30,0000</td>
+                                            </tr>
+                                            <tr>
+                                                <th>총청약금액</th>
+                                                <td>00,000,000원</td>
+                                                <th>총발행수량</th>
+                                                <td>00,000</td>
+                                            </tr>
+                                            <tr>
+                                                <th>청약방식</th>
+                                                <td>비례배분</td>
+                                                <th>상품상태</th>
+                                                <td>미사용</td>
+                                            </tr>
+                                            <tr>
+                                                <th>청약기간</th>
+                                                <td>0000-00-00 00:00 ~ 0000-00-00 00:00 (30일간)</td>
+                                                <th>청약상태</th>
+                                                <td>대기</td>
+                                            </tr>
+                                            <!-- 사전공모 미사용의 경우 입력 데이터 없음 -->
+                                            <tr>
+                                                <th>사전공모여부</th>
+                                                <td>미사용</td>
+                                                <th>사전공모금액</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>사전공모비율</th>
+                                                <td></td>
+                                                <th>사전공모수량</th>
+                                                <td></td>
+                                            </tr>
+                                            <!-- //사전공모 미사용의 경우 입력 데이터 없음 -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </dd>
+
+                    <dt>
+                        <strong class="tit">청약상품 소개정보</strong>
+                    </dt>
+                    <!-- 상세 내용 -->
+                    <dd>
+                        <div class="cont">
+                            <div class="table_wrap detaile">
+                                <div class="inner">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:150px;" />
+                                            <col />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>관련이미지<br/> (대표사진)</th>
+                                                <td>
+                                                    <ul class="gallery_list_01">
+                                                        <li>
+                                                            <div class="item">
+                                                                <span class="thumb"><img src="../images/sample/sam_horse.png" alt="" /></span>
+                                                                <p>
+                                                                    <em>abcd123.jpg</em>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="item">
+                                                                <span class="thumb"><img src="../images/sample/sam_horse.png" alt="" /></span>
+                                                                <p>
+                                                                    <em>abcd123.jpg</em>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="item">
+                                                                <span class="thumb"><img src="../images/sample/sam_horse.png" alt="" /></span>
+                                                                <p>
+                                                                    <em>abcd123.jpg</em>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="item">
+                                                                <span class="thumb"><img src="../images/sample/sam_horse.png" alt="" /></span>
+                                                                <p>
+                                                                    <em>abcd123.jpg</em>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="item">
+                                                                <span class="thumb"><img src="../images/sample/sam_horse.png" alt="" /></span>
+                                                                <p>
+                                                                    <em>abcd123.jpg</em>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="item">
+                                                                <span class="thumb"><img src="../images/sample/sam_horse.png" alt="" /></span>
+                                                                <p>
+                                                                    <em>abcd123.jpg</em>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="item">
+                                                                <span class="thumb"><img src="../images/sample/sam_horse.png" alt="" /></span>
+                                                                <p>
+                                                                    <em>abcd123.jpg</em>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>상품소개</th>
+                                                <td>
+                                                    &lt;보통약관&gt;<br>
+                                                    법정전염병을 제외한 질병 또는 각종사고(풍재·수재·설해·지진 등 자연재해, 화재)로 인한 폐사<br>
+                                                    ※ 신규가입일 경우 가입일로부터 1개월 이내 질병 관련 사고는 보상하지 않습니다.<br>
+
+                                                    부상(사지골절, 경추골절, 탈구), 난산, 산욕마비, 산통, 경주마의 실명으로 인하여 즉시 도살하여야 할 손해<br><br>
+
+                                                    &lt;보험특약&gt;<br>
+                                                    1. 경주마 부적격 특약<br>
+                                                    경주마가 건염, 인대염, 골절로 인한 손해<br>
+                                                    ※ 다만, 경주마 부적격 판정 이후 종모마 혹은 종빈마로 용도 변경된 경우는 보상하지 않습니다.<br><br>
+
+                                                    2. 말운송위험확장보장특약<br>
+                                                    말 운송 중 발생되는 주계약 보상사고<br><br>
+
+                                                    3. 화재대물 배상책임 특약<br>
+                                                    화재로 인해 타인의 재물에 손해를 끼침으로서 부담하게 될 법률적 배상책임액보상<br><br>
+
+                                                    4. 동물복지인증계약 특약<br>
+                                                    동물복지축산농장 인증(농림축산검역본부)시 5% 할인
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </dd>
+                    <!-- //상세 내용 -->
+
+                    <dt>
+                        <strong class="tit">청약상품 구성정보</strong>
+                    </dt>
+                    <!-- 상세 내용 -->
+                    <dd>
+                        <div class="cont">
+                            <!-- loop -->
+                            <div class="def_info_wrap">
+                                <!-- swiper 이미지 영역 -->
+                                <div class="img_area swiper-container">
+                                    <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">
+                                            <span class="thumb"><img src="../images/sample/sam_horse.png" /></span>
+                                        </li>
+                                    </ul>
+
+                                    <div class="swiper-button-wrap">
+                                        <button class="swiper-button-next">다음</button>
+                                        <button class="swiper-button-prev">이전</button>
+                                    </div>
+                                </div>
+                                <!-- //swiper 이미지 영역 -->
+                                <div class="info_area">
+                                    <div class="table_wrap detaile">
+                                        <div class="inner">
+                                            <table>
+                                                <colgroup>
+                                                    <col style="width:37%;" />
+                                                    <col />
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>마번</th>
+                                                        <td>1411965</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>마이크로칩</th>
+                                                        <td>410-0998-0002-1181</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>마명(한글$영문)</th>
+                                                        <td>가나파워 GANA POWER</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>소유주</th>
+                                                        <td>갤럭시아 머니트리</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>소재지</th>
+                                                        <td>서울경마공원(0T1001)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>생산자</th>
+                                                        <td>한라농축영농조합법인(215422)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>기초자산(가)</th>
+                                                        <td> 10,000,000원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>보관장소</th>
+                                                        <td>렛츠런 파크</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>보관위치</th>
+                                                        <td>경상북도 경주군 경남로 4길 2-1 ABC마방</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //loop -->
+                            <div class="def_info_wrap">
+                                <!-- swiper 이미지 영역 -->
+                                <div class="img_area swiper-container">
+                                    <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">
+                                            <span class="thumb"><img src="../images/sample/sam_horse.png" /></span>
+                                        </li>
+                                    </ul>
+
+                                    <div class="swiper-button-wrap">
+                                        <button class="swiper-button-next">다음</button>
+                                        <button class="swiper-button-prev">이전</button>
+                                    </div>
+                                </div>
+                                <!-- //swiper 이미지 영역 -->
+                                <div class="info_area">
+                                    <div class="table_wrap detaile">
+                                        <div class="inner">
+                                            <table>
+                                                <colgroup>
+                                                    <col style="width:37%;" />
+                                                    <col />
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>마번</th>
+                                                        <td>1411965</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>마이크로칩</th>
+                                                        <td>410-0998-0002-1181</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>마명(한글$영문)</th>
+                                                        <td>가나파워 GANA POWER</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>소유주</th>
+                                                        <td>갤럭시아 머니트리</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>소재지</th>
+                                                        <td>서울경마공원(0T1001)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>생산자</th>
+                                                        <td>한라농축영농조합법인(215422)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>기초자산(가)</th>
+                                                        <td> 10,000,000원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>보관장소</th>
+                                                        <td>렛츠런 파크</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>보관위치</th>
+                                                        <td>경상북도 경주군 경남로 4길 2-1 ABC마방</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+
+            <div class="btnSection">
+                <button class="btn_cancel"><em>이전</em></button>
+                <button class="btn_confirm"><em>수정</em></button>
+                <button class="btn_confirm"><em>청약시작</em></button>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer>Template</footer>
+        <!-- //footer -->
+    </div>
+</body>

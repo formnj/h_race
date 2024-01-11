@@ -3,6 +3,7 @@ input[type="text"], input[type="email"], input[type="number"], input[type="tel"]
 select {background-color:#fff; border:0; border-bottom:1px solid #E1E1E1; border-radius:0; outline:0;}
 
 .multi_form {display:flex; flex-wrap:wrap; align-items:center; gap:8px;}
+.multi_form.ac {justify-content:center;}
 .multi_form label {flex:1;}
 .multi_form + em {display:none;}
 .multi_form.err + em {margin-top:12px; color:#ff7200; font-size: 12px; display:block;}
@@ -50,10 +51,6 @@ label.input_square i {color:#666; font-size:14px; top:13px; left:20px;}
 label.input_square input, label.input_square textarea {padding:0 20px; border:1px solid #D7D8DD; border-radius:8px;}
 label.input_square textarea {padding:15px 20px;resize:none;}
 
-.label_wrap {border-bottom:1px solid #E1E1E1;}
-.label_wrap:has(input:focus) {border-color:#222;}
-.label_wrap input {border-bottom:0;}
-
 /* select_form */
 .select select {width:100%; height:43px; padding:0 20px 0 0; font-size:18px;}
 .select select option[value=""][disabled] {color:red;}
@@ -67,7 +64,9 @@ label.input_square textarea {padding:15px 20px;resize:none;}
 .select_form dd li a {padding:8px 0; word-break:keep-all; display:block;}
 .select_form.fr dd ul {right:0; left:initial;}
 
-.label_wrap {position:relative; flex:1; display:flex; gap:10px;}
+.label_wrap {border-bottom:1px solid #E1E1E1; position:relative; flex:1; display:flex; gap:10px; align-items:center;}
+.label_wrap:has(input:focus) {border-color:#222;}
+.label_wrap input {border-bottom:0;}
 
 .label_wrap label + label {margin-top:10px;}
 
