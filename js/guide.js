@@ -676,6 +676,16 @@ $(document).ready(function(){
             id:'adm-event-003', status:'com',
             note:'',
             sDate:'2024-01-12', eDate:'2024-01-12'
+        },{
+            depth:['','청약해지 조회','등록',''],
+            id:'adm-termnt-003', status:'com',
+            note:'',
+            sDate:'2024-01-12', eDate:'2024-01-12'
+        },{
+            depth:['','매각/청산관리','투표관리','등록'],
+            id:'adm-vote-003', status:'com',
+            note:'',
+            sDate:'2024-01-12', eDate:'2024-01-12'
         },
         // {
         //     depth:['','','',''],

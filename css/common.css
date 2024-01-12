@@ -330,6 +330,8 @@ h2 + .notice_box, h2 + .explain {margin-top:-22px;}
 .notice_box .tit {font-weight:600;}
 .notice_box li {padding-left:10px; line-height:1.5em; position:relative;}
 .notice_box li:before {content:'*'; position:absolute; top:2px; left:0;}
+.notice_box.ac ul {display:inline-flex; flex-direction:column;}
+.notice_box.ac li {text-align:left;}
 
 em.err {margin-top:12px; color:#F1213A; font-size:12px; display:block;}
 

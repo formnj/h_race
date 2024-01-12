@@ -1,0 +1,570 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<title>mysql connect test</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+
+<script src="../js/admin.js"></script>
+<link rel="stylesheet" href="../css/admin.css">
+
+<!-- 2024-01-10 swiper -->
+<script src="../js/swiper.js"></script>
+<link rel="stylesheet" href="../css/swiper.css">
+<!-- //2024-01-10 swiper -->
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+    $(document).ready(function(){
+        /* placeholder */
+        $('label[class*="input"]').each(function(){
+            placeholder(this);
+        });
+    });
+</script>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="admin_wrap">
+        <!-- header -->
+        <header>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <div class="tit_wrap">
+                <h2>청산투표 등록하기</h2>
+                <ul class="breadcrumb">
+                    <li>Home</li>
+                    <li>1Depth</li>
+                    <li>2Depth</li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <div class="list_wrap">
+                    <dl class="type_register accordion">
+                        <dt class="active">
+                            <strong class="tit">청약상품 기본정보</strong>
+                        </dt>
+                        <!-- 상세 내용 -->
+                        <dd style="display:block;">
+                            <div class="cont">
+                                <dl class="bullet_list type_admin">
+                                    <dd>
+                                        <p>청산투표 신청을 위한 청약상품을 선택해 주세요.</p>
+                                        <button class="btn_mid btn_confirm" onclick="modal.open('adm-vote-003-1', 'type_big');"><em class="w_350">투표 대상 청약상품/매각대상 선택</em></button>
+                                    </dd>
+                                </dl>
+
+                                <div class="table_wrap detaile">
+                                    <div class="inner">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:20%;" />
+                                                <col style="width:30%;" />
+                                                <col style="width:20%;" />
+                                                <col style="width:30%;" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>상품코드</th>
+                                                    <td>상품코드</td>
+                                                    <th>최종수정</th>
+                                                    <td>0000-00-00 00:00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>카테고리</th>
+                                                    <td>카테고리</td>
+                                                    <th>청약번호</th>
+                                                    <td>청약번호</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>상품명</th>
+                                                    <td>상품명</td>
+                                                    <th>최소투자금액</th>
+                                                    <td>0,000,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>총청약금액</th>
+                                                    <td>0,000,000원</td>
+                                                    <th>총발행수량</th>
+                                                    <td>00,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>청약방식</th>
+                                                    <td>비례배분</td>
+                                                    <th>상품상태</th>
+                                                    <td>사용</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>청약기간</th>
+                                                    <td>0000-00-00 ~ 0000-00-00 (30일간)</td>
+                                                    <th>청약상태</th>
+                                                    <td>마감</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </dd>
+
+                        <dt>
+                            <strong class="tit">청산투표 등록정보</strong>
+                        </dt>
+                        <dd>
+                            <div class="cont">
+                                <div class="table_wrap detaile">
+                                    <div class="inner">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:20%;" />
+                                                <col style="width:30%;" />
+                                                <col style="width:20%;" />
+                                                <col style="width:30%;" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>청산구분</th>
+                                                    <td>
+                                                        <label class="check">
+                                                            <input type="radio">
+                                                            <em class="label">자산매각 (투표는 매각만 신청)</em>
+                                                        </label>
+                                                    </td>
+                                                    <th>최종수정</th>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>투표제목</th>
+                                                    <td colspan="3">
+                                                        <div class="multi_form">
+                                                            <label class="input">
+                                                                <i>Placeholder</i>
+                                                                <input type="text" value="[청약상품01호]" readonly>
+                                                                <em>error message</em>
+                                                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                            </label>
+
+                                                            <label class="input">
+                                                                <i>Placeholder</i>
+                                                                <input type="text" onkeyup="input_btn_chk(this);">
+                                                                <em>error message</em>
+                                                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>투표기간</th>
+                                                    <td>
+                                                        <div class="datepicker_wrap">
+                                                            <div class="multi_form">
+                                                                <label class="input datepicker">
+                                                                    <i>Placeholder</i>
+                                                                    <input type="text" id="datepicker_start" readonly="readonly">
+                                                                    <em>error message</em>
+                                                                </label>
+                                                                <span>~</span>
+                                                                <label class="input datepicker">
+                                                                    <i>Placeholder</i>
+                                                                    <input type="text" id="datepicker_end" readonly="readonly">
+                                                                    <em>error message</em>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <th>투표일수</th>
+                                                    <td>
+                                                        <label class="input">
+                                                            <i>Placeholder</i>
+                                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                                            <em>error message</em>
+                                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>총발행량(ST)</th>
+                                                    <td>
+                                                        <label class="input">
+                                                            <i>Placeholder</i>
+                                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                                            <em>error message</em>
+                                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                        </label>
+                                                    </td>
+                                                    <th>투표일수</th>
+                                                    <td>
+                                                        <label class="input">
+                                                            <i>Placeholder</i>
+                                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                                            <em>error message</em>
+                                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>총투자자수(명)</th>
+                                                    <td>
+                                                        <label class="input">
+                                                            <i>Placeholder</i>
+                                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                                            <em>error message</em>
+                                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                        </label>
+                                                    </td>
+                                                    <th>총투표자수</th>
+                                                    <td>
+                                                        <label class="input">
+                                                            <i>Placeholder</i>
+                                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                                            <em>error message</em>
+                                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>매각 경주마</th>
+                                                    <td>
+                                                        <label class="input">
+                                                            <i>Placeholder</i>
+                                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                                            <em>error message</em>
+                                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                        </label>
+                                                    </td>
+                                                    <th>목표 매각금액</th>
+                                                    <td>
+                                                        <div class="multi_form">
+                                                            <label class="check">
+                                                                <input type="checkbox">
+                                                                <em class="label"></em>
+                                                            </label>
+
+                                                            <label class="input">
+                                                                <i>Placeholder</i>
+                                                                <input type="text" onkeyup="input_btn_chk(this);">
+                                                                <em>error message</em>
+                                                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>매각 경주마</th>
+                                                    <td>
+                                                        <label class="input">
+                                                            <i>Placeholder</i>
+                                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                                            <em>error message</em>
+                                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                        </label>
+                                                    </td>
+                                                    <th>목표 매각금액</th>
+                                                    <td>
+                                                        <div class="multi_form">
+                                                            <label class="check">
+                                                                <input type="checkbox">
+                                                                <em class="label"></em>
+                                                            </label>
+
+                                                            <label class="input">
+                                                                <i>Placeholder</i>
+                                                                <input type="text" onkeyup="input_btn_chk(this);">
+                                                                <em>error message</em>
+                                                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>매각 경주마</th>
+                                                    <td>
+                                                        <label class="input">
+                                                            <i>Placeholder</i>
+                                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                                            <em>error message</em>
+                                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                        </label>
+                                                    </td>
+                                                    <th>목표 매각금액</th>
+                                                    <td>
+                                                        <div class="multi_form">
+                                                            <label class="check">
+                                                                <input type="checkbox">
+                                                                <em class="label"></em>
+                                                            </label>
+
+                                                            <label class="input">
+                                                                <i>Placeholder</i>
+                                                                <input type="text" onkeyup="input_btn_chk(this);">
+                                                                <em>error message</em>
+                                                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>행사투표/전체투표</th>
+                                                    <td>
+                                                        <label class="input">
+                                                            <i>Placeholder</i>
+                                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                                            <em>error message</em>
+                                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                        </label>
+                                                    </td>
+                                                    <th>투표율</th>
+                                                    <td>
+                                                        <label class="input">
+                                                            <i>Placeholder</i>
+                                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                                            <em>error message</em>
+                                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>찬성표</th>
+                                                    <td>
+                                                        <label class="input">
+                                                            <i>Placeholder</i>
+                                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                                            <em>error message</em>
+                                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                        </label>
+                                                    </td>
+                                                    <th>반대표</th>
+                                                    <td>
+                                                        <label class="input">
+                                                            <i>Placeholder</i>
+                                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                                            <em>error message</em>
+                                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>기권표</th>
+                                                    <td>
+                                                        <label class="input">
+                                                            <i>Placeholder</i>
+                                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                                            <em>error message</em>
+                                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                        </label>
+                                                    </td>
+                                                    <th>투표결과</th>
+                                                    <td>
+                                                        <label class="input">
+                                                            <i>Placeholder</i>
+                                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                                            <em>error message</em>
+                                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>투표안내</th>
+                                                    <td colspan="3">
+                                                        <label class="input">
+                                                            <i>투표 안내문을 입력해주세요.</i>
+                                                            <textarea></textarea>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>관련문서</th>
+                                                    <td colspan="3">
+                                                        <!-- 관련문서 내용 -->
+                                                        <table>
+                                                            <colgroup>
+                                                                <col style="width:20%;" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>수익자통회 개최 안내문</th>
+                                                                    <td>
+                                                                        <div class="file_box">
+                                                                            <button class="btn_dgray btn_file">파일찾기</button>
+                                                                            <input type="file" name="img[]" class="inp_file">
+                                                                            <em class="txt_control">파일없음</em>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>결과 안내문</th>
+                                                                    <td>(결과 안내문은 투표 종료 후 업로드 가능합니다)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>정산 안내문</th>
+                                                                    <td>(정산 안내문은 투표 종료 후 업로드 가능합니다)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>그 외 안내문</th>
+                                                                    <td>
+                                                                        <div class="file_box">
+                                                                            <button class="btn_dgray btn_file">파일찾기</button>
+                                                                            <input type="file" name="img[]" class="inp_file">
+                                                                            <em class="txt_control">파일없음</em>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- //관련문서 내용 -->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="btnSection">
+                    <button class="btn_cancel"><em>목록</em></button>
+                    <button class="btn_confirm" onclick="modal.open('adm-vote-003-2', 'type_mid')"><em>저장</em></button>
+                </div>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer>Template</footer>
+        <!-- //footer -->
+
+        <!-- modal -->
+        <div class="modal_wrap adm-vote-003-1">
+            <div class="modal_container">
+                <div class="modal_header">
+                    <h3>청약상품 조회</h3>
+                    <button class="btn_close" onclick="modal.close(event);">close</button>
+                </div>
+                <div class="modal_content">
+                    <div class="modal_content">
+                        <section class="search_wrap">
+                            <div class="inner">
+                                <ul class="row">
+                                    <li>
+                                        <div class="label_wrap">
+                                            <label class="input">
+                                                <i>상품번호, 상품명 검색</i>
+                                                <input type="text" onkeyup="input_btn_chk(this);">
+                                                <em>error message</em>
+                                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                            </label>
+                                            <button class="btn_search"><em>조회</em></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+    
+                        <div class="table_wrap scroll">
+                            <div class="inner">
+                                <table class="type_list ac">
+                                    <thead>
+                                        <tr>
+                                            <th>상품코드</th>
+                                            <th>카테고리</th>
+                                            <th>청약번호</th>
+                                            <th>상품명</th>
+                                            <th>총청약금액</th>
+                                            <th>총발행량</th>
+                                            <th>청약상태</th>
+                                            <th>
+                                                <label class="check">
+                                                    <input type="checkbox">
+                                                    <em class="label"></em>
+                                                </label>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- no data-->
+                                        <tr>
+                                            <td colspan="8">
+                                                <p class="no_data">청약상품을 조회해 주세요.</p>
+                                            </td>
+                                        </tr>
+                                        <!-- //no data-->
+                                        <tr>
+                                            <td>코드코드</td>
+                                            <td>카테고리</td>
+                                            <td>청약상품01호</td>
+                                            <td>경주마와 함께하는 최고의 조각투자</td>
+                                            <td>0,000,000원</td>
+                                            <td>00,000</td>
+                                            <td>운영중</td>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="checkbox">
+                                                    <em class="label"></em>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 페이징 -->
+                        <div class="paging">
+                            <div>
+                                <a href="#none" class="first">처음으로</a>
+                                <a href="#none" class="prev">이전</a>
+    
+                                <strong>1</strong>
+                                <a href="#none">2</a>
+                                <a href="#none">3</a>
+                                <a href="#none">4</a>
+                                <a href="#none">5</a>
+    
+                                <a href="#none" class="next">다음</a>
+                                <a href="#none" class="last">마지막으로</a>
+                            </div>
+                        </div>
+                        <!-- //페이징 -->
+                    </div>
+    
+                    <div class="btnSection">
+                        <a href="#none" class="btn_cancel"><em>취소</em></a>
+                        <a href="#none" class="btn_confirm"><em>확인</em></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 중도해지 처리하기 -->
+        <div class="modal_wrap adm-vote-003-2">
+            <div class="modal_container">
+                <div class="modal_header">
+                    <button class="btn_close" onclick="modal.close(event);">close</button>
+                </div>
+                <div class="modal_content">
+                    <div class="modal_content ac">
+                        <p class="tit">청산투표를 등록하시겠습니까?</p>
+                        <div class="mt20">청산투표는 투표 신청관리를 통해 투표종료 후 결과 안내문을 등록하고, 청산내역관리에서 마감처리를 꼭 해주세요.</div>
+                    </div>
+                </div>
+
+                <div class="btnSection">
+                    <a href="#none" class="btn_cancel"><em>취소</em></a>
+                    <a href="#none" class="btn_confirm"><em>확인</em></a>
+                </div>
+            </div>
+        </div>
+        <!-- //modal -->
+    </div>
+</body>

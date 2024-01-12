@@ -5,6 +5,7 @@ select {background-color:#fff; border:0; border-bottom:1px solid #E1E1E1; border
 .multi_form {display:flex; flex-wrap:wrap; align-items:center; gap:8px;}
 .multi_form.ac {justify-content:center;}
 .multi_form label {flex:1;}
+.multi_form label.check {flex:0 auto;}
 .multi_form + em {display:none;}
 .multi_form.err + em {margin-top:12px; color:#ff7200; font-size: 12px; display:block;}
 .multi_form.err + em.type_02 {color:#0070BA;}
