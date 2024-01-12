@@ -686,6 +686,16 @@ $(document).ready(function(){
             id:'adm-vote-003', status:'com',
             note:'',
             sDate:'2024-01-12', eDate:'2024-01-12'
+        },{
+            depth:['','아이콘메뉴 관리','상세',''],
+            id:'adm-iconm-002', status:'com',
+            note:'',
+            sDate:'2024-01-12', eDate:'2024-01-12'
+        },{
+            depth:['','아이콘메뉴 관리','상세',''],
+            id:'adm-iconm-003', status:'com',
+            note:'',
+            sDate:'2024-01-12', eDate:'2024-01-12'
         },
         // {
         //     depth:['','','',''],
