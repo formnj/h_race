@@ -72,30 +72,78 @@
                                         <tbody>
                                             <tr>
                                                 <th>작성자</th>
-                                                <td>홍길동</td>
+                                                <td>
+                                                    <label class="input">
+                                                        <i>Placeholder</i>
+                                                        <input type="text" onkeyup="input_btn_chk(this);">
+                                                        <em>error message</em>
+                                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                    </label>
+                                                </td>
                                                 <th>최종수정일시</th>
-                                                <td>2024-00-00 00:00</td>
+                                                <td>
+                                                    <label class="input">
+                                                        <i>Placeholder</i>
+                                                        <input type="text" onkeyup="input_btn_chk(this);">
+                                                        <em>error message</em>
+                                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                    </label>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>구분</th>
-                                                <td colspan="3">메뉴 아이콘</td>
+                                                <td colspan="3">
+                                                    <div class="check_group">
+                                                        <label class="check">
+                                                            <input type="radio">
+                                                            <em class="label">메인 메뉴 아이콘</em>
+                                                        </label>
+                                                        <label class="check">
+                                                            <input type="radio">
+                                                            <em class="label">카테고리 아이콘</em>
+                                                        </label>
+                                                    </div>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>아이콘 메뉴명</th>
-                                                <td colspan="3">펀딩</td>
+                                                <td colspan="3">
+                                                    <div class="multi_form">
+                                                        <label class="input">
+                                                            <i>Placeholder</i>
+                                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                                            <em>error message</em>
+                                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                        </label>
+                                                        <p>메뉴명은 5자 이내로 기입해 주세요.</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>순서</th>
+                                                <td colspan="3">
+                                                    <label class="input">
+                                                        <i>Placeholder</i>
+                                                        <input type="text" onkeyup="input_btn_chk(this);">
+                                                        <em>error message</em>
+                                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                    </label>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>이미지</th>
-                                                <td>
+                                                <td colspan="3">
                                                     <div class="file_box">
                                                         <button class="btn_dgray btn_file">파일찾기</button>
                                                         <input type="file" name="img[]" class="inp_file">
                                                         <em class="txt_control">파일없음</em>
+                                                        <button class="btn_add" onclick="add_upfile_row.add(event)">추가</button>
                                                     </div>
-                                                    <div class="notice_box">
+
+                                                    <div class="notice_box txt_exp">
                                                         <ul>
                                                             <li>메인메뉴 아이콘 이미지 사이즈 : 권장 000 * 000(가로*세로), 확장자는 Jpeg$JPG$PNG</li>
-                                                            <li>카테고리 아이콘 이미지 사이즈 : 권장 000 * 000(가로*세로), 확장자는 Jpeg$JPG$PNG</li>
+                                                            <li>카테고리 아이콘 이미지 사이즈 : 권장 000 * 000(가로*세로), 확장자는 Jpeg$JPG$PNG)</li>
                                                         </ul>
                                                     </div>
                                                 </td>
@@ -103,16 +151,39 @@
                                             <tr>
                                                 <th>연결주소URL</th>
                                                 <td colspan="3">
-                                                    <a href="#none">https:$$m.stgalaxia.co.kr$board$view.php?period=current&bdId=event&sno=146</a>
+                                                    <label class="input">
+                                                        <i>Placeholder</i>
+                                                        <input type="text" onkeyup="input_btn_chk(this);">
+                                                        <em>error message</em>
+                                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                    </label>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <th>사용여부</th>
-                                                <td colspan="3">사용</td>
+                                                <td colspan="3">
+                                                    <div class="check_group">
+                                                        <label class="check">
+                                                            <input type="radio">
+                                                            <em class="label">사용</em>
+                                                        </label>
+                                                        <label class="check">
+                                                            <input type="radio">
+                                                            <em class="label">미사용</em>
+                                                        </label>
+                                                    </div>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>비고</th>
-                                                <td colspan="3"></td>
+                                                <td colspan="3">
+                                                    <label class="input">
+                                                        <i>Placeholder</i>
+                                                        <input type="text" onkeyup="input_btn_chk(this);">
+                                                        <em>error message</em>
+                                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                    </label>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
