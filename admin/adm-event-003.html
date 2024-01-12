@@ -21,7 +21,7 @@
         <!-- container -->
         <div id="container">
             <div class="tit_wrap">
-                <h2>공지/공시 등록하기</h2>
+                <h2>이벤트/배너 등록하기</h2>
                 <ul class="breadcrumb">
                     <li>Home</li>
                     <li>1Depth</li>
@@ -32,7 +32,7 @@
             <div class="list_wrap">
                 <dl class="type_register accordion">
                     <dt class="active">
-                        <strong class="tit">공지/공시 등록하기</strong>
+                        <strong class="tit">배너 기본정보</strong>
                     </dt>
                     <dd style="display:block;">
                         <div class="cont">
@@ -61,64 +61,64 @@
                                                 </label></td>
                                             </tr>
                                             <tr>
-                                                <th>제목</th>
-                                                <td colspan="3"><label class="input">
-                                                    <i></i>
-                                                    <input type="text" onkeyup="input_btn_chk(this);">
-                                                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
-                                                </label></td>
-                                            </tr>
+                                                <th>배너위치</th>
+                                                <td>
+                                                    <label class="check">
+                                                        <input type="checkbox">
+                                                        <em class="label">메인배너</em>
+                                                    </label>
+                                                </td>
+                                                <th>배너순서</th>
+                                                <td>
+                                                    <label class="input">
+                                                        <i></i>
+                                                        <input type="text" value="0000-00-00 00:00" onkeyup="input_btn_chk(this);">
+                                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                    </label>
+                                                </td>
+                                            </tr>                                            
                                             <tr>
-                                                <th>상단공지</th>
+                                                <th>배너구분</th>
                                                 <td colspan="3">
                                                     <div class="check_group">
                                                         <label class="check">
                                                             <input type="radio" checked name="group1">
-                                                            <em class="label">Y</em>
+                                                            <em class="label">이벤트배너</em>
                                                         </label>
                                                         <label class="check">
                                                             <input type="radio" name="group1">
-                                                            <em class="label">N</em>
+                                                            <em class="label">일반배너</em>
                                                         </label>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>구분</th>
+                                                <th>게시기간</th>
                                                 <td colspan="3">
-                                                    <div class="check_group">
-                                                        <label class="check">
-                                                            <input type="radio" checked name="group1">
-                                                            <em class="label">공지사항</em>
-                                                        </label>
-                                                        <label class="check">
-                                                            <input type="radio" name="group1">
-                                                            <em class="label">청약공시</em>
-                                                        </label>
+                                                    <div class="datepicker_wrap">
+                                                        <div class="multi_form" style="width:700px;">
+                                                            <label class="input datepicker">
+                                                                <i>Placeholder</i>
+                                                                <input type="text" id="datepicker_start" readonly="readonly">
+                                                                <em>error message</em>
+                                                            </label>
+                                                            <span>~</span>
+                                                            <label class="input datepicker">
+                                                                <i>Placeholder</i>
+                                                                <input type="text" id="datepicker_end" readonly="readonly">
+                                                                <em>error message</em>
+                                                            </label>
+
+                                                            <label class="check">
+                                                                <input type="checkbox">
+                                                                <em class="label">기간제한 없음</em>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>관련상품</th>
-                                                <td colspan="3"><button class="btn_mid btn_confirm" onclick="modal.open('goods_search','type_big')"><em>청약상품 조회하기</em></button></td>
-                                            </tr>
-                                            <tr>
-                                                <th>개시여부</th>
-                                                <td colspan="3">
-                                                    <div class="check_group">
-                                                        <label class="check">
-                                                            <input type="radio" checked name="group1">
-                                                            <em class="label">개시</em>
-                                                        </label>
-                                                        <label class="check">
-                                                            <input type="radio" name="group1">
-                                                            <em class="label">미개시</em>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>첨부파일</th>
+                                                <th>이미지</th>
                                                 <td colspan="3">
                                                     <script>
                                                         $(document).on('click', '.btn_file', function(){
@@ -148,11 +148,26 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>내용</th>
+                                                <th>접속주소</th>
+                                                <td colspan="3"><label class="input">
+                                                    <i></i>
+                                                    <input type="text" onkeyup="input_btn_chk(this);">
+                                                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                </label></td>
+                                            </tr>
+                                            <tr>
+                                                <th>개시여부</th>
                                                 <td colspan="3">
-                                                    <!-- 에디터 영역 -->
-                                                    <div class="editor_wrap"></div>
-                                                    <!-- //에디터 영역 -->
+                                                    <div class="check_group">
+                                                        <label class="check">
+                                                            <input type="radio" checked name="group1">
+                                                            <em class="label">개시</em>
+                                                        </label>
+                                                        <label class="check">
+                                                            <input type="radio" name="group1">
+                                                            <em class="label">미개시</em>
+                                                        </label>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         </tbody>

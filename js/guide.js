@@ -666,6 +666,16 @@ $(document).ready(function(){
             id:'adm-goods-003', status:'com',
             note:'',
             sDate:'2024-01-11', eDate:'2024-01-11'
+        },{
+            depth:['','이벤트/배너 조회','목록',''],
+            id:'adm-event-001', status:'com',
+            note:'',
+            sDate:'2024-01-12', eDate:'2024-01-12'
+        },{
+            depth:['','이벤트/배너 조회','등록',''],
+            id:'adm-event-003', status:'com',
+            note:'',
+            sDate:'2024-01-12', eDate:'2024-01-12'
         },
         // {
         //     depth:['','','',''],

@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>mysql connect test</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+
+<script src="../js/admin.js"></script>
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <!-- wrap -->
+    <div id="admin_wrap">
+        <!-- header -->
+        <header>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <div class="tit_wrap">
+                <h2>이벤트/배너 조회</h2>
+                <ul class="breadcrumb">
+                    <li>Home</li>
+                    <li>1Depth</li>
+                    <li>2Depth</li>
+                </ul>
+            </div>
+
+            <section class="search_wrap mt30">
+                <div class="inner">
+                    <ul class="row">
+                        <li>
+                            <dl>
+                                <dt>기간선택</dt>
+                                <dd>
+                                    <div class="datepicker_wrap">
+                                        <div class="multi_form">
+                                            <label class="input datepicker">
+                                                <i>Placeholder</i>
+                                                <input type="text" id="datepicker_start" readonly="readonly">
+                                                <em>error message</em>
+                                            </label>
+                                            <span>~</span>
+                                            <label class="input datepicker">
+                                                <i>Placeholder</i>
+                                                <input type="text" id="datepicker_end" readonly="readonly">
+                                                <em>error message</em>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- //datepicker -->
+                                </dd>
+
+                                <dt>구분선택</dt>
+                                <dd>
+                                    <div class="check_group">
+                                        <label class="check">
+                                            <input type="checkbox">
+                                            <em class="label">전체</em>
+                                        </label>
+                                        <label class="check">
+                                            <input type="checkbox">
+                                            <em class="label">이벤트</em>
+                                        </label>
+                                        <label class="check">
+                                            <input type="checkbox">
+                                            <em class="label">일반배너</em>
+                                        </label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div class="multi_form full">
+                                <label class="select w_150">
+                                    <select>
+                                        <option>선택</option>
+                                    </select>
+                                </label>
+                                <div class="label_wrap">
+                                    <label class="input">
+                                        <i style="display: none;">Placeholder</i>
+                                        <input class="password" type="text" onkeyup="input_btn_chk(this);">
+                                        <em>error message</em>
+                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                    </label>
+                                    <button class="btn_search"><em>조회</em></button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="board_info_wrap">
+                <p class="result_count">총<strong>999</strong>건의 게시물이 있습니다.</p>
+                <div class="btnSection">
+                    <label class="select w_150">
+                        <select>
+                            <option>전체</option>
+                        </select>
+                    </label>
+                    
+                    <button class="btn_add" onclick="modal.open('adm-goodsApply-007','type_big');"><em>배너 추가</em></button>
+                </div>
+            </div>
+
+            <!-- default -->
+            <div class="table_wrap scroll"> <!-- 스크롤 테이블의 경우 class="scroll" 추가 -->
+                <div class="inner">
+                    <table class="type_list ac">
+                        <colgroup>
+                            <col style="width:80px;" />
+                            <col style="width:200px;" />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>썸네일</th>
+                                <th>배너위치</th>
+                                <th>접속주소</th>
+                                <th>배너구분</th>
+                                <th>배너순서</th>
+                                <th>작성자</th>
+                                <th>최종수정일시</th>
+                                <th>게시여부</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>65</td>
+                                <td>
+                                    <span class="thumb"><img src="../images/sample/sam_horse.png" /></span>
+                                </td>
+                                <td>메인상단</td>
+                                <td>-</td>
+                                <td>일반배너</td>
+                                <td>1</td>
+                                <td>홍길동</td>
+                                <td>0000-00-00 00:00</td>
+                                <td>게시</td>
+                            </tr>
+                            <tr>
+                                <td>65</td>
+                                <td>
+                                    <span class="thumb"><img src="../images/sample/sam_event_banner.png" /></span>
+                                </td>
+                                <td>메인상단</td>
+                                <td>-</td>
+                                <td>일반배너</td>
+                                <td>1</td>
+                                <td>홍길동</td>
+                                <td>0000-00-00 00:00</td>
+                                <td>미게시</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- //default -->
+
+            <!-- 페이징 -->
+            <div class="paging">
+                <div>
+                    <a href="#none" class="first">처음으로</a>
+                    <a href="#none" class="prev">이전</a>
+
+                    <strong>1</strong>
+                    <a href="#none">2</a>
+                    <a href="#none">3</a>
+                    <a href="#none">4</a>
+                    <a href="#none">5</a>
+
+                    <a href="#none" class="next">다음</a>
+                    <a href="#none" class="last">마지막으로</a>
+                </div>
+            </div>
+            <!-- //페이징 -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer>Template</footer>
+        <!-- //footer -->
+
+        <!-- modal 주문대리인 -->
+        <div class="modal_wrap adm-mamber-002-1">
+            <div class="modal_container">
+                <div class="modal_header">
+                    <h3>주문대리인 지정</h3>
+                    <button class="btn_close" onclick="modal.close(event);">close</button>
+                </div>
+                <div class="modal_content">
+                    <div class="gray_box txt_cont"><span class="txt_blue">'$이름$'</span> 회원님을 주문대리인으로 지정합니다. 주문대리인 지정을 위해 가입한 회원 정보와 지점에서 개설한 법인계좌의 가입자 정보 일치를 확인합니다.</div>
+                
+                    <div class="table_wrap detaile mt25">
+                        <div class="inner">
+                            <table>
+                                <colgroup>
+                                    <col style="width:20%;" />
+                                    <col style="width:30%;" />
+                                    <col style="width:20%;" />
+                                    <col style="width:30%;" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>가입일시</th>
+                                        <td>2023-0000 00:00:00</td>
+                                        <th>회원명</th>
+                                        <td>홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <th>휴대폰번호</th>
+                                        <td>010-1523-4567</td>
+                                        <th>성별</th>
+                                        <td>남성</td>
+                                    </tr>
+                                    <tr>
+                                        <th>이메일</th>
+                                        <td>abc@abcd.com</td>
+                                        <th>연령대</th>
+                                        <td>30대</td>
+                                    </tr>
+                                    <tr>
+                                        <th>회원상태</th>
+                                        <td>활성</td>
+                                        <th>계좌개설상태</th>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>자격설문</th>
+                                        <td>일반투자자</td>
+                                        <th>법인계좌번호</th>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                
+                    <ul class="write_input_group mt50">
+                        <li>
+                            <div>
+                                <strong>법인사업자번호</strong>
+                                <label class="input">
+                                    <i style="display: none;">Placeholder</i>
+                                    <input class="password" type="text" onkeyup="input_btn_chk(this);">
+                                    <em>error message</em>
+                                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>법인계좌 상태</strong>
+                                <label class="input">
+                                    <i style="display: none;">Placeholder</i>
+                                    <input class="password" type="text" onkeyup="input_btn_chk(this);">
+                                    <em>error message</em>
+                                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>법인계좌 번호</strong>
+                                <label class="input">
+                                    <i style="display: none;">Placeholder</i>
+                                    <input class="password" type="text" onkeyup="input_btn_chk(this);">
+                                    <em>error message</em>
+                                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnSection">
+                    <button class="btn_confirm" onclick="modal.open('adm-mamber-002-2','type_mid');">
+                        <em>주문대리인 검증요청</em>
+                    </button>
+                </div>
+                
+                <script>
+                </script>
+            </div>
+        </div>
+        <!-- //modal -->
+
+        <!-- 검증요청 -->
+        <div class="modal_wrap adm-mamber-002-2">
+            <div class="modal_container">
+                <div class="modal_header ac">
+                    <h3>주문대리인 검증 완료</h3>
+                </div>
+                <div class="modal_content">
+                    <div class="gray_box txt_cont"><span class="txt_blue">'$이름$'</span> 회원으로 주문대리인 검증이 완료되었습니다.</div>
+                
+                    <div class="table_wrap detaile mt25">
+                        <div class="inner">
+                            <table>
+                                <colgroup>
+                                    <col style="width:35%;" />
+                                    <col />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>법인사업자 번호</th>
+                                        <td>2023-0000 00:00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <th>계좌개설상태</th>
+                                        <td>활성</td>
+                                    </tr>
+                                    <tr>
+                                        <th>법인계좌번호</th>
+                                        <td>1234-5678-9123</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="btnSection">
+                    <button class="btn_confirm" onclick="modal.close(event);">
+                        <em>확인</em>
+                    </button>
+                </div>
+                
+                <script>
+                </script>
+            </div>
+        </div>
+        <!-- //검증요청 -->
+
+        <!-- modal 갤럭갤럭시아 청약 참여 -->
+        <div class="modal_wrap adm-goodsApply-007">
+            <div class="modal_container">
+                <div class="modal_header">
+                    <h3>갤럭시아 청약 참여하기</h3>
+                    <button class="btn_close" onclick="modal.close(event);">close</button>
+                </div>
+                <div class="modal_content">
+                    <div class="gray_box txt_cont">현재 청약율 <span class="txt_blue">70%</span>로 갤럭시아 청약 참여를 통해 청약을 마감할 수 있습니다. 아래 청약금액$수량 확인 후 참여하기를
+                        선택해 주세요.</div>
+                
+                    <h4 class="mt35">청약현황</h4>
+                    <div class="table_wrap detaile mt25">
+                        <div class="inner">
+                            <table>
+                                <colgroup>
+                                    <col style="width:20%;" />
+                                    <col style="width:30%;" />
+                                    <col style="width:20%;" />
+                                    <col style="width:30%;" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>청약상품 구분</th>
+                                        <td class="ar">경주마</td>
+                                        <th>청약상품 번호</th>
+                                        <td class="ar">청약상품01호</td>
+                                    </tr>
+                                    <tr>
+                                        <th>목표 청약수량</th>
+                                        <td class="ar">100,000</td>
+                                        <th>목표 청약금액</th>
+                                        <td class="ar">1,000,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <th>현재 청약수량</th>
+                                        <td class="ar">70,000</td>
+                                        <th>현재 청약금액</th>
+                                        <td class="ar">70,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <th>미달 청약수량</th>
+                                        <td class="ar txt_blue">30,000</td>
+                                        <th>미달 청약금액</th>
+                                        <td class="ar txt_red">30,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <th>마감 청약율</th>
+                                        <td class="ar txt_blue">70%</td>
+                                        <th>청약 미달율</th>
+                                        <td class="ar txt_red">30%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                
+                    <ul class="write_input_group mt50">
+                        <li>
+                            <div>
+                                <strong>갤럭시아 청약 수량</strong>
+                                <label class="input">
+                                    <i>Placeholder</i>
+                                    <input class="ar" type="text" value="30,000" onkeyup="input_btn_chk(this);">
+                                    <em>error message</em>
+                                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>갤럭시아 청약 금액</strong>
+                                <label class="input">
+                                    <i>Placeholder</i>
+                                    <input class="ar" type="text" value="30,000원" onkeyup="input_btn_chk(this);">
+                                    <em>error message</em>
+                                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                
+                    <div class="ac mt35">
+                        <p>현재 청약 미달율은 30%이며, 청약 마감을 위해 갤럭시아 청약 참여 시 30,000 청약수량을 30,000원으로 청약 참여가 필요합니다.<br/> 갤럭시아 청약 참여 시 취소가 불가하오니 신중히 결정해 주십시오.</p>
+                        <label class="check mt20">
+                            <input type="checkbox">
+                            <em class="label">갤럭시아 청약 참여를 신청합니다.</em>
+                        </label>
+                    </div>
+                </div>
+                <div class="btnSection">
+                    <button class="btn_confirm" onclick="modal.close(event);">
+                        <em>갤럭시아 청약참여하기</em>
+                    </button>
+                </div>
+                
+                <script>
+                    /* placeholder */
+                    $('label[class*="input"]').each(function(){
+                        placeholder(this);
+                    });
+                </script>
+            </div>
+        </div>
+        <!-- //modal 갤럭갤럭시아 청약 참여 -->
+    </div>
+</body>
