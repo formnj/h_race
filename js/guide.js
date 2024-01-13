@@ -310,13 +310,18 @@ $(document).ready(function(){
         },{
             depth:['','','','배당내역'],
             id:'app-myInfo-006', status:'',
-            note:'',
+            note:'app-myInfo-005 기간 조회 배치',
             sDate:'', eDate:''
         },{
-            depth:['','내가참여한청약','청약상품 목록보기',''],
-            id:'app-mygoods-001', status:'',
+            depth:['','내가참여한청약','목록보기',''],
+            id:'app-mygoods-001', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-12', eDate:'2024-01-13'
+        },{
+            depth:['','','상세',''],
+            id:'app-mygoods-002', status:'com',
+            note:'',
+            sDate:'2024-01-13', eDate:'2024-01-13'
         },{
             depth:['','','청약상품 취소하기','청약신청 내역보기'],
             id:'app-mygoods-005', status:'',

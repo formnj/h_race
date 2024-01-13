@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>내가 참여한 청약</strong>
+            </p>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content">
+
+                <div class="tab_wrap">                    
+                    <!-- date sort -->
+                    <ul class="tab_type_text demo">
+                        <li class="current"><button>금일</button></li>
+                        <li><button>금주</button></li>
+                        <li><button>1개월</button></li>
+                        <li><button>3개월</button></li>
+                        <li><button>6개월</button></li>
+                        <li><button>직접입력</button></li>
+                    </ul>
+                    <!-- //date sort -->
+                </div>
+
+                <div class="list_top mt25">
+                    <p class="count">총 5건 조회</p>
+                    <div class="select_form fr">
+                        <select>
+                            <option>Option01</option>
+                            <option>Option02</option>
+                            <option>Option03</option>
+                        </select>
+                        <dl>
+                            <dt><a href="#none">진행</a></dt>
+                            <dd>
+                                <ul>
+                                    <li><a href="#none">Option01</a></li>
+                                    <li><a href="#none">Option02</a></li>
+                                    <li><a href="#none">Option03</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function(){
+                        const goods_item = document.querySelectorAll('.goods_list > li');
+
+                        goods_item.forEach(el => {
+                            /* progress bar 넓이값 조정 */
+                            var step = Number(el.querySelector('dt em').textContent);
+
+                            el.querySelector('.progress_wrap p em').style.width = (step/100)*100+'%';
+                            /* //progress bar 넓이값 조정 */
+                        });
+                    });
+                </script>
+
+                <ul class="goods_list mt20">
+                    <!-- loop -->
+                    <li>
+                        <div class="goods_item">
+                            <span class="badge">
+                                <em class="fin">종료</em>
+                            </span>
+                            <span class="badge">
+                                <em class="wait">비례</em>
+                            </span>
+                            <span class="badge">
+                                <em class="ing">일반</em>
+                            </span>
+                            <a href="./app-mygoods-002.html" class="tit"><em>[청약상품 1호]</em> 우월한 유전자 최고의 경주마</a>
+                            <div class="cont">
+                                <span class="thumb"><img src="../images/sample/sam_horse.png" /></span>
+                                <ul class="info">
+                                    <li>
+                                        <dl>
+                                            <dt>공모기간</dt>
+                                            <dd>2023.00.00 ~ 2023.00.00</dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>청약금액</dt>
+                                            <dd>20,000,000원</dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>발행수량</dt>
+                                            <dd>2,000,000</dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>목장명</dt>
+                                            <dd>하늘농장</dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <dl class="progress">
+                                <dt>
+                                    <strong>달성율 <em>50</em></strong>
+                                    <span>80명 참여
+                                        <em>500 STO 남음</em>
+                                    </span>
+                                </dt>
+                                <dd class="progress_wrap"><!-- 초과달성 시 "over" 클래스 추가 -->
+                                    <p><em></em></p>
+                                </dd>
+                            </dl>
+
+                            <div class="gray_box">
+                                <span class="badge">청약인기상품!</span>청약수량 초과로 신청하신 청약수량은 비례배분으로 지급될 예정입니다.  자세한 청약 결과는 결과 공시를 참고해 주세요.
+                            </div>
+                        </div>
+                    </li>
+                    <!-- //loop -->
+                    <li>
+                        <div class="goods_item">
+                            <span class="badge">
+                                <em class="wait">비례</em>
+                            </span>
+                            <a href="./app-mygoods-002.html" class="tit"><em>[청약상품 1호]</em> 우월한 유전자 최고의 경주마</a>
+                            <div class="cont">
+                                <span class="thumb"><img src="../images/sample/sam_horse.png" /></span>
+                                <ul class="info">
+                                    <li>
+                                        <dl>
+                                            <dt>공모기간</dt>
+                                            <dd>2023.00.00 ~ 2023.00.00</dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>청약금액</dt>
+                                            <dd>20,000,000원</dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>발행수량</dt>
+                                            <dd>2,000,000</dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>목장명</dt>
+                                            <dd>하늘농장</dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <dl class="progress">
+                                <dt>
+                                    <strong>달성율 <em>250</em></strong>
+                                    <span>80명 참여
+                                        <em>500 STO 남음</em>
+                                    </span>
+                                </dt>
+                                <dd class="progress_wrap over"><!-- 초과달성 시 "over" 클래스 추가 -->
+                                    <p><em></em></p>
+                                </dd>
+                            </dl>
+
+                            <ul class="bullet_list txt_blue mt10">
+                                <li>회원님이 받은 청약수량은 <strong>00,000 STO</strong> 입니다.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- action bar -->
+        <div class="action_bar">
+            <ul>
+                <li><button class="home">홈</button></li>
+                <li><button class="funding">펀딩</button></li>
+                <li><button class="invest">자산</button></li>
+                <li><a href="./app-setMyInfo-000.html" class="setting">설정</a></li>
+            </ul>
+        </div>
+        <!-- //action bar -->
+    </div>
+
+    <!-- modal -->
+    <div class="modal_wrap">
+        <div class="modal_container"></div>
+    </div>
+    <!-- //modal -->
+</body>
+</html>
