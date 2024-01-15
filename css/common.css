@@ -832,5 +832,6 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .goods_detail_info .icon_bullet_list.type_02 li p:before {width:2px; height:2px; background-color:#444; border-radius:50%; content:''; position:absolute; top:10px; left:5px; display:block;}
 
 .horse_list ul {display:flex;}
-.horse_list li {width:20%;}
-.horse_list li .thumb {width:42px; height:42px; margin:0 auto; background-image:url('../images/sub/icon_horse.png'); background-repeat:no-repeat; background-size:42px auto; display:block;}
+.horse_list li {width:20%; text-align:center;}
+.horse_list li .thumb {width:42px; height:42px; margin:0 auto; background-image:url('../images/sub/icon_horse.png'); background-position:0 0; background-repeat:no-repeat; background-size:42px auto; display:block;}
+.horse_list li.active .thumb {background-position:0 -50px;}
