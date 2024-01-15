@@ -137,6 +137,7 @@ $('.select_form').delegate('select','change',function() {
 const modal = {
     open: (_content,_type) => {
         $('.modal_wrap.'+_content).addClass('active').find('.modal_container').attr('modal-type', _type);
+        disableScroll();
         // $.ajax({
         //     url:'../modal/'+_content+'.html',
         //     method:'get',

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+
+    <!-- 2024-01-10 swiper -->
+    <script src="../js/swiper.js"></script>
+    <link rel="stylesheet" href="../css/swiper.css">
+    <!-- //2024-01-10 swiper -->
+    
+    <script>
+        $(document).ready(function(){
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                loop: true,
+                keyboard: {
+                    enabled: true,
+                },
+                on: {
+                    init: function () {},
+                    slideChange: function () {},
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+
+            /* 스텝에 따른 progress bar 넓이값 조정 */
+            var step        = Number(document.querySelector('.goods_detail_info .progress_wrap div em').textContent);
+
+            document.querySelector('.progress_wrap p em').style.width = (step/100)*100+'%';
+            /* //스텝에 따른 progress bar 넓이값 조정 */
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>상세보기</strong>
+            </p>
+            <button class="btn_alarm">알림</button>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content">
+
+                <!-- goods detail -->
+                <div class="funding_detail">
+                    <div class="goods_info">
+                        <strong class="tit">[청약상품 1호]  </strong>
+                        <div class="detail_swiper swiper-container">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <span class="thumb"><em><img src="../images/sample/sam_horse.png" /></em></span>
+                                </li>
+                                <li class="swiper-slide">
+                                    <span class="thumb"><em><img src="../images/sample/sam_event_banner.png" /></em></span>
+                                </li>
+                            </ul>
+
+                            <div class="swiper-button-wrap">
+                                <button class="swiper-button-next">다음</button>
+                                <button class="swiper-button-prev">이전</button>
+                            </div>
+                        </div>
+                        <p class="explain">Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum Lorem/ 이어 받은 새로운 기대주 스탄로드! 스탄로드의 주인이 되어 성장에 따른 수익을 마음 껏 누리세요.</p>
+                    </div>
+                </div>
+
+                <dl class="goods_detail_info">
+                    <dt>투자 포인트</dt>
+                    <dd>
+                        <ul class="icon_bullet_list type_01">
+                            <li>
+                                <strong class="tit">타이틀 투자 포인트</strong>
+                                <p>'스탄로드'는 2023년 1월 태어난 전통있는 더브러렛입니다.<br/> 스탄로드의 주인이 되어 성장에 따른 수익을 마음껏</p>
+                            </li>
+                            <li>
+                                <strong class="tit">타이틀 투자 포인트</strong>
+                                <p>'스탄로드'는 2023년 1월 태어난 전통있는 더브러렛입니다.<br/> 스탄로드의 주인이 되어 성장에 따른 수익을 마음껏</p>
+                            </li>
+                        </ul>
+
+                        <div class="info_box_01 mt40">
+                            <ul class="info_01">
+                                <li>청약기간 : 2023. 12. 31 ~ 2025. 12. 31</li>
+                                <li>발행수량 : 2000</li>
+                                <li>최소투자 : 10만원</li>
+                            </ul>
+                            <ul class="info_02">
+                                <li class="prime">
+                                    <span>청약금액</span>
+                                    <strong>20,000,000원</strong>
+                                </li>
+                                <li>
+                                    <span>육성마 비용</span>
+                                    <strong>10,000,000 원</strong>
+                                </li>
+                                <li>
+                                    <span>육성 및 관리 비용</span>
+                                    <strong>12,000,000 원</strong>
+                                </li>
+                                <li>
+                                    <span>보험 및 기타비용</span>
+                                    <strong>5,600,000 원</strong>
+                                </li>
+                            </ul>
+                            <div class="progress_wrap">
+                                <div>
+                                    <strong>달성율 <em>18.5</em></strong>
+                                    <span>5명 참여</span>
+                                    <span>1,800 STO 남음</span>
+                                </div>
+                                <p><em></em></p>
+                            </div>
+                            <ul class="bullet_list">
+                                <li>청약율 미달 시 청약율 달성을 위해 법인 공모가 추가될 수 있습니다.</li>
+                                <li>본 청약상품은 오랜 시간 경주마를 운용해 온 목장과 함께하며, 육성/관리비용은 24개월까지의 예상치입니다.</li>
+                            </ul>
+                        </div>
+                    </dd>
+
+                    <dt>경주마 목장 안내</dt>
+                    <dd>
+                        <p>제주하늘목장은 태어난 후 6개월된 0세마를 경주마로 육성하는데 21년간의 경험과 노하우를 갖고 있습니다.<br/> 경마 대회에서 빛나는 경주마를 육성하기 위해 늘 최선을 다하고, 세심하고 꼼꼼함으로 유명합니다.</p>
+                        <div class="table_wrap detail mt35">
+                            <div class="inner">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:20%;" />
+                                        <col style="width:30%;" />
+                                        <col style="width:20%;" />
+                                        <col style="width:30%;" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>목장명</th>
+                                            <td>제주하늘목장</td>
+                                            <th>설립연월</th>
+                                            <td>2년</td>
+                                        </tr>
+                                        <tr>
+                                            <th>농장규모</th>
+                                            <td>1.775㎥</td>
+                                            <th>보유마</th>
+                                            <td>124마리(23년기준)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>소재지</th>
+                                            <td colspan="3">제주도 제주시 대관령면 꽃밭양지길 458-23</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </dd>
+
+                    <dt>투자 수익배분
+                        <em><img src="../images/sub/icon_Bookmark.png" /></em>
+                    </dt>
+                    <dd>
+                        <ul class="icon_bullet_list type_02">
+                            <li>
+                                <strong class="tit">타이틀 투자 포인트</strong>
+                                <p>투자한 상품을 구성하는 경주마(3~5마리)를 목장에서 경주마로 육성 후 낙찰 경매가에 따라 수익금 수익 배분</p>
+                            </li>
+                            <li>
+                                <strong class="tit">수익금 지급 안내</strong>
+                                <p>낙찰 경매가에서 발생한 수익금을 지분 비율에 따라 지급</p>
+                                <p>낙찰 경매가 수익금을 내부 집계 완료 후 투자자에게는 정산일 기준 익월말일까지 일괄 지급</p>
+                            </li>
+                        </ul>
+                    </dd>
+
+                    <dt>경주마 개체 정보</dt>
+                    <dd>
+                        <p class="sub_tit">[청약상품 1호] [공모제목]</p>
+                        <div class="horse_list">
+                            <ul>
+                                <li class="active">
+                                    <a href="#none">
+                                        <span class="thumb"></span>
+                                        <strong>스탄로드</strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none">
+                                        <span class="thumb"></span>
+                                        <strong>말이름</strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none">
+                                        <span class="thumb"></span>
+                                        <strong>말이름</strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none">
+                                        <span class="thumb"></span>
+                                        <strong>말이름</strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none">
+                                        <span class="thumb"></span>
+                                        <strong>말이름</strong>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </dd>
+                </dl>
+                <!-- //goods detail -->
+
+            </div>
+        </div>
+        <!-- //action bar -->
+    </div>
+</body>
+</html>

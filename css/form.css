@@ -88,7 +88,7 @@ label.input_square textarea {padding:15px 20px;resize:none;}
 
 /* checkbox */
 /* .check input[type='checkbox'] {width:10px; height:10px;} */
-.check input[type='checkbox'] + .label:before {width:24px; height:24px; background-image:url('../images/common/icon_sprit.png'); background-position:0 -30px; background-repeat:no-repeat; background-size:250px auto; top:-2px; left:0;}
+.check input[type='checkbox'] + .label:before {width:24px; height:24px; margin-top:-12px; background-image:url('../images/common/icon_sprit.png'); background-position:0 -30px; background-repeat:no-repeat; background-size:250px auto; top:50%; left:0;}
 .check input[type='checkbox']:checked + .label:before {background-position:0 -60px;}
 .check input[type='checkbox']:disabled + .label:before {background-color:#f0f0f0;}
 
@@ -114,6 +114,7 @@ label.input_square textarea {padding:15px 20px;resize:none;}
 
 [class*='form_group'] > li + li {padding-top:50px;}
 [class*='form_group'].gap_30 > li + li {padding-top:30px;}
+[class*='form_group'].gap_25 > li + li {padding-top:25px;}
 [class*='form_group'] .form_tit {margin-top:0; margin-bottom:13px; font-size:15px;}
 [class*='form_group'] .form_tit em {color:#888; font-weight:400; display:inline-block;}
 [class*='form_group'] .form_tit.required:after {margin-left:2px; color:#d60812; font-size:14px; content:'*'; display:inline-block;}
