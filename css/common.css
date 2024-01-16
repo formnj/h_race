@@ -28,7 +28,7 @@ footer p {color:#888;}
 header + #container {padding-top:66px;}
 #container:has(> .btnSection) {padding-bottom:51px;}
 .content {padding:0 20px 30px;}
-.content + .btnSection {position:fixed; right:0; bottom:0; left:0;}
+.content + .btnSection {position:fixed; right:0; bottom:0; left:0; z-index:1;}
 .content + .btnSection .btn_cancel {width:36%; flex:0 auto;}
 .content + .btnSection [class*='btn_'] + [class*='btn_'] {margin-left:0;}
 .content + .btnSection [class*='btn_'] em {padding:16px 10px; font-size:16px; font-weight:600;}
@@ -62,7 +62,6 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 .mt35 {margin-top:35px !important;}
 .mt40 {margin-top:40px !important;}
 .mt50 {margin-top:50px !important;}
-.mt35 {margin-top:35px !important;}
 .mb20 {margin-bottom:20px !important;}
 .mb30 {margin-bottom:30px !important;}
 .mb50 {margin-bottom:50px !important;}
@@ -396,7 +395,7 @@ em.err {margin-top:12px; color:#F1213A; font-size:12px; display:block;}
 .invest_type_select .check_square input:checked + .label:before {background-position:-30px -60px;}
 .invest_type_select .check_square span {width:55px; font-size:13px; letter-spacing:-0.02em; text-align:left;}
 
-.table_wrap table {min-width:100%; word-break:keep-all; text-align:left;}
+.table_wrap table {min-width:100%; text-align:left;}
 .table_wrap.scroll {overflow-x:auto;}
 .table_wrap.scroll table {table-layout:fixed; white-space:nowrap;}
 .table_wrap table thead {background-color:#E8E8E8;}
@@ -433,7 +432,7 @@ em.err {margin-top:12px; color:#F1213A; font-size:12px; display:block;}
 .upfile_list div label {width:100%; display:flex; align-items:center;}
 .upfile_list div label.check {margin-left:-10px; height:50px;}
 .upfile_list div:has(.check input:checked) {border-color:#2ECCC8;}
-.upfile_list div .label:before {top:50% !important; transform:translateY(-50%);}
+/* .upfile_list div .label:before {top:50% !important;} */
 .upfile_list .input input {height:50px; border-bottom:0;}
 .upfile_list label[class*='input'] i {color:#222; font-size:14px; top:16px;}
 .upfile_list div .btn_add {width:20px; height:20px; font-size:0; background-image:url('../images/common/icon_add.png'); background-position:0 50%; background-repeat:no-repeat; background-size:20px auto; display:block;}
@@ -831,7 +830,7 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .goods_detail_info .icon_bullet_list.type_02 li p {padding-left:20px; position:relative;}
 .goods_detail_info .icon_bullet_list.type_02 li p:before {width:2px; height:2px; background-color:#444; border-radius:50%; content:''; position:absolute; top:10px; left:5px; display:block;}
 
-.horse_list ul {display:flex;}
-.horse_list li {width:20%; text-align:center;}
-.horse_list li .thumb {width:42px; height:42px; margin:0 auto; background-image:url('../images/sub/icon_horse.png'); background-position:0 0; background-repeat:no-repeat; background-size:42px auto; display:block;}
+.horse_list ul {display:flex; gap:10px;}
+.horse_list li {width:20%; font-size:12px; text-align:center;}
+.horse_list li .thumb {width:42px; height:42px; margin:0 auto 8px; background-image:url('../images/sub/icon_horse.png'); background-position:0 0; background-repeat:no-repeat; background-size:42px auto; display:block;}
 .horse_list li.active .thumb {background-position:0 -50px;}

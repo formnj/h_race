@@ -189,7 +189,7 @@ section.search_wrap dd + dt {margin-left:40px;}
 #admin_wrap .check input[type='radio'] + .label:after {width:12px; height:12px; background-color:#666; border-radius:50%; opacity:0; top:4px; left:4px;}
 #admin_wrap .check input[type='radio']:checked + .label:after {opacity:1;}
 #admin_wrap .check input[type='radio']:disabled:checked + .label:after {background-color:#999;}
-#admin_wrap .check input[type='checkbox'] + .label:before {background-image:none;}
+#admin_wrap .check input[type='checkbox'] + .label:before {margin-top:0; background-image:none;}
 #admin_wrap .check input[type='checkbox']:checked + .label:after {width:14px; height:8px; border:2px solid #444; border-top:0; border-right:0; top:4px; left:3px; display:block; transform:rotate(-45deg);}
 #admin_wrap .check input[type='checkbox']:disabled:checked + .label:after {border-color:#999;}
 
