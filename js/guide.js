@@ -334,9 +334,9 @@ $(document).ready(function(){
             sDate:'2024-01-15', eDate:'2024-01-15'
         },{
             depth:['','','청약상품 상세보기',''],
-            id:'app-mygoods-006', status:'ing',
+            id:'app-mygoods-006', status:'com',
             note:'',
-            sDate:'2024-01-15', eDate:'2024-01-15'
+            sDate:'2024-01-15', eDate:'2024-01-16'
         },{
             depth:['','','청약상품 중도해지','중도해지 신청안내'],
             id:'app-mygoods-008', status:'com',
@@ -397,6 +397,13 @@ $(document).ready(function(){
             id:'app-mydvdns-007', status:'',
             note:'',
             sDate:'', eDate:''
+        },
+
+        {
+            depth:['펀딩','메인','',''],
+            id:'app-goods-001', status:'com',
+            note:'',
+            sDate:'2024-01-16', eDate:'2024-01-16'
         },
 
         {
