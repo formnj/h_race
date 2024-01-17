@@ -324,19 +324,24 @@ $(document).ready(function(){
             sDate:'2024-01-13', eDate:'2024-01-13'
         },{
             depth:['','','','청약신청 취소하기'],
-            id:'app-mygoods-002-1', status:'com',
+            id:'app-mygoods-002-1', status:'',
             note:'app-mygoods-002 모달 배치',
-            sDate:'2024-01-15', eDate:'2024-01-15'
+            sDate:'', eDate:''
         },{
             depth:['','','','청약취소 완료'],
-            id:'app-mygoods-002-2', status:'com',
+            id:'app-mygoods-002-2', status:'',
             note:'app-mygoods-002 모달 배치',
-            sDate:'2024-01-15', eDate:'2024-01-15'
+            sDate:'', eDate:''
         },{
             depth:['','','청약상품 상세보기',''],
             id:'app-mygoods-006', status:'com',
             note:'',
             sDate:'2024-01-15', eDate:'2024-01-16'
+        },{
+            depth:['','','청약상품 수익금 내역',''],
+            id:'app-mygoods-007', status:'com',
+            note:'',
+            sDate:'2024-01-17', eDate:'2024-01-17'
         },{
             depth:['','','청약상품 중도해지','중도해지 신청안내'],
             id:'app-mygoods-008', status:'com',
@@ -344,8 +349,8 @@ $(document).ready(function(){
             sDate:'2024-01-15', eDate:'2024-01-15'
         },{
             depth:['','내 경주마 경주현황','경주참여 결과','참여결과 및 경주일정'],
-            id:'app-myrace-001', status:'ing',
-            note:'',
+            id:'app-myrace-001', status:'com',
+            note:'수익금 지급 안내 팝업',
             sDate:'2024-01-15', eDate:'2024-01-15'
         },{
             depth:['','','','내 청약상품 목록-경주성적_마별'],

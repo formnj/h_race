@@ -145,7 +145,7 @@
                                         </p>
                                     </div>
                                     <p class="ac">
-                                        <a href="#none">언제 수익금이 지급 되나요?</a>
+                                        <button onclick="modal.open('app-myrace-001-1','type_alert');">언제 수익금이 지급 되나요?</button>
                                     </p>
                                 </div>
 
@@ -214,6 +214,105 @@
                                     </div>
                                 </div>
 
+                                <div class="list_top mt50">
+                                    <strong class="tit">진료 정보</strong>
+                                </div>
+
+                                <dl class="medical_info mt25">
+                                    <dt>최근 진료 정보</dt>
+                                    <dd>
+                                        <div class="table_wrap detaile">
+                                            <div class="inner">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>진료일자</th>
+                                                            <th>질병명</th>
+                                                            <th>진료병원</th>
+                                                            <th>진료장소</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>2020-00-00</td>
+                                                            <td>우전체관부 열창</td>
+                                                            <td>서울부속병원</td>
+                                                            <td>장내진료</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="notice_box">
+                                            <ul>
+                                                <li>진료정보는 최근 10건 만 표시됩니다.</li>
+                                            </ul>
+                                        </div>
+                                    </dd>
+
+                                    <dt>최근 예방접종 정보</dt>
+                                    <dd>
+                                        <div class="table_wrap detaile">
+                                            <div class="inner">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>진료일자</th>
+                                                            <th>접종명</th>
+                                                            <th>유효기간</th>
+                                                            <th>접종병원</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>2020-00-00</td>
+                                                            <td>선택</td>
+                                                            <td>1년</td>
+                                                            <td>외부병원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+
+                                <div class="list_top mt50">
+                                    <strong class="tit">경주마 목장 안내</strong>
+                                </div>
+                                <p class="mt20">제주하늘목장은 태어난 후 6개월된 0세마를 경주마로 육성하는데 21년간의 경험과 노하우를 갖고 있습니다.<br/> 경마 대회에서 빛나는 경주마를 육성하기 위해 늘 최선을 다하고, 세심하고 꼼꼼함으로 유명합니다.</p>
+
+                                <div class="table_wrap detaile mt25">
+                                    <div class="inner">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:20%;" />
+                                                <col />
+                                                <col style="width:20%;" />
+                                                <col />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>목장명</th>
+                                                    <td>제주하늘목장</td>
+                                                    <th>설립연월</th>
+                                                    <td>2년</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>농장규모</th>
+                                                    <td>1.778㎥</td>
+                                                    <th>보유마</th>
+                                                    <td>124마리(23년기준)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>소재지</th>
+                                                    <td colspan="3">제주도 제주시 대관령면 꽃밭양지길 458-23</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
                             </div>
                         </dd>
                         <!-- //상세 내용 -->
@@ -233,8 +332,49 @@
     </div>
 
     <!-- modal -->
-    <div class="modal_wrap">
-        <div class="modal_container"></div>
+    <div class="modal_wrap app-myrace-001-1">
+        <div class="modal_container">
+            <div class="modal_header">
+                <button class="btn_close" onclick="modal.close(event);">close</button>
+            </div>
+            <div class="modal_content ac">
+                <h4>수익금 지급 안내</h4>
+                <div class="explain_box al">
+                    <p>ST Galaxia 경주마STO는 0세(6개월) 2년간 경주마를 훈련하고 관리하여 경주마로 판매를 위해 경매에 참여해요.</p>
+                    <p>경주마는 청약 운용기간(훈련/육성기간) 동안 총 2번의 경매에 참여하여 낙찰 후 낙찰된 경매가에서 발생하는 수익금을 가지고 투자지분에 따라 수익금을 나눠 드려요.</p>
+                </div>
+
+                <ul class="workflow">
+                    <li>
+                        <p>0세마<br/> 유동화</p>
+                    </li>
+                    <li>
+                        <p>청약참여<br/> 투자하기</p>
+                    </li>
+                    <li>
+                        <p>육성 및<br/> 훈련시작</p>
+                    </li>
+                    <li>
+                        <p>2차 낙찰<br/> 수익금 지급</p>
+                        <span>1세마 경매 유찰 시<br/> 2세마 경매 상장 진행</span>
+                    </li>
+                    <li>
+                        <p>1차 낙찰<br/> 수입금 지급</p>
+                    </li>
+                    <li>
+                        <p>경주마<br/> 경매참여</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="btnSection">
+                <button class="btn_confirm">
+                    <em>확인</em>
+                </button>
+            </div>
+            
+            <script>
+            </script>
+        </div>
     </div>
     <!-- //modal -->
 </body>

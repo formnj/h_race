@@ -95,7 +95,7 @@
                                     <span class="badge">
                                         <em class="ing">일반</em>
                                     </span>
-                                    <a href="./app-mygoods-005.html" class="tit"><em>[청약상품 1호]</em> 우월한 유전자 최고의 경주마</a>
+                                    <a href="./app-mygoods-006.html" class="tit"><em>[청약상품 1호]</em> 우월한 유전자 최고의 경주마</a>
                                     <div class="cont">
                                         <span class="thumb"><img src="../images/sample/sam_horse.png" /></span>
                                         <ul class="info">
@@ -144,7 +144,7 @@
                                     </div>
 
                                     <div class="btnSection mt15">
-                                        <button class="btn_mid btn_gray_r type_02"><em>청약신청</em></button>
+                                        <button class="btn_mid btn_gray_r type_02" onclick="modal.open('app-goods-001-1','type_full');"><em>청약신청</em></button>
                                     </div>
                                 </div>
                             </li>
@@ -154,7 +154,7 @@
                                     <span class="badge">
                                         <em class="wait">비례</em>
                                     </span>
-                                    <a href="./app-mygoods-005.html" class="tit"><em>[청약상품 1호]</em> 우월한 유전자 최고의 경주마</a>
+                                    <a href="./app-mygoods-006.html" class="tit"><em>[청약상품 1호]</em> 우월한 유전자 최고의 경주마</a>
                                     <div class="cont">
                                         <span class="thumb"><img src="../images/sample/sam_horse.png" /></span>
                                         <ul class="info">
@@ -210,8 +210,48 @@
     </div>
 
     <!-- modal -->
-    <div class="modal_wrap">
-        <div class="modal_container"></div>
+    <div class="modal_wrap app-goods-001-1">
+        <div class="modal_container">
+            <div class="modal_header">
+                <h3>청약 신청(공모 참여)</h3>
+                <button class="btn_close" onclick="modal.close(event);">close</button>
+            </div>
+            <div class="modal_content">
+                <ul class="bullet_list type_big">
+                    <li>본 청약상품의 달성율은 모집인원과 실제 모집인원 대비 집계로 산출됩니다.</li>
+                    <li>본 청약상품의 조각수량은 모집금액과 신청 수량 집계 후 공모 수량 초과 시 비례 배정으로 처리됩니다.</li>
+                </ul>
+
+                <dl class="goods_detail_info">
+                    <dt>현재 달성율</dt>
+                    <dd>
+                        <dl class="progress type_01">
+                            <dt>
+                                <strong>달성율 <em>50</em></strong>
+                                <span>80명 참여
+                                    <em>500 STO 남음</em>
+                                </span>
+                            </dt>
+                            <dd class="progress_wrap"><!-- 초과달성 시 "over" 클래스 추가 -->
+                                <p><em style="width:50%;"></em>
+                                    <span class="badge" style="left:14%;"><em>여유</em></span>
+                                    <span class="badge orange" style="left:24%;"><em>인기</em></span>
+                                    <span class="badge red" style="left:50%;"><em>종료임박</em></span>
+                                </p>
+                            </dd>
+                        </dl>
+                    </dd>
+                </dl>
+            </div>
+            <div class="btnSection">
+                <button class="btn_confirm">
+                    <em>내 청약신청 접수하기</em>
+                </button>
+            </div>
+            
+            <script>
+            </script>
+        </div>
     </div>
     <!-- //modal -->
 </body>
