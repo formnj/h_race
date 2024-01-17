@@ -27,7 +27,18 @@
                     <p class="explain">계좌를 빌려주는것은 범죄입니다.<br/> 미성년자도 민형사상 책임이 발생합니다.</p>
                 </h2>
 
-                <dl class="survay_list">
+                <ul class="form_group">
+                    <li>
+                        <label class="input select" id="reason">
+                            <i>금융거래 목적 선택</i>
+                            <input class="text" type="text" readonly onclick="modal.open('select_reason', 'type_bottom');">
+                            <em>error message</em>
+                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                        </label>
+                    </li>
+                </ul>
+
+                <dl class="survay_list mt50">
                     <dt>
                         <h4>타인으로 부터 계좌 대여 요청을 받은 사실이 있나요?</h4>
                     </dt>
@@ -78,8 +89,38 @@
     </div>
 
     <!-- modal -->
-    <div class="modal_wrap">
-        <div class="modal_container"></div>
+    <div class="modal_wrap select_reason">
+        <div class="modal_container">
+            <div class="modal_header">
+                <h3>금융거래 목적 선택</h3>
+                <button class="btn_close" onclick="modal.close(event);">close</button>
+            </div>
+            <div class="modal_content">
+                <ul class="option_list al">
+                    <li><button onclick="modal.close(event);">급여 및 생활비</button></li>
+                    <li><button onclick="modal.close(event);">저축 및 투자</button></li>
+                    <li><button onclick="modal.close(event);">사업상 거래</button></li>
+                    <li><button onclick="modal.close(event);">공과금 등 결제</button></li>
+                    <li><button onclick="modal.close(event);">상속 등</button></li>
+                    <li><button onclick="modal.close(event);">기타</button></li>
+                </ul>
+            </div>
+            <div class="btnSection">
+                <button class="btn_confirm" onclick="modal.close(event);">
+                    <em>확인</em>
+                </button>
+            </div>
+            
+            <script>            
+                /* 선택 통신사 전달 후 placeholder 숨김 */
+                $('.option_list > li').delegate('*', 'click', function(){
+                    console.log($(this).text())
+                    $('#reason i').hide();
+                    $('#reason input').val($(this).text());
+                });
+                /* //선택 통신사 전달 후 placeholder 숨김 */
+            </script>
+        </div>
     </div>
     <!-- //modal -->
 </body>

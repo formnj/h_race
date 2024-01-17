@@ -9,6 +9,31 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" async="" src="../js/common.js"></script>
+
+    <!-- 2024-01-10 swiper -->
+    <script src="../js/swiper.js"></script>
+    <link rel="stylesheet" href="../css/swiper.css">
+    <!-- //2024-01-10 swiper -->
+
+    <script>
+        $(document).ready(function(){
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                loop: true,
+                keyboard: {
+                    enabled: true,
+                },
+                on: {
+                    init: function () {},
+                    slideChange: function () {},
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    </script>
 </head>
 <body>
     <div id="wrap">
@@ -65,6 +90,127 @@
                                                 </ul>
                                             </dd>
                                         </dl>
+                                    </div>
+                                </div>
+
+                                <div class="horse_list mt20">
+                                    <ul>
+                                        <li class="active">
+                                            <a href="#none">
+                                                <span class="thumb"></span>
+                                                <strong>스탄로드</strong>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <span class="thumb"></span>
+                                                <strong>말이름</strong>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <span class="thumb"></span>
+                                                <strong>말이름</strong>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <span class="thumb"></span>
+                                                <strong>말이름</strong>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <span class="thumb"></span>
+                                                <strong>말이름</strong>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="horse_status">
+                                    <span>스탄로드 현재 육성후 6개월이 지났어요</span>
+                                    <div class="progress_wrap">
+                                        <div class="tit">
+                                            <strong>0세 6개월<br/>
+                                                <em>출생일 20년 12월 25일</em>
+                                            </strong>
+                                            <span>1세마 경매</span>
+                                            <span>2세마 경매</span>
+                                        </div>
+                                        <p><em style="width:24.25%;"></em>
+                                            <span class="badge left" style="left:0%;"><em>6개월</em></span>
+                                            <span class="badge light" style="left:24%;"><em>10개월</em></span>
+                                            <span class="badge right light" style="left:100%;"><em>12개월</em></span>
+                                        </p>
+                                    </div>
+                                    <p class="ac">
+                                        <a href="#none">언제 수익금이 지급 되나요?</a>
+                                    </p>
+                                </div>
+
+                                <div class="list_top mt50">
+                                    <strong class="tit">육성 사진 보기</strong>
+                                </div>
+
+                                <div class="detail_swiper type_02 mt30">
+                                    <div class="swiper-container">
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide">
+                                                <span class="thumb"><em><img src="../images/sample/sam_horse.png" /></em></span>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <span class="thumb"><em><img src="../images/sample/sam_event_banner.png" /></em></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+        
+                                    <div class="swiper-button-wrap">
+                                        <button class="swiper-button-next">다음</button>
+                                        <button class="swiper-button-prev">이전</button>
+                                    </div>
+                                </div>
+
+                                <div class="list_top mt50">
+                                    <strong class="tit">지금 건강 상태</strong>
+                                </div>
+                                <div class="table_wrap mt20">
+                                    <div class="inner">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:30%;" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>최초 나이</th>
+                                                    <td><strong>0세 6개월 24일</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>현재 나이</th>
+                                                    <td><strong>1세 0개월 12일</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>최초 체중</th>
+                                                    <td><strong>000 kg</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>현재 체중</th>
+                                                    <td><strong>000 kg</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>최초 사이드</th>
+                                                    <td><strong>1m 24cm / 89cm</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>현재 사이즈</th>
+                                                    <td><strong>1m 24cm / 89cm</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>마지막 측정일</th>
+                                                    <td><strong>2023-12-25  12:39</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
 

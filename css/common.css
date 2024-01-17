@@ -345,6 +345,10 @@ em.err {margin-top:12px; color:#F1213A; font-size:12px; display:block;}
 .progress_wrap p .badge {position:absolute; top:8px; transform:translateX(-50%);}
 .progress_wrap p .badge > em {padding:4px 12px; color:#fff; font-size:11px; background-color:#A0A3A8; border:0; border-radius:4px; box-shadow:0 2px 4px 0 rgba(0,0,0,0.4);  position:relative; z-index:1;}
 .progress_wrap p .badge:after {width:8px; height:8px; background-color:#A0A3A8; box-shadow:0 2px 4px 0 rgba(0,0,0,0.4); content:''; position:absolute; top:0; left:50%;  transform:rotate(45deg) translateX(-50%);}
+.progress_wrap p .badge.left {transform:translateX(-25%);}
+.progress_wrap p .badge.left:after {left:25%;}
+.progress_wrap p .badge.right {transform:translateX(-75%);}
+.progress_wrap p .badge.right:after {left:75%;}
 
 
 .progress_wrap.over p em {background-color:#FF7075;}
@@ -622,7 +626,7 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 /* list */
 .list_top {margin-bottom:5px; display:flex; align-items:center;}
 .list_top .fr {margin-left:auto;}
-.list_top .tit {font-size:15px; font-weight:600;}
+.list_top .tit {font-size:16px; font-weight:700;}
 
 .list_top [class*='tab_type'] {gap:24px;}
 .list_top [class*='tab_type'] > li {flex:auto;}
@@ -807,9 +811,9 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .detail_swiper .swiper-button-wrap button.swiper-button-next {transform:rotate(180deg);}
 .detail_swiper .swiper-button-wrap button:after {display:none;}
 
-.goods_detail_info .detail_swiper {padding:0 30px;}
-.goods_detail_info .detail_swiper .swiper-button-next {right:0;}
-.goods_detail_info .detail_swiper .swiper-button-prev {left:0;}
+.detail_swiper.type_02 {padding:0 30px;}
+.detail_swiper.type_02 .swiper-button-next {right:0;}
+.detail_swiper.type_02 .swiper-button-prev {left:0;}
 
 .funding_detail .tit {margin-bottom:35px; font-size:20px; display:block;}
 .funding_detail .detail_swiper {margin-bottom:42px;}
@@ -859,3 +863,16 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .horse_list li {width:20%; font-size:12px; text-align:center;}
 .horse_list li .thumb {width:42px; height:42px; margin:0 auto 8px; background-image:url('../images/sub/icon_horse.png'); background-position:0 0; background-repeat:no-repeat; background-size:42px auto; display:block;}
 .horse_list li.active .thumb {background-position:0 -50px;}
+
+dd .horse_list {padding:14px 0 16px; border:1px solid #dedede; border-right:0; border-left:0;}
+
+.horse_status {margin-top:30px;}
+.horse_status > span {margin-bottom:20px; color:#444; font-size:15px; display:block;}
+.horse_status .progress_wrap {padding:25px 20px 52px; background-color:#F8F8F8; border:1px solid #ededed; border-radius:16px;}
+.horse_status .progress_wrap .tit > * {white-space:nowrap; vertical-align:top; display:inline-block;}
+.horse_status .progress_wrap .tit strong em {font-size:11px;}
+.horse_status .progress_wrap p {margin-top:15px;}
+.horse_status .progress_wrap p .badge > em, .horse_status .progress_wrap p .badge:after {background-color:#444;}
+.horse_status .progress_wrap p .badge.light > em, .horse_status .progress_wrap p .badge.light:after {background-color:#B9B9B9;}
+.horse_status .ac a {margin-top:22px; border-bottom:1px solid #444; display:inline-flex; align-items:center;}
+.horse_status .ac a:before {width:23px; height:12px; margin-right:10px; background:url('../images/sub/icon_money.png') 0 0 no-repeat; background-size:cover; content:''; display:block;}

@@ -81,7 +81,72 @@
                             <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
                         </label>
                     </li>
+                    <!-- 추가 24-01-17 -->
+                    <li>
+                        <div class="label_wrap">
+                            <label class="input">
+                                <i>주소</i>
+                                <input type="text" value="경상북도 문경시 모리길 14(불정동)" onkeyup="input_btn_chk(this);">
+                                <em>error message</em>
+                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                            </label>
+                            <button class="btn_search" onclick="modal.open('search_address', 'type_bottom');"><em>검색</em></button>
+                        </div>
+                        <label class="input mt10">
+                            <i>주소</i>
+                            <input type="text" value="141-21" onkeyup="input_btn_chk(this);">
+                            <em>error message</em>
+                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                        </label>
+                    </li>
+                    <!-- 직업선택 -->
+                    <li>
+                        <label class="input select" id="job">
+                            <i>직업 선택</i>
+                            <input class="text" type="text" readonly onclick="modal.open('select_job', 'type_bottom');">
+                            <em>error message</em>
+                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                        </label>
+                    </li>
+                    <!-- //직업선택 -->
+                    <!-- 거래목적 -->
+                    <li>
+                        <label class="input select" id="select01">
+                            <i>거래목적</i>
+                            <input class="text" type="text" readonly onclick="modal.open('select_sample', 'type_bottom');">
+                            <em>error message</em>
+                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                        </label>
+                    </li>
+                    <!-- //거래목적 -->
+                    <!-- 자금출처선택 -->
+                    <li>
+                        <label class="input select" id="select01">
+                            <i>자금출처선택</i>
+                            <input class="text" type="text" readonly onclick="modal.open('select_sample', 'type_bottom');">
+                            <em>error message</em>
+                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                        </label>
+                    </li>
+                    <!-- //자금출처선택 -->
                 </ul>
+
+                <dl class="qna mt50">
+                    <dt>이 계좌의 자금이 본인 소유이신가요?</dt>
+                    <dd>
+                        <div class="check_group boolean">
+                            <label class="check_square">
+                                <input type="radio" name="group">
+                                <em class="label">네</em>
+                            </label>
+                            <label class="check_square">
+                                <input type="radio" name="group">
+                                <em class="label">아니오</em>
+                            </label>
+                        </div>
+                    </dd>
+                </dl>
+                <!-- //추가 24-01-17 -->
             </div>
 
             <div class="btnSection">
@@ -91,8 +156,44 @@
     </div>
 
     <!-- modal -->
-    <div class="modal_wrap">
-        <div class="modal_container"></div>
+    <div class="modal_wrap select_job">
+        <div class="modal_container">
+            <div class="modal_header">
+                <h3>직업선택</h3>
+                <button class="btn_close" onclick="modal.close(event);">close</button>
+            </div>
+            <div class="modal_content">
+                <ul class="option_list al">
+                    <li><button onclick="modal.close(event);">일반기업체</button></li>
+                    <li><button onclick="modal.close(event);">금융권</button></li>
+                    <li><button onclick="modal.close(event);">교육계</button></li>
+                    <li><button onclick="modal.close(event);">공무원</button></li>
+                    <li><button onclick="modal.close(event);">의사, 변호사</button></li>
+                    <li><button onclick="modal.close(event);">전문직</button></li>
+                    <li><button onclick="modal.close(event);">세무, 회계사</button></li>
+                    <li><button onclick="modal.close(event);">법무사, 공증인</button></li>
+                    <li><button onclick="modal.close(event);">부동산 중개인</button></li>
+                    <li><button onclick="modal.close(event);">카지노 사업자</button></li>
+                    <li><button onclick="modal.close(event);">보석, 귀금속상</button></li>
+                    <li><button onclick="modal.close(event);">미술, 골동품상</button></li>
+                    <li><button onclick="modal.close(event);">무직</button></li>
+                </ul>
+            </div>
+            <div class="btnSection">
+                <button class="btn_confirm" onclick="modal.close(event);">
+                    <em>확인</em>
+                </button>
+            </div>
+            
+            <script>            
+                /* 선택 통신사 전달 후 placeholder 숨김 */
+                $('.option_list > li').delegate('*', 'click', function(){
+                    $('#job i').hide();
+                    $('#job input').val($(this).text());
+                });
+                /* //선택 통신사 전달 후 placeholder 숨김 */
+            </script>
+        </div>
     </div>
     <!-- //modal -->
 </body>
