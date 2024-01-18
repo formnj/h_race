@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블록체인 기반 경주마 조각투자</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <p>
+                <button class="back">뒤로가기</button>
+                <strong>내 투표 및 청산내역</strong>
+            </p>
+        </header>
+        <!-- //header -->
+        <div id="container">
+            <div class="content">
+
+                <div class="tab_wrap">
+                    <ul class="tab_type_01 type_dark_02 demo">
+                        <li class="current"><button>자산매각 투표</button></li>
+                        <li><button>매각 / 청산 내역</button></li>
+                    </ul>
+                </div>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function(){
+                        const goods_item = document.querySelectorAll('.goods_list > li');
+
+                        goods_item.forEach(el => {
+                            /* progress bar 넓이값 조정 */
+                            var step = Number(el.querySelector('dt em').textContent);
+
+                            el.querySelector('.progress_wrap p em').style.width = (step/100)*100+'%';
+                            /* //progress bar 넓이값 조정 */
+                        });
+                    });
+                </script>
+
+                <ul class="goods_list type_02 mt30">
+                    <!-- loop -->
+                    <li>
+                        <div class="goods_item">
+                            <span class="badge">
+                                <em class="fin">종료</em>
+                            </span>
+                            <span class="badge">
+                                <em class="ing">진행</em>
+                            </span>
+                            <button class="tit" onclick="modal.open('app-mydvdns-003','type_full');">[청약상품 1호] 우월한 유전자 최고의 경주마</button>
+                            <div class="cont">
+                                <div>
+                                    <strong>자산매각 투표</strong>
+                                    <p>투표기간 : 2023. 11. 10 ~ 2023. 12.31(3일간)</p>
+                                </div>
+                            </div>
+                            <dl class="progress">
+                                <dt>
+                                    <strong>투표율 <em>50</em></strong>
+                                </dt>
+                                <dd class="progress_wrap">
+                                    <p><em></em></p>
+                                    <span class="explain">13명 참여 | 1,200ST 투표권 중 580ST 투표권 실행</span>
+                                </dd>
+                            </dl>
+                            <div class="survey_progress mt25">
+                                <ul>
+                                    <li class="blue" style="width:80%;">
+                                        <p></p>
+                                        <strong>찬성 80%</strong>
+                                        <span>480 ST</span>
+                                    </li>
+                                    <li class="yellow">
+                                        <p></p>
+                                        <strong>반대 20%</strong>
+                                        <span>100 ST</span>
+                                    </li>
+                                </ul>
+
+                                <strong class="status_box ing">집계중</strong><!-- 상태값 = 집계중 : ing / 가결 : fin -->
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="goods_item">
+                            <span class="badge">
+                                <em class="fin">종료</em>
+                            </span>
+                            <span class="badge">
+                                <em class="ing">진행</em>
+                            </span>
+                            <button class="tit" onclick="modal.open('app-mydvdns-003','type_full');">[청약상품 1호] 우월한 유전자 최고의 경주마</button>
+                            <div class="cont">
+                                <div>
+                                    <strong>자산매각 투표</strong>
+                                    <p>투표기간 : 2023. 11. 10 ~ 2023. 12.31(3일간)</p>
+                                </div>
+                            </div>
+                            <dl class="progress">
+                                <dt>
+                                    <strong>투표율 <em>50</em></strong>
+                                </dt>
+                                <dd class="progress_wrap">
+                                    <p><em></em></p>
+                                    <span class="explain">13명 참여 | 1,200ST 투표권 중 580ST 투표권 실행</span>
+                                </dd>
+                            </dl>
+                            <div class="survey_progress mt25">
+                                <ul>
+                                    <li class="blue" style="width:80%;">
+                                        <p></p>
+                                        <strong>찬성 80%</strong>
+                                        <span>480 ST</span>
+                                    </li>
+                                    <li class="yellow">
+                                        <p></p>
+                                        <strong>반대 20%</strong>
+                                        <span>100 ST</span>
+                                    </li>
+                                </ul>
+
+                                <strong class="status_box fin">가결</strong><!-- 상태값 = 집계중 : ing / 가결 : fin -->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal_wrap app-mydvdns-003">
+        <div class="modal_container">
+            <div class="modal_header">
+                <h3>청산투표 상세보기</h3>
+                <button class="btn_close" onclick="modal.close(event);">close</button>
+            </div>
+            <div class="modal_content">
+                <ul class="goods_list type_02">
+                    <!-- loop -->
+                    <li>
+                        <div class="goods_item">
+                            <span class="badge">
+                                <em class="fin">종료</em>
+                            </span>
+                            <span class="badge">
+                                <em class="ing">진행</em>
+                            </span>
+                            <strong class="tit">[청약상품 1호] 우월한 유전자 최고의 경주마</strong>
+                            <div class="cont">
+                                <div>
+                                    <strong>자산매각 투표</strong>
+                                    <p>투표기간 : 2023. 11. 10 ~ 2023. 12.31(3일간)</p>
+                                </div>
+                            </div>
+                            <dl class="progress">
+                                <dt>
+                                    <strong>투표율 <em>50</em></strong>
+                                </dt>
+                                <dd class="progress_wrap">
+                                    <p><em></em></p>
+                                    <span class="explain">13명 참여 | 1,200ST 투표권 중 580ST 투표권 실행</span>
+                                </dd>
+                            </dl>
+                            <div class="survey_progress mt25">
+                                <ul>
+                                    <li class="blue" style="width:80%;">
+                                        <p></p>
+                                        <strong>찬성 80%</strong>
+                                        <span>480 ST</span>
+                                    </li>
+                                    <li class="yellow">
+                                        <p></p>
+                                        <strong>반대 20%</strong>
+                                        <span>100 ST</span>
+                                    </li>
+                                </ul>
+
+                                <strong class="status_box ing">집계중</strong><!-- 상태값 = 집계중 : ing / 가결 : fin -->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <dl class="detail_subscript mt50">
+                    <dt>투표 안내</dt>
+                    <dd>
+                        <p>[청약상품02호] 스탄로드 경주마 자산매각에 대한 투표를 진행합니다. 스탄로드는 [청약상품02호] 구성 육성마로 청산 후 [청약상품02호]의 나머지 경주마로 계속 운용됩니다.</p>
+                        <ol class="type_num mt20">
+                            <li>청산 대상 : [청약상품02호] 스탄로드</li>
+                            <li>매각/청산 투표 안건 분류 : 경주마 자산의 청산</li>
+                            <li>매각/청산 투표 참여 대상 : [청약상품02호]의 조각 수량을 보유한 모든 투자자</li>
+                            <li>매각/청산 투표 안건 사유 : <span class="txt_blue">[청약상품02호] 경주마(스탄로드)의 가치상승으로 1억원 이상(부가가치세 별도)의 금액으로 청산 절차를 개시하는 것에 대한 동의 여부를 확인하기 위함</span></li>
+                            <li>매각/청산 투표 방법 : ST Galaxia 모바일앱을 통한 전자투표</li>
+                        </ol>
+                    </dd>
+
+                    <dt class="mt45">관련문서</dt>
+                    <dd class="list_wrap mt0">
+                        <ul class="type_board">
+                            <!-- loop -->
+                            <li>
+                                <a href="javascript:void(0);" onclick="modal.open('app-mydvdns-003-1', 'type_full');">
+                                    <span class="tit">수익자총회 개최 안내문</span>
+                                </a>
+                            </li>
+                            <!-- //loop -->
+                            <li>
+                                <a href="javascript:void(0);" onclick="modal.open('app-mydvdns-003-1', 'type_full');">
+                                    <span class="tit">결과 안내문</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" onclick="modal.open('app-mydvdns-003-1', 'type_full');">
+                                    <span class="tit">청산 안내문</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" onclick="modal.open('app-mydvdns-003-1', 'type_full');">
+                                    <span class="tit">기타</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <div class="btnSection mt40">
+                    <button class="btn_big btn_confirm type_r" onclick="modal.open('app-mydvdns-004','type_alert')"><em>투표하기</em></button>
+                </div>
+            </div>
+            
+            <script>
+            </script>
+        </div>
+    </div>
+
+    <div class="modal_wrap app-mydvdns-003-1"><!-- 관련문서 팝업-->
+        <div class="modal_container">
+            <div class="modal_header">
+                <h3>개최 안내문</h3>
+                <button class="btn_close" onclick="modal.close(event);">close</button>
+            </div>
+            <div class="modal_content">
+                <div class="board_detail_wrap type_viewer">
+                    <div class="title_wrap">
+                        <p class="tit">[청약상품01호] 스탄로드의 멋진 경마 대회 여정</p>
+                    </div>
+                    <div class="board_cont">
+                        <p>2023년 10월 23일  |  공시</p>
+                    </div>
+                </div>
+            </div>
+            <div class="btnSection">
+                <button class="btn_confirm"><em>PDF 다운로드 받기</em></button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal_wrap app-mydvdns-004"><!-- 투표하기 팝업-->
+        <div class="modal_container">
+            <div class="modal_header">
+                <button class="btn_close" onclick="modal.close(event);">close</button>
+            </div>
+            <div class="modal_content">
+                <h4 class="ac">보유하신 투표권을 사용하여<br/> 찬성/반대 의결권을 행사해 주세요.</h4>
+
+                <ul class="form_group mt50">
+                    <li>
+                        <p class="form_tit">보유 투표권</p>
+                        <p class="sandwitch_border">의결권 42개(42 ST)</p>
+                    </li>
+                    <li>
+                        <p class="form_tit">찬성 / 반대 선택</p>
+                        <div class="check_group boolean">
+                            <label class="check_square">
+                                <input type="radio" name="group">
+                                <em class="label">찬성</em>
+                            </label>
+                            <label class="check_square">
+                                <input type="radio" name="group">
+                                <em class="label">반대</em>
+                            </label>
+                        </div>                   
+                    </li>
+                </ul>
+            </div>
+            <div class="btnSection">
+                <button class="btn_confirm" onclick="modal.open('app-mydvdns-004-1','type_alert')"><em>투표완료</em></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal_wrap app-mydvdns-004-1"><!-- 투표하기 완료 팝업-->
+        <div class="modal_container">
+            <div class="modal_header">
+                <button class="btn_close" onclick="modal.close(event);">close</button>
+            </div>
+            <div class="modal_content ac">
+                <h4>투표권 행사가 완료되었습니다.</h4>
+                <p class="txt_cont">투표에 참여해 주셔서 감사합니다. </p>
+            </div>
+            <div class="btnSection">
+                <button class="btn_confirm" onclick="modal.close(event);"><em>투표 첫화면으로</em></button>
+            </div>
+        </div>
+    </div>
+    <!-- //modal -->
+</body>
+</html>

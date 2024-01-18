@@ -338,11 +338,6 @@ $(document).ready(function(){
             note:'',
             sDate:'2024-01-15', eDate:'2024-01-16'
         },{
-            depth:['','','청약상품 수익금 내역',''],
-            id:'app-mygoods-007', status:'com',
-            note:'',
-            sDate:'2024-01-17', eDate:'2024-01-17'
-        },{
             depth:['','','청약상품 중도해지','중도해지 신청안내'],
             id:'app-mygoods-008', status:'com',
             note:'',
@@ -350,7 +345,7 @@ $(document).ready(function(){
         },{
             depth:['','내 경주마 경주현황','경주참여 결과','참여결과 및 경주일정'],
             id:'app-myrace-001', status:'com',
-            note:'수익금 지급 안내 팝업',
+            note:'수익금 지급 안내 팝업, 디자인에 없는 탭 "경주참여 결과 / 일정" 추가',
             sDate:'2024-01-15', eDate:'2024-01-15'
         },{
             depth:['','','','내 청약상품 목록-경주성적_마별'],
@@ -369,24 +364,29 @@ $(document).ready(function(){
             sDate:'', eDate:''
         },{
             depth:['','내 청약상품 배당내역','청약상품 배당내역','우숭상금/자산매각 배당'],
-            id:'app-mydvdns-001', status:'',
+            id:'app-mydvdns-001', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-17', eDate:'2024-01-17'
         },{
             depth:['','내 투표 및 청산내역','청산투표','청산투표 목록'],
-            id:'app-mydvdns-002', status:'',
+            id:'app-mydvdns-002', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-18', eDate:'2024-01-18'
         },{
             depth:['','','','청산투표 상세보기'],
-            id:'app-mydvdns-003', status:'',
-            note:'',
-            sDate:'', eDate:''
+            id:'app-mydvdns-003', status:'ing',
+            type:'modal', note:'app-mydvdns-002 [상품 제목]클릭 시 팝업 노출',
+            sDate:'2024-01-18', eDate:'2024-01-18'
+        },{
+            depth:['','','','관련문서보기'],
+            id:'app-mydvdns-003-1', status:'ing',
+            type:'modal', note:'청산투표 상세보기 > 관련문서 [문서 제목]클릭 시 팝업 노출',
+            sDate:'2024-01-18', eDate:'2024-01-18'
         },{
             depth:['','','','청산투표 투표하기'],
-            id:'app-mydvdns-004', status:'',
-            note:'',
-            sDate:'', eDate:''
+            id:'app-mydvdns-004', status:'ing',
+            type:'modal', note:'app-mydvdns-002 [투표하기]클릭 시 팝업 노출',
+            sDate:'2024-01-18', eDate:'2024-01-18'
         },{
             depth:['','','청산내역','청산내역 목록'],
             id:'app-mydvdns-005', status:'',
@@ -407,8 +407,13 @@ $(document).ready(function(){
         {
             depth:['펀딩','메인','',''],
             id:'app-goods-001', status:'com',
-            note:'',
+            note:'청약신청(공모참여) 팝업 추가[app-goodsApply-001](2024-01-18)',
             sDate:'2024-01-16', eDate:'2024-01-16'
+        },{
+            depth:['','청약신청','',''],
+            id:'app-goodsApply-001', status:'',
+            type:'modal', note:'app-goods-001 [참여하기] 클릭 시 노출',
+            sDate:'2024-01-17', eDate:'2024-01-18'
         },
 
         {

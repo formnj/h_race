@@ -144,7 +144,7 @@
                                     </div>
 
                                     <div class="btnSection mt15">
-                                        <button class="btn_mid btn_gray_r type_02" onclick="modal.open('app-goods-001-1','type_full');"><em>청약신청</em></button>
+                                        <button class="btn_mid btn_gray_r type_02" onclick="modal.open('app-goodsApply-001','type_full');"><em>청약신청</em></button>
                                     </div>
                                 </div>
                             </li>
@@ -210,21 +210,24 @@
     </div>
 
     <!-- modal -->
-    <div class="modal_wrap app-goods-001-1">
+    <div class="modal_wrap app-goodsApply-001">
         <div class="modal_container">
             <div class="modal_header">
                 <h3>청약 신청(공모 참여)</h3>
                 <button class="btn_close" onclick="modal.close(event);">close</button>
             </div>
             <div class="modal_content">
-                <ul class="bullet_list type_big">
-                    <li>본 청약상품의 달성율은 모집인원과 실제 모집인원 대비 집계로 산출됩니다.</li>
-                    <li>본 청약상품의 조각수량은 모집금액과 신청 수량 집계 후 공모 수량 초과 시 비례 배정으로 처리됩니다.</li>
-                </ul>
+                <dl class="apply_wrap">
+                    <dt><strong>[청약상품 1호]<br/> 우월한 유전자 최고의 육성마</strong></dt>
+                    <dd>                
+                        <ul class="bullet_list type_big">
+                            <li>본 청약상품의 달성율은 모집인원과 실제 모집인원 대비 집계로 산출됩니다.</li>
+                            <li>본 청약상품의 조각수량은 모집금액과 신청 수량 집계 후 공모 수량 초과 시 비례 배정으로 처리됩니다.</li>
+                        </ul>
+                    </dd>
 
-                <dl class="goods_detail_info">
                     <dt>현재 달성율</dt>
-                    <dd>
+                    <dd class="goods_detail_info">
                         <dl class="progress type_01">
                             <dt>
                                 <strong>달성율 <em>50</em></strong>
@@ -240,6 +243,128 @@
                                 </p>
                             </dd>
                         </dl>
+
+                        <div class="status_board type_02 mt20">
+                            <dl>
+                                <dt>발행 조각 수량</dt>
+                                <dd>0,000,000 STO</dd>
+                            </dl>
+                            <dl>
+                                <dt>남은 조각 수량</dt>
+                                <dd>18,000,000 STO</dd>
+                            </dl>
+                            <dl>
+                                <dt>현재 참여 인원</dt>
+                                <dd>18,000,000명</dd>
+                            </dl>
+                            <dl>
+                                <dt>비례 배정 여부</dt>
+                                <dd>청약수량 초과 시</dd>
+                            </dl>
+                        </div>
+                    </dd>
+
+                    <dt>MY 청약 신청</dt>
+                    <dd class="goods_detail_info">
+                        <div class="info_box_01">
+                            <p class="info_account">
+                                <em>신한투자증권</em>
+                                <span>1234-12345-123456</span>
+                                <button class="btn_copy">copy</button>
+                            </p>
+                            <ul class="info_02">
+                                <li>
+                                    <span>보유 예수금</span>
+                                    <strong>10,000,000 원</strong>
+                                </li>
+                                <li>
+                                    <span>남은 투자한도</span>
+                                    <strong>12,000,000 원</strong>
+                                </li>
+                            </ul>
+                            <p class="mt20 ar"><!-- type_01 : 소득적격투자자 / type_02 : 전문투자자 / type_03 : 일반투자자 -->
+                                <span class="badge"><em class="type_01">소득적격투자자</em></span>
+                                <span class="badge"><em class="type_02">전문투자자</em></span>
+                                <span class="badge"><em class="type_03">일반투자자</em></span>
+                            </p>
+                        </div>
+                    </dd>
+                </dl>
+
+                <dl class="detail_subscript mt25">
+                    <dt>청약 신청 금액 설정</dt>
+                    <dd class="mt15">
+                        <ul class="bullet_list">
+                            <li>청약 신청할 조각 수량을 기입해주세요.</li>
+                            <li>청약 신청 후 공모 수량 초과 시 비례 배정으로 처리됩니다.</li>
+                        </ul>
+                    </dd>
+
+                    <dt>조각당 청약 금액</dt>
+                    <dd class="mt15">
+                        <ul class="bullet_list">
+                            <li>총 발행수량 : <strong>2,000 STO</strong></li>
+                            <li>총 모집금액 : <strong>45,000,000원(4천5백만원)</strong></li>
+                        </ul>
+                        <p class="ratio mt25">1 STO = 22,500원</p>
+                    </dd>
+
+                    <dt>신청할 조각 수량</dt>
+                    <dd class="tab_wrap">
+                        <ul class="tab_type_01 type_dark">
+                            <li class="current"><button>수량으로 입력</button></li>
+                            <li><button>금액으로 입력</button></li>
+                        </ul>
+                        <div class="tab_content">
+                            <div class="current">
+                                <div class="price">
+                                    <p>
+                                        <label class="input">
+                                            <i></i>
+                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                        </label>
+                                        STO
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <a href="#none" class="btn_text underline">초기화</a>
+                                        </li>
+                                        <li>
+                                            <a href="#none" class="btn_text underline">자동입력(가)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="price">
+                                    <p>
+                                        <label class="input">
+                                            <i></i>
+                                            <input type="text" onkeyup="input_btn_chk(this);">
+                                            <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                        </label>
+                                        원
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <a href="#none" class="btn_text underline">초기화</a>
+                                        </li>
+                                        <li>
+                                            <a href="#none" class="btn_text underline">자동입력(가)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>        
+                    </dd>
+
+                    <dt>청약신청 최종 금액</dt>
+                    <dd>
+                        <div class="price">
+                            <p>100,000원</p>
+                        </div>
+                        <p class="mt25">청약신청 후 예상 잔고 : 000,000원</p>
                     </dd>
                 </dl>
             </div>
