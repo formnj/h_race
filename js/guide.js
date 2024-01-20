@@ -65,6 +65,46 @@ $(document).ready(function(){
             id:'preload_modal', status:'com',
             type:'modal', note:'',
             sDate:'2024-01-08', eDate:'2024-01-08'
+        },{
+            depth:['','알림내역','',''],
+            id:'app-alarm', status:'com',
+            type:'', note:'[알림없음(main_no-data)]는 display:none 처리해두었습니다.',
+            sDate:'2024-01-20', eDate:'2024-01-20'
+        },{
+            depth:['','연결중','',''],
+            id:'app-common-001', status:'com',
+            type:'', note:'공통 화면 SB 순서로 app-common-001~ 로 진행합니다.',
+            sDate:'2024-01-20', eDate:'2024-01-20'
+        },{
+            depth:['','연결오류','',''],
+            id:'app-common-002', status:'com',
+            type:'', note:'',
+            sDate:'2024-01-20', eDate:'2024-01-20'
+        },{
+            depth:['','네트워크 오류','',''],
+            id:'app-common-003', status:'com',
+            type:'', note:'',
+            sDate:'2024-01-20', eDate:'2024-01-20'
+        },{
+            depth:['','페이지 찾을 수 없음','',''],
+            id:'app-common-004', status:'com',
+            type:'', note:'',
+            sDate:'2024-01-20', eDate:'2024-01-20'
+        },{
+            depth:['','접속지연','',''],
+            id:'app-common-005', status:'com',
+            type:'', note:'',
+            sDate:'2024-01-20', eDate:'2024-01-20'
+        },{
+            depth:['','접근 권한 허용','',''],
+            id:'app-common-006', status:'com',
+            type:'', note:'',
+            sDate:'2024-01-20', eDate:'2024-01-20'
+        },{
+            depth:['','신청결과 안내','',''],
+            id:'app-common-007', status:'com',
+            type:'', note:'[승인/거절] 구분을 위해 폰트 색상차를 적용하였습니다. 디자인안대로 수정 필요하시면 말씀주세요.',
+            sDate:'2024-01-20', eDate:'2024-01-20'
         },
 
         {
@@ -113,9 +153,9 @@ $(document).ready(function(){
         
         {
             depth:['메인','','',''],
-            id:'app-main-001', status:'',
+            id:'app-main-001', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-20', eDate:'2024-01-20'
         },
         
         {

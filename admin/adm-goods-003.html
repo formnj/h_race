@@ -357,16 +357,18 @@
                                 <!-- loop -->
                                 <div class="def_info_wrap">
                                     <!-- swiper 이미지 영역 -->
-                                    <div class="img_area swiper-container">
-                                        <ul class="swiper-wrapper">
-                                            <li class="swiper-slide">
-                                                <span class="thumb"><img src="../images/sample/sam_horse.png" /></span>
-                                            </li>
-                                        </ul>
+                                    <div class="img_area">
+                                        <div class="swiper-container">
+                                            <ul class="swiper-wrapper">
+                                                <li class="swiper-slide">
+                                                    <span class="thumb"><img src="../images/sample/sam_horse.png" /></span>
+                                                </li>
+                                            </ul>
 
-                                        <div class="swiper-button-wrap">
-                                            <button class="swiper-button-next">다음</button>
-                                            <button class="swiper-button-prev">이전</button>
+                                            <div class="swiper-button-wrap">
+                                                <button class="swiper-button-next">다음</button>
+                                                <button class="swiper-button-prev">이전</button>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- //swiper 이미지 영역 -->
@@ -424,16 +426,19 @@
                                 <!-- //loop -->
                                 <div class="def_info_wrap">
                                     <!-- swiper 이미지 영역 -->
-                                    <div class="img_area swiper-container">
-                                        <ul class="swiper-wrapper">
-                                            <li class="swiper-slide">
-                                                <span class="thumb"><img src="../images/sample/sam_horse.png" /></span>
-                                            </li>
-                                        </ul>
+                                    <div class="img_area">
 
-                                        <div class="swiper-button-wrap">
-                                            <button class="swiper-button-next">다음</button>
-                                            <button class="swiper-button-prev">이전</button>
+                                        <div class="swiper-container">
+                                            <ul class="swiper-wrapper">
+                                                <li class="swiper-slide">
+                                                    <span class="thumb"><img src="../images/sample/sam_horse.png" /></span>
+                                                </li>
+                                            </ul>
+
+                                            <div class="swiper-button-wrap">
+                                                <button class="swiper-button-next">다음</button>
+                                                <button class="swiper-button-prev">이전</button>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- //swiper 이미지 영역 -->
@@ -488,6 +493,79 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- del 2024-01-20 -->
+                                <div class="def_info_wrap">
+                                    <div class="img_area">
+                                            <!-- swiper 이미지 영역 -->
+                                        <div class="swiper-container">
+                                            <ul class="swiper-wrapper">
+                                                <li class="swiper-slide">
+                                                    <span class="thumb"><img src="../images/sample/sam_horse.png" /></span>
+                                                </li>
+                                            </ul>
+
+                                            <div class="swiper-button-wrap">
+                                                <button class="swiper-button-next">다음</button>
+                                                <button class="swiper-button-prev">이전</button>
+                                            </div>
+                                        </div>
+                                        <!-- //swiper 이미지 영역 -->
+
+                                        <button class="btn_mid btn_cancel btn_del_03"><em>입력란 제거</em></button>
+                                    </div>
+
+                                    <div class="info_area">
+                                        <div class="table_wrap detaile">
+                                            <div class="inner">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width:37%;" />
+                                                        <col />
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>마번</th>
+                                                            <td>1411965</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>마이크로칩</th>
+                                                            <td>410-0998-0002-1181</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>마명(한글$영문)</th>
+                                                            <td>가나파워 GANA POWER</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>소유주</th>
+                                                            <td>갤럭시아 머니트리</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>소재지</th>
+                                                            <td>서울경마공원(0T1001)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>생산자</th>
+                                                            <td>한라농축영농조합법인(215422)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>기초자산(가)</th>
+                                                            <td> 10,000,000원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>보관장소</th>
+                                                            <td>렛츠런 파크</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>보관위치</th>
+                                                            <td>경상북도 경주군 경남로 4길 2-1 ABC마방</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //del 2024-01-24 -->
                             </div>
 
                             <div class="multi_form ac mt30">
@@ -527,7 +605,7 @@
                                 <li>
                                     <div class="label_wrap">
                                         <label class="input">
-                                            <i>Placeholder</i>
+                                            <i>마명, 마번 입력</i>
                                             <input class="password" type="text" onkeyup="input_btn_chk(this);">
                                             <em>error message</em>
                                             <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
@@ -538,6 +616,27 @@
                             </ul>
                         </div>
                     </section>
+
+                    <!-- add 2024-01-20 -->
+                    <section class="search_wrap">
+                        <div class="inner">
+                            <ul class="file_list">
+                                <li>
+                                    <div>
+                                        <span>청약약관.pdf</span>
+                                        <button class="btn_del"><em>삭제</em></button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <span>주민등록증.jpg</span>
+                                        <button class="btn_del"><em>삭제</em></button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-- //add 2024-01-20 -->
 
                     <div class="table_wrap detaile"><!-- Edit 2024-01-05 table scroll 필요 시 scroll 클래스 추가 -->
                         <div class="inner">

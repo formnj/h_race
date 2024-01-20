@@ -60,11 +60,6 @@ header .btn_open:before {width:9px; height:9px; margin-left:2px; border:2px soli
 footer {padding:10px 20px; color:#fff; font-size:13px; font-weight:400; background-color:#40454f; text-align:center; position:fixed; right:0; bottom:0; left:253px; z-index:100; transition:left 0.25s; display:none;}
 /* //footer */
 
-/* width */
-.w_150 {width:150px;}
-.w_350 {width:350px;}
-.full {width:100%;}
-
 #container {min-height:calc(100vh - 122px); padding-top:38px !important; margin-left:253px; padding:30px 30px 50px; transition:margin 0.25s;}
 #container:has(.login_wrap) {height:100vh; margin:0; padding:0 !important; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:30px;}
 .copyright {color:#888; font-size:12px;}
@@ -301,6 +296,9 @@ section.search_wrap dd + dt {margin-left:40px;}
 .btn_del_02 {width:26px; height:26px; font-size:0; background:url('../images/admin/icon_del_02.png') 0 0 no-repeat; background-size:cover; display:inline-block;}
 .btn_add_02 {width:26px; height:26px; font-size:0; background:url('../images/admin/icon_add_02.png') 0 0 no-repeat; background-size:cover; display:inline-block;}
 
+.btn_del_03 em {display:flex; align-items:center;}
+.btn_del_03 em:after {width:26px; height:26px; margin-left:5px; background:url('../images/admin/icon_del_02.png') no-repeat center center / 100% auto; content:''; display:block;}
+
 .detail_cont {text-align:justify;}
 .detail_cont h3 {padding-bottom:20px; color:#141824; font-size:18px; font-weight:700; border-bottom:1px solid #e3e6ed;}
 .detail_cont * {margin:initial; padding:initial; list-style:initial;}
@@ -379,7 +377,8 @@ section.search_wrap dd + dt {margin-left:40px;}
 
 .def_info_wrap {display:flex; gap:20px;}
 .def_info_wrap + .def_info_wrap {margin-top:-1px; border-top:1px solid #EEEBE9;}
-.def_info_wrap .img_area {width:29.34%; max-width:468px; flex-shrink:0;}
+.def_info_wrap .img_area {width:29.34%; max-width:468px; text-align:center; flex-shrink:0;}
+.def_info_wrap .img_area .swiper-container {height:80%;}
 .def_info_wrap .img_area li {overflow:hidden; text-align:center; position:relative;}
 .def_info_wrap .img_area .thumb {position:absolute; top:0; right:50px; bottom:0; left:50px; display:flex; align-items:center;}
 .def_info_wrap .img_area .thumb img {width:100%; max-width:initial;}

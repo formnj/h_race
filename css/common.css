@@ -40,6 +40,11 @@ h2 {margin-bottom:42px; font-size:21px; line-height:1.43em; font-weight:600;}
 h2 .explain {margin-top:10px; color:#666; font-size:12px; line-height:1.66em;}
 h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 
+/* width */
+.w_150 {width:150px;}
+.w_350 {width:350px;}
+.full {width:100%;}
+
 /* color */
 .txt_blue {color:#1D9ADD !important;}
 .txt_red {color:#EE1045 !important;}
@@ -65,6 +70,7 @@ h4 {margin-bottom:22px; font-size:16px; font-weight:600;}
 .mt40 {margin-top:40px !important;}
 .mt45 {margin-top:45px !important;}
 .mt50 {margin-top:50px !important;}
+.mt65 {margin-top:65px !important;}
 .mb20 {margin-bottom:20px !important;}
 .mb30 {margin-bottom:30px !important;}
 .mb50 {margin-bottom:50px !important;}
@@ -242,14 +248,62 @@ ol.type_num > li:before {content:'1.'; position:absolute; top:0; left:0; display
 
 .thumb img {display:block;}
 
+/* main */
+.main_visual {padding-bottom:20px; position:relative;}
+.main_visual .swiper-container {border-radius:16px;}
+.main_visual .swiper-pagination {width:100%; bottom:0; display:flex; align-items:end; justify-content:center; gap:4px;}
+.main_visual .swiper-pagination-bullet {width:6px; height:6px;}
+
+.main_banner {display:flex; gap:12px;}
+.main_banner li {width:50%; text-align:center;}
+.main_banner a {padding:27px 20px; color:#444; font-size:12px; background-color:#f7f7f7; border-radius:16px; display:flex; flex-direction:column; align-items:center; justify-content:space-between;}
+.main_banner span {display:inline-flex; align-items:center;}
+.main_banner span:before {width:15px; height:15px; margin-right:6px; background:url('../images/main/icon_feeling.png') 0 0 no-repeat; background-size:cover; content:''; display:block;}
+.main_banner strong {margin-top:14px; color:#222; font-size:17px; font-weight:600;}
+.main_banner em {color:#21AAA6;}
+
+.main_quick {display:flex; flex-wrap:wrap;}
+.main_quick li {width:33.3333%;}
+.main_quick a {height:100%; padding:12px; display:flex; flex-direction:column; align-items:center; justify-content:space-between;}
+
+.main_board {position:relative;}
+.main_board:before {margin:32px auto; border-top:1px solid #f5f2f2; content:''; display:block;}
+.main_board .btn_more {padding-right:14px; color:#666; font-size:12px; position:absolute; top:45px; right:0;}
+.main_board .btn_more:before, .main_board .btn_more:after {width:10px; margin-top:-2px; border-top:1px solid #aaa; content:''; position:absolute; top:50%; right:0; display:block;}
+.main_board .btn_more:after {transform:rotate(90deg);}
+.main_board .tab_type {display:inline-flex; gap:8px;}
+.main_board .tab_type li > * {width:100px; height:42px; color:#444; font-size:15px; border:1px solid #959DA5; border-radius:42px; display:flex; align-items:center; justify-content:center;}
+.main_board .tab_type li.current > * {color:#fff; font-weight:600; background-color:#7E8083; border-color:#7E8083;}
+.main_board .board_list a {padding:8px 0 8px 25px; color:#333; display:block; position:relative;}
+.main_board .board_list a:before {width:4px; height:4px; background-color:#dedede; border-radius:50px; content:''; position:absolute; top:15px; left:5px; display:block;}
+/* //main */
+
 /* 간편비밀번호, 생체인증, DID발급 레이아웃 */
 .except_layout {height:100%; text-align:center; display:flex; flex-direction:column; justify-content:space-between;}
-.except_layout h2 {margin-top:96px; margin-bottom:0; font-size:24px; font-weight:500; line-height:36px;}
+.except_layout h2 {margin-top:96px; margin-bottom:0; font-size:24px; font-weight:600; line-height:36px;}
 .except_layout h2 p {margin-top:34px; font-size:14px; font-weight:400; line-height:20px;}
 .except_layout .explain {color:#666; font-size:15px; line-height:24px;}
 
 .except_layout section:nth-last-of-type(1) {padding-bottom:30px;}
 .except_layout section:nth-last-of-type(1):has(.sec_keypad) {padding-bottom:0;}
+
+.except_layout.connect_wrap {text-align:center;}
+.except_layout.connect_wrap .txt_cont p {margin-top:33px;}
+.except_layout.connect_wrap .err_msg:before {width:157px; height:43px; margin:0 auto; background:url('../images/main/icon_err_connect.png') 0 0 no-repeat; background-size:cover; content:''; display:block;}
+.except_layout.connect_wrap .err_msg_02.type_01:before {width:56px; height:64px; margin:0 auto 67px; background:url('../images/main/icon_err_antena.png') 0 0 no-repeat; background-size:cover; content:''; display:block; transform:translateX(10px);}
+.except_layout.connect_wrap .err_msg_02.type_02:before {width:78px; height:78px; margin:0 auto 11px; background:url('../images/main/icon_warning.png') 0 0 no-repeat; background-size:cover; content:''; display:block;}
+.except_layout.connect_wrap .err_msg_02 > * {display:block;}
+.except_layout.connect_wrap .err_msg_02 strong {margin-bottom:27px; font-size:18px; font-weight:400;}
+.except_layout.connect_wrap .err_msg_02.type_02 strong {margin-top:11px; margin-bottom:43px; font-size:20px; font-weight:500; line-height:1.5em;}
+.except_layout.connect_wrap .err_msg_02 p {color:#666;}
+.except_layout.connect_wrap .err_msg_02 p + p {margin-top:25px;}
+
+.access_wrap {margin-top:46px;}
+.access_wrap dt {padding-top:25px; font-size:18px; font-weight:700; border-top:1px solid #eee;}
+.access_wrap dd {margin-top:25px; font-size:16px;}
+.access_wrap dd + dt {margin-top:25px;}
+.access_wrap strong {font-weight:600;}
+.access_wrap p {margin-top:5px; color:#444;}
 
 .bio_mark {width:112px; height:112px; font-size:0; border:1px solid #E4E4E4; border-radius:50%; box-shadow:-2px -2px 5px 0 rgba(0,0,0,0.08); position:relative; display:inline-block}
 .bio_mark:before {width:65px; height:65px; background-image:url('../images/common/icon_finger.png'); background-position:0 0; background-repeat:no-repeat; background-size:110px auto; content:''; position:absolute; top:50%; left:50%; display:block; transform:translate(-50%, -50%);}
@@ -653,11 +707,18 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 
 /* list */
 .list_top {margin-bottom:5px; display:flex; align-items:center;}
+.list_top.ar {justify-content:end;}
 .list_top .fr {margin-left:auto;}
 .list_top .tit {font-size:16px; font-weight:700;}
 
 .list_top [class*='tab_type'] {gap:24px;}
 .list_top [class*='tab_type'] > li {flex:auto;}
+
+.list_top.type_alarm > * + * {margin-left:6px;}
+.list_top .btn_round_gray_01 {border:1px solid #444; border-radius:100px;}
+.list_top .btn_round_gray_01 em {padding:10px 11px 9px; font-size:13px; font-weight:600;}
+.list_top .btn_round_gray_02 {border:1px solid #C0C0C0; border-radius:100px;}
+.list_top .btn_round_gray_02 em {padding:10px 11px 9px; font-size:13px; font-weight:400;}
 
 .list_wrap .type_table > li {width:100%; border-bottom:1px solid #EEEEEE; display:table;}
 .list_wrap .type_table > li + li {margin-top:20px;}
@@ -676,6 +737,15 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .list_wrap .type_board.type_status > li {padding:20px 0;}
 .list_wrap .type_board.type_status > li:after {display:none;}
 .list_wrap .type_board.type_status > * .tit {display:flex; justify-content:space-between;}
+
+.list_wrap .type_board.type_alarm {border-top:1px solid #eee;}
+.list_wrap .type_board.type_alarm > li {padding-right:10px;}
+.list_wrap .type_board.type_alarm > li.noti {background-color:#F1FBFB;}
+.list_wrap .type_board.type_alarm > li:after {display:none;}
+.list_wrap .type_board.type_alarm > li > * {padding-right:75px; padding-left:36px; font-size:15px; position:relative; display:block;}
+.list_wrap .type_board.type_alarm > li.noti > * {font-weight:600;}
+.list_wrap .type_board.type_alarm > li.noti > *:before {width:16px; height:16px; color:#fff; font-size:11px; font-weight:600; background-color:#F04E1B; border-radius:50%; content:'n'; position:absolute; top:2px; left:10px; display:flex; align-items:center; justify-content:center;}
+.list_wrap .type_board.type_alarm > li em {color:#888; font-size:12px; font-weight:400; line-height:1.42em; text-align:right; position:absolute; top:2px; right:0; display:inline-block;}
 
 .list_wrap .accordion > dt {position:relative;}
 .list_wrap .accordion > dt:after {width:24px; height:24px; font-size:0; background-image:url('../images/common/icon_sprit.png'); background-position:-150px -90px; background-repeat:no-repeat; background-size:250px auto; content:''; position:absolute; top:20px; right:4px; display:block; transform:rotate(90deg); transition:transform 0.25s;}
@@ -967,3 +1037,5 @@ dd .horse_list {padding:14px 0 16px; border:1px solid #dedede; border-right:0; b
 .survey_progress .status_box.fin {color:#888; background-color:#EDEDED; border-color:#EDEDED;}
 
 .sandwitch_border {padding:18px 10px; color:#2174f5; font-size:18px; font-weight:500; border:1px solid #eee; border-right:0; border-left:0; text-align:center;}
+
+.main_no_data {width:100%; text-align:center; position:fixed; top:50%; left:0; transform:translateY(-50%);}
