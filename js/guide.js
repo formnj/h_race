@@ -1,6 +1,13 @@
 $(document).ready(function(){
     var page_arry = [
         {
+            depth:['서비스 가이드','','',''],
+            id:'service-guide', status:'com',
+            type:'', note:'',
+            sDate:'2024-01-20', eDate:'2024-01-20'
+        },
+
+        {
             depth:['공통','간편비밃너호 설정 완료','',''],
             id:'app-password-002-1', status:'com',
             type:'modal', note:'',
