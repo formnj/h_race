@@ -374,33 +374,33 @@ $(document).ready(function(){
             sDate:'2024-01-18', eDate:'2024-01-18'
         },{
             depth:['','','','청산투표 상세보기'],
-            id:'app-mydvdns-003', status:'ing',
+            id:'app-mydvdns-003', status:'com',
             type:'modal', note:'app-mydvdns-002 [상품 제목]클릭 시 팝업 노출',
             sDate:'2024-01-18', eDate:'2024-01-18'
         },{
             depth:['','','','관련문서보기'],
-            id:'app-mydvdns-003-1', status:'ing',
+            id:'app-mydvdns-003-1', status:'com',
             type:'modal', note:'청산투표 상세보기 > 관련문서 [문서 제목]클릭 시 팝업 노출',
             sDate:'2024-01-18', eDate:'2024-01-18'
         },{
             depth:['','','','청산투표 투표하기'],
-            id:'app-mydvdns-004', status:'ing',
+            id:'app-mydvdns-004', status:'com',
             type:'modal', note:'app-mydvdns-002 [투표하기]클릭 시 팝업 노출',
             sDate:'2024-01-18', eDate:'2024-01-18'
         },{
             depth:['','','청산내역','청산내역 목록'],
-            id:'app-mydvdns-005', status:'',
+            id:'app-mydvdns-005', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-01-20', eDate:'2024-01-20'
         },{
             depth:['','','','청산내역 상세보기'],
             id:'app-mydvdns-006', status:'',
-            note:'',
+            note:'청산내역 목록에서 펼침으로 확인가능',
             sDate:'', eDate:''
         },{
             depth:['','','','청산투표 결과보기'],
             id:'app-mydvdns-007', status:'',
-            note:'',
+            type:'modal', note:'app-mydvdns-003과 동일화면 [투표하기]버튼 제거',
             sDate:'', eDate:''
         },
 
@@ -474,7 +474,7 @@ $(document).ready(function(){
         },{
             depth:['','','1:1문의','문의하기'],
             id:'app-setQna-001', status:'com',
-            note:'문의하기/내역 페이지 묶음',
+            note:'문의하기/내역 페이지 묶음/ [취소/완료] 버튼 추가',
             sDate:'2024-01-05', eDate:'2024-01-06'
         },{
             depth:['','','','문의내역'],

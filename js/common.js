@@ -28,6 +28,10 @@ $(document).ready(function(){
     /* placeholder */
     $('label[class*="input"]').each(function(){
         placeholder(this);
+
+        $(this).find('input, textarea').keyup(function(){
+            input_btn_chk(this);
+        })
     });
 
     /* resize check */
@@ -172,7 +176,7 @@ const modal = {
 
 /* Input Form */
 function input_btn_chk(e){ // 버튼보이기
-    var icon_button = e.closest('.input').querySelector('button')
+    var icon_button = e.closest('.input, .input_square').querySelector('button')
     if(e.value.length>0){
         icon_button.style.cssText="display:block;"
     }else{
@@ -181,7 +185,7 @@ function input_btn_chk(e){ // 버튼보이기
 }
 
 function input_btn_fn(e){ // del 클릭시, input 내용 삭제
-    var input = e.closest('.input').querySelector('input');
+    var input = e.closest('.input, .input_square').querySelector('input, textarea');
     input.value = null;
     e.style.display="none";
     e.parentNode.querySelector('i').style.display="block";

@@ -75,7 +75,7 @@
                                     <p class="form_tit">제목</p>
                                     <label class="input_square">
                                         <i>제목을 입력해주세요.</i>
-                                        <input type="text" />
+                                        <input type="text" onkeyup="input_btn_chk(this);" />
                                         <em>error message</em>
                                         <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
                                     </label>
@@ -127,6 +127,13 @@
                     </div>
                 </div>
             </div>
+
+            <!-- add 2024-01-20 -->
+            <div class="btnSection">
+                <button class="btn_cancel"><em>취소</em></button>
+                <button class="btn_confirm"><em>완료</em></button>
+            </div>
+            <!-- //add 2024-01-20 -->
         </div>
 
         <!-- action bar -->
