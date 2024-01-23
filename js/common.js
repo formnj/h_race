@@ -6,7 +6,6 @@ $(document).ready(function(){
             $('.pass_bullet li').eq(bul_idx).addClass('active');
             bul_idx +=1;
 
-            console.log(bul_idx);
             if(bul_idx == 6){
                 modal.open('app-password-002-1', 'type_bottom');
             }
@@ -178,7 +177,6 @@ const modal = {
 function input_btn_chk(e){ // 버튼보이기
     var icon_button = e.closest('.input, .input_square').querySelector('button');
     if(icon_button != null){
-        console.log(icon_button);
         if(e.value.length>0){
             icon_button.style.cssText="display:block;"
         }else{
