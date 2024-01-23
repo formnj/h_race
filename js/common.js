@@ -174,14 +174,17 @@ const modal = {
     }
 }
 
-/* Input Form */
+/* Input Form Edit 2024-01-23 */
 function input_btn_chk(e){ // 버튼보이기
-    var icon_button = e.closest('.input, .input_square').querySelector('button')
-    if(e.value.length>0){
-        icon_button.style.cssText="display:block;"
-    }else{
-        icon_button.style.cssText="display:none;"
-    }    
+    var icon_button = e.closest('.input, .input_square').querySelector('button');
+    if(icon_button != null){
+        console.log(icon_button);
+        if(e.value.length>0){
+            icon_button.style.cssText="display:block;"
+        }else{
+            icon_button.style.cssText="display:none;"
+        }
+    }
 }
 
 function input_btn_fn(e){ // del 클릭시, input 내용 삭제
