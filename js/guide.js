@@ -765,6 +765,11 @@ $(document).ready(function(){
             id:'adm-iconm-003', status:'com',
             note:'',
             sDate:'2024-01-12', eDate:'2024-01-12'
+        },{
+            depth:['','청약/해지관리','상세',''],
+            id:'adm-goodsApply-009', status:'com',
+            note:'',
+            sDate:'2024-01-25', eDate:'2024-01-25'
         },
         // {
         //     depth:['','','',''],

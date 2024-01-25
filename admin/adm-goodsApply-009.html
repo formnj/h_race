@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>mysql connect test</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+
+<script src="../js/admin.js"></script>
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <!-- wrap -->
+    <div id="admin_wrap">
+        <!-- header -->
+        <header>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <div class="tit_wrap">
+                <h2>청약배분 상세보기</h2>
+                <ul class="breadcrumb">
+                    <li>Home</li>
+                    <li>1Depth</li>
+                    <li>2Depth</li>
+                </ul>
+            </div>
+
+            <div class="list_wrap">
+                <dl class="type_register accordion">
+                    <dt class="active">
+                        <strong class="tit">청약상품 기본정보</strong>
+                    </dt>
+                    <dd style="display:block;">
+                        <div class="cont">
+                            <div class="table_wrap detaile">
+                                <div class="inner">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:20%;" />
+                                            <col style="width:30%;" />
+                                            <col style="width:20%;" />
+                                            <col style="width:30%;" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>상품코드</th>
+                                                <td>$상품코드$</td>
+                                                <th>최종수정</th>
+                                                <td>2024-00-00 00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th>카테고리</th>
+                                                <td>$카테고리$</td>
+                                                <th>청약번호</th>
+                                                <td>청약번호</td>
+                                            </tr>
+                                            <tr>
+                                                <th>상품명</th>
+                                                <td>상품명</td>
+                                                <th>최소투자금액</th>
+                                                <td>30,0000</td>
+                                            </tr>
+                                            <tr>
+                                                <th>총청약금액</th>
+                                                <td>00,000,000원</td>
+                                                <th>총발행수량</th>
+                                                <td>00,000</td>
+                                            </tr>
+                                            <tr>
+                                                <th>청약방식</th>
+                                                <td>비례배분</td>
+                                                <th>상품상태</th>
+                                                <td>미사용</td>
+                                            </tr>
+                                            <tr>
+                                                <th>청약기간</th>
+                                                <td>0000-00-00 00:00 ~ 0000-00-00 00:00 (30일간)</td>
+                                                <th>청약상태</th>
+                                                <td>대기</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </dd>
+
+                    <dt>
+                        <strong class="tit">청약상품 배분현황</strong>
+                    </dt>
+                    <!-- 상세 내용 -->
+                    <dd>
+                        <div class="cont">
+
+                            <script>
+                                $(document).ready(function(){
+                                    tab_active('.tab_wrap .tab_type_text','click');
+                                });
+                            </script>
+
+                            <section class="search_wrap">
+                                <div class="inner">
+                                    <ul class="row">
+                                        <!-- 회원명/휴대폰번호 검색 -->
+                                        <li class="ac">
+                                            <dl>
+                                                <dt>회원명/휴대폰번호 검색</dt>
+                                                <dd>
+                                                    <div class="multi_form" style="width:500px;">
+                                                        <div class="label_wrap">
+                                                            <label class="input">
+                                                                <i>Placeholder</i>
+                                                                <input type="text" onkeyup="input_btn_chk(this);">
+                                                                <em>error message</em>
+                                                                <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button>
+                                                            </label>
+                                                            <button class="btn_search"><em>조회</em></button>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <!-- //회원명/휴대폰번호 검색 -->
+                                    </ul>
+                                </div>
+                            </section>
+
+                            <div class="board_info_wrap">
+                                <p class="result_count">총<strong>999</strong>건의 게시물이 있습니다.</p>
+                                <div class="btnSection">
+                                    <div class="tab_wrap w_150">
+                                        <!-- date sort -->
+                                        <ul class="tab_type_text demo">
+                                            <li class="current"><button>전체</button></li>
+                                            <li><button>신청</button></li>
+                                            <li><button>취소</button></li>
+                                        </ul>
+                                        <!-- //date sort -->
+                                    </div>
+
+                                    <label class="select w_150 ml10">
+                                        <select>
+                                            <option>최신순</option>
+                                        </select>
+                                    </label>
+                                    
+                                    <button class="btn_download"><em>엑셀 다운로드</em></button>
+                                    <button class="btn_upload"><em>정산지급 엑셀 업로드</em></button>
+                                    <button class="btn_add"><em>운영자 등록</em></button>
+                                </div>
+                            </div>
+
+                            <div class="board_info_wrap">
+                                <div class="table_wrap detaile">
+                                    <div class="inner">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:20%;" />
+                                                <col style="width:30%;" />
+                                                <col style="width:20%;" />
+                                                <col style="width:30%;" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>비례배분 지분율 합계</th>
+                                                    <td>00.00%</td>
+                                                    <th>잔여수량</th>
+                                                    <td>3개</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="btnSection">
+                                    <button class="btn_cancel"><em>비례배분 수동관리</em></button>
+                                    <button class="btn_cancel"><em>비례배분 완료하기</em></button>
+                                </div>
+                            </div>
+
+                            <div class="table_wrap detaile">
+                                <div class="inner">
+                                    <table class="mt20">
+                                        <colgroup>
+                                            <col style="width:20%;" />
+                                            <col style="width:30%;" />
+                                            <col style="width:20%;" />
+                                            <col style="width:30%;" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>현재청약율</th>
+                                                <td>00.00%</td>
+                                                <th>청약취소율</th>
+                                                <td>00.00%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="mt20">
+                                        <colgroup>
+                                            <col style="width:15%;" />
+                                            <col />
+                                            <col style="width:15%;" />
+                                            <col />
+                                            <col style="width:15%;" />
+                                            <col />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>총청약금액</th>
+                                                <td>0,000,000원</td>
+                                                <th>총신청금액</th>
+                                                <td>0,000,000원</td>
+                                                <th>비례배분적용</th>
+                                                <td>비례배분(초과시)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>총발행수량</th>
+                                                <td>0,000,000개</td>
+                                                <th>총신청수량</th>
+                                                <td>0,000,000개</td>
+                                                <th>청약취소수량</th>
+                                                <td>000,000</td>
+                                            </tr>
+                                            <tr>
+                                                <th>총투자자수</th>
+                                                <td>0,000,000명</td>
+                                                <th>실투자자수</th>
+                                                <td>0,000,000명</td>
+                                                <th>최소투자자수</th>
+                                                <td>000명</td>
+                                            </tr>
+                                            <tr>
+                                                <th>지급수량(확정)</th>
+                                                <td>0,000,000개</td>
+                                                <th>지급율(확정)</th>
+                                                <td>100.0%</td>
+                                                <th>배분상태</th>
+                                                <td>완료</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- 페이징 -->
+                            <div class="paging">
+                                <div>
+                                    <a href="#none" class="first">처음으로</a>
+                                    <a href="#none" class="prev">이전</a>
+
+                                    <strong>1</strong>
+                                    <a href="#none">2</a>
+                                    <a href="#none">3</a>
+                                    <a href="#none">4</a>
+                                    <a href="#none">5</a>
+
+                                    <a href="#none" class="next">다음</a>
+                                    <a href="#none" class="last">마지막으로</a>
+                                </div>
+                            </div>
+                            <!-- //페이징 -->
+                        </div>
+                    </dd>
+                    <!-- //상세 내용 -->
+                </dl>
+            </div>
+
+            <div class="btnSection">
+                <button class="btn_cancel"><em>이전</em></button>
+                <button class="btn_confirm"><em>집금계좌 이체요청하기</em></button>
+                <button class="btn_confirm"><em>청약증거금 반환요청</em></button>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer>Template</footer>
+        <!-- //footer -->
+    </div>
+</body>
