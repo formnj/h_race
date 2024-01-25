@@ -112,6 +112,16 @@ $(document).ready(function(){
             id:'app-common-007', status:'com',
             type:'', note:'[승인/거절] 구분을 위해 폰트 색상차를 적용하였습니다. 디자인안대로 수정 필요하시면 말씀주세요.',
             sDate:'2024-01-20', eDate:'2024-01-20'
+        },{
+            depth:['','접속차단','',''],
+            id:'app-common-008', status:'com',
+            type:'', note:'',
+            sDate:'2024-01-20', eDate:'2024-01-20'
+        },{
+            depth:['','휴면 계정 안내','',''],
+            id:'app-common-009', status:'com',
+            type:'', note:'',
+            sDate:'2024-01-25', eDate:'2024-01-25'
         },
 
         {
