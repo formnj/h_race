@@ -471,6 +471,11 @@ $(document).ready(function(){
             id:'app-goodsApply-001', status:'',
             type:'modal', note:'app-goods-001 [참여하기] 클릭 시 노출',
             sDate:'2024-01-17', eDate:'2024-01-18'
+        },{
+            depth:['','청약신청 접수결과','',''],
+            id:'app-goodsApply-005', status:'com',
+            type:'', note:'',
+            sDate:'2024-02-01', eDate:'2024-02-01'
         },
 
         {
