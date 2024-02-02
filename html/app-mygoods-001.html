@@ -36,6 +36,44 @@
                         <li><button>직접입력</button></li>
                     </ul>
                     <!-- //date sort -->
+
+                    <!-- datepicker -->
+                    <script>
+                        $(document).ready(function(){
+                            var today = new Date();
+                            var year = today.getFullYear();
+                            var month = ('0' + (today.getMonth() + 1)).slice(-2);
+                            var day = ('0' + today.getDate()).slice(-2);
+                            var dateString = year + '-' + month  + '-' + day;
+
+
+                            $(".datepicker input").val(dateString).datepicker({
+                                dayNamesMin: [ "일", "월", "화", "수", "목", "금", "토" ],
+                                dateFormat: "yy-mm-dd",
+                                onSelect: function(){
+                                    var _wrap = $(this).parent();
+                                    placeholder(_wrap);
+                                }
+                            });
+                        });
+                    </script>
+                    <div class="datepicker_wrap type_sort">
+                        <div class="multi_form">
+                            <label class="input datepicker">
+                                <i>Placeholder</i>
+                                <input type="text" id="datepicker_start" readonly="readonly">
+                                <em>error message</em>
+                            </label>
+                            <span>~</span>
+                            <label class="input datepicker">
+                                <i>Placeholder</i>
+                                <input type="text" id="datepicker_end" readonly="readonly">
+                                <em>error message</em>
+                            </label>
+                        </div>
+                        <button class="btn_mid"><em>조회</em></button>
+                    </div>
+                    <!-- //datepicker -->
                 </div>
 
                 <div class="list_top mt25">
