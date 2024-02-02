@@ -585,9 +585,9 @@ $(document).ready(function(){
             sDate:'2024-01-08', eDate:'2024-01-08'
         },{
             depth:['','탈퇴하기','',''],
-            id:'app-withdraw-001', status:'',
+            id:'app-withdraw-001', status:'com',
             note:'',
-            sDate:'', eDate:''
+            sDate:'2024-02-02', eDate:'2024-02-02'
         },
 
         {
