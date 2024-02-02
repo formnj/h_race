@@ -17,7 +17,7 @@ select {background-color:#fff; border:0; border-bottom:1px solid #E1E1E1; border
 .multi_form .pass_wrap label input[type='text'] {padding-right:0;}
 .multi_form .pass_wrap strong {margin-bottom:5px; color:#B7B7B7; font-size:18px; display:flex;}
 
-label[class*='input'] input:focus, label.select select:focus {border-color:#222;}
+label[class*='input'] input:focus, label[class*='input'] textarea:focus, label.select select:focus {border-color:#222;}
 
 label[class*='input'], label.select {position:relative; display:block; flex:1;}
 label.select:after {width:24px; height:24px; background-image:url('../images/common/icon_sprit.png'); background-position:-120px 0; background-repeat:no-repeat; background-size:250px auto; content:''; position:absolute; top:10px; right:3px; display:block;}

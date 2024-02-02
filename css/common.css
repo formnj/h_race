@@ -261,9 +261,9 @@ ol.type_num > li:before {content:'1.'; position:absolute; top:0; left:0; display
 .main_banner {display:flex; gap:12px;}
 .main_banner li {width:50%; text-align:center;}
 .main_banner a {padding:27px 20px; color:#444; font-size:12px; background-color:#f7f7f7; border-radius:16px; display:flex; flex-direction:column; align-items:center; justify-content:space-between;}
-.main_banner span {display:inline-flex; align-items:center;}
+.main_banner span {display:inline-flex; align-items:top;}
 .main_banner span:before {width:15px; height:15px; margin-right:6px; background:url('../images/main/icon_feeling.png') 0 0 no-repeat; background-size:cover; content:''; display:block;}
-.main_banner strong {margin-top:14px; color:#222; font-size:17px; font-weight:600;}
+.main_banner strong {margin-top:14px; color:#222; font-size:17px; font-weight:600; word-break:keep-all;}
 .main_banner em {color:#21AAA6;}
 
 .main_quick {display:flex; flex-wrap:wrap;}
@@ -669,7 +669,9 @@ span.txt_checked:before {width:30px; height:30px; margin-right:10px; background:
 .action_bar ul {display:flex;  justify-content:space-between;}
 .action_bar li {flex:1;}
 .action_bar li > * {width:100%; padding:8px; color:#888A90; font-size:11px; font-weight:500; display:flex; align-items:center; flex-direction:column;}
-.action_bar li > *:before {width:24px; height:24px; margin-bottom:4px; background-position:0 0; background-repeat:no-repeat; background-size:cover; content:''; display:block;}
+.action_bar li > *:before {width:24px; height:24px; margin-bottom:4px; background-position:0 0; background-repeat:no-repeat; background-size:24px auto; content:''; display:block;}
+.action_bar li > *.active {color:#222;}
+.action_bar li > *.active:before {background-position:0 -30px;}
 
 .action_bar li > *.home:before {background-image:url('../images/common/icon_act_home.png');}
 .action_bar li > *.funding:before {background-image:url('../images/common/icon_act_funding.png');}
