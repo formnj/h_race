@@ -136,18 +136,20 @@
                                 <div class="horse_status">
                                     <span>스탄로드 현재 육성후 6개월이 지났어요</span>
                                     <div class="progress_wrap">
+                                        <!-- Edit 2024-02-06 left:0은 class="left" / left:100%는 class="right"가 붙어야 정위치에 배치됩니다. -->
                                         <div class="tit">
-                                            <strong>0세 6개월<br/>
+                                            <strong class="left" style="left:0;">0세 6개월<br/>
                                                 <em>출생일 20년 12월 25일</em>
                                             </strong>
-                                            <span>1세마 경매</span>
-                                            <span>2세마 경매</span>
+                                            <span style="left:50%;">1세마 경매</span>
+                                            <span class="right" style="left:100%;">2세마 경매</span>
                                         </div>
                                         <p><em style="width:24.25%;"></em>
                                             <span class="badge left" style="left:0%;"><em>6개월</em></span>
-                                            <span class="badge light" style="left:24%;"><em>10개월</em></span>
-                                            <span class="badge right light" style="left:100%;"><em>12개월</em></span>
+                                            <span class="badge" style="left:24%;"><em>10개월</em></span>
+                                            <span class="badge right" style="left:100%;"><em>12개월</em></span>
                                         </p>
+                                        <!-- //Edit 2024-02-06 -->
                                     </div>
                                     <p class="ac">
                                         <button onclick="modal.open('app-myrace-001-1','type_alert');">언제 수익금이 지급 되나요?</button>
