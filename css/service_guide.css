@@ -2,8 +2,8 @@
 
 #wrap {height:100%; overflow:hidden;}
 .content {padding:0;}
-.guide {position:relative; overflow:hidden;}
-.swiper-slide {height:100vh !important;}
+.guide {padding-bottom:51px; position:relative;}
+.swiper-slide {height:calc(100vh - 51px) !important;}
 .swiper-slide .copy_wrap {padding-top:26%; padding-bottom:40px; background-color:rgba(255,255,255,0.6); position:relative; z-index:10;}
 .swiper-slide .copy_wrap > * {text-align:center; display:block;}
 .swiper-slide .copy_wrap strong {font-size:24px; font-weight:600; line-height:36px;}
@@ -29,7 +29,7 @@
 [data-swiper-slide-index="3"] .img_wrap img:nth-of-type(1) {left:0;}
 [data-swiper-slide-index="3"] .img_wrap img:nth-of-type(2) {right:0;}
 
-[data-swiper-slide-index="4"] .img_wrap img:nth-of-type(1) {width:calc(100% - 40px); margin:0 auto 80px;}
+[data-swiper-slide-index="4"] .img_wrap img:nth-of-type(1) {width:calc(100% - 40px); margin:0 auto 30px;}
 [data-swiper-slide-index="4"] .img_wrap img:nth-of-type(2) {width:35%; position:absolute; top:-20%; right:0;}
 
 .swiper-pagination {line-height:0; position:absolute; top:6.598984%; right:0; left:0;}
