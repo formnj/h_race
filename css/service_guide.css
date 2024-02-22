@@ -2,7 +2,7 @@
 
 #wrap {height:100%; overflow:hidden;}
 .content {padding:0;}
-.guide {padding-bottom:51px; position:relative;}
+/* .guide {padding-bottom:51px; position:relative;} */
 .swiper-slide {height:calc(100vh - 51px) !important;}
 .swiper-slide .copy_wrap {padding-top:26%; padding-bottom:40px; background-color:rgba(255,255,255,0.6); position:relative; z-index:10;}
 .swiper-slide .copy_wrap > * {text-align:center; display:block;}
