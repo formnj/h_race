@@ -1,4 +1,45 @@
 $(document).ready(function(){
+    /* :has 방어 */
+    if($('.except_layout').length > 0){
+        $('#wrap, #container, .content').addClass('has_exceptLayer');
+    }
+
+    if($('.action_bar').length > 0){
+        if(!$('.action_bar').hasClass('down')){
+            $('#container').addClass('hasAction');
+        }
+    }
+
+    if($('#container > .btnSection').length > 0){
+        $('#container').addClass('has_btnSection');
+    }
+
+    $('.except_layout section').each(function(){
+        if($(this).find('.sec_keypad').length){
+            $(this).addClass('has_sec_keypad');
+        } else {
+            console.log('b')
+        }
+    });
+
+    $('.check input').change(function(){
+        if($(this).prop('checked')){
+            $(this).closest('div').addClass('checked');
+            $(this).addClass('checked');
+        } else {
+            $(this).closest('div').removeClass('checked');
+            $(this).removeClass('checked')
+        }
+    });
+
+    $('.invest_type_select input').change(function(){
+        if($(this).prop('checked')){
+            $(this).closest('.invest_type_select').find('label').removeClass('checked');
+            $(this).parent().addClass('checked');
+        }
+    });
+    /* //:has 방어 */
+
     /* 비밀번호 보안키보드 기능 */
     var bul_idx = 0;
     $('.sec_keypad').delegate('button', 'click', function(){
@@ -141,20 +182,15 @@ const modal = {
     open: (_content,_type) => {
         $('.modal_wrap.'+_content).addClass('active').find('.modal_container').attr('modal-type', _type);
         disableScroll();
-        // $.ajax({
-        //     url:'../modal/'+_content+'.html',
-        //     method:'get',
-        //     success: function(data){
-        //         $('#modal_wrap').find('.modal_container').attr('modal-type', _type).html(data);
-        //         $('#modal_wrap').addClass('active').find('.modal_container');
-        //     },
-        //     complete: function(data){
-        //         disableScroll();
-        //     },
-        //     error: function(){
-        //         alert('404 Error!');
-        //     }
-        // });
+
+        /* :has 방어 */
+        if($('.modal_wrap.'+_content+' .modal_container > .btnSection').length > 0){
+            $('.modal_wrap.'+_content+' .modal_container').addClass('has_btnSection');
+        }
+
+        if($('.modal_wrap.'+_content+' .modal_container > .modal_header').length > 0){
+            $('.modal_wrap.'+_content+' .modal_container').addClass('has_header');
+        }
     },
     close: (e) => {
         e.currentTarget.closest('.modal_wrap').classList.remove('active');
